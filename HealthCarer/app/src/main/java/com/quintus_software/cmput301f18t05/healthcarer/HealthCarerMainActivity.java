@@ -10,4 +10,15 @@ public class HealthCarerMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_carer_main);
     }
-}
+
+    @Override
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //Anything else we need to call. 
+    }   
+    
+}  
+
