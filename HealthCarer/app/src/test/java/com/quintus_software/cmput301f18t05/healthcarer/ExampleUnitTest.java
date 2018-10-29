@@ -15,3 +15,18 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 }
+
+public class SoftwareTests {
+
+    @Test
+
+    public void addProblem() {
+        
+        // problem = new list of problems. 
+        // add problem
+        // assert(check if problem is in list).
+        assertEquals(4, 2 + 2);
+
+    }
+
+}
