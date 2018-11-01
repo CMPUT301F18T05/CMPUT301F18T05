@@ -1,1 +1,0 @@
-I think it might be a good idea to add the UML diagrams to this folder, so they are easy to find. 
