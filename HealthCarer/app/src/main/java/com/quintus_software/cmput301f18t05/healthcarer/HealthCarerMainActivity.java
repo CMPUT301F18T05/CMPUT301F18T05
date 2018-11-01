@@ -11,7 +11,6 @@ public class HealthCarerMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_health_carer_main);
     }
 
-    @Override
 
     @Override
     protected void onStart() {
