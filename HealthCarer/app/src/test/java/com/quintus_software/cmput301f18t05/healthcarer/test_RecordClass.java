@@ -1,5 +1,6 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.media.Image;
 
@@ -47,17 +48,11 @@ public class test_RecordClass {
     @Test
     /* Test that adding too many images throws an exception */
     public void test_maxImageAmount() {
-        // addImage x 10
+        Bitmap.Config conf = Bitmap.Config.ARGB_8888; // see other conf types
+        Bitmap bmp = Bitmap.createBitmap(1,1, conf); // this creates a MUTABLE bitmap
+        ArrayList<Bitmap> listOfImages = new ArrayList<Bitmap>();
 
-        ArrayList<Image> listOfImages = new ArrayList<Image>();
-
-        listOfImages.get(0);
-
-//        try{
-//
-//        }  {
-//
-//        }
+        listOfImages.add(bmp);
     }
 
     /* This test checks if the maximum image limit triggers an error. */

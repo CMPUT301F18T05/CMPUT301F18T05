@@ -1,14 +1,14 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
+import android.graphics.Bitmap;
 import android.location.Location;
-import android.media.Image;
 import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Record {
     private String title;
     private Calendar date;
-    private ArrayList<Image> imageList = new ArrayList<Image>();
+    private ArrayList<Bitmap> imageList = new ArrayList<Bitmap>();
     private Location location;
     private String comment;
     private String type;
@@ -47,15 +47,15 @@ public class Record {
     }
 
     // Not sure whether to return imageList or specific image.
-    public ArrayList<Image> getImageList() {
+    public ArrayList<Bitmap> getImageList() {
         return this.imageList;
     }
 
-    public void addPhoto(Image image) {
+    public void addPhoto(Bitmap image) {
         this.imageList.add(image);
     }
 
-    public Image getPhoto(Integer index) {
+    public Bitmap getPhoto(Integer index) {
         return this.imageList.get(index);
     }
 
