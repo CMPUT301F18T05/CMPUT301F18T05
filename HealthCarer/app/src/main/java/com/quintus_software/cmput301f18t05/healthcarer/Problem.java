@@ -1,5 +1,6 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Problem {
@@ -7,7 +8,7 @@ public class Problem {
     private Date calenderDate;
     private String description;
     private String type;
-//    private ArrayList<Record>;
+    private ArrayList<Record> recordList;
     private String bodyPart;
 
 
@@ -58,5 +59,13 @@ public class Problem {
 
     public void setBodyPart(String bodyPart) {
         this.bodyPart = bodyPart;
+    }
+
+    public ArrayList<Record> getRecordList() {
+        return recordList;
+    }
+
+    public void setRecordList(ArrayList<Record> recordList) {
+        this.recordList = recordList;
     }
 }
