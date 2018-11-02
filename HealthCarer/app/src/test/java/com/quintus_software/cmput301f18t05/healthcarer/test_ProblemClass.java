@@ -8,6 +8,7 @@ import java.util.Calendar;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class test_ProblemClass {
     @Test
@@ -71,5 +72,61 @@ public class test_ProblemClass {
         testProblem.addRecord(testRecord);
         assertEquals(testRecord, testProblem.getRecord(0));
     }
+
+    @Test
+    /* Testing is to make sure that a title less than or equal to 30 characters is permissible*/
+    public void test_titleLengthMaximum() {
+        Record testRecord = new Record();
+        Boolean failedTest = Boolean.FALSE;
+        String failString = new String();
+
+        for (Integer i = 0; i < 30; i++) {
+            failString += "E";
+        }
+
+        // Idea here is to test setting a below the minimum required characters. (This should throw
+        // an exception. The try statement is because Junit3 doesn't assertNotException (Junit4 can))
+        try {
+            testRecord.setTitle(failString);
+        } catch(Exception e) {
+            failedTest = Boolean.TRUE;
+        }
+
+        assertTrue(failedTest);
+
+        Calendar currentTime = Calendar.getInstance();
+        Problem testProblem2 = new Problem("Problem1", currentTime, "Derp", "Real", "FINAL");
+
+        // Test to make sure that the length is less than 30 characters long.
+        assertTrue(testProblem2.getTitle().length() <= 30);
+
+    }
+
+
+    @Test
+    public void test_commentLengthMaximum() {
+        Problem testProblem = new Problem();
+        Boolean failedTest = Boolean.FALSE;
+        String failString = new String();
+
+        for (Integer i = 0; i < 301; i++) {
+            failString += "D";
+        }
+
+        try {
+            testProblem.setDescription(failString);
+        } catch (Exception e) {
+            failedTest = Boolean.TRUE;
+        }
+
+        Calendar currentTime = Calendar.getInstance();
+        Problem testProblem2 = new Problem("Problem1", currentTime, "Derp", "Real", "FINAL");
+
+
+        // Test to make sure that the
+        assertTrue(testProblem2.getDescription().length() <= 300);
+
+    }
+
 
 }
