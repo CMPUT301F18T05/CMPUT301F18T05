@@ -10,6 +10,7 @@ import static org.junit.Assert.assertFalse;
 public class test_DoctorComment {
 
     @Test
+    /* This test will check if a doctor comment is created correctly. */
     public void test_createComment() {
         Doctor_Comment testDoctorComment = new Doctor_Comment();
         Calendar currentTime = Calendar.getInstance();
@@ -26,6 +27,7 @@ public class test_DoctorComment {
     }
 
     @Test
+    /* This test will check if a doctor comment is created correctly. */
     public void test_createCommentConstuctor() {
         Calendar currentTime = Calendar.getInstance();
         Doctor_Comment testDoctorComment = new Doctor_Comment("GERGEEG", "FinalTest"

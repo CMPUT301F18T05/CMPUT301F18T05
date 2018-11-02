@@ -11,6 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class test_PatientClass {
 
     @Test
+    /* This test will create a patient, and check if the attributes are correctly created. */
     public void test_createPatient() {
         Patient testPatient = new Patient("Derp", "DER", "reole@testPatient.com"
                 ,"33", "rr", "S");
@@ -24,6 +25,7 @@ public class test_PatientClass {
     }
 
     @Test
+    /* This test will create a patient and problem, and add the problem to the patient. */
     public void test_addPatientProblem() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
                 ,"33", "rr", "S");
@@ -40,6 +42,7 @@ public class test_PatientClass {
     }
 
     @Test
+    /* This problem will add multiple problems to a patient. */
     public void test_addMultipleProblems() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
                 ,"33", "rr", "S");
@@ -58,6 +61,7 @@ public class test_PatientClass {
     }
 
     @Test
+    /* This test will check if another method for checking problems in patient works. */
     public void test_checkProblemsInList() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
                 ,"33", "rr", "S");
@@ -76,6 +80,7 @@ public class test_PatientClass {
     }
 
     @Test
+    /* This test will check if deleting a problem from a patient works. */
     public void test_deleteProblemsInList() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
                 ,"33", "rr", "S");

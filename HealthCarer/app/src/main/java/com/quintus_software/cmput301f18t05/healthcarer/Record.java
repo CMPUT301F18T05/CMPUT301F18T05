@@ -48,7 +48,7 @@ public class Record {
 
     // Not sure whether to return imageList or specific image.
     public ArrayList<Image> getImageList() {
-        return imageList;
+        return this.imageList;
     }
 
     public void addPhoto(Image image) {

@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class test_DocterClass {
 
     @Test
+    /*This test case will create a doctor, and check that the fields are created correctly. */
     public void test_createDoctor() {
         Doctor testDoctor = new Doctor("Derp", "DER", "reole@testPatient.com"
                 ,"33", "doc");
@@ -21,6 +22,7 @@ public class test_DocterClass {
     }
 
     @Test
+    /*This test will create a patient and doctor, and add the patient to the doctor. */
     public void test_add_get_Patient() {
         Doctor testDoctor = new Doctor("Derp", "DER", "reole@testPatient.com"
                 ,"33", "doc");
@@ -32,6 +34,7 @@ public class test_DocterClass {
     }
 
     @Test
+    /* This test will check if removing a patient from the doctor removes it*/
     public void test_removePatient() {
         Doctor testDoctor = new Doctor("Derp", "DER", "reole@testPatient.com"
                 ,"33", "doc");

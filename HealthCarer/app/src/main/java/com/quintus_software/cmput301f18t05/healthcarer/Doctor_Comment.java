@@ -17,7 +17,7 @@ public class Doctor_Comment {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -25,7 +25,7 @@ public class Doctor_Comment {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -33,7 +33,7 @@ public class Doctor_Comment {
     }
 
     public Calendar getDate() {
-        return date;
+        return this.date;
     }
 
     public void setDate(Calendar date) {
@@ -41,7 +41,7 @@ public class Doctor_Comment {
     }
 
     public String getComment() {
-        return comment;
+        return this.comment;
     }
 
     public void setComment(String comment) {

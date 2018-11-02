@@ -11,6 +11,7 @@ import static org.junit.Assert.assertFalse;
 
 public class test_ProblemClass {
     @Test
+    /* This problem will check if a problem is created with the proper fields. */
     public void test_setProblem() {
         Calendar currentTime = Calendar.getInstance();
         Problem testProblem = new Problem();
@@ -30,6 +31,7 @@ public class test_ProblemClass {
     }
 
     @Test
+    /* This test check if you can add a record to a problem. */
     public void test_addRecord() {
         Calendar currentTime = Calendar.getInstance();
         Location location = new Location("dummyprovider");
@@ -41,6 +43,7 @@ public class test_ProblemClass {
     }
 
     @Test
+    /* This test checks if the delete function removes the record from the problem. */
     public void test_deleteRecord() {
         Calendar currentTime = Calendar.getInstance();
         Location location = new Location("dummyprovider");
@@ -58,6 +61,7 @@ public class test_ProblemClass {
     }
 
     @Test
+    /* This test checks if you can retrieve a record. */
     public void test_getRecord() {
         Calendar currentTime = Calendar.getInstance();
         Location location = new Location("dummyprovider");
@@ -67,6 +71,5 @@ public class test_ProblemClass {
         testProblem.addRecord(testRecord);
         assertEquals(testRecord, testProblem.getRecord(0));
     }
-
 
 }
