@@ -5,6 +5,7 @@ public abstract class User {
     private String name;
     private String email;
     private String phoneNumber;
+    private String role;
 
     User() {
 
@@ -24,6 +25,14 @@ public abstract class User {
 
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public String getRole() {
+        return this.role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public void setUserID(String userID) {
