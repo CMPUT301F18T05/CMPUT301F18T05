@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Patient extends User{
 
-    private String role;
     private String body;
     private ArrayList<Problem> problemList  = new ArrayList<Problem>();
 
@@ -13,16 +12,8 @@ public class Patient extends User{
 
     }
 
-    public String getRole() {
-        return this.role;
-    }
-
     public String getBody() {
         return this.body;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     public void setBody(String body) {
