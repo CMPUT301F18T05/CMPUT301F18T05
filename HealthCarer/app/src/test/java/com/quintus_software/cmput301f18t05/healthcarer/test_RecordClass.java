@@ -47,13 +47,25 @@ public class test_RecordClass {
 
     @Test
     /* Test that adding too many images throws an exception */
+    /* This test checks if the maximum image limit triggers an error. */
     public void test_maxImageAmount() {
         Bitmap.Config conf = Bitmap.Config.ARGB_8888; // see other conf types
         Bitmap bmp = Bitmap.createBitmap(1,1, conf); // this creates a MUTABLE bitmap
         ArrayList<Bitmap> listOfImages = new ArrayList<Bitmap>();
+        String fail = "0";
 
-        listOfImages.add(bmp);
+        for (Integer i = 0; i < 10; i++) {
+            listOfImages.add(bmp);
+        }
+
+        // Junit3 doesn't allow to assert a exception, so this is a work around
+        try {
+            listOfImages.add(bmp);
+        } catch(Exception e){
+            fail = "0";
+        }
+
+        assertEquals("0", fail);
     }
 
-    /* This test checks if the maximum image limit triggers an error. */
 }
