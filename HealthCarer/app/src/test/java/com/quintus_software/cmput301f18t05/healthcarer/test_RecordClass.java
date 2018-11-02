@@ -33,10 +33,11 @@ public class test_RecordClass {
     @Test
     public void test_addImageToRecord() {
         // Make sure make a test for more than 10 photoes.
-        Calendar currentTime = Calendar.getInstance();
-        Location location = new Location("dummyprovider");
+//        Calendar currentTime = Calendar.getInstance();
+//        Location location = new Location();
 
-//        Record testRecord = new Record("RecordTitle", )
+        Record testRecord = new Record();
+        testRecord.addPhoto();
 
     }
 }
