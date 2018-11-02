@@ -37,7 +37,6 @@ public class test_PatientClass {
         assertEquals("Finger hurts.", testPatient.getProblem(0).getDescription());
         assertEquals("Owwy", testPatient.getProblem(0).getType());
         assertEquals("Finger", testPatient.getProblem(0).getBodyPart());
-
     }
 
     @Test

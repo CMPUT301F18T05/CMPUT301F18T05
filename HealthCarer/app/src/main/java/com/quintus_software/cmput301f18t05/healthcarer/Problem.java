@@ -74,4 +74,12 @@ public class Problem {
         this.recordList.add(record);
     }
 
+    public Record getRecord(Integer index) {
+        return this.recordList.get(index);
+    }
+
+    public void deleteRecord(Integer index) {
+        this.recordList.remove(index);
+    }
+
 }

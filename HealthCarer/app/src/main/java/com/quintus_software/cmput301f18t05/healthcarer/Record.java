@@ -15,6 +15,10 @@ public class Record {
     private String type;
     private ArrayList<Doctor_Comment> doctorComentList = new ArrayList<Doctor_Comment>();
 
+    Record() {
+
+    }
+
     Record(String title, Calendar date, Location location, String comment, String type) {
 
     }
@@ -44,9 +48,9 @@ public class Record {
     }
 
     // Not sure whether to return imageList or specific image.
-//    public ArrayList<Image> getImageList() {
-//        return imageList;
-//    }
+    public ArrayList<Image> getImageList() {
+        return imageList;
+    }
 
     public void addPhoto(Image image) {
         this.imageList.add(image);

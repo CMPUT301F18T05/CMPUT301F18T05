@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.Calendar;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class test_ProblemClass {
     @Test
@@ -38,4 +39,34 @@ public class test_ProblemClass {
         testProblem.addRecord(testRecord);
         assertEquals(testRecord, testProblem.getRecordList().get(0));
     }
+
+    @Test
+    public void test_deleteRecord() {
+        Calendar currentTime = Calendar.getInstance();
+        Location location = new Location("dummyprovider");
+        Problem testProblem = new Problem("Problem1", currentTime, "Derp", "Real", "FINAL");
+        Record testRecord1 = new Record("Record", currentTime, location, "comments", "grave");
+        Record testRecord2 = new Record("Crap", currentTime, location, "super", "hot");
+
+
+        testProblem.addRecord(testRecord1);
+        testProblem.addRecord(testRecord2);
+        testProblem.deleteRecord(0);
+
+        assertEquals(testRecord2, testProblem.getRecordList().get(0));
+        assertFalse(testProblem.getRecordList().contains(testRecord1));
+    }
+
+    @Test
+    public void test_getRecord() {
+        Calendar currentTime = Calendar.getInstance();
+        Location location = new Location("dummyprovider");
+        Problem testProblem = new Problem("Problem1", currentTime, "Derp", "Real", "FINAL");
+        Record testRecord = new Record("Record", currentTime, location, "comments", "grave");
+
+        testProblem.addRecord(testRecord);
+        assertEquals(testRecord, testProblem.getRecord(0));
+    }
+
+
 }
