@@ -9,7 +9,7 @@ public class Patient {
     private Integer phoneNumber;
     private String role;
     private String body;
-    private ArrayList<Problem> problemList;
+    private ArrayList<Problem> problemList  = new ArrayList<Problem>();
 
     Patient(String userID, String name, String email, Integer phoneNumber, String role,
             String body) {

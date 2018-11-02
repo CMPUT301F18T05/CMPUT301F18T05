@@ -1,22 +1,23 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
+import android.icu.util.Calendar;
+
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Problem {
     private String title;
-    private Date calenderDate;
+    private Calendar calenderDate;
     private String description;
     private String type;
-    private ArrayList<Record> recordList;
+    private ArrayList<Record> recordList  = new ArrayList<Record>();
     private String bodyPart;
 
-
-    Problem() {
+    Problem(String title, Date calenderDate, String description, String type, String bodyPart) {
 
     }
 
-    public Date getDate(){
+    public Calendar getDate(){
         return this.getCalenderDate();
     }
 
@@ -29,11 +30,11 @@ public class Problem {
         this.title = title;
     }
 
-    public Date getCalenderDate() {
+    public Calendar getCalenderDate() {
         return calenderDate;
     }
 
-    public void setCalenderDate(Date calenderDate) {
+    public void setCalenderDate(Calendar calenderDate) {
         this.calenderDate = calenderDate;
     }
 
