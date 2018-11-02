@@ -37,7 +37,7 @@ public class test_RecordClass {
 //        Location location = new Location();
 
         Record testRecord = new Record();
-        testRecord.addPhoto();
+//        testRecord.addPhoto();
 
     }
 }

@@ -6,14 +6,17 @@ public class Patient {
     private String userID;
     private String name;
     private String email;
-    private Integer phoneNumber;
+    private String phoneNumber;
     private String role;
     private String body;
     private ArrayList<Problem> problemList  = new ArrayList<Problem>();
 
-    Patient(String userID, String name, String email, Integer phoneNumber, String role,
-            String body) {
+    Patient() {
 
+    }
+
+    Patient(String userID, String name, String email, String phoneNumber, String role,
+            String body) {
     }
 
     public String getUserID() {
@@ -28,7 +31,7 @@ public class Patient {
         return this.email;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
@@ -41,27 +44,27 @@ public class Patient {
     }
 
     public void setUserID(String userID) {
-        this.setUserID(userID);
+        this.userID = userID;
     }
 
     public void setName(String name) {
-        this.setName(name);
+        this.name = name;
     }
 
     public void setEmail(String email) {
-        this.setEmail(email);
+        this.email = email;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
-        this.setPhoneNumber(phoneNumber);
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public void setRole(String role) {
-        this.setRole(role);
+        this.role = role;
     }
 
     public void setBody(String body) {
-        this.setBody(body);
+        this.body = body;
     }
 
     public Problem getProblem(Integer index) {
