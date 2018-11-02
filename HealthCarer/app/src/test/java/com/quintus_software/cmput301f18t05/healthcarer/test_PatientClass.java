@@ -102,17 +102,17 @@ public class test_PatientClass {
     @Test
     /* This test will check if removing a patient from the doctor removes it*/
     public void test_userIDMinimum() {
-        Doctor testDoctor = new Doctor("DerpERPP", "DER", "reole@testPatient.com"
-                ,"33", "doc");
-        Doctor testDoctor2 = new Doctor();
+        Patient testPatient = new Patient("DerpERPP", "DER", "reole@testPatient.com"
+                ,"33", "patient", "ARM");
+        Patient testPatient2 = new Patient();
         Boolean failedTest = Boolean.FALSE;
 
-        assertTrue(testDoctor.getUserID().length() >= 8);
+        assertTrue(testPatient.getUserID().length() >= 8);
 
         // Since there should be an exception thrown, try to set a userID shorter than 8 chars and
         // catch the exception.
         try {
-            testDoctor2.setUserID("D");
+            testPatient2.setUserID("D");
         } catch(Exception e) {
             failedTest = Boolean.TRUE;
         }
