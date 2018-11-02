@@ -3,13 +3,14 @@ package com.quintus_software.cmput301f18t05.healthcarer;
 import android.location.Location;
 import android.media.Image;
 
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Record {
     private String title;
     private Calendar date;
-    private ArrayList<Image> imageList = new ArrayList<Image>();
+    private ArrayList<BufferedImage> imageList = new ArrayList<Image>();
     private Location location;
     private String comment;
     private String type;
