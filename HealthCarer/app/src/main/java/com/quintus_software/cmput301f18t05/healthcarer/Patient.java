@@ -7,7 +7,7 @@ public class Patient extends User{
     private String body;
     private ArrayList<Problem> problemList  = new ArrayList<Problem>();
 
-    Patient(String userID, String name, String email, Integer phoneNumber, String role,
+    Patient(String userID, String name, String email, String phoneNumber, String role,
             String body) {
 
     }

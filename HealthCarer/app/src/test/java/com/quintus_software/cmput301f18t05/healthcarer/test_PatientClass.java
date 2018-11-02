@@ -13,10 +13,10 @@ public class test_PatientClass {
     @Test
     public void test_createPatient() {
         Patient testPatient = new Patient("Derp", "DER", "reole@testPatient.com"
-                ,33, "rr", "S");
+                ,"33", "rr", "S");
 
-        assertEquals("Derp", testPatient.getName());
-        assertEquals("S", testPatient.getBody());
+        assertEquals("Derp", testPatient.getUserID());
+        assertEquals("S", testPatient.getName());
         assertEquals("reole@testPatient.com", testPatient.getEmail());
         assertEquals("33", testPatient.getPhoneNumber());
         assertEquals("rr", testPatient.getRole());
@@ -26,7 +26,7 @@ public class test_PatientClass {
     @Test
     public void test_addPatientProblem() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
-                ,33, "rr", "S");
+                ,"33", "rr", "S");
         Calendar currentTime = Calendar.getInstance();
         Problem testProblem = new Problem("Oww", currentTime, "Finger hurts."
                 , "Owwy", "Finger");
@@ -42,7 +42,7 @@ public class test_PatientClass {
     @Test
     public void test_addMultipleProblems() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
-                ,33, "rr", "S");
+                ,"33", "rr", "S");
         Calendar currentTime = Calendar.getInstance();
 
         Problem testProblem1 = new Problem("Oww", currentTime, "Finger hurts."
@@ -60,7 +60,7 @@ public class test_PatientClass {
     @Test
     public void test_checkProblemsInList() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
-                ,33, "rr", "S");
+                ,"33", "rr", "S");
         Calendar currentTime = Calendar.getInstance();
 
         Problem testProblem1 = new Problem("Oww", currentTime, "Finger hurts."
@@ -78,7 +78,7 @@ public class test_PatientClass {
     @Test
     public void test_deleteProblemsInList() {
         Patient testPatient = new Patient("Derp", "DER", "reole@derp.com"
-                ,33, "rr", "S");
+                ,"33", "rr", "S");
         Calendar currentTime = Calendar.getInstance();
 
         Problem testProblem1 = new Problem("Oww", currentTime, "Finger hurts."

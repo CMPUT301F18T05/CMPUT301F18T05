@@ -2,11 +2,15 @@ package com.quintus_software.cmput301f18t05.healthcarer;
 
 import java.util.ArrayList;
 
-public class Docter extends User {
+public class Doctor extends User {
 
     private ArrayList<Patient> patientList = new ArrayList<Patient>();
 
-    Docter() {
+    Doctor() {
+
+    }
+
+    Doctor(String userID, String name, String email, String phoneNumber, String role) {
 
     }
 
@@ -16,6 +20,10 @@ public class Docter extends User {
 
     public Patient getPatient(Integer index) {
         return this.patientList.get(index);
+    }
+
+    public void removePatient(Integer index) {
+        this.patientList.remove(index);
     }
 }
 
