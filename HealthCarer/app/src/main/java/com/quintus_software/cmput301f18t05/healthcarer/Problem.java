@@ -1,6 +1,6 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
-import android.icu.util.Calendar;
+import java.util.Calendar;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +13,11 @@ public class Problem {
     private ArrayList<Record> recordList  = new ArrayList<Record>();
     private String bodyPart;
 
-    Problem(String title, Date calenderDate, String description, String type, String bodyPart) {
+    Problem() {
+
+    }
+
+    Problem(String title, Calendar calenderDate, String description, String type, String bodyPart) {
 
     }
 
@@ -23,7 +27,7 @@ public class Problem {
 
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -31,7 +35,7 @@ public class Problem {
     }
 
     public Calendar getCalenderDate() {
-        return calenderDate;
+        return this.calenderDate;
     }
 
     public void setCalenderDate(Calendar calenderDate) {
@@ -39,7 +43,7 @@ public class Problem {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -47,7 +51,7 @@ public class Problem {
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(String type) {
@@ -55,7 +59,7 @@ public class Problem {
     }
 
     public String getBodyPart() {
-        return bodyPart;
+        return this.bodyPart;
     }
 
     public void setBodyPart(String bodyPart) {
@@ -63,10 +67,19 @@ public class Problem {
     }
 
     public ArrayList<Record> getRecordList() {
-        return recordList;
+        return this.recordList;
     }
 
-    public void setRecordList(ArrayList<Record> recordList) {
-        this.recordList = recordList;
+    public void addRecord(Record record) {
+        this.recordList.add(record);
     }
+
+    public Record getRecord(Integer index) {
+        return this.recordList.get(index);
+    }
+
+    public void deleteRecord(Integer index) {
+        this.recordList.remove(index);
+    }
+
 }

@@ -2,7 +2,6 @@ package com.quintus_software.cmput301f18t05.healthcarer;
 
 import android.location.Location;
 import android.media.Image;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -13,13 +12,26 @@ public class Record {
     private Location location;
     private String comment;
     private String type;
+    private ArrayList<Doctor_Comment> doctorComentList = new ArrayList<Doctor_Comment>();
+
+    Record() {
+
+    }
 
     Record(String title, Calendar date, Location location, String comment, String type) {
 
     }
 
+    public void addDoctorComment(Doctor_Comment doctor_comment){
+        this.doctorComentList.add(doctor_comment);
+    }
+
+    public Doctor_Comment getDoctorComment(Integer index){
+        return this.doctorComentList.get(index);
+    }
+
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -27,7 +39,7 @@ public class Record {
     }
 
     public Calendar getDate() {
-        return date;
+        return this.date;
     }
 
     public void setDate(Calendar date) {
@@ -35,9 +47,9 @@ public class Record {
     }
 
     // Not sure whether to return imageList or specific image.
-//    public ArrayList<Image> getImageList() {
-//        return imageList;
-//    }
+    public ArrayList<Image> getImageList() {
+        return this.imageList;
+    }
 
     public void addPhoto(Image image) {
         this.imageList.add(image);
@@ -48,7 +60,7 @@ public class Record {
     }
 
     public Location getLocation() {
-        return location;
+        return this.location;
     }
 
     public void deletePhoto(Integer index) {
@@ -60,7 +72,7 @@ public class Record {
     }
 
     public String getComment() {
-        return comment;
+        return this.comment;
     }
 
     public void setComment(String comment) {
@@ -68,7 +80,7 @@ public class Record {
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(String type) {

@@ -1,6 +1,6 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
-import android.icu.util.Calendar;
+import java.util.Calendar;
 
 public class Doctor_Comment {
     private String title;
@@ -8,12 +8,16 @@ public class Doctor_Comment {
     private Calendar date;
     private String comment;
 
+    Doctor_Comment(){
+
+    }
+
     Doctor_Comment(String title, String name, Calendar date, String comment){
 
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -21,7 +25,7 @@ public class Doctor_Comment {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -29,7 +33,7 @@ public class Doctor_Comment {
     }
 
     public Calendar getDate() {
-        return date;
+        return this.date;
     }
 
     public void setDate(Calendar date) {
@@ -37,7 +41,7 @@ public class Doctor_Comment {
     }
 
     public String getComment() {
-        return comment;
+        return this.comment;
     }
 
     public void setComment(String comment) {
