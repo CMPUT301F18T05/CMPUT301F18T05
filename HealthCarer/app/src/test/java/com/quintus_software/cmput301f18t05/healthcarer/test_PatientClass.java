@@ -10,12 +10,23 @@ public class test_PatientClass {
     public void test_createPatient() {
         Patient derp = new Patient("Derp", "DER", "reole@derp.com"
                 ,33, "rr", "S");
+
         assertEquals(derp.getName(), "Derp");
-//        assertEquals(4, 2 + 2);
+        assertEquals(derp.getBody(), "S");
+        assertEquals(derp.getEmail(), "reole@derp.com");
+//        assertEquals(derp.getPhoneNumber(), 33);
+        assertEquals(derp.getRole(), "rr");
+        assertEquals(derp.getBody(), "S");
+    }
+
+    @Test
+    public void test_addPatientProblem() {
+        Patient derp = new Patient("Derp", "DER", "reole@derp.com"
+                ,33, "rr", "S");
+        derp.
 
     }
 
-    // DEREREREPRPERPEPERP
 
 }
 

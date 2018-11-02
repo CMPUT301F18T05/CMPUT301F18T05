@@ -64,5 +64,12 @@ public class Patient {
         this.setBody(body);
     }
 
+    public Problem getProblemList(Integer index) {
+        return this.problemList.get(index);
+    }
+
+    public void setProblemList(ArrayList<Problem> problemList) {
+        this.problemList = problemList;
+    }
 }
 

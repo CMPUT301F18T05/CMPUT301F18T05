@@ -13,9 +13,18 @@ public class Record {
     private Location location;
     private String comment;
     private String type;
+    private ArrayList<Doctor_Comment> doctorComentList = new ArrayList<Doctor_Comment>();
 
     Record(String title, Calendar date, Location location, String comment, String type) {
 
+    }
+
+    public void addDoctorComment(Doctor_Comment doctor_comment){
+        this.doctorComentList.add(doctor_comment);
+    }
+
+    public Doctor_Comment getDoctorComment(Integer index){
+        return this.doctorComentList.get(index);
     }
 
     public String getTitle() {
