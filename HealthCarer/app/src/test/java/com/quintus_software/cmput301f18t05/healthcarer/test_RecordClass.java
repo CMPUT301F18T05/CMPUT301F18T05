@@ -1,6 +1,7 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
 import android.location.Location;
+import android.media.Image;
 
 import org.junit.Test;
 
@@ -30,8 +31,12 @@ public class test_RecordClass {
     }
 
     @Test
-    public void test_addDoctorComment() {
+    public void test_addImageToRecord() {
         // Make sure make a test for more than 10 photoes.
+        Calendar currentTime = Calendar.getInstance();
+        Location location = new Location("dummyprovider");
+
+//        Record testRecord = new Record("RecordTitle", )
 
     }
 }
