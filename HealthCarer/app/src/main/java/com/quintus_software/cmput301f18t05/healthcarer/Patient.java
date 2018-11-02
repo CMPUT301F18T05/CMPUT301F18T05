@@ -17,27 +17,27 @@ public class Patient {
     }
 
     public String getUserID() {
-        return userID;
+        return this.userID;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public Integer getPhoneNumber() {
-        return phoneNumber;
+        return this.phoneNumber;
     }
 
     public String getRole() {
-        return role;
+        return this.role;
     }
 
     public String getBody() {
-        return body;
+        return this.body;
     }
 
     public void setUserID(String userID) {
@@ -64,12 +64,12 @@ public class Patient {
         this.setBody(body);
     }
 
-    public Problem getProblemList(Integer index) {
+    public Problem getProblem(Integer index) {
         return this.problemList.get(index);
     }
 
-    public void setProblemList(ArrayList<Problem> problemList) {
-        this.problemList = problemList;
+    public void addProblem(Problem problem) {
+        this.problemList.add(problem);
     }
 }
 
