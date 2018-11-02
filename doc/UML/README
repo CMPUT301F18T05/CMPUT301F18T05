@@ -1,3 +1,5 @@
 the connections are fixed
 need to get merge with "patient" UML.
 public and private status need specified.
+missing patients profile, which is in patients' UML.
+body locations should be in patients' UML
