@@ -19,7 +19,7 @@ public class HealthCarerMainActivity extends AppCompatActivity {
         super.onStart();
 
 
-        ArrayList<Temp_ProblemClass> x;
+//        ArrayList<Temp_ProblemClass> x;
 
         //Anything else we need to call. 
     }   

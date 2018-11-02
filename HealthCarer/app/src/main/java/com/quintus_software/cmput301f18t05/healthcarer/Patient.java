@@ -1,12 +1,15 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
-public abstract class Patient {
+import java.util.ArrayList;
+
+public class Patient {
     private String userID;
     private String name;
     private String email;
     private Integer phoneNumber;
     private String role;
     private String body;
+    private ArrayList<Problem> problemList;
 
     Patient(String userID, String name, String email, Integer phoneNumber, String role,
             String body) {
