@@ -28,7 +28,7 @@ public class Record {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -36,7 +36,7 @@ public class Record {
     }
 
     public Calendar getDate() {
-        return date;
+        return this.date;
     }
 
     public void setDate(Calendar date) {
@@ -57,7 +57,7 @@ public class Record {
     }
 
     public Location getLocation() {
-        return location;
+        return this.location;
     }
 
     public void deletePhoto(Integer index) {
@@ -69,7 +69,7 @@ public class Record {
     }
 
     public String getComment() {
-        return comment;
+        return this.comment;
     }
 
     public void setComment(String comment) {
@@ -77,7 +77,7 @@ public class Record {
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(String type) {

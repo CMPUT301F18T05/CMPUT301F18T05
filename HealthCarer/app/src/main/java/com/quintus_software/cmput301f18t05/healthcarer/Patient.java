@@ -71,5 +71,14 @@ public class Patient {
     public void addProblem(Problem problem) {
         this.problemList.add(problem);
     }
+
+    public void deleteProblem(Integer index) {
+        this.problemList.remove(index);
+    }
+
+    public ArrayList<Problem> getProblemList() {
+        return this.problemList;
+    }
+
 }
 

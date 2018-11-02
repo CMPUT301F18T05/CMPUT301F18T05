@@ -1,6 +1,6 @@
 package com.quintus_software.cmput301f18t05.healthcarer;
 
-import android.icu.util.Calendar;
+import java.util.Calendar;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +13,11 @@ public class Problem {
     private ArrayList<Record> recordList  = new ArrayList<Record>();
     private String bodyPart;
 
-    Problem(String title, Date calenderDate, String description, String type, String bodyPart) {
+    Problem() {
+
+    }
+
+    Problem(String title, Calendar calenderDate, String description, String type, String bodyPart) {
 
     }
 
@@ -31,7 +35,7 @@ public class Problem {
     }
 
     public Calendar getCalenderDate() {
-        return calenderDate;
+        return this.calenderDate;
     }
 
     public void setCalenderDate(Calendar calenderDate) {
@@ -66,7 +70,8 @@ public class Problem {
         return recordList;
     }
 
-    public void setRecordList(ArrayList<Record> recordList) {
-        this.recordList = recordList;
+    public void addRecord(Record record) {
+        this.recordList.add(record);
     }
+
 }
