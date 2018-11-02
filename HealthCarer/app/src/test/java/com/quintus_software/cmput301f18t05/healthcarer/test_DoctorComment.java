@@ -21,6 +21,7 @@ public class test_DoctorComment {
         testDoctorComment.setTitle("GERGREEG");
         testDoctorComment.setDate(currentTime);
 
+        // Make sure created doctor object has values in correct positions.
         assertEquals("FinalTest", testDoctorComment.getName());
         assertEquals("Please", testDoctorComment.getComment());
         assertEquals("GERGREEG", testDoctorComment.getTitle());
@@ -65,11 +66,13 @@ public class test_DoctorComment {
         Doctor_Comment testDoctorComment2 = new Doctor_Comment("GERGREEG", "FinalTest"
                 , currentTime, "Plase");
 
-        // Test to make sure that the
+        // Test to make sure that the created doctorComment object has a title less than 30 chars.
         assertTrue(testDoctorComment2.getTitle().length() <= 30);
 
     }
 
+    @Test
+    /* Test to make sure that a doctor_comment cannot be longer than 300 characters*/
     public void test_commentLengthMaximum() {
         Doctor_Comment testDoctorComment = new Doctor_Comment();
         Boolean failedTest = Boolean.FALSE;
@@ -79,6 +82,7 @@ public class test_DoctorComment {
             failString += "D";
         }
 
+        // Try will catch this as the comment length is too large, and will throw an exception.
         try {
             testDoctorComment.setComment(failString);
         } catch(Exception e) {
@@ -92,7 +96,7 @@ public class test_DoctorComment {
         Doctor_Comment testDoctorComment2 = new Doctor_Comment("GERGREEG", "FinalTest"
                 , currentTime, "Plase");
 
-        // Test to make sure that the
+        // Test to make sure that the doctor object has a character length below 300.
         assertTrue(testDoctorComment2.getTitle().length() <= 300);
 
     }

@@ -104,7 +104,8 @@ public class test_ProblemClass {
 
 
     @Test
-    public void test_commentLengthMaximum() {
+    /* Test to make sure that the comment is not longer than 300 characters. */
+    public void test_commentDescriptionMaximum() {
         Problem testProblem = new Problem();
         Boolean failedTest = Boolean.FALSE;
         String failString = new String();
@@ -123,7 +124,7 @@ public class test_ProblemClass {
         Problem testProblem2 = new Problem("Problem1", currentTime, "Derp", "Real", "FINAL");
 
 
-        // Test to make sure that the
+        // Test to make sure that the description length is not longer than 300 characters.
         assertTrue(testProblem2.getDescription().length() <= 300);
 
     }
