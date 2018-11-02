@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RemindMe</string>
+    <string name="remind_me">Remind Me</string>
+    <string name="title_activity_remind">RemindActivity</string>
+</resources>
