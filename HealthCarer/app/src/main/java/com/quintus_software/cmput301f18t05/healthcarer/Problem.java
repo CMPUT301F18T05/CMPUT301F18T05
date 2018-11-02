@@ -27,7 +27,7 @@ public class Problem {
 
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -43,7 +43,7 @@ public class Problem {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -51,7 +51,7 @@ public class Problem {
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(String type) {
@@ -59,7 +59,7 @@ public class Problem {
     }
 
     public String getBodyPart() {
-        return bodyPart;
+        return this.bodyPart;
     }
 
     public void setBodyPart(String bodyPart) {
@@ -67,7 +67,7 @@ public class Problem {
     }
 
     public ArrayList<Record> getRecordList() {
-        return recordList;
+        return this.recordList;
     }
 
     public void addRecord(Record record) {

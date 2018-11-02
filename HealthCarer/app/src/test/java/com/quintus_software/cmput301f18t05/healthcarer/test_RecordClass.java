@@ -10,7 +10,9 @@ import java.util.Calendar;
 import static org.junit.Assert.assertEquals;
 
 public class test_RecordClass {
+
     @Test
+    /* This test checks if you can create a record correctly. */
     public void test_setRecord() {
         Calendar currentTime = Calendar.getInstance();
         Record testRecord = new Record();
@@ -31,13 +33,16 @@ public class test_RecordClass {
     }
 
     @Test
+    /* This test checks if you can add a image to a record. */
     public void test_addImageToRecord() {
         // Make sure make a test for more than 10 photoes.
-//        Calendar currentTime = Calendar.getInstance();
-//        Location location = new Location();
+        // Calendar currentTime = Calendar.getInstance();
+        // Location location = new Location();
 
         Record testRecord = new Record();
-//        testRecord.addPhoto();
+        //testRecord.addPhoto();
 
     }
+
+    /* This test checks if the maximum image limit triggers an error. */
 }
