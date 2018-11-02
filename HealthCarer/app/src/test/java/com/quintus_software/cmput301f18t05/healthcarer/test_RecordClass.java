@@ -68,4 +68,9 @@ public class test_RecordClass {
         assertEquals("0", fail);
     }
 
+    @Test
+    public void test_TitleLength() {
+
+    }
+
 }
