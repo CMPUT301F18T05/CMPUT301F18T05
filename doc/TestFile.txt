@@ -8,3 +8,5 @@ this is for testing
 upload the UML demo version
 upload the UI demo version
 combined some old version's UML and UI
+change "doctor" to "care provider"
+state the public and privite status
