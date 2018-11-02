@@ -5,6 +5,7 @@ import android.media.Image;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import static org.junit.Assert.assertEquals;
@@ -41,7 +42,22 @@ public class test_RecordClass {
 
         Record testRecord = new Record();
         //testRecord.addPhoto();
+    }
 
+    @Test
+    /* Test that adding too many images throws an exception */
+    public void test_maxImageAmount() {
+        // addImage x 10
+
+        ArrayList<Image> listOfImages = new ArrayList<Image>();
+
+        listOfImages.get(0);
+
+//        try{
+//
+//        }  {
+//
+//        }
     }
 
     /* This test checks if the maximum image limit triggers an error. */
