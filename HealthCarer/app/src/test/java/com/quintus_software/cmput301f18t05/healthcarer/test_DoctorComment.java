@@ -6,6 +6,7 @@ import java.util.Calendar;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class test_DoctorComment {
 
@@ -17,12 +18,12 @@ public class test_DoctorComment {
 
         testDoctorComment.setName("FinalTest");
         testDoctorComment.setComment("Please");
-        testDoctorComment.setTitle("GERGEEG");
+        testDoctorComment.setTitle("GERGREEG");
         testDoctorComment.setDate(currentTime);
 
         assertEquals("FinalTest", testDoctorComment.getName());
         assertEquals("Please", testDoctorComment.getComment());
-        assertEquals("GERGEEG", testDoctorComment.getTitle());
+        assertEquals("GERGREEG", testDoctorComment.getTitle());
         assertEquals(currentTime, testDoctorComment.getDate());
     }
 
@@ -30,13 +31,69 @@ public class test_DoctorComment {
     /* This test will check if a doctor comment is created correctly. */
     public void test_createCommentConstuctor() {
         Calendar currentTime = Calendar.getInstance();
-        Doctor_Comment testDoctorComment = new Doctor_Comment("GERGEEG", "FinalTest"
+        Doctor_Comment testDoctorComment = new Doctor_Comment("GERGREEG", "FinalTest"
                 , currentTime, "Plase");
 
         assertEquals("FinalTest", testDoctorComment.getName());
         assertEquals("Please", testDoctorComment.getComment());
-        assertEquals("GERGEEG", testDoctorComment.getTitle());
+        assertEquals("GERGREEG", testDoctorComment.getTitle());
         assertEquals(currentTime, testDoctorComment.getDate());
     }
 
+    @Test
+    /* Testing is to make sure that a title less than or equal to 30 characters is permissible*/
+    public void test_titleLengthMinimum() {
+        Doctor_Comment testDoctorComment = new Doctor_Comment();
+        Boolean failedTest = Boolean.FALSE;
+        String failString = new String();
+
+        for (Integer i = 0; i < 30; i++) {
+            failString += "E";
+        }
+
+        // Idea here is to test setting a below the minimum required characters. (This should throw
+        // an exception. The try statement is because Junit3 doesn't assertNotException (Junit4 can))
+        try {
+            testDoctorComment.setTitle(failString);
+        } catch(Exception e) {
+            failedTest = Boolean.TRUE;
+        }
+
+        assertTrue(failedTest);
+
+        Calendar currentTime = Calendar.getInstance();
+        Doctor_Comment testDoctorComment2 = new Doctor_Comment("GERGREEG", "FinalTest"
+                , currentTime, "Plase");
+
+        // Test to make sure that the
+        assertTrue(testDoctorComment2.getTitle().length() <= 30);
+
+    }
+
+    public void test_commentLengthMaximum() {
+        Doctor_Comment testDoctorComment = new Doctor_Comment();
+        Boolean failedTest = Boolean.FALSE;
+        String failString = new String();
+
+        for (Integer i = 0; i < 301; i++) {
+            failString += "D";
+        }
+
+        try {
+            testDoctorComment.setComment(failString);
+        } catch(Exception e) {
+            failedTest = Boolean.TRUE;
+        }
+
+        // If comment is longer than 300 characters, this test should be True.
+        assertTrue(failedTest);
+
+        Calendar currentTime = Calendar.getInstance();
+        Doctor_Comment testDoctorComment2 = new Doctor_Comment("GERGREEG", "FinalTest"
+                , currentTime, "Plase");
+
+        // Test to make sure that the
+        assertTrue(testDoctorComment2.getTitle().length() <= 300);
+
+    }
 }
