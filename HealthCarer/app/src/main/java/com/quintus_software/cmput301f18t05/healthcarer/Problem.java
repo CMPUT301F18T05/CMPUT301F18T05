@@ -7,7 +7,8 @@ public class Problem {
     private Date calenderDate;
     private String description;
     private String type;
-//    private ArrayList<Records>;
+//    private ArrayList<Record>;
+    private String bodyPart;
 
 
     Problem() {
@@ -49,5 +50,13 @@ public class Problem {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getBodyPart() {
+        return bodyPart;
+    }
+
+    public void setBodyPart(String bodyPart) {
+        this.bodyPart = bodyPart;
     }
 }
