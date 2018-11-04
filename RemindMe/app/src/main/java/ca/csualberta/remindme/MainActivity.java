@@ -1,4 +1,6 @@
 package ca.csualberta.remindme;
+// reference https://www.youtube.com/watch?v=yrpimdBRk5Q
+// youtube chanel "coding in flow" , "AlarmManager" tutorial
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

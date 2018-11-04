@@ -1,23 +1,41 @@
 package ca.csualberta.remindme;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
-public class RemindActivity extends AppCompatActivity {
+import java.text.DateFormat;
+import java.util.Calendar;
+
+public class RemindActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener{
     private EditText daysText;
+    private String duration;
+    private NotificationHelper mNotificationHelper;
+    private TextView mTextView;
+    private Calendar c = Calendar.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remind);
 
         daysText = (EditText) findViewById(R.id.editTextDays);
+        mTextView = (TextView) findViewById(R.id.setTextView);
         Button sButton = (Button) findViewById(R.id.save);
         Button tButton = (Button) findViewById(R.id.time);
+        Button cButton = (Button) findViewById(R.id.cancel);
+        mNotificationHelper = new NotificationHelper(this);
+
 
         tButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,16 +45,68 @@ public class RemindActivity extends AppCompatActivity {
             }
         });
 
+        cButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancelReminder();
+            }
+        });
+
         sButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                Integer days = Integer.parseInt(daysText.getText().toString());
+                duration = daysText.getText().toString();
 
-                //Intent intent = new Intent(MainActivity.this, RemindActivity.class);
-                //startActivity(intent);
+                String title = "Reminder";
+                String message = "Do not forget to take photo for the problem";
+                String setText = "Reminder set for: ";
+                updateTimeText(c,setText);
+                startReminder(c,title,message,duration);
+
             }
         });
 
     }
+
+    @Override
+    public void onTimeSet(android.widget.TimePicker view, int hour, int min) {
+        c.set(Calendar.HOUR_OF_DAY, hour);
+        c.set(Calendar.MINUTE, min);
+        c.set(Calendar.SECOND, 0);
+        String text = "Time set for: ";
+        updateTimeText(c,text);
+    }
+
+    private void updateTimeText(Calendar c, String timeText) {
+        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
+        mTextView.setText(timeText);
+    }
+
+    private void startReminder(Calendar c, String title, String message, String duration) {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, AlertReceiver.class);
+        intent.putExtra("title", title);
+        intent.putExtra("message", message);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1,intent,0);
+
+        //if (c.before(Calendar.getInstance())) {
+        //     c.add(Calendar.DATE, Integer.parseInt(duration));
+        //}
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+    }
+
+    private void cancelReminder() {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, AlertReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1,intent,0);
+
+        alarmManager.cancel(pendingIntent);
+        mTextView.setText("Reminder canceled");
+    }
+
+    //public void sendOnChannel(String title, String message) {
+    //    NotificationCompat.Builder nb = mNotificationHelper.getChannelNotification(title, message);
+    //    mNotificationHelper.getManager().notify(1, nb.build());
+    //}
 }
