@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\University Notes\\CMPUT 301\\RemindMe\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "outputFile": "/afs/ualberta.ca/home/c/h/chhaniya/CMPUT301/Quintus-Software/RemindMe/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Owner\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\18f4f41270318b4533523407429d6b3b\\res\\values-az\\values-az.xml",
+                    "source": "/afs/ualberta.ca/home/c/h/chhaniya/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/09e578544aa3520ceda7b58009eebf6a/res/values-az/values-az.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Owner\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\2b1ce98d4a05c1bae59ab023851567d4\\res\\values-az\\values-az.xml",
+                    "source": "/afs/ualberta.ca/home/c/h/chhaniya/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7b0184032369b2b5312c824d83d13eb0/res/values-az/values-az.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

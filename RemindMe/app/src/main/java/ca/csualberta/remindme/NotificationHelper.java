@@ -26,7 +26,7 @@ public class NotificationHelper extends ContextWrapper {
 
     @TargetApi(Build.VERSION_CODES.O)
     public void createChannels() {
-        NotificationChannel channel = new NotificationChannel(channelID,channelName, NotificationManager.IMPORTANCE_DEFAULT);
+        NotificationChannel channel = new NotificationChannel(channelID,channelName, NotificationManager.IMPORTANCE_HIGH);
         channel.enableLights(true);
         channel.enableVibration(true);
         channel.setLightColor(R.color.colorPrimary);
@@ -43,12 +43,12 @@ public class NotificationHelper extends ContextWrapper {
     }
 
     public NotificationCompat.Builder getChannelNotification(String title, String message) {
-        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        //Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         return new NotificationCompat.Builder(getApplicationContext(), channelID)
                 .setContentTitle(title)
                 .setContentText(message)
-                .setSound(alarmSound)
-                .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
+                //.setSound(alarmSound)
+                //.setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
                 .setSmallIcon(R.drawable.ic_notification);
     }
 }

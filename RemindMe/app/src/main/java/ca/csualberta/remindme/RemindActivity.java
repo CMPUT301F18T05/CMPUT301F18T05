@@ -60,9 +60,11 @@ public class RemindActivity extends AppCompatActivity implements TimePickerDialo
 
                 String title = "Reminder";
                 String message = "Do not forget to take photo for the problem";
+                String message2 = "I am god, evn this is working";
                 String setText = "Reminder set for: ";
                 updateTimeText(c,setText);
                 startReminder(c,title,message,duration);
+                //startReminder2(c,title,message2,duration);
 
             }
         });
@@ -93,9 +95,20 @@ public class RemindActivity extends AppCompatActivity implements TimePickerDialo
         //if (c.before(Calendar.getInstance())) {
         //     c.add(Calendar.DATE, Integer.parseInt(duration));
         //}
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),((AlarmManager.INTERVAL_FIFTEEN_MINUTES / 15)/60) * Integer.parseInt(duration),pendingIntent);
     }
-
+//    private void startReminder2(Calendar c, String title, String message, String duration) {
+//        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//        Intent intent = new Intent(this, AlertReceiver.class);
+//        intent.putExtra("title", title);
+//        intent.putExtra("message", message);
+//        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 2,intent,0);
+//
+//        //if (c.before(Calendar.getInstance())) {
+//        //     c.add(Calendar.DATE, Integer.parseInt(duration));
+//        //}
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),((AlarmManager.INTERVAL_FIFTEEN_MINUTES / 15)/60) * Integer.parseInt(duration),pendingIntent);
+//    }
     private void cancelReminder() {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
