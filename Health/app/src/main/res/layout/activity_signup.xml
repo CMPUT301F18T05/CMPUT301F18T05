@@ -13,8 +13,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Sign up"
+        android:text="@string/sign_up"
         android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/textView_warning"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_SignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="@string/noError"
+        android:textColor="#d73232" />
+
+
 
 
     <EditText
@@ -26,52 +38,57 @@
         android:layout_marginTop="141dp"
         android:background="#fff"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:paddingLeft="3dp"
-        android:layout_alignLeft="@+id/Type" />
+        android:layout_alignLeft="@+id/Type"
+        android:autofillHints=""
+        android:paddingStart="3dp" />
 
     <EditText
         android:id="@+id/UserId"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/Name"
+        android:layout_alignLeft="@+id/Name"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="201dp"
         android:background="#fff"
         android:ems="10"
-        android:hint="UserID"
-        android:inputType="textPersonName"
-        android:paddingLeft="3dp"
-        android:layout_alignLeft="@+id/Name" />
+        android:hint="@string/userid"
+        android:importantForAutofill="no"
+        android:inputType="textVisiblePassword|numberSigned"
+        android:paddingLeft="3dp" />
 
     <EditText
         android:id="@+id/Email"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/Name"
+        android:layout_alignLeft="@+id/Name"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="202dp"
         android:background="#fff"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:paddingLeft="3dp"
-        android:layout_alignLeft="@+id/Name" />
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/Phone"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/Name"
+        android:layout_alignLeft="@+id/Name"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="132dp"
         android:background="#fff"
         android:ems="10"
-        android:hint="Phone"
-        android:inputType="textPersonName"
+        android:hint="@string/phone"
+        android:inputType="phone"
         android:paddingLeft="3dp"
-        android:layout_alignLeft="@+id/Name" />
+        android:autofillHints="" tools:targetApi="o"/>
 
     <TextView
         android:id="@+id/Role"
@@ -80,7 +97,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView_SignUp"
         android:layout_marginStart="18dp"
-        android:text="Role"
+        android:text="@string/role"
         android:textSize="28sp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="18dp" />
@@ -96,7 +113,8 @@
         android:background="#fff"
         android:paddingLeft="3dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="22dp" />
+        android:layout_marginLeft="22dp"
+        android:paddingStart="3dp" />
 
     <Button
         android:id="@+id/save"
@@ -106,7 +124,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="13dp"
         android:background="@color/colorAccent"
-        android:text="Save"
+        android:text="@string/save"
         android:textColor="#fff"
         android:textSize="18sp"
         android:layout_alignParentLeft="true" />
