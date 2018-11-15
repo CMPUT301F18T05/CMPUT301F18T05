@@ -11,31 +11,25 @@ import android.widget.Button;
 
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    Button Login;
+public class MainActivity extends AppCompatActivity{
     Button NewProfile ;
-    ImageView Logo;
+
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Login = findViewById(R.id.Login);
-        NewProfile  = findViewById(R.id.NewProfile);
-        Logo  = findViewById(R.id.Logo);
-        Login .setOnClickListener(this);
-        NewProfile .setOnClickListener(this);
+        final Button Login= (Button)findViewById(R.id.btn_Login );
+        final Button NewProfile= (Button)findViewById(R.id.btn_NewProfile );
+        NewProfile .setOnClickListener(new View.OnClickListener() {
 
-        ImageView myImageView = (ImageView) findViewById(R.id.Logo);
+            @Override
+            public void onClick( View view ) {
+                Intent Newprofile= new Intent(MainActivity.this,Signup.class );
+                MainActivity.this.startActivity(Newprofile );
+            }
+        });
 
-    }
 
-    @Override
-    public void onClick( View v ) {
-        if(v.getId()== R.id.button_reg)
-        {
-            startActivity(new Intent(MainActivity.this,Signup.class));
-
-        }
 
     }
 }
