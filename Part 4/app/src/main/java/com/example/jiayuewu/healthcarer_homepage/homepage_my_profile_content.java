@@ -18,6 +18,7 @@ public class homepage_my_profile_content extends Fragment{
         savebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // placeholder
                 Snackbar.make(v, "Save Button Action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
