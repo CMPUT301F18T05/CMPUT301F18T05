@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homepage_doctor_my_patients_content">
+
+    <EditText
+        android:id="@+id/search_text"
+        android:layout_width="277dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:ems="10"
+        android:hint="Search for keyword"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/search_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/patients_listview"
+        android:layout_width="385dp"
+        android:layout_height="342dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_text" />
+
+    <TextView
+        android:id="@+id/patients_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="9dp"
+        android:text="Patients Count: 0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patients_listview" />
+
+    <Button
+        android:id="@+id/add_patient_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginLeft="149dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginRight="149dp"
+        android:text="Add Patient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patients_listview" />
+
+</android.support.constraint.ConstraintLayout>

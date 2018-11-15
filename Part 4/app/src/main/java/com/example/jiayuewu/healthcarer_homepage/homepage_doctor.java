@@ -1,19 +1,18 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class homepage_patient extends AppCompatActivity {
+public class homepage_doctor extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -33,7 +32,7 @@ public class homepage_patient extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage_patient);
+        setContentView(R.layout.activity_homepage_doctor);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -65,7 +64,7 @@ public class homepage_patient extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_homepage_patient, menu);
+        getMenuInflater().inflate(R.menu.menu_homepage_doctor, menu);
         return true;
     }
 
@@ -101,10 +100,10 @@ public class homepage_patient extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch(position) {
                 case 0:
-                    homepage_patient_my_body_content tab1 = new homepage_patient_my_body_content();
+                    homepage_doctor_my_patients_content tab1 = new homepage_doctor_my_patients_content();
                     return tab1;
                 case 1:
-                    homepage_patient_my_profile_content tab2 = new homepage_patient_my_profile_content();
+                    homepage_doctor_my_profile_content tab2 = new homepage_doctor_my_profile_content();
                     return tab2;
                 default:
                     return null;

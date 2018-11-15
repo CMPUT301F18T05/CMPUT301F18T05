@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homepage_patient$PlaceholderFragment">
+    tools:context=".homepage_patient_my_body_content">
 
     <EditText
         android:id="@+id/search_text"
