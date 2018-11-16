@@ -7,56 +7,77 @@
     tools:context=".ViewAndEdit">
 
     <EditText
-        android:id="@+id/newDate"
+        android:id="@+id/updatedescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Date started"
-        android:inputType="textPersonName"
-        android:maxLength="100"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/oldDscription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oldDate"
-        app:layout_constraintVertical_bias="0.636" />
-
-    <EditText
-        android:id="@+id/newTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Problem name"
+        android:hint="description"
         android:inputType="textPersonName"
         android:maxLength="100"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/oldDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oldProblem" />
+        app:layout_constraintTop_toBottomOf="@+id/oldComment" />
+
+    <EditText
+        android:id="@+id/updatedate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="date"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oldDate" />
 
     <Button
-        android:id="@+id/saveProblem"
+        android:id="@+id/saveButton"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:onClick="saveButton"
-        android:text="Save Problem"
+        android:onClick="applyChange"
+        android:text="update"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updatedate" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:onClick="deleteEmotion"
+        android:text="Delete"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/updatedate" />
 
     <TextView
-        android:id="@+id/oldProblem"
+        android:id="@+id/oldEmotion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/newTitle"
+        app:layout_constraintBottom_toTopOf="@+id/updatetitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/oldComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/updatedescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updatetitle" />
 
     <TextView
         android:id="@+id/oldDate"
@@ -64,32 +85,21 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/newDate"
+        app:layout_constraintBottom_toTopOf="@+id/updatedate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newTitle" />
-
-    <TextView
-        android:id="@+id/oldDscription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/newDescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newDate" />
+        app:layout_constraintTop_toBottomOf="@+id/updatedescription" />
 
     <EditText
-        android:id="@+id/newDescription"
-        android:layout_width="0dp"
+        android:id="@+id/updatetitle"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="title"
         android:inputType="textPersonName"
-        android:text="Description"
-        app:layout_constraintBottom_toTopOf="@+id/saveProblem"
+        app:layout_constraintBottom_toTopOf="@+id/oldComment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oldDscription" />
+        app:layout_constraintTop_toBottomOf="@+id/oldEmotion" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,12 @@
 package com.example.hanshen.hanshen;
 
+/**
+ * for the activity, the program let the user change any component of the emotion
+ * after the user apply the changes, it will change the emotion record
+ * after the user delete the emotion record, the selected emotion will be deleted from the history
+ * whenever user apply or delete emotions, the program will activity main activity
+ */
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -28,64 +35,81 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class ProblemEdit extends AppCompatActivity {
+
+public class ViewAndEdit extends AppCompatActivity {
+
     private static final String FILENAME = "file.sav";
     ArrayList<Problem> problemArrayList;
-    Problem problem;
+    Problem emotion;
     int position;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.problem_edit);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        //reload for new sorted emotionList
+        setContentView(R.layout.activity_problem_edit);
+        Intent intent = getIntent();
+        this.position = intent.getIntExtra("position",0);
         loadFromFile();
+        this.emotion = problemArrayList.get(this.position);
+        loadOldInfo();
     }
 
-    private void updateTextview() {
-        //get the old values from the privious info.
-        String oldProblem = this.problem.getTitle();
-        String oldDscription = this.problem.getDescription();
-        Date oldDate = this.problem.getDate();
-        TextView Problem = (TextView) findViewById(R.id.oldProblem);
-        Problem.setText("Title: " + oldProblem);
-        TextView Description = (TextView) findViewById(R.id.oldDscription);
-        Description.setText("Description: " + oldDscription);
+    @SuppressLint("SetTextI18n")
+    private void loadOldInfo(){
+
+        String oldEmotion = this.emotion.getTitle();
+        String oldComment = this.emotion.getDescription();
+        Date oldDate = this.emotion.getDate();
+        TextView emotionPromote = (TextView)findViewById(R.id.oldEmotion);
+        emotionPromote.setText("Old Emotion: "+oldEmotion);
+
+        TextView commentPromote = (TextView)findViewById(R.id.oldComment);
+        commentPromote.setText("Old Comment: "+oldComment);
+
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss");
-        TextView Date = (TextView) findViewById(R.id.oldDate);
-        Date.setText("Date: " + dateFormat.format(oldDate));
-        //update the input values.
-        EditText title = findViewById(R.id.newTitle);
-        String newTitle = title.getText().toString();
-        this.problem.setTitle(newTitle);
-        EditText description = findViewById(R.id.newDescription);
-        String newDescription = description.getText().toString();
-        this.problem.setDescription(newDescription);
-        EditText date = findViewById(R.id.newDate);
-        String newDate = date.getText().toString();
+        TextView datePromote = (TextView)findViewById(R.id.oldDate);
+        datePromote.setText("Old Date: "+dateFormat.format(oldDate));
+
+    }
+    public void updateComment(View view){
+        EditText text = (EditText) findViewById(R.id.updatedescription);
+        String newComment = text.getText().toString();
+        this.emotion.setDescription(newComment);
+        Toast.makeText(this,"Comment changed",Toast.LENGTH_LONG).show();
+    }
+    public void updateDate(View view){
+        EditText text = (EditText) findViewById(R.id.updatedate);
+        String newDate = text.getText().toString();
+
         @SuppressLint("SimpleDateFormat") DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss");
         try {
-            Date newdate = format.parse(newDate);
-            this.problem.setDate(newdate);
+            Date date = format.parse(newDate);
+            this.emotion.setDate(date);
+            Toast.makeText(this,"Date changed",Toast.LENGTH_LONG).show();
         } catch (ParseException e) {
             //e.printStackTrace();
-            Toast.makeText(this, "Invalid Date, please correct your date", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Invalid Date, please correct your date",Toast.LENGTH_LONG).show();
         }
-
     }
-
-    public void saveButton(View view){
-        problemArrayList.set(this.position,this.problem);
+    public void applyChange(View view){
+        problemArrayList.set(this.position,this.emotion);
         saveInFile();
         Toast.makeText(this,"Applied changes",Toast.LENGTH_LONG).show();
-        Intent mainactivity = new Intent(this, ProblemHistory.class);
-        startActivity(mainactivity);
+        Intent back = new Intent(this, ProblemHistory.class);
+        startActivity(back);
     }
+    public void deleteEmotion(View view){
+        problemArrayList.remove(this.emotion);
+        saveInFile();
+        Toast.makeText(this,"Deleted this emotion",Toast.LENGTH_LONG).show();
+        Intent back = new Intent(this, ProblemHistory.class);
+        startActivity(back);
+    }
+
+
+
+
+
+
 
     private void saveInFile() {
         try {
@@ -103,7 +127,6 @@ public class ProblemEdit extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -114,10 +137,8 @@ public class ProblemEdit extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             //e.printStackTrace();
-            problemArrayList = new ArrayList<Problem>();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            problemArrayList = new ArrayList<>();
         }
     }
+
 }
