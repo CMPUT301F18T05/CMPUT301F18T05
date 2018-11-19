@@ -14,7 +14,7 @@ public class homepage_my_profile_content extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.homepage_patient_my_profile, container, false);
-        Button savebutton = rootView.findViewById(R.id.edit_save_button);
+        Button savebutton = rootView.findViewById(R.id.patient_profile_save_button);
         savebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
