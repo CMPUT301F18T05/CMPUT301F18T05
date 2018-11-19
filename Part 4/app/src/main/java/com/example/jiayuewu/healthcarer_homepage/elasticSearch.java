@@ -96,7 +96,7 @@ public class elasticSearch {
 
     public static void verifySettings() {
         if (client == null) {
-            DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080/cmput301f18t05");
+            DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080/CMPUT301F18T05");
             DroidClientConfig config = builder.build();
 
             JestClientFactory factory = new JestClientFactory();
@@ -247,7 +247,7 @@ public class elasticSearch {
             verifySettings();
 
             for (User user : users) {
-                Index index = new Index.Builder(user).index("testing").type("tweet").build();
+                Index index = new Index.Builder(user).index("testing").type("User").build();
 
                 try {
                     // where is the client?

@@ -44,14 +44,16 @@ public class newprofile extends AppCompatActivity {
 
            public void onClick(View v) {
                 setResult(RESULT_OK);
-                Integer userid = Integer.parseInt(useridText.getText().toString());
+                String uk = useridText.getText().toString();
+                Integer userid = Integer.parseInt(uk);
+
                 String name = nameText.getText().toString();
                 String phone = phoneText.getText().toString();
                 String email = emailText.getText().toString();
 
                 String roleString = roleSpinner.getSelectedItem().toString();
 
-                User user = new User(userid,name,phone,email,roleString);
+                User user = new User(userid,name,email,phone,roleString);
                 //userArrayList.add(user);
                 //todo add the list to local or ES using controller
                elasticSearch.addUserTask addTweetsTask
