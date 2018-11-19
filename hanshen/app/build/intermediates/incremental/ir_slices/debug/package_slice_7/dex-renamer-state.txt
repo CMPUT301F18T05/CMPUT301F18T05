@@ -1,4 +1,4 @@
-#Thu Nov 15 20:58:39 MST 2018
-base.0=/Users/hanshen/Downloads/app/build/intermediates/transforms/dexMerger/debug/7
+#Mon Nov 19 06:13:01 MST 2018
+base.0=/Users/hanshen/Desktop/Quintus-Software/hanshen/app/build/intermediates/transforms/dexMerger/debug/7
 path.0=classes.dex
 renamed.0=classes.dex

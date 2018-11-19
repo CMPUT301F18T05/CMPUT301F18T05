@@ -702,7 +702,7 @@ id custom
 id customPanel
 id decor_content_parent
 id default_activity_button
-id deleteButton
+id deleteEditButton
 id deleteProblem
 id dimensions
 id direct
@@ -739,16 +739,16 @@ id middle
 id multiply
 id never
 id newDate
-id newDescripption
+id newDescription
 id newTitle
 id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id oldComment
 id oldDate
-id oldTitile
+id oldDescription
+id oldTitle
 id packed
 id parent
 id parentPanel
@@ -762,7 +762,7 @@ id recordHistory
 id right
 id right_icon
 id right_side
-id saveButton
+id saveEditButton
 id screen
 id scrollIndicatorDown
 id scrollIndicatorUp

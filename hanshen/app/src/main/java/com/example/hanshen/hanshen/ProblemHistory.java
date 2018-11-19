@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class ProblemHistory extends AppCompatActivity {
 
     private static final String FILENAME = "problem.sav";
-    ArrayList<Problem> emotionList;
+    ArrayList<Problem> problemArrayList;
     ArrayAdapter<Problem> adapter;
 
     @Override
@@ -46,7 +46,7 @@ public class ProblemHistory extends AppCompatActivity {
 
     //show all the history to the screen
     private void showProblem(){
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, emotionList);
+        adapter = new ArrayAdapter<>(this, R.layout.list_item, problemArrayList);
         ListView history = findViewById(R.id.problemHistory);
         history.setAdapter(adapter);
         history.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -60,7 +60,7 @@ public class ProblemHistory extends AppCompatActivity {
     }
 
     public void clearAll(View view){
-        emotionList = new ArrayList<Problem>();
+        problemArrayList = new ArrayList<Problem>();
         saveInFile();
         Intent back = new Intent(this, ProblemCreate.class);
         startActivity(back);
@@ -79,12 +79,12 @@ public class ProblemHistory extends AppCompatActivity {
 
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<Problem>>(){}.getType();
-            emotionList = gson.fromJson(in,listType);
+            problemArrayList = gson.fromJson(in,listType);
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             //e.printStackTrace();
-            emotionList = new ArrayList<Problem>();
+            problemArrayList = new ArrayList<Problem>();
 
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -98,7 +98,7 @@ public class ProblemHistory extends AppCompatActivity {
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
 
             Gson gson = new Gson();
-            gson.toJson(emotionList, out);
+            gson.toJson(problemArrayList, out);
             out.flush();
             fos.close();
         } catch (FileNotFoundException e) {

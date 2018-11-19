@@ -65,9 +65,6 @@ public class ProblemCreate extends AppCompatActivity {
         startActivity(emotion_history);
     }
 
-
-
-
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -86,7 +83,6 @@ public class ProblemCreate extends AppCompatActivity {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
     }
 
     private void saveInFile() {
@@ -106,6 +102,5 @@ public class ProblemCreate extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
 }
 
