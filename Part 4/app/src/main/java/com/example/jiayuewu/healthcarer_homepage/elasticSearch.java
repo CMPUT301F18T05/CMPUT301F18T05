@@ -268,7 +268,7 @@ public class elasticSearch {
     }
 
     // TODO we need a function which gets tweets from elastic search
-    public static class GetUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
+    public static class getUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
         @Override
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
             verifySettings();

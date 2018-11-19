@@ -18,7 +18,7 @@ public class newprofile extends AppCompatActivity {
     private EditText nameText;
     private EditText emailText;
     private EditText phoneText;
-    private ArrayList<User> userArrayList = new ArrayList<User>();
+    //private ArrayList<User> userArrayList = new ArrayList<User>();
 
 
     @Override
@@ -45,15 +45,18 @@ public class newprofile extends AppCompatActivity {
            public void onClick(View v) {
                 setResult(RESULT_OK);
                 Integer userid = Integer.parseInt(useridText.getText().toString());
-                String name = useridText.getText().toString();
-                String phone = useridText.getText().toString();
-                String email = useridText.getText().toString();
+                String name = nameText.getText().toString();
+                String phone = phoneText.getText().toString();
+                String email = emailText.getText().toString();
 
                 String roleString = roleSpinner.getSelectedItem().toString();
 
                 User user = new User(userid,name,phone,email,roleString);
-                userArrayList.add(user);
+                //userArrayList.add(user);
                 //todo add the list to local or ES using controller
+               elasticSearch.addUserTask addTweetsTask
+                       = new elasticSearch.addUserTask();
+               addTweetsTask.execute(user);
             }
         });
     }
