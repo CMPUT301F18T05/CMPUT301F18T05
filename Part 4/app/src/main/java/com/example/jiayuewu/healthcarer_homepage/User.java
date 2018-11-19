@@ -1,8 +1,10 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 
-public abstract class User {
-    private String userID;
+import java.util.ArrayList;
+
+public class User {
+    private Integer userID;
     private String name;
     private String email;
     private String phoneNumber;
@@ -12,8 +14,14 @@ public abstract class User {
 
     }
 
-    public String getUserID() {
+
+    public Integer getUserID() {
         return this.userID;
+    }
+
+    public void setUserID(Integer userID) {
+
+        this.userID = userID;
     }
 
     public String getName() {
@@ -34,11 +42,6 @@ public abstract class User {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public void setUserID(String userID) {
-
-        this.userID = userID;
     }
 
     public void setName(String name) {

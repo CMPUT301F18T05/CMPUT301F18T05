@@ -7,25 +7,33 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Problem {
+    private Integer problemID;
+    private Integer userID;
     private String title;
     private Calendar calenderDate;
     private String description;
-    private String type;
-    private ArrayList<Record> recordList  = new ArrayList<Record>();
     private String bodyPart;
 
     Problem() {
 
     }
 
-    Problem(String title, Calendar calenderDate, String description, String type, String bodyPart) {
+    Problem(String userID, String problemID, String title, Calendar calenderDate, String description, String bodyPart) {
 
     }
 
-    public Calendar getDate(){
-        return this.getCalenderDate();
+    public Integer getUserID() {
+        return this.userID;
     }
 
+    public void setUserID(Integer userID) {
+
+        this.userID = userID;
+    }
+
+    public Integer getProblemID() { return this.problemID; }
+
+    public void setProblemID(Integer problemID) { this.problemID = problemID; }
 
     public String getTitle() {
         return this.title;
@@ -51,36 +59,12 @@ public class Problem {
         this.description = description;
     }
 
-    public String getType() {
-        return this.type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getBodyPart() {
         return this.bodyPart;
     }
 
     public void setBodyPart(String bodyPart) {
         this.bodyPart = bodyPart;
-    }
-
-    public ArrayList<Record> getRecordList() {
-        return this.recordList;
-    }
-
-    public void addRecord(Record record) {
-        this.recordList.add(record);
-    }
-
-    public Record getRecord(Integer index) {
-        return this.recordList.get(index);
-    }
-
-    public void deleteRecord(Integer index) {
-        this.recordList.remove(index);
     }
 
 }

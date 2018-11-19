@@ -4,6 +4,8 @@ package com.example.jiayuewu.healthcarer_homepage;
 import java.util.Calendar;
 
 public class Doctor_Comment {
+    private Integer problemID;
+    private Integer doctorCommentID;
     private String title;
     private String name;
     private Calendar date;
@@ -16,6 +18,14 @@ public class Doctor_Comment {
     Doctor_Comment(String title, String name, Calendar date, String comment){
 
     }
+
+    public Integer getDoctorCommentID() { return this.doctorCommentID; }
+
+    public void setDoctorCommentID(Integer doctorCommentID) { this.doctorCommentID = doctorCommentID; }
+
+    public Integer getProblemID() { return this.problemID; }
+
+    public void setProblemID(Integer problemID) { this.problemID = problemID; }
 
     public String getTitle() {
         return this.title;

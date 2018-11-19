@@ -7,29 +7,28 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Record {
+    private Integer problemID;
+    private Integer recordID;
     private String title;
     private Calendar date;
-    private ArrayList<Bitmap> imageList = new ArrayList<Bitmap>();
     private Location location;
     private String comment;
-    private String type;
-    private ArrayList<Doctor_Comment> doctorComentList = new ArrayList<Doctor_Comment>();
 
     Record() {
 
     }
 
-    Record(String title, Calendar date, Location location, String comment, String type) {
+    Record(String problemID, String recordID, String title, Calendar date, Location location, String comment) {
 
     }
 
-    public void addDoctorComment(Doctor_Comment doctor_comment){
-        this.doctorComentList.add(doctor_comment);
-    }
+    public Integer getProblemID() { return this.problemID; }
 
-    public Doctor_Comment getDoctorComment(Integer index){
-        return this.doctorComentList.get(index);
-    }
+    public void setProblemID(Integer problemID) { this.problemID = problemID; }
+
+    public Integer getRecordID() { return this.recordID; }
+
+    public void setRecordID(Integer recordID) { this.recordID = recordID; }
 
     public String getTitle() {
         return this.title;
@@ -47,29 +46,12 @@ public class Record {
         this.date = date;
     }
 
-    // Not sure whether to return imageList or specific image.
-    public ArrayList<Bitmap> getImageList() {
-        return this.imageList;
-    }
-
-    public void addPhoto(Bitmap image) {
-        this.imageList.add(image);
-    }
-
-    public Bitmap getPhoto(Integer index) {
-        return this.imageList.get(index);
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     public Location getLocation() {
         return this.location;
-    }
-
-    public void deletePhoto(Integer index) {
-        this.imageList.remove(index);
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public String getComment() {
@@ -78,13 +60,5 @@ public class Record {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public String getType() {
-        return this.type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 }

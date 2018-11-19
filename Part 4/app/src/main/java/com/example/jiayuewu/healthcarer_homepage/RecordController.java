@@ -9,12 +9,6 @@ public class RecordController {
     }
 
 
-    public void addDoctorComment(Doctor_Comment doctor_comment){
-        record.addDoctorComment(doctor_comment);
-    }
 
-    public Doctor_Comment getDoctorComment(Integer index){
-        return record.getDoctorComment(index);
-    }
 
 }
