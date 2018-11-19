@@ -1,5 +1,6 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -40,8 +41,10 @@ public class homepage_patient_my_body_content extends Fragment{
     public ImageButton right_foot_spot_button;
     public Drawable body_front;
     public Drawable body_back;
+    public FloatingActionButton all_problems_button;
     public FloatingActionButton turn_around;
     public FloatingActionButton upload;
+
 
 
     @Override
@@ -60,6 +63,7 @@ public class homepage_patient_my_body_content extends Fragment{
         left_foot_spot_button = rootView.findViewById(R.id.left_foot_spot);
         right_leg_spot_button = rootView.findViewById(R.id.right_leg_spot);
         right_foot_spot_button = rootView.findViewById(R.id.right_foot_spot);
+        all_problems_button = rootView.findViewById(R.id.all_problems_button);
         turn_around = rootView.findViewById(R.id.turn_around_button);
         upload = rootView.findViewById(R.id.upload_button);
         body_front = getResources().getDrawable(R.drawable.body_front);
@@ -69,8 +73,8 @@ public class homepage_patient_my_body_content extends Fragment{
             @Override
             public void onClick(View v) {
                 // placeholder
-                Snackbar.make(v, "Search Button Action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent search_intent = new Intent(homepage_patient_my_body_content.this.getActivity(), search_result.class);
+                startActivityForResult(search_intent, 0);
             }
         });
 
@@ -82,6 +86,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Head Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Head Spot Back", Snackbar.LENGTH_LONG)
@@ -223,6 +229,14 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Right Foot Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+            }
+        });
+
+        all_problems_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent all_problems_intent = new Intent(homepage_patient_my_body_content.this.getActivity(), all_problems.class);
+                startActivityForResult(all_problems_intent, 0);
             }
         });
 

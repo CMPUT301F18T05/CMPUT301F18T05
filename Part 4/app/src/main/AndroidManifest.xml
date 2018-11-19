@@ -45,7 +45,20 @@
         <activity
             android:name=".newprofile"
             android:label="New Profile" />
-        <activity android:name=".login" android:label="Login"></activity>
+        <activity
+            android:name=".login"
+            android:label="Login" />
+        <activity
+            android:name=".all_problems"
+            android:label="All Problems" />
+        <activity
+            android:name=".search_result"
+            android:label="Search Result" />
+        <activity android:name=".problems_for_part" />
+        <activity
+            android:name=".add_problem"
+            android:label="Add Problem" />
+        <activity android:name=".view_problem"></activity>
     </application>
 
 </manifest>
