@@ -60,9 +60,9 @@ public class ProblemCreate extends AppCompatActivity {
     }
 
 
-    public void showHistory(View view){
-        Intent emotion_history = new Intent(this, ProblemHistory.class);
-        startActivity(emotion_history);
+    public void remindsetting(View view){
+//        Intent remind = new Intent(this, remindSetting.class);
+//        startActivity(remind);
     }
 
     private void loadFromFile() {

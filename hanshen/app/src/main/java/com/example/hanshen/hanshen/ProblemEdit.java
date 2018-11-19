@@ -56,7 +56,6 @@ public class ProblemEdit extends AppCompatActivity {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-
             Gson gson = new Gson();
             gson.toJson(problemArrayList, out);
             out.flush();
@@ -74,16 +73,13 @@ public class ProblemEdit extends AppCompatActivity {
         try {
             FileInputStream fis = openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<Problem>>(){}.getType();
             problemArrayList = gson.fromJson(in,listType);
-
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             //e.printStackTrace();
             problemArrayList = new ArrayList<Problem>();
-
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -93,24 +89,21 @@ public class ProblemEdit extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void loadOldInfo(){
 
-        String oldEmotion = this.problem.getTitle();
-        String oldComment = this.problem.getDescription();
+        String oldTitle = this.problem.getTitle();
+        String oldDescription = this.problem.getDescription();
         Date oldDate = this.problem.getDate();
-        TextView emotionPromote = findViewById(R.id.oldTitle);
-        emotionPromote.setText("Old Emotion: "+oldEmotion);
-
-        TextView commentPromote = findViewById(R.id.oldDescription);
-        commentPromote.setText("Old Comment: "+oldComment);
-
+        TextView title = findViewById(R.id.oldTitle);
+        title.setText("Old Title: "+oldTitle);
+        TextView des = findViewById(R.id.oldDescription);
+        des.setText("Old Description: "+oldDescription);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss");
         TextView datePromote = findViewById(R.id.oldDate);
         datePromote.setText("Old Date: "+dateFormat.format(oldDate));
     }
 
-    public void applyChange(View view){
+    public void update(View view){
         EditText date1 = findViewById(R.id.newDate);
         String newDate = date1.getText().toString();
-
         @SuppressLint("SimpleDateFormat") DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss");
         try {
             Date date = format.parse(newDate);
@@ -133,12 +126,17 @@ public class ProblemEdit extends AppCompatActivity {
         Intent back = new Intent(this, ProblemHistory.class);
         startActivity(back);
     }
-    public void deleteEmotion(View view){
+    public void delete(View view){
         problemArrayList.remove(this.problem);
         saveInFile();
         Toast.makeText(this,"Deleted this emotion",Toast.LENGTH_LONG).show();
         Intent back = new Intent(this, ProblemHistory.class);
         startActivity(back);
+    }
+
+    public void record(View view){
+        Intent record = new Intent(this, RecordHistory.class);
+        startActivity(record);
     }
 
 }

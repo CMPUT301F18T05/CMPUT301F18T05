@@ -52,7 +52,7 @@ public class ProblemHistory extends AppCompatActivity {
         history.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
-                Intent viewAndEdit = new Intent(ProblemHistory.this, RecordHistory.class);
+                Intent viewAndEdit = new Intent(ProblemHistory.this, ProblemEdit.class);
                 viewAndEdit.putExtra("position",position);
                 startActivity(viewAndEdit);
             }

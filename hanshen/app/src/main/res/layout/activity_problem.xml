@@ -15,7 +15,7 @@
         android:inputType="textPersonName"
         android:maxLength="100"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/countButton"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +25,13 @@
         android:id="@+id/creatDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="description (optional)"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/createDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <TextView
         android:id="@+id/promote_top"
@@ -43,38 +44,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/countButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="showCount"
-        android:text="count"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/createProblem"
-        app:layout_constraintEnd_toStartOf="@+id/historyButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createDescription" />
-
-    <Button
-        android:id="@+id/historyButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="showHistory"
-        android:text="Problem"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/createProblem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/countButton"
-        app:layout_constraintTop_toBottomOf="@+id/createDescription" />
-
     <EditText
         android:id="@+id/createTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="title"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/creatDescription"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/promote_top" />
@@ -88,5 +66,28 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countButton" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="remindsetting"
+        android:text="remind Setting"
+        app:layout_constraintBottom_toTopOf="@+id/createProblem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createDescription" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="yyyy-mm-dd hh:mm:ss"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/creatDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createTitle" />
 </android.support.constraint.ConstraintLayout>

@@ -28,8 +28,9 @@
         android:hint="New Date"
         android:inputType="textPersonName"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/deleteEditButton"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/oldDate" />
 
@@ -37,7 +38,7 @@
         android:id="@+id/saveEditButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:onClick="applyChange"
+        android:onClick="update"
         android:text="Apply"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +49,7 @@
         android:id="@+id/deleteEditButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:onClick="deleteEmotion"
+        android:onClick="delete"
         android:text="Delete"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,5 +101,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/oldTitle" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="record"
+        android:text="Record"
+        app:layout_constraintBottom_toTopOf="@+id/saveEditButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newDate" />
 
 </android.support.constraint.ConstraintLayout>

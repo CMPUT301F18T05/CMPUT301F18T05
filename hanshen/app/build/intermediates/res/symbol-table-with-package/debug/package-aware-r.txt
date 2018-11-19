@@ -680,6 +680,8 @@ id blocking
 id bottom
 id button
 id button2
+id button3
+id button4
 id buttonPanel
 id center
 id center_horizontal
@@ -692,7 +694,6 @@ id clip_vertical
 id collapseActionView
 id content
 id contentPanel
-id countButton
 id creatDescription
 id createDescription
 id createProblem
@@ -708,6 +709,7 @@ id dimensions
 id direct
 id disableHome
 id editProblem
+id editText
 id edit_query
 id end
 id expand_activities_button
@@ -719,7 +721,6 @@ id forever
 id gone
 id group_divider
 id groups
-id historyButton
 id home
 id homeAsUp
 id icon
