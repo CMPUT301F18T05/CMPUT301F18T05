@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0196cf10a8c477e26e78c529dc61b2418f9e3ae9
 //package com.quintus_software.cmput301f18t05.healthcarer;
 //
 //import android.content.Intent;
@@ -68,6 +71,7 @@
 //
 //}
 //
+<<<<<<< HEAD
 =======
 package com.quintus_software.cmput301f18t05.healthcarer;
 
@@ -139,3 +143,5 @@ public class HealthCarerMainActivity extends AppCompatActivity {
 }  
 
 >>>>>>> 8db66fd2605cd6a10a24690a6c3af5052f3500af
+=======
+>>>>>>> 0196cf10a8c477e26e78c529dc61b2418f9e3ae9
