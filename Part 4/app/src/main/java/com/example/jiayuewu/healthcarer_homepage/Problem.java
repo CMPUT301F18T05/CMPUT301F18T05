@@ -18,8 +18,13 @@ public class Problem {
 
     }
 
-    Problem(String userID, String problemID, String title, Calendar calenderDate, String description, String bodyPart) {
-
+    Problem(Integer userID, Integer problemID, String title, Calendar calenderDate, String description, String bodyPart) {
+        this.problemID = problemID;
+        this.userID = userID;
+        this.title = title;
+        this.calenderDate = calenderDate;
+        this.description = description;
+        this.bodyPart = bodyPart;
     }
 
     public Integer getUserID() {
