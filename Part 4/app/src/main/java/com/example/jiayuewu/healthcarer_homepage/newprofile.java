@@ -3,6 +3,7 @@ package com.example.jiayuewu.healthcarer_homepage;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -45,7 +46,9 @@ public class newprofile extends AppCompatActivity {
            public void onClick(View v) {
                 setResult(RESULT_OK);
                 String uk = useridText.getText().toString();
-                Integer userid = Integer.parseInt(uk);
+                Integer userid = 0 + Integer.parseInt(uk);
+
+                Log.w("USER ID ASKDASDKBAFBGAG", "" + userid);
 
                 String name = nameText.getText().toString();
                 String phone = phoneText.getText().toString();
