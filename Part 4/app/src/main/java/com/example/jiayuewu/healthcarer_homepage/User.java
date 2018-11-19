@@ -14,6 +14,14 @@ public class User {
 
     }
 
+    User(Integer userID,String name,String email,String phoneNumber, String role) {
+        this.userID = userID;
+        this.role = role;
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
 
     public Integer getUserID() {
         return this.userID;

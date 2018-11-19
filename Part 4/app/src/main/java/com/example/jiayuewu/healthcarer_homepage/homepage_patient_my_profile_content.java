@@ -10,12 +10,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class homepage_patient_my_profile_content extends Fragment{
+    private User user;
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.homepage_doctor_my_profile, container, false);
 
         return rootView;
+
     }
 
 }

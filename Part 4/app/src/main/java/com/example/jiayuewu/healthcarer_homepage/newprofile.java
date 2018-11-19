@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 public class newprofile extends AppCompatActivity {
 
     private Spinner roleSpinner;
@@ -16,6 +18,8 @@ public class newprofile extends AppCompatActivity {
     private EditText nameText;
     private EditText emailText;
     private EditText phoneText;
+    private ArrayList<User> userArrayList = new ArrayList<User>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,17 +44,17 @@ public class newprofile extends AppCompatActivity {
 
            public void onClick(View v) {
                 setResult(RESULT_OK);
-                String userid = useridText.getText().toString();
+                Integer userid = Integer.parseInt(useridText.getText().toString());
                 String name = useridText.getText().toString();
                 String phone = useridText.getText().toString();
                 String email = useridText.getText().toString();
 
-               String roleString = roleSpinner.getSelectedItem().toString();
+                String roleString = roleSpinner.getSelectedItem().toString();
 
-
-
+                User user = new User(userid,name,phone,email,roleString);
+                userArrayList.add(user);
+                //todo add the list to local or ES using controller
             }
         });
-
     }
 }
