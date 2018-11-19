@@ -7,7 +7,7 @@
     tools:context=".view_problem">
 
     <EditText
-        android:id="@+id/add_problem_description2"
+        android:id="@+id/patient_problem_description"
         android:layout_width="308dp"
         android:layout_height="168dp"
         android:layout_marginStart="51dp"
@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_problem_remind2" />
+        app:layout_constraintTop_toBottomOf="@+id/patient_date_started" />
 
     <TextView
         android:id="@+id/textView14"
@@ -33,13 +33,13 @@
         android:layout_marginRight="315dp"
         android:layout_marginBottom="8dp"
         android:text="Description"
-        app:layout_constraintBottom_toTopOf="@+id/add_problem_description2"
+        app:layout_constraintBottom_toTopOf="@+id/patient_problem_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/add_problem_remind2"
+        android:id="@+id/patient_date_started"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_problem_date2" />
+        app:layout_constraintTop_toBottomOf="@+id/patient_body_part" />
 
     <TextView
         android:id="@+id/textView18"
@@ -65,13 +65,13 @@
         android:layout_marginRight="315dp"
         android:layout_marginBottom="8dp"
         android:text="Date Started"
-        app:layout_constraintBottom_toTopOf="@+id/add_problem_date2"
+        app:layout_constraintBottom_toTopOf="@+id/patient_body_part"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/add_problem_date2"
+        android:id="@+id/patient_body_part"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_problem_title2" />
+        app:layout_constraintTop_toBottomOf="@+id/patient_problem_title" />
 
     <TextView
         android:id="@+id/textView19"
@@ -97,13 +97,13 @@
         android:layout_marginRight="315dp"
         android:layout_marginBottom="8dp"
         android:text="Remind Setting"
-        app:layout_constraintBottom_toTopOf="@+id/add_problem_remind2"
+        app:layout_constraintBottom_toTopOf="@+id/patient_date_started"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/add_problem_title2"
+        android:id="@+id/patient_problem_title"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
@@ -129,7 +129,7 @@
         android:layout_marginRight="315dp"
         android:layout_marginBottom="8dp"
         android:text="Title"
-        app:layout_constraintBottom_toTopOf="@+id/add_problem_title2"
+        app:layout_constraintBottom_toTopOf="@+id/patient_problem_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
@@ -144,11 +144,11 @@
         android:clickable="true"
         app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view_records_button"
+        app:layout_constraintEnd_toStartOf="@+id/patient_records_button"
         app:srcCompat="@android:drawable/ic_menu_save" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/view_records_button"
+        android:id="@+id/patient_records_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"

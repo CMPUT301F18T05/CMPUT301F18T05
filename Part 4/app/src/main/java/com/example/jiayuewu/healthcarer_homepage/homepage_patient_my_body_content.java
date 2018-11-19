@@ -86,14 +86,13 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Head Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Head Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
-
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -109,6 +108,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Torso Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -124,6 +125,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Left Arm Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -139,6 +142,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Left Hand Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -154,6 +159,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Right Arm Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -169,6 +176,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Right Hand Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -184,6 +193,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Left Leg Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -199,6 +210,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Left Foot Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -214,6 +227,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Right Leg Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -229,6 +244,8 @@ public class homepage_patient_my_body_content extends Fragment{
                     Snackbar.make(v, "Right Foot Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                startActivityForResult(problem_part, 0);
             }
         });
 
