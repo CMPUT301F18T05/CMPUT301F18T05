@@ -95,7 +95,7 @@ public class RemindActivity extends AppCompatActivity implements TimePickerDialo
         //if (c.before(Calendar.getInstance())) {
         //     c.add(Calendar.DATE, Integer.parseInt(duration));
         //}
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),((AlarmManager.INTERVAL_FIFTEEN_MINUTES / 15)/60) * Integer.parseInt(duration),pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),AlarmManager.INTERVAL_HOUR * Integer.parseInt(duration),pendingIntent);
     }
 //    private void startReminder2(Calendar c, String title, String message, String duration) {
 //        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);

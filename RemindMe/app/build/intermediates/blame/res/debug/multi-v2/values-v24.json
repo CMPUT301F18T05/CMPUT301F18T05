@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/afs/ualberta.ca/home/c/h/chhaniya/CMPUT301/Quintus-Software/RemindMe/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "C:\\Users\\Owner\\Documents\\GitHub\\Quintus-Software\\RemindMe\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/afs/ualberta.ca/home/c/h/chhaniya/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/09e578544aa3520ceda7b58009eebf6a/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Owner\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\18f4f41270318b4533523407429d6b3b\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
