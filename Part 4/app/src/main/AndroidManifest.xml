@@ -58,7 +58,12 @@
         <activity
             android:name=".add_problem"
             android:label="Add Problem" />
-        <activity android:name=".view_problem"></activity>
+        <activity android:name=".view_problem" />
+        <activity android:name=".remind_setting" />
+        <activity android:name=".view_records" />
+        <activity android:name=".add_record" />
+        <activity android:name=".doctor_comments" />
+        <activity android:name=".view_doctor_comment"></activity>
     </application>
 
 </manifest>
