@@ -103,8 +103,8 @@ public class homepage_doctor extends AppCompatActivity {
                     homepage_doctor_my_patients_content tab1 = new homepage_doctor_my_patients_content();
                     return tab1;
                 case 1:
-                    homepage_doctor_my_profile_content tab2 = new homepage_doctor_my_profile_content();
-                    return tab2;
+//                    homepage_doctor_my_profile_content tab2 = new homepage_doctor_my_profile_content();
+//                    return tab2;
                 default:
                     return null;
             }
