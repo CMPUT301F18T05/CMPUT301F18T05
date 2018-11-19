@@ -1,5 +1,6 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,27 +30,27 @@ public class newprofile extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         roleSpinner.setAdapter(myAdapter);
 
-        Button registerButton = (Button) findViewById(R.id.register_button);
+        FloatingActionButton registerButton = (FloatingActionButton) findViewById(R.id.register_button);
         useridText = (EditText) findViewById(R.id.userid_text);
         emailText = (EditText) findViewById(R.id.email_text);
         phoneText = (EditText) findViewById(R.id.phone_text);
         nameText = (EditText) findViewById(R.id.name_text);
 
-        //registerButton.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
 
-        //   public void onClick(View v) {
-        //        setResult(RESULT_OK);
-        //        String userid = useridText.getText().toString();
-        //        String name = useridText.getText().toString();
-        //        String phone = useridText.getText().toString();
-        //       String email = useridText.getText().toString();
+           public void onClick(View v) {
+                setResult(RESULT_OK);
+                String userid = useridText.getText().toString();
+                String name = useridText.getText().toString();
+                String phone = useridText.getText().toString();
+                String email = useridText.getText().toString();
 
-        //       String roleString = roleSpinner.getSelectedItem().toString();
+               String roleString = roleSpinner.getSelectedItem().toString();
 
 
 
-        //    }
-        //});
+            }
+        });
 
     }
 }
