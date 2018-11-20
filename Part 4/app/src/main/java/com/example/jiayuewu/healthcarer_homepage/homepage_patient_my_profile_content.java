@@ -58,13 +58,12 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
         user.setName(n);
         user.setPhoneNumber(p);
 
-        //DataHolder.setData(user);
+        DataHolder.setData(user);
         try {
             Thread.sleep(1000);
         } catch (Exception el) {
 
         }
-
 
         //userArrayList.add(user);
         //todo add the list to local or ES using controller

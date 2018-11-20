@@ -86,13 +86,18 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Head Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front Head");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Head Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back Head");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
+
             }
         });
 
@@ -103,13 +108,18 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Torso Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front Torso");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Torso Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back Torso");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
+
             }
         });
 
@@ -120,13 +130,17 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Left Arm Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front right Arm");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Arm Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back Left Arm");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -137,14 +151,18 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Left Hand Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front right hand");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Hand Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back left hand");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
-            }
+           }
         });
 
         right_arm_spot_button.setOnClickListener(new View.OnClickListener() {
@@ -154,13 +172,17 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Right Arm Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front left arm");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Arm Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back right arm");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -171,13 +193,17 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Right Hand Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front left hand");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Hand Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back right hand");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -188,13 +214,17 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Left Leg Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front right leg");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Leg Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back left leg");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -205,13 +235,17 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Left Foot Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front right foot");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Foot Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back left foot");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -222,13 +256,17 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Right Leg Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front left leg");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Leg Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back right leg");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
             }
         });
 
@@ -239,13 +277,17 @@ public class homepage_patient_my_body_content extends Fragment{
                     // placeholder
                     Snackbar.make(v, "Right Foot Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Front left foot");
+                    startActivityForResult(problem_part, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Foot Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
+                    problem_part.putExtra("part", "Back right foot");
+                    startActivityForResult(problem_part, 0);
                 }
-                Intent problem_part = new Intent(homepage_patient_my_body_content.this.getActivity(), problems_for_part.class);
-                startActivityForResult(problem_part, 0);
             }
         });
 
