@@ -25,9 +25,6 @@ public class login extends AppCompatActivity {
         Button login = findViewById(R.id.login_login_button);
         login.setOnClickListener(new View.OnClickListener() {
 
-
-
-
             @Override
             public void onClick(View v) {
 
@@ -45,13 +42,7 @@ public class login extends AppCompatActivity {
                 }
 
                 user = userArrayList.get(0);
-//                for (User u: userArrayList) {
-//                    if (u.getUserID() == userid) {
-//                        Log.i("ASDASD", "" + u.getUserID());
-//                        user = u;
-//                        break;
-//                    }
-//                }
+
                 Log.i("id", "" + user.getUserID());
                 Log.i("PHONE", "" + user.getPhoneNumber());
                 Log.i("ROLE",  user.getRole());
@@ -59,15 +50,11 @@ public class login extends AppCompatActivity {
                 if (user.getRole().equals("Patient")) {
                     Intent patient_intent = new Intent(login.this, homepage_patient.class);
                     startActivity(patient_intent);
+                } else {
+                    //Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
+                    //startActivityForResult(doctor_intent, 0);
                 }
 
-//                if (user.getRole() == "Patient") {
-//                    Intent patient_intent = new Intent(login.this, homepage_patient.class);
-//                    startActivityForResult(patient_intent, 0);
-//                } else {
-//                    //Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
-//                    //startActivityForResult(doctor_intent, 0);
-//                }
             }
         });
 
