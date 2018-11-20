@@ -1,6 +1,6 @@
 /**
  * add_patient class used to add patients to doctor.
- *
+ *This part Doctor user can add patients.
  * @author: CMPUT301F18T05
  * @since: 1.0
  *

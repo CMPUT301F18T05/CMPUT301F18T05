@@ -1,6 +1,7 @@
 /**
  * add_doctor_comment class
- *
+ * This part doctor user can add comment for their patient problems.
+
  * @author: CMPUT301F18T05
  * @since: 1.0
  *
