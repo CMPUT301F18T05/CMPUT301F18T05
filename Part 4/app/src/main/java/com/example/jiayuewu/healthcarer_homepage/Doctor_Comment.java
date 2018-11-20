@@ -15,8 +15,13 @@ public class Doctor_Comment {
 
     }
 
-    Doctor_Comment(String title, String name, Calendar date, String comment){
-
+    Doctor_Comment(Integer problemID, Integer doctorCommentID, String title, String name, Calendar date, String comment){
+        this.problemID = problemID;
+        this.doctorCommentID = doctorCommentID;
+        this.title = title;
+        this.name = name;
+        this.date = date;
+        this.comment = comment;
     }
 
     public Integer getDoctorCommentID() { return this.doctorCommentID; }
