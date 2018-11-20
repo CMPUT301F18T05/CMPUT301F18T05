@@ -85,20 +85,18 @@ public class add_problem extends AppCompatActivity {
                 description = dText.getText().toString();
                 dateText.setText(date_text);
 
-//                elasticSearch.getProblemsTask problemTask
-//                        = new elasticSearch.getProblemsTask();
-//                problemTask.execute(userid);
-//
-//                try {
-//                    problemArrayList = problemTask.get();
-//
-//                }	catch (Exception e) {
-//                    Log.e("Error", "Failed to get the problem out of the async object.");
-//                }
-//
-//                for (Problem problem: problemArrayList) {
-//
-//                }
+                elasticSearch.getProblemsTask problemTask
+                        = new elasticSearch.getProblemsTask();
+                problemTask.execute(userid);
+
+                try {
+                    problemArrayList = problemTask.get();
+
+                }	catch (Exception e) {
+                    Log.e("Error", "Failed to get the problem out of the async object.");
+                }
+                Integer length = problemArrayList.size() - 1;
+                problemID = problemArrayList.get(length).getProblemID() + 1;
 
                 Problem problem = new Problem(userid, problemID, title, date_text, description, part);
                 elasticSearch.addProblemTask task
