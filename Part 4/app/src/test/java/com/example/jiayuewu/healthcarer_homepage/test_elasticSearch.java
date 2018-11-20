@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class test_elasticSearch {
 
@@ -26,6 +27,15 @@ public class test_elasticSearch {
         }
     }
 
+
+    public void test_getProblem() {
+        Doctor_Comment dc = new Doctor_Comment(123,123,"ASD",
+                "ASD",Calendar.getInstance(), "ASD");
+
+        elasticSearch.addDoctorCommentTask addTweetsTask
+                = new elasticSearch.addDoctorCommentTask();
+        addTweetsTask.execute(dc);
+    }
 
 
 }

@@ -31,14 +31,6 @@ public class mainpage extends AppCompatActivity {
 //                Intent login_intent = new Intent(mainpage.this, login.class);
 //                startActivityForResult(login_intent, 0);
 
-                Doctor_Comment dc = new Doctor_Comment(123,123,"ASD",
-                        "ASD",Calendar.getInstance(), "ASD");
-
-                elasticSearch.addDoctorCommentTask addTweetsTask
-                        = new elasticSearch.addDoctorCommentTask();
-                addTweetsTask.execute(dc);
-
-
             }
         });
     }

@@ -43,9 +43,9 @@ public class login extends AppCompatActivity {
 
                 user = userArrayList.get(0);
 
-                Log.i("id", "" + user.getUserID());
-                Log.i("PHONE", "" + user.getPhoneNumber());
-                Log.i("ROLE",  user.getRole());
+//                Log.i("id", "" + user.getUserID());
+//                Log.i("PHONE", "" + user.getPhoneNumber());
+//                Log.i("ROLE",  user.getRole());
                 DataHolder.setData(user);
                 if (user.getRole().equals("Patient")) {
                     Intent patient_intent = new Intent(login.this, homepage_patient.class);

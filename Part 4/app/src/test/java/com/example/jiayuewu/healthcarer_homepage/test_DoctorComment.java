@@ -32,7 +32,7 @@ public class test_DoctorComment {
     /* This test will check if a doctor comment is created correctly. */
     public void test_createCommentConstuctor() {
         Calendar currentTime = Calendar.getInstance();
-        Doctor_Comment testDoctorComment = new Doctor_Comment("GERGREEG", "FinalTest"
+        Doctor_Comment testDoctorComment = new Doctor_Comment(123 , 123 ,"GERGREEG", "FinalTest"
                 , currentTime, "Plase");
 
         assertEquals("FinalTest", testDoctorComment.getName());
@@ -63,7 +63,7 @@ public class test_DoctorComment {
         assertTrue(failedTest);
 
         Calendar currentTime = Calendar.getInstance();
-        Doctor_Comment testDoctorComment2 = new Doctor_Comment("GERGREEG", "FinalTest"
+        Doctor_Comment testDoctorComment2 = new Doctor_Comment(123, 123 ,"GERGREEG", "FinalTest"
                 , currentTime, "Plase");
 
         // Test to make sure that the created doctorComment object has a title less than 30 chars.
@@ -93,7 +93,7 @@ public class test_DoctorComment {
         assertTrue(failedTest);
 
         Calendar currentTime = Calendar.getInstance();
-        Doctor_Comment testDoctorComment2 = new Doctor_Comment("GERGREEG", "FinalTest"
+        Doctor_Comment testDoctorComment2 = new Doctor_Comment(213 , 123 , "GERGREEG", "FinalTest"
                 , currentTime, "Plase");
 
         // Test to make sure that the doctor object has a character length below 300.
