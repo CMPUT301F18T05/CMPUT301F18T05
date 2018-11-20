@@ -84,7 +84,7 @@ public class login extends AppCompatActivity {
         });
 
 
-        final Context context = this;
+        //final Context context = this;
 
     }
 }

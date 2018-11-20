@@ -76,7 +76,9 @@
         <activity android:name=".view_doctor_comment" android:label="View Doctor Comments"/>
         <activity android:name=".add_patient" android:label="Add Patient"/>
         <activity android:name=".view_patient" android:label="View Patient"/>
+        <activity android:name=".RemindActivity"/>
         <activity android:name=".add_doctor_comment" android:label="Add Doctor Comment"></activity>
+        <receiver android:name=".AlertReceiver"></receiver>
     </application>
 
 </manifest>
