@@ -28,7 +28,7 @@ public class all_problems extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Integer ID = problem.getProblemID();
-        elasticSearch.GetProblemsTask getProblemsTask = new elasticSearch.GetProblemsTask();
+        elasticSearch.getProblemsTask getProblemsTask = new elasticSearch.getProblemsTask();
         getProblemsTask.execute(ID);
         try{
             problemArrayList = getProblemsTask.get();
