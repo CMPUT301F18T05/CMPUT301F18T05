@@ -1,0 +1,4 @@
+#Tue Nov 20 09:17:14 MST 2018
+base.0=C\:\\Users\\Greg\\Documents\\GitHub\\Quintus-Software\\Part 4\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+path.0=classes.dex
+renamed.0=classes.dex

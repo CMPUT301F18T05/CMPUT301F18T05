@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jiayuewu.healthcarer_homepage"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Welcome, user"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.homepage_patient"
+            android:label="Welcome, user"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.homepage_doctor"
+            android:label="Welcome, user"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.mainpage"
+            android:label="Health Carer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.newprofile"
+            android:label="New Profile" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.login"
+            android:label="Login" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.all_problems"
+            android:label="All Problems" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.search_result"
+            android:label="Search Result" />
+        <activity android:name="com.example.jiayuewu.healthcarer_homepage.problems_for_part" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.add_problem"
+            android:label="Add Problem" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_problem"
+            android:label="View Problem" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_patient_problem"
+            android:label="View Problem" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.remind_setting"
+            android:label="Remind Setting" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_record"
+            android:label="View Record" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_records"
+            android:label="View Records" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_patient_record"
+            android:label="View Patient Record" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_patient_records"
+            android:label="View Patient Records" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.add_record"
+            android:label="Add Record" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.doctor_comments"
+            android:label="Doctor Comments" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_doctor_comment"
+            android:label="View Doctor Comments" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.add_patient"
+            android:label="Add Patient" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.view_patient"
+            android:label="View Patient" />
+        <activity android:name="com.example.jiayuewu.healthcarer_homepage.RemindActivity" />
+        <activity
+            android:name="com.example.jiayuewu.healthcarer_homepage.add_doctor_comment"
+            android:label="Add Doctor Comment" />
+
+        <receiver android:name="com.example.jiayuewu.healthcarer_homepage.AlertReceiver" />
+        <!-- <service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" /> -->
+    </application>
+
+</manifest>
