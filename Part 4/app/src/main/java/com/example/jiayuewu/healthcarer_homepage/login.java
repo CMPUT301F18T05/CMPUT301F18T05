@@ -1,5 +1,6 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -15,8 +17,6 @@ public class login extends AppCompatActivity {
     private EditText useridText;
     private User user = new User();
     private ArrayList<User> userArrayList = new ArrayList<User>();
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +38,39 @@ public class login extends AppCompatActivity {
                     userArrayList = getUserTask.get();
 
                 }	catch (Exception e) {
-                    Log.e("Error", "Failed to get the tweets out of the async object.");
+                    Log.e("Error", "Failed to get the user out of the async object.");
                 }
 
-                user = userArrayList.get(0);
+                try {
+                    user = userArrayList.get(0);
 
-//                Log.i("id", "" + user.getUserID());
-//                Log.i("PHONE", "" + user.getPhoneNumber());
-//                Log.i("ROLE",  user.getRole());
+                    DataHolder.setData(user);
+                    if (user.getRole().equals("Patient")) {
+
+                        try {
+                            Intent patient_intent = new Intent(login.this, homepage_patient.class);
+                            startActivity(patient_intent);
+                        } catch (Exception e) {
+                            Log.i ("Error in trying to open", "Patient homepage");
+                        }
+                    } else {
+                        try {
+                            Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
+                            startActivityForResult(doctor_intent, 0);
+                        } catch (Exception e) {
+                            Log.i ("Error in trying to open", "Doctor homepage");
+                        }
+                    }
+                } catch (Exception e) {
+                    Log.i("User", "Not found");
+
+                    Context context = login.super.getApplicationContext();
+
+                    Dialog dialog = new Dialog(context);
+ 
+                    dialog.show();
+                }
+
                 DataHolder.setData(user);
                 if (user.getRole().equals("Patient")) {
                     Intent patient_intent = new Intent(login.this, homepage_patient.class);
