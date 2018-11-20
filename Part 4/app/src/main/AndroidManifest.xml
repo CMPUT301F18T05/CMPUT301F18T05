@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Welcome, user"
@@ -79,6 +80,8 @@
         <activity android:name=".RemindActivity"/>
         <activity android:name=".add_doctor_comment" android:label="Add Doctor Comment"></activity>
         <receiver android:name=".AlertReceiver"></receiver>
+        <!--<service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" />-->
     </application>
+
 
 </manifest>

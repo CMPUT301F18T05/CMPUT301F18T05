@@ -214,6 +214,8 @@ public class elasticSearch {
                 getUserTask getUserTask
                         = new getUserTask();
                 getUserTask.execute(user.getUserID());
+                Log.w("In elastic Search", "add USer");
+
 
                 try {
                     userArrayList = getUserTask.get();
@@ -277,7 +279,7 @@ public class elasticSearch {
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
             verifySettings();
 
-            String query = "{ \"query\": { \"term\" : { \"message\" : \""+search_parameters[0]+"\" } } }";
+            String query = "{ \"query\": { \"term\" : { \"_id\" : \""+search_parameters[0]+"\" } } }";
 
             DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
                     .addIndex("testing")

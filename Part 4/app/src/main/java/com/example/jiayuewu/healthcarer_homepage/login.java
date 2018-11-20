@@ -62,6 +62,8 @@ public class login extends AppCompatActivity {
                 try {
                     user = userArrayList.get(0);
 
+                    Log.w("GOT USER", "" + user.getUserID());
+
                     DataHolder.setData(user);
                     if (user.getRole().equals("Patient")) {
 
@@ -74,7 +76,7 @@ public class login extends AppCompatActivity {
                     } else {
                         try {
                             Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
-                            startActivityForResult(doctor_intent, 0);
+                            startActivity(doctor_intent);
                         } catch (Exception e) {
                             Log.i ("Error in trying to open", "Doctor homepage");
                         }
