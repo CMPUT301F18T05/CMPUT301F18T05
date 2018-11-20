@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Calendar;
+
+import io.searchbox.core.Doc;
+
 public class mainpage extends AppCompatActivity {
 
     @Override
@@ -24,8 +28,17 @@ public class mainpage extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login_intent = new Intent(mainpage.this, login.class);
-                startActivityForResult(login_intent, 0);
+//                Intent login_intent = new Intent(mainpage.this, login.class);
+//                startActivityForResult(login_intent, 0);
+
+                Doctor_Comment dc = new Doctor_Comment(123,123,"ASD",
+                        "ASD",Calendar.getInstance(), "ASD");
+
+                elasticSearch.addDoctorCommentTask addTweetsTask
+                        = new elasticSearch.addDoctorCommentTask();
+                addTweetsTask.execute(dc);
+
+
             }
         });
     }

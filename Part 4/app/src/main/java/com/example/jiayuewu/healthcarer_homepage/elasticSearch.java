@@ -7,14 +7,10 @@ import com.searchly.jestdroid.DroidClientConfig;
 import com.searchly.jestdroid.JestClientFactory;
 import com.searchly.jestdroid.JestDroidClient;
 
-import org.w3c.dom.DocumentType;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import io.searchbox.client.JestResult;
 import io.searchbox.core.DeleteByQuery;
-import io.searchbox.core.Doc;
 import io.searchbox.core.DocumentResult;
 import io.searchbox.core.Index;
 import io.searchbox.core.Search;
@@ -174,24 +170,19 @@ public class elasticSearch {
 
         @Override
         protected Void doInBackground(Doctor_Comment... doctor_comments) {
+
             verifySettings();
 
-            for (Doctor_Comment doctor_comment: doctor_comments) {
-                Index index = new Index.Builder(doctor_comment).index("testing").type("tweet").build();
+            for (Doctor_Comment doctor_comment : doctor_comments) {
+                Index index = new Index.Builder(doctor_comment).index("cmput301f18t05")
+                        .type("Doctor_Comment").id("" + doctor_comment.getProblemID()).build();
 
                 try {
                     // where is the client?
-                    DocumentResult result = client.execute(index);
-                    if (result.isSucceeded()) {
-                        doctor_comment.setDoctorCommentID(Integer.parseInt(result.getId()));
-                    } else {
-                        Log.i("Error", "Elastic search was not able to add the tweet.");
-                    }
+                    client.execute(index);
+                } catch (Exception e) {
+                    Log.w("You", "Done goofed.");
                 }
-                catch (Exception e) {
-                    Log.i("Error", "The application failed to build and send the tweets");
-                }
-
             }
             return null;
         }
@@ -201,17 +192,13 @@ public class elasticSearch {
     public static class GetDoctorCommentTask extends AsyncTask<Integer, Void, ArrayList<Doctor_Comment>> {
         @Override
         protected ArrayList<Doctor_Comment> doInBackground(Integer... search_parameters) {
-            verifySettings();
 
             ArrayList<Doctor_Comment> doctor_comments = new ArrayList<Doctor_Comment>();
 
-//            String query = "{ \"query\": { \"term\" : { \"message\" : \"love\" } } }";
-
-            String query = "{ \"query\": { \"term\" : { \"message\" : \""+search_parameters[0]+"\" } } }";
-
+            String query = "{\"query\" : {\"term\" : { \"_id\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
-                    .addIndex("testing")
+                    .addIndex("cmput301f18t05")
                     .addType("Doctor_Comment")
                     .build();
 
@@ -221,8 +208,6 @@ public class elasticSearch {
                 if (result.isSucceeded()) {
                     List<Doctor_Comment> foundTweets = result.getSourceAsObjectList(Doctor_Comment.class);
                     doctor_comments.addAll(foundTweets);
-                    Log.i("DERP", "" + doctor_comments);
-
                 } else {
                     Log.i("Error", "The search query failed to find any tweets for some reason.");
                 }
@@ -232,6 +217,7 @@ public class elasticSearch {
             }
 
             return doctor_comments;
+
         }
     }
 
@@ -266,12 +252,7 @@ public class elasticSearch {
 
             ArrayList<User> users = new ArrayList<User>();
 
-//            String query = "{ \"query\": { \"term\" : { \"message\" : \"love\" } } }";
-
-//            String query = "{ \"query\": { \"term\" : { \"\" : \""+search_parameters[0]+"\" } } }";
-
             String query = "{\"query\" : {\"term\" : { \"_id\" : \"" + search_parameters[0] + "\" }}}";
-//            {"query" : {"term" : { "_id" : "435" }}}
 
             Search search = new Search.Builder(query)
                     .addIndex("cmput301f18t05")
@@ -284,8 +265,6 @@ public class elasticSearch {
                 if (result.isSucceeded()) {
                     List<User> foundTweets = result.getSourceAsObjectList(User.class);
                     users.addAll(foundTweets);
-                    //Log.i("DERP", "" + users);
-
                 } else {
                     Log.i("Error", "The search query failed to find any tweets for some reason.");
                 }
