@@ -29,22 +29,16 @@ public class elasticSearch {
             verifySettings();
 
             for (Problem problem : problems) {
-                Index index = new Index.Builder(problem).index("testing").type("tweet").build();
+                Index index = new Index.Builder(problem).index("cmput301f18t05").type("Problem").id("" + problem.getUserID()).build();
 
                 try {
                     // where is the client?
                     DocumentResult result = client.execute(index);
-                    if (result.isSucceeded()) {
-                        problem.setProblemID(Integer.parseInt(result.getId()));
-                    } else {
-                        Log.i("Error", "Elastic search was not able to add the tweet.");
-                    }
+                } catch (Exception e) {
+                    Log.w("You", "Done goofed.");
                 }
-                catch (Exception e) {
-                    Log.i("Error", "The application failed to build and send the tweets");
-                }
-
             }
+
             return null;
         }
     }
@@ -57,13 +51,10 @@ public class elasticSearch {
 
             ArrayList<Problem> problems = new ArrayList<Problem>();
 
-//            String query = "{ \"query\": { \"term\" : { \"message\" : \"love\" } } }";
-
-            String query = "{ \"query\": { \"term\" : { \"message\" : \""+search_parameters[0]+"\" } } }";
-
+            String query = "{\"query\" : {\"term\" : { \"_id\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
-                    .addIndex("testing")
+                    .addIndex("cmput301f18t05")
                     .addType("Problem")
                     .build();
 
@@ -73,8 +64,6 @@ public class elasticSearch {
                 if (result.isSucceeded()) {
                     List<Problem> foundTweets = result.getSourceAsObjectList(Problem.class);
                     problems.addAll(foundTweets);
-                    Log.i("DERP", "" + problems);
-
                 } else {
                     Log.i("Error", "The search query failed to find any tweets for some reason.");
                 }
@@ -106,23 +95,18 @@ public class elasticSearch {
             verifySettings();
 
             for (Record record : records) {
-                Index index = new Index.Builder(record).index("testing").type("tweet").build();
+                Index index = new Index.Builder(record).index("cmput301f18t05").type("Record").id("" + record.getProblemID()).build();
 
                 try {
                     // where is the client?
                     DocumentResult result = client.execute(index);
-                    if (result.isSucceeded()) {
-                        record.setRecordID(Integer.parseInt(result.getId()));
-                    } else {
-                        Log.i("Error", "Elastic search was not able to add the tweet.");
-                    }
+                } catch (Exception e) {
+                    Log.w("You", "Done goofed.");
                 }
-                catch (Exception e) {
-                    Log.i("Error", "The application failed to build and send the tweets");
-                }
-
             }
+
             return null;
+
         }
     }
 
@@ -134,13 +118,10 @@ public class elasticSearch {
 
             ArrayList<Record> records = new ArrayList<Record>();
 
-//            String query = "{ \"query\": { \"term\" : { \"message\" : \"love\" } } }";
-
-            String query = "{ \"query\": { \"term\" : { \"message\" : \""+search_parameters[0]+"\" } } }";
-
+            String query = "{\"query\" : {\"term\" : { \"_id\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
-                    .addIndex("testing")
+                    .addIndex("cmput301f18t05")
                     .addType("Record")
                     .build();
 
@@ -150,8 +131,6 @@ public class elasticSearch {
                 if (result.isSucceeded()) {
                     List<Record> foundTweets = result.getSourceAsObjectList(Record.class);
                     records.addAll(foundTweets);
-                    Log.i("DERP", "" + records);
-
                 } else {
                     Log.i("Error", "The search query failed to find any tweets for some reason.");
                 }
