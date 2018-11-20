@@ -23,7 +23,9 @@ public class RemindActivity extends AppCompatActivity implements TimePickerDialo
     private NotificationHelper mNotificationHelper;
     private TextView mTextView;
     private Calendar c = Calendar.getInstance();
-
+    /**
+     * create the basic interface for user to set notifications for problem
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
