@@ -287,7 +287,7 @@ public class elasticSearch {
                 if (result.isSucceeded()) {
                     List<User> foundTweets = result.getSourceAsObjectList(User.class);
                     users.addAll(foundTweets);
-                    Log.i("DERP", "" + users);
+                    //Log.i("DERP", "" + users);
 
                 } else {
                     Log.i("Error", "The search query failed to find any tweets for some reason.");
