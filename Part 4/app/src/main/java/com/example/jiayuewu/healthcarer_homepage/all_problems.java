@@ -16,6 +16,8 @@ public class all_problems extends AppCompatActivity {
     private ArrayList<Problem> problemArrayList = new ArrayList<Problem>();
     private ArrayAdapter<Problem> adapter;
     private User user;
+    //open the activity_all_problem layout
+    //start showing problem history screen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,11 @@ public class all_problems extends AppCompatActivity {
     /**
      *
      */
+    // get user's id from the user data
+    // get user's problem history
+    // display the history to the search_result listview
+    // set onclick in order to let user see the problem details
+    // once clkicked, jump to detail's screen (view_patient_problem)
     @Override
     protected void onStart() {
         super.onStart();

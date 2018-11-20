@@ -44,10 +44,11 @@ public class elasticSearch {
     static String cmput301f18t05 = "cmput301f18t05test";
     private static JestDroidClient client;
 
-    /**
+      /**
      * AddProblemTask
      *
-     * This task takes a problem object, and then 
+     * store the data from the user and save it into the related ID Problemlist
+     *
      */
     public static class addProblemTask extends AsyncTask<Problem, Void, Void> {
 
@@ -69,7 +70,11 @@ public class elasticSearch {
             return null;
         }
     }
-
+   /**GetProblemsTask:
+     *
+     *  get problemList from the data which related to the UserID
+     *
+     */
     // TODO we need a function which gets tweets from elastic search
     public static class getProblemsTask extends AsyncTask<Integer, Void, ArrayList<Problem>> {
         @Override
@@ -118,7 +123,10 @@ public class elasticSearch {
             return new ArrayList<Problem>();
         }
     }
-
+/**verifySettings:
+     * verify the settings with the cmput301's serverURL
+     *
+     */
     public static void verifySettings() {
         if (client == null) {
             DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080");
@@ -129,7 +137,10 @@ public class elasticSearch {
             client = (JestDroidClient) factory.getObject();
         }
     }
-
+/**AddRecordTask:
+     *
+    store the data from the user and save it into the related ID RecordList and save under which ProblemLIst
+     */
     // TODO we need a function which adds tweets to elastic search
     public static class addRecordTask extends AsyncTask<Record, Void, Void> {
 
@@ -152,7 +163,10 @@ public class elasticSearch {
 
         }
     }
-
+/**GetRecordsTask:
+     * get recordList from the date which related to the UserID's problemList
+     *
+     */
     // TODO we need a function which gets tweets from elastic search
     public static class getRecordsTask extends AsyncTask<Integer, Void, ArrayList<Record>> {
         @Override
@@ -209,7 +223,10 @@ public class elasticSearch {
             return null;
         }
     }
-
+/**GetDoctorCommentTask:
+     * get doctor's comment form the UserID's ProblenmList"s detail
+     *
+     */
     // TODO we need a function which gets tweets from elastic search
     public static class getDoctorCommentTask extends AsyncTask<Integer, Void, ArrayList<Doctor_Comment>> {
         @Override
@@ -242,6 +259,10 @@ public class elasticSearch {
 
         }
     }
+ /**addUserTask:
+     * create a user info to data stream
+     *
+     */
 
     public static class addUserTask extends AsyncTask<User, Void, Void> {
 
@@ -271,7 +292,10 @@ public class elasticSearch {
             return null;
         }
     }
-
+ /**getUserTask:
+     * get User's info from the date stream with the UserID
+     *
+     */
     public static class getUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
         @Override
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
@@ -304,7 +328,10 @@ public class elasticSearch {
         }
     }
 
-
+/**deleteUserTask：
+     * delete User's info from the data stream with the UserID
+     *
+     */
     public static class deleteUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
         @Override
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
