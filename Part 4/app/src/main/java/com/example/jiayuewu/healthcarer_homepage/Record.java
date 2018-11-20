@@ -35,7 +35,11 @@ public class Record {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if (title.length() <= 10) {
+            this.title = title;
+        } else {
+            this.title = "";
+        }
     }
 
     public Calendar getDate() {
@@ -59,6 +63,10 @@ public class Record {
     }
 
     public void setComment(String comment) {
-        this.comment = comment;
+        if (comment.length() <= 300) {
+            this.comment = comment;
+        } else {
+            this.comment = "";
+        }
     }
 }

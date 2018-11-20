@@ -45,7 +45,11 @@ public class Problem {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if (title.length() <= 10) {
+            this.title = title;
+        } else {
+            this.title = "";
+        }
     }
 
     public Calendar getCalenderDate() {
@@ -61,7 +65,11 @@ public class Problem {
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        if (description.length() <= 300) {
+            this.description = description;
+        } else {
+            this.description = "";
+        }
     }
 
     public String getBodyPart() {
