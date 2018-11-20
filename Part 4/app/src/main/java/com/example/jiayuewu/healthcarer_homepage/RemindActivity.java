@@ -91,7 +91,12 @@ public class RemindActivity extends AppCompatActivity implements TimePickerDialo
         });
 
     }
-
+    /**
+     * when provider click the time set, it will set a time for alarm
+     * after set the time, user can set date
+     * once every thing set up, the alarm will work
+     * and it will bring back to the privious screen
+     */
     @Override
     public void onTimeSet(android.widget.TimePicker view, int hour, int min) {
         c.set(Calendar.HOUR_OF_DAY, hour);
@@ -130,6 +135,10 @@ public class RemindActivity extends AppCompatActivity implements TimePickerDialo
 //        //}
 //        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),((AlarmManager.INTERVAL_FIFTEEN_MINUTES / 15)/60) * Integer.parseInt(duration),pendingIntent);
 //    }
+     /**
+     * when provider click the cancel, it will remove the alarm
+     * and it will bring back to the privious screen
+     */
     private void cancelReminder() {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
