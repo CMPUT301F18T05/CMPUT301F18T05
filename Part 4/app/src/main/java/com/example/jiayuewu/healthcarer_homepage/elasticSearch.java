@@ -222,7 +222,7 @@ public class elasticSearch {
                 }
 
                 if (userArrayList != null) {
-                    Index index = new Index.Builder(user).index("cmput301f18t05").type("User").id("" + user.getUserID()).build();
+                    Index index = new Index.Builder(user).index("cmput301f18t05").type("User").build();
 
                     try {
                         // where is the client?
@@ -246,7 +246,7 @@ public class elasticSearch {
 
             ArrayList<User> users = new ArrayList<User>();
 
-            String query = "{\"query\" : {\"term\" : { \"_id\" : \"" + search_parameters[0] + "\" }}}";
+            String query = "{\"query\" : {\"term\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
                     .addIndex("cmput301f18t05")
@@ -272,16 +272,16 @@ public class elasticSearch {
     }
 
     // TODO we need a function which gets tweets from elastic search
-    public static class DeleteUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
+    public static class deleteUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
         @Override
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
             verifySettings();
 
-            String query = "{ \"query\": { \"term\" : { \"message\" : \""+search_parameters[0]+"\" } } }";
+            String query = "{ \"query\": { \"term\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
 
             DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
-                    .addIndex("testing")
-                    .addType("Problem")
+                    .addIndex("cmput301f18t05")
+                    .addType("User")
                     .build();
 
             try {
