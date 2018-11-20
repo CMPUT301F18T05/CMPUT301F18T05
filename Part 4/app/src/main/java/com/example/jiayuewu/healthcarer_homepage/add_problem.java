@@ -19,12 +19,25 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+
 
 public class add_problem extends AppCompatActivity {
+    private EditText titleText;
+    private EditText dateText;
+    private EditText dText;
+    private User user;
+    private Integer problemID;
+    private ArrayList<Problem> problemArrayList = new ArrayList<Problem>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +52,55 @@ public class add_problem extends AppCompatActivity {
                 //passing the emotion count to new activity
                 Intent intent = new Intent(add_problem.this, RemindActivity.class);
                 add_problem.this.startActivity(intent);
+            }
+        });
+
+        FloatingActionButton saveProblem = findViewById(R.id.add_problem_save_button);
+        saveProblem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String part, title, description;
+                Calendar date;
+
+                Integer userid;
+
+                date = Calendar.getInstance();
+
+                problemID = 1;
+
+
+
+                part = getIntent().getStringExtra("part");
+                user = DataHolder.getData();
+                userid = user.getUserID();
+                titleText = (EditText) findViewById(R.id.add_problem_title);
+                dateText = (EditText) findViewById(R.id.add_problem_date);
+                dText = (EditText) findViewById(R.id.add_problem_description);
+
+                title = titleText.getText().toString();
+                description = dText.getText().toString();
+                dateText.setText(date.toString());
+
+//                elasticSearch.getProblemsTask problemTask
+//                        = new elasticSearch.getProblemsTask();
+//                problemTask.execute(userid);
+//
+//                try {
+//                    problemArrayList = problemTask.get();
+//
+//                }	catch (Exception e) {
+//                    Log.e("Error", "Failed to get the problem out of the async object.");
+//                }
+//
+//                for (Problem problem: problemArrayList) {
+//
+//                }
+
+                Problem problem = new Problem(userid, problemID, title, date, description, part);
+                elasticSearch.addProblemTask task
+                        = new elasticSearch.addProblemTask();
+                task.execute(problem);
+
             }
         });
     }

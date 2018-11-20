@@ -24,6 +24,7 @@ public class problems_for_part extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent add_problem_intent = new Intent(problems_for_part.this, add_problem.class);
+                add_problem_intent.putExtra("part", part);
                 startActivityForResult(add_problem_intent, 0);
             }
         });

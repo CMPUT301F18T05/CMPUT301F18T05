@@ -49,7 +49,7 @@ public class elasticSearch {
      *
      * This task takes a problem object, and then 
      */
-    public static class AddProblemTask extends AsyncTask<Problem, Void, Void> {
+    public static class addProblemTask extends AsyncTask<Problem, Void, Void> {
 
         @Override
         protected Void doInBackground(Problem... problems) {
@@ -71,7 +71,7 @@ public class elasticSearch {
     }
 
     // TODO we need a function which gets tweets from elastic search
-    public static class GetProblemsTask extends AsyncTask<Integer, Void, ArrayList<Problem>> {
+    public static class getProblemsTask extends AsyncTask<Integer, Void, ArrayList<Problem>> {
         @Override
         protected ArrayList<Problem> doInBackground(Integer... search_parameters) {
             verifySettings();
@@ -115,7 +115,7 @@ public class elasticSearch {
     }
 
     // TODO we need a function which adds tweets to elastic search
-    public static class AddRecordTask extends AsyncTask<Record, Void, Void> {
+    public static class addRecordTask extends AsyncTask<Record, Void, Void> {
 
         @Override
         protected Void doInBackground(Record... records) {
@@ -138,7 +138,7 @@ public class elasticSearch {
     }
 
     // TODO we need a function which gets tweets from elastic search
-    public static class GetRecordsTask extends AsyncTask<Integer, Void, ArrayList<Record>> {
+    public static class getRecordsTask extends AsyncTask<Integer, Void, ArrayList<Record>> {
         @Override
         protected ArrayList<Record> doInBackground(Integer... search_parameters) {
             verifySettings();
@@ -195,7 +195,7 @@ public class elasticSearch {
     }
 
     // TODO we need a function which gets tweets from elastic search
-    public static class GetDoctorCommentTask extends AsyncTask<Integer, Void, ArrayList<Doctor_Comment>> {
+    public static class getDoctorCommentTask extends AsyncTask<Integer, Void, ArrayList<Doctor_Comment>> {
         @Override
         protected ArrayList<Doctor_Comment> doInBackground(Integer... search_parameters) {
 
