@@ -206,19 +206,34 @@ public class elasticSearch {
 
         @Override
         protected Void doInBackground(User... users) {
+            ArrayList<User> userArrayList = new ArrayList<User>();
+
             verifySettings();
 
             for (User user : users) {
-                Index index = new Index.Builder(user).index("cmput301f18t05").type("User").id("" + user.getUserID()).build();
+                getUserTask getUserTask
+                        = new getUserTask();
+                getUserTask.execute(user.getUserID());
 
                 try {
-                    // where is the client?
-                    DocumentResult result = client.execute(index);
+                    userArrayList = getUserTask.get();
                 } catch (Exception e) {
-                    Log.w("You", "Done goofed.");
+                    Log.w("Not sure the", "Error");
+                }
+
+                if (userArrayList != null) {
+                    Index index = new Index.Builder(user).index("cmput301f18t05").type("User").id("" + user.getUserID()).build();
+
+                    try {
+                        // where is the client?
+                        DocumentResult result = client.execute(index);
+                    } catch (Exception e) {
+                        Log.w("You", "Done goofed.");
+                    }
                 }
             }
 
+            Log.w("In elasticSearch", "USer has been made");
             return null;
         }
     }

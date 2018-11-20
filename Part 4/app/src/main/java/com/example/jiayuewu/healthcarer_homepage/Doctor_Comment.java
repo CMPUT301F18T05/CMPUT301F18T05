@@ -37,7 +37,11 @@ public class Doctor_Comment {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if (title.length() <= 30) {
+            this.title = title;
+        } else {
+            this.title = "";
+        }
     }
 
     public String getName() {
@@ -61,6 +65,10 @@ public class Doctor_Comment {
     }
 
     public void setComment(String comment) {
-        this.comment = comment;
+        if (comment.length() <= 300) {
+            this.comment = comment;
+        } else {
+            this.comment = "";
+        }
     }
 }
