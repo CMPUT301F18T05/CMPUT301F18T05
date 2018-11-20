@@ -1,6 +1,9 @@
 /**
  * add_problem class used to add problems to user.
- *
+ *This part Patient user can add problem with title and description and save it to the problem list.
+ * They can set a start time and click the "Remind Me" button to go the RemindActivity part.
+
+
  * @author: CMPUT301F18T05
  * @since: 1.0
  *
