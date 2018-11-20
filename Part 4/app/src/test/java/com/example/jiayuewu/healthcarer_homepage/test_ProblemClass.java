@@ -18,15 +18,15 @@ public class test_ProblemClass {
         Problem testProblem = new Problem();
 
         testProblem.setBodyPart("Finger");
-        testProblem.setCalenderDate(currentTime);
+        testProblem.setCalenderDate("2018");
         testProblem.setDescription("Finger hurts.");
-        testProblem.setTitle("Oww");
+        testProblem.setTitle("Oww2131232");
         testProblem.setProblemID(123);
         testProblem.setUserID(234);
 
         // It should all pass. (True, True)
-        assertEquals(currentTime, testProblem.getCalenderDate());
-        assertEquals("Oww", testProblem.getTitle());
+        assertEquals("2018", testProblem.getCalenderDate());
+        assertEquals("Oww2131232", testProblem.getTitle());
         assertEquals("Finger hurts.", testProblem.getDescription());
         assertEquals("123", "" + testProblem.getProblemID());
         assertEquals("Finger", testProblem.getBodyPart());
@@ -38,7 +38,7 @@ public class test_ProblemClass {
     public void test_deleteRecord() {
         Calendar currentTime = Calendar.getInstance();
         Location location = new Location("dummyprovider");
-        Problem testProblem = new Problem(121, 123,"Problem1", currentTime, "Real", "FINAL");
+        Problem testProblem = new Problem(121, 123,"Problem1", "2018", "Real", "FINAL");
         Record testRecord1 = new Record(123, 432, "ASD", currentTime, location, "grave");
         Record testRecord2 = new Record(123, 435, "asd", currentTime, location, "super");
 
@@ -52,7 +52,7 @@ public class test_ProblemClass {
         Boolean failedTest = Boolean.FALSE;
         String failString = new String();
 
-        for (Integer i = 0; i < 30; i++) {
+        for (Integer i = 0; i < 31; i++) {
             failString += "E";
         }
 
@@ -64,10 +64,10 @@ public class test_ProblemClass {
             failedTest = Boolean.TRUE;
         }
 
-        assertTrue(failedTest);
+        assertEquals("", "" + testRecord.getTitle());
 
         Calendar currentTime = Calendar.getInstance();
-        Problem testProblem2 = new Problem(123,123,   "Derp",currentTime,
+        Problem testProblem2 = new Problem(123,123,   "Derp","2018",
                 "Real", "FINAL");
 
         // Test to make sure that the length is less than 30 characters long.
@@ -92,7 +92,7 @@ public class test_ProblemClass {
         }
 
         Calendar currentTime = Calendar.getInstance();
-        Problem testProblem2 = new Problem(123, 324, "Problem1",currentTime,
+        Problem testProblem2 = new Problem(123, 324, "Problem1","2018",
                 "Real", "FINAL");
 
         // Test to make sure that the description length is not longer than 300 characters.

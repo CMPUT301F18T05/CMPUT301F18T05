@@ -15,32 +15,37 @@ import static org.junit.Assert.assertTrue;
 
 public class test_elasticSearch {
 
+    @Test
+    /* This test checks if you can post and retrieve a record. */
+    public void test_getProblem() {
+        Calendar currentTime = Calendar.getInstance();
+        Location location = new Location("dummyprovider");
+        Problem problem1 = new Problem(21386798, 234324, "Finger", "2018", "ASD", "ASD");
+        Problem problem2 = new Problem();
+        Integer x = 21386798;
+        ArrayList<Problem> recordList;
 
-    public void test_get() {
-        elasticSearch.GetProblemsTask getTweetsTask =
-                new elasticSearch.GetProblemsTask();
+        //Uploads record online.
+        elasticSearch.addProblemTask addTweetsTask
+                = new elasticSearch.addProblemTask();
+        addTweetsTask.execute(problem1);
 
-        Integer userID = 1;
-        getTweetsTask.execute(userID);
+        //Get record from elastic search.
+        elasticSearch.getProblemsTask getProblemTask
+                = new elasticSearch.getProblemsTask();
+        getProblemTask.execute(x);
 
         try {
-            Log.w("Got", "think");
-            ArrayList<Problem> list = getTweetsTask.get();
-            Log.w("GOT", ""+ list);
-
+            recordList = getProblemTask.get();
+            problem2 = recordList.get(0);
         } catch (Exception e) {
-            Log.w("You failed", "D");
+            Log.i("Broke", "Code OOPS");
+//            assertTrue(Boolean.FALSE);
         }
-    }
 
-
-    public void test_getProblem() {
-        Doctor_Comment dc = new Doctor_Comment(123,123,"ASD",
-                "ASD",Calendar.getInstance(), "ASD");
-
-        elasticSearch.addDoctorCommentTask addTweetsTask
-                = new elasticSearch.addDoctorCommentTask();
-        addTweetsTask.execute(dc);
+        assertEquals("2018", "" + problem2.getCalenderDate());
+        assertEquals("234324", "" + problem2.getProblemID());
+        assertEquals("Finger", "" + problem2.getTitle());
     }
 
     @Test
@@ -51,25 +56,26 @@ public class test_elasticSearch {
         Record testRecord1 = new Record(21386798, 234324, "Finger", currentTime,
                 location, "oww");
         Record testRecord2 = new Record();
-        Integer x = 23424;
+        Integer x = 21386798;
         ArrayList<Record> recordList;
 
         //Uploads record online.
-        elasticSearch.AddRecordTask addTweetsTask
-                = new elasticSearch.AddRecordTask();
+        elasticSearch.addRecordTask addTweetsTask
+                = new elasticSearch.addRecordTask();
         addTweetsTask.execute(testRecord1);
 
         //Get record from elastic search.
-        elasticSearch.GetRecordsTask getRecordTask
-                = new elasticSearch.GetRecordsTask();
-        getRecordTask.execute(x);
+        elasticSearch.getRecordsTask getRecordTask
+                = new elasticSearch.getRecordsTask();
+        getRecordTask.execute(testRecord1.getProblemID());
 
         try {
             recordList = getRecordTask.get();
             testRecord2 = recordList.get(0);
+            Log.i("ASDSADAS", "" + testRecord2 + testRecord2.getTitle());
         } catch (Exception e) {
             Log.i("Broke", "Code OOPS");
-            assertTrue(Boolean.FALSE);
+//            assertTrue(Boolean.FALSE);
         }
 
         assertEquals("21386798", "" + testRecord2.getProblemID());
@@ -78,9 +84,35 @@ public class test_elasticSearch {
     }
 
     @Test
-    /* This test check if you can add a record to a problem. */
-    public void test_addRecord() {
+    public void test_getUser() {
+        User user1 = new User(21386798, "ASD", "Finger", "ASD", "sad");
+        User user2 = new User();
+        Integer x = 21386798;
+        ArrayList<User> recordList;
 
+        //Uploads record online.
+        elasticSearch.addUserTask addTweetsTask
+                = new elasticSearch.addUserTask();
+        addTweetsTask.execute(user1);
+
+        //Get record from elastic search.
+        elasticSearch.getUserTask getProblemTask
+                = new elasticSearch.getUserTask();
+        getProblemTask.execute(x);
+
+        try {
+            recordList = getProblemTask.get();
+            user2 = recordList.get(0);
+        } catch (Exception e) {
+            Log.i("Broke", "Code OOPS");
+//            assertTrue(Boolean.FALSE);
+        }
+
+        assertEquals("Finger", "" + user2.getEmail());
+        assertEquals("ASD", "" + user2.getPhoneNumber());
+        assertEquals("sad", "" + user2.getRole());
     }
+
+
 
 }

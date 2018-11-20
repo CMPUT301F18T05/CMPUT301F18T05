@@ -40,7 +40,7 @@ public class Record {
     }
 
     public void setTitle(String title) {
-        if (title.length() <= 10) {
+        if (title.length() <= 30) {
             this.title = title;
         } else {
             this.title = "";

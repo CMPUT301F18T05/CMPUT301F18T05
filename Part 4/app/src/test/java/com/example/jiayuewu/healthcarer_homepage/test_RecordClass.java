@@ -33,8 +33,8 @@ public class test_RecordClass {
         assertEquals("Finger", testRecord.getComment());
         assertEquals("Finger hurts.", testRecord.getTitle());
         assertEquals(location, testRecord.getLocation());
-        assertEquals("123", testRecord.getProblemID());
-        assertEquals("324", testRecord.getRecordID());
+        assertEquals("123", "" + testRecord.getProblemID());
+        assertEquals("234", "" + testRecord.getRecordID());
     }
 
     @Test
@@ -104,7 +104,7 @@ public class test_RecordClass {
         Boolean failedTest = Boolean.FALSE;
         String failString = new String();
 
-        for (Integer i = 0; i < 30; i++) {
+        for (Integer i = 0; i < 31; i++) {
             failString += "E";
         }
 
@@ -116,7 +116,7 @@ public class test_RecordClass {
             failedTest = Boolean.TRUE;
         }
 
-        assertTrue(failedTest);
+        assertEquals("", "" + testRecord.getTitle());
 
         Calendar currentTime = Calendar.getInstance();
         Location location = new Location("dummyprovider");
