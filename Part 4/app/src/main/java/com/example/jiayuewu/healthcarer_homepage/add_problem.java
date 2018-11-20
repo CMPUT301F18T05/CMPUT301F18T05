@@ -27,8 +27,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 
 public class add_problem extends AppCompatActivity {
@@ -59,16 +61,18 @@ public class add_problem extends AppCompatActivity {
         saveProblem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String part, title, description;
-                Calendar date;
-
+                String part, date_text, title, description;
                 Integer userid;
+                Calendar cal;
 
-                date = Calendar.getInstance();
+                Date date;
+                cal = Calendar.getInstance();
+                date = cal.getTime();
+                SimpleDateFormat sdf;
+                sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                date_text = "" + sdf.format(date);
 
                 problemID = 1;
-
-
 
                 part = getIntent().getStringExtra("part");
                 user = DataHolder.getData();
@@ -79,7 +83,7 @@ public class add_problem extends AppCompatActivity {
 
                 title = titleText.getText().toString();
                 description = dText.getText().toString();
-                dateText.setText(date.toString());
+                dateText.setText(date_text);
 
 //                elasticSearch.getProblemsTask problemTask
 //                        = new elasticSearch.getProblemsTask();
@@ -96,7 +100,7 @@ public class add_problem extends AppCompatActivity {
 //
 //                }
 
-                Problem problem = new Problem(userid, problemID, title, date, description, part);
+                Problem problem = new Problem(userid, problemID, title, date_text, description, part);
                 elasticSearch.addProblemTask task
                         = new elasticSearch.addProblemTask();
                 task.execute(problem);

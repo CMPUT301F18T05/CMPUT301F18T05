@@ -10,7 +10,7 @@ public class Problem {
     private Integer problemID;
     private Integer userID;
     private String title;
-    private Calendar calenderDate;
+    private String calenderDate;
     private String description;
     private String bodyPart;
 
@@ -18,7 +18,7 @@ public class Problem {
 
     }
 
-    Problem(Integer userID, Integer problemID, String title, Calendar calenderDate, String description, String bodyPart) {
+    Problem(Integer userID, Integer problemID, String title, String calenderDate, String description, String bodyPart) {
         this.problemID = problemID;
         this.userID = userID;
         this.title = title;
@@ -52,11 +52,11 @@ public class Problem {
         }
     }
 
-    public Calendar getCalenderDate() {
+    public String getCalenderDate() {
         return this.calenderDate;
     }
 
-    public void setCalenderDate(Calendar calenderDate) {
+    public void setCalenderDate(String calenderDate) {
         this.calenderDate = calenderDate;
     }
 
