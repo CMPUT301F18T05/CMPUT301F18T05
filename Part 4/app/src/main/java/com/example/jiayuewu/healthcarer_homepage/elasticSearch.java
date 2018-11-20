@@ -247,32 +247,15 @@ public class elasticSearch {
             verifySettings();
 
             for (User user : users) {
-//                Index index = new Index.Builder(user).index("cmput301f18t05").type("User").build();
-                Index index = new Index.Builder(user).index("cmput301f18t05").type("User").build();
-
-//                Index index = new Index.Builder(user).build();
-
-
-                Log.w("Got here in create", "AS");
-                Log.w("GETTING USER", "" + user.getUserID());
-                Log.w("AA", "" + index);
-
+                Index index = new Index.Builder(user).index("cmput301f18t05").type("User").id("" + user.getUserID()).build();
 
                 try {
                     // where is the client?
                     DocumentResult result = client.execute(index);
-                    Log.w("Success", "Red");
-                    Log.w("ASAS", "" + result.isSucceeded());
-                    if (result.isSucceeded()) {
-                    } else {
-                        Log.w("Error", "Elastic search was not able to add the tweet.");
-                    }
                 } catch (Exception e) {
-                    Log.w("Error", "The application failed to build and send the tweets");
+                    Log.w("You", "Done goofed.");
                 }
-
             }
-            Log.w("AT END", "ASSA");
 
             return null;
         }
@@ -288,11 +271,13 @@ public class elasticSearch {
 
 //            String query = "{ \"query\": { \"term\" : { \"message\" : \"love\" } } }";
 
-            String query = "{ \"query\": { \"term\" : { \"message\" : \""+search_parameters[0]+"\" } } }";
+//            String query = "{ \"query\": { \"term\" : { \"\" : \""+search_parameters[0]+"\" } } }";
 
+            String query = "{\"query\" : {\"term\" : { \"_id\" : \"" + search_parameters[0] + "\" }}}";
+//            {"query" : {"term" : { "_id" : "435" }}}
 
             Search search = new Search.Builder(query)
-                    .addIndex("testing")
+                    .addIndex("cmput301f18t05")
                     .addType("User")
                     .build();
 

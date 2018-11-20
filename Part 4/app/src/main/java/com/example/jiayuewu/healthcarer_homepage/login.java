@@ -25,16 +25,12 @@ public class login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.w("In loging", "s");
 
                 useridText = (EditText) findViewById(R.id.login_userid_text);
-                Integer userid = 0 + Integer.parseInt(useridText.getText().toString());
+                Integer userid = Integer.parseInt(useridText.getText().toString());
                 elasticSearch.getUserTask getUserTask
                         = new elasticSearch.getUserTask();
                 getUserTask.execute(userid);
-
-                Log.w("AFETER", "ERER");
-
 
                 try {
                     userArrayList = getUserTask.get();
@@ -43,33 +39,24 @@ public class login extends AppCompatActivity {
                     Log.e("Error", "Failed to get the tweets out of the async object.");
                 }
 
-                Log.w("AFTER TRY", "ASDASD");
-
                 for (User u: userArrayList) {
                     if (u.getUserID() == userid) {
+                        Log.i("ASDASD", "" + u.getUserID());
                         user = u;
+                        break;
                     }
                 }
 
-//                Log.w("ASDASD", "" + userArrayList.get(0));
+                Log.i("PHONE", "" + user.getPhoneNumber());
+                Log.i("ROLE", "" + user.getRole());
 
-
-                if (user.getUserID() == null) {
-                    Log.w("DER", "ASDA");
-                    if (user.getRole() == "Patient") {
-                        Intent patient_intent = new Intent(login.this, homepage_patient.class);
-                        startActivityForResult(patient_intent, 0);
-                    } else {
-                        Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
-                        startActivityForResult(doctor_intent, 0);
-                    }
-                } else {
-                    Log.w("NOT LODDED IN", "DERP");
-                }
-
-
-
-
+//                if (user.getRole() == "Patient") {
+//                    Intent patient_intent = new Intent(login.this, homepage_patient.class);
+//                    startActivityForResult(patient_intent, 0);
+//                } else {
+//                    Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
+//                    startActivityForResult(doctor_intent, 0);
+//                }
             }
         });
     }
