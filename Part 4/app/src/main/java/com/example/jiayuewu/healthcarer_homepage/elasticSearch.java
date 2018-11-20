@@ -200,8 +200,6 @@ public class elasticSearch {
         }
     }
 
-
-    // TODO we need a function which adds tweets to elastic search
     public static class addUserTask extends AsyncTask<User, Void, Void> {
 
         @Override
@@ -215,7 +213,6 @@ public class elasticSearch {
                         = new getUserTask();
                 getUserTask.execute(user.getUserID());
 
-
                 Log.w("HEYO", "HERH");
                 Index index = new Index.Builder(user).index("cmput301f18t05").type("User").build();
 
@@ -228,13 +225,10 @@ public class elasticSearch {
                 }
             }
 
-
-            Log.w("In elasticSearch", "USer has been made");
             return null;
         }
     }
 
-    // TODO we need a function which gets tweets from elastic search
     public static class getUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
         @Override
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
@@ -267,7 +261,7 @@ public class elasticSearch {
         }
     }
 
-    // TODO we need a function which gets tweets from elastic search
+
     public static class deleteUserTask extends AsyncTask<Integer, Void, ArrayList<User>> {
         @Override
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
@@ -280,22 +274,7 @@ public class elasticSearch {
                     .addType("User")
                     .build();
 
-            try {
-                // TODO get the results of the query
-                if (client.execute(deleteQuery).isSucceeded()) {
-                    Log.i("DERP", "PROBLEM HAS ");
-                } else {
-                    Log.i("Error", "The search query failed to find any tweets for some reason.");
-                }
-            }
-            catch (Exception e) {
-                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
-            }
-
             return new ArrayList<User>();
         }
-
-
     }
-
 }
