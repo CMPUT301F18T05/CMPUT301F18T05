@@ -39,7 +39,7 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
     @Override
     public void onClick(View v) {
         // placeholder
-        Snackbar.make(v, "Save Button Action", Snackbar.LENGTH_LONG)
+        Snackbar.make(v, "Contact Information Saved", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
 
         elasticSearch.deleteUserTask task

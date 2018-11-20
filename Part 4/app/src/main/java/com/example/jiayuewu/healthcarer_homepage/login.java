@@ -74,12 +74,12 @@ public class login extends AppCompatActivity {
                             Log.i ("Error in trying to open", "Patient homepage");
                         }
                     } else {
-                        try {
-                            Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
-                            startActivity(doctor_intent);
-                        } catch (Exception e) {
-                            Log.i ("Error in trying to open", "Doctor homepage");
-                        }
+//                        try {
+//                            Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
+//                            startActivity(doctor_intent);
+//                        } catch (Exception e) {
+//                            Log.i ("Error in trying to open", "Doctor homepage");
+//                        }
                     }
                 } catch (Exception e) {
                     Log.i("User", "Not found");

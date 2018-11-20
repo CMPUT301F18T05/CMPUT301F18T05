@@ -1,6 +1,7 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,6 +63,9 @@ public class newprofile extends AppCompatActivity {
                elasticSearch.addUserTask addTweetsTask
                        = new elasticSearch.addUserTask();
                addTweetsTask.execute(user);
+
+               Snackbar.make(v, "New user created", Snackbar.LENGTH_LONG)
+                       .setAction("Action", null).show();
             }
         });
     }
