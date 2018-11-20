@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class all_problems extends AppCompatActivity {
     private Problem problem = new Problem();
-    private ArrayList<Problem> problemArrayList = new ArrayList<>();
+    private ArrayList<Problem> problemArrayList = new ArrayList<Problem>();
     private ArrayAdapter<Problem> adapter;
     private User user;
     @Override
@@ -39,7 +39,8 @@ public class all_problems extends AppCompatActivity {
             Log.e("Error", "Failed to get the problem history out of the async object.");
         }
 
-        adapter = new ArrayAdapter<>(this, R.layout.activity_all_problems, problemArrayList);
+        Log.i("hello","" + problemArrayList);
+        adapter = new ArrayAdapter<>(this, R.layout.list_item, problemArrayList);
         ListView history = findViewById(R.id.search_result_lisview);
         history.setAdapter(adapter);
         adapter.notifyDataSetChanged();

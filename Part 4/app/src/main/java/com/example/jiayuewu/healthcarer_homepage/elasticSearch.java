@@ -103,6 +103,22 @@ public class elasticSearch {
         }
     }
 
+    public static class deleteProblemTask extends AsyncTask<Integer, Void, ArrayList<Problem>> {
+        @Override
+        protected ArrayList<Problem> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            String query = "{ \"query\": { \"term\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
+
+            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Problem")
+                    .build();
+
+            return new ArrayList<Problem>();
+        }
+    }
+
     public static void verifySettings() {
         if (client == null) {
             DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080");

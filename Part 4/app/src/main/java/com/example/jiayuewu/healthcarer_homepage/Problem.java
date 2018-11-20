@@ -80,4 +80,9 @@ public class Problem {
         this.bodyPart = bodyPart;
     }
 
+    @Override
+    public String toString(){
+        return this.problemID + this.title;
+    }
+
 }

@@ -104,6 +104,9 @@ public class add_problem extends AppCompatActivity {
                 elasticSearch.addProblemTask task
                         = new elasticSearch.addProblemTask();
                 task.execute(problem);
+//                elasticSearch.deleteProblemTask task
+//                        = new elasticSearch.deleteProblemTask();
+//                task.execute(userid);
 
             }
         });
