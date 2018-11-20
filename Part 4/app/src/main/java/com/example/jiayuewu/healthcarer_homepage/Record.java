@@ -18,8 +18,13 @@ public class Record {
 
     }
 
-    Record(String problemID, String recordID, String title, Calendar date, Location location, String comment) {
-
+    Record(Integer problemID, Integer recordID, String title, Calendar date, Location location, String comment) {
+        this.problemID = problemID;
+        this.recordID = recordID;
+        this.title = title;
+        this.date = date;
+        this.location = location;
+        this.comment = comment;
     }
 
     public Integer getProblemID() { return this.problemID; }
