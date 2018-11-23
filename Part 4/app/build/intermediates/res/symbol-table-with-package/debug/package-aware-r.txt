@@ -1078,7 +1078,6 @@ id add_record_save_button
 id alertTitle
 id all
 id all_problems_button
-id all_problems_count_text
 id always
 id appbar
 id async
@@ -1107,6 +1106,7 @@ id comment_timestamp
 id comment_title
 id constraintLayout
 id container
+id container2
 id content
 id contentPanel
 id coordinator
@@ -1305,6 +1305,7 @@ id submenuarrow
 id submit_area
 id tabMode
 id tabs
+id tabs2
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1431,6 +1432,7 @@ layout activity_add_record
 layout activity_all_problems
 layout activity_doctor_comments
 layout activity_homepage_doctor
+layout activity_homepage_doctor_my_profile_content
 layout activity_homepage_patient
 layout activity_login
 layout activity_mainpage
@@ -1465,6 +1467,7 @@ layout homepage_doctor_my_patients
 layout homepage_doctor_my_profile
 layout homepage_patient_my_body
 layout homepage_patient_my_profile
+layout list_item
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
