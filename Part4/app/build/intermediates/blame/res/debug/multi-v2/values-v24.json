@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/991ca1f6f075828bcbaed4caa256003c/res/values-v24/values-v24.xml",
