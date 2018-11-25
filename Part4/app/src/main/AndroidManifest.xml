@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jiayuewu.healthcarer_homepage">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Welcome, user"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".homepage_patient"
+            android:label="Welcome, user"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".homepage_doctor"
+            android:label="Welcome, user"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainpage"
+            android:label="Health Carer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".newprofile"
+            android:label="New Profile" />
+        <activity
+            android:name=".login"
+            android:label="Login" />
+        <activity
+            android:name=".all_problems"
+            android:label="All Problems" />
+        <activity
+            android:name=".search_result"
+            android:label="Search Result" />
+        <activity android:name=".problems_for_part" />
+        <activity
+            android:name=".add_problem"
+            android:label="Add Problem" />
+        <activity
+            android:name=".view_problem"
+            android:label="View Problem" />
+        <activity
+            android:name=".view_patient_problem"
+            android:label="View Problem" />
+        <activity
+            android:name=".remind_setting"
+            android:label="Remind Setting" />
+        <activity
+            android:name=".view_record"
+            android:label="View Record" />
+        <activity
+            android:name=".view_records"
+            android:label="View Records" />
+        <activity
+            android:name=".view_patient_record"
+            android:label="View Patient Record" />
+        <activity
+            android:name=".view_patient_records"
+            android:label="View Patient Records" />
+        <activity
+            android:name=".add_record"
+            android:label="Add Record" />
+        <activity
+            android:name=".doctor_comments"
+            android:label="Doctor Comments" />
+        <activity
+            android:name=".view_doctor_comment"
+            android:label="View Doctor Comments" />
+        <activity
+            android:name=".add_patient"
+            android:label="Add Patient" />
+        <activity
+            android:name=".view_patient"
+            android:label="View Patient" />
+        <activity android:name=".RemindActivity" />
+        <activity
+            android:name=".add_doctor_comment"
+            android:label="Add Doctor Comment" />
+
+        <receiver android:name=".AlertReceiver" />
+        <!-- <service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" /> -->
+        <activity android:name=".homepage_doctor_my_profile_content"></activity>
+    </application>
+
+</manifest>
