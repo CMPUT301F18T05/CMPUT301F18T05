@@ -25,6 +25,7 @@ import com.searchly.jestdroid.DroidClientConfig;
 import com.searchly.jestdroid.JestClientFactory;
 import com.searchly.jestdroid.JestDroidClient;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -119,8 +120,13 @@ public class elasticSearch {
                     .addIndex(cmput301f18t05)
                     .addType("Problem")
                     .build();
-
-            return new ArrayList<Problem>();
+            try{
+                client.execute(deleteQuery);
+            }catch (IOException e){
+                Log.i("TODO","We actually failed here, deleting a user");
+                e.printStackTrace();
+            }
+            return null;
         }
     }
 /**verifySettings:
@@ -337,14 +343,19 @@ public class elasticSearch {
         protected ArrayList<User> doInBackground(Integer... search_parameters) {
             verifySettings();
 
-            String query = "{ \"query\": { \"term\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
+            String query = "{ \"query\": { \"match\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
 
             DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
                     .addIndex(cmput301f18t05)
                     .addType("User")
                     .build();
-
-            return new ArrayList<User>();
+            try{
+                client.execute(deleteQuery);
+            }catch (IOException e){
+                Log.i("TODO","We actually failed here, deleting a user");
+                e.printStackTrace();
+            }
+            return null;
         }
     }
 }

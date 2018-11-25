@@ -99,6 +99,9 @@ public class add_problem extends AppCompatActivity {
                     Log.e("Error", "Failed to get the problem out of the async object.");
                 }
                 Integer length = problemArrayList.size() - 1;
+                if (length != -1){
+                    problemID = problemArrayList.get(length).getProblemID() + 1;
+                }
                 problemID = problemArrayList.get(length).getProblemID() + 1;
 
                 Problem problem = new Problem(userid, problemID, title, date_text, description, part);
