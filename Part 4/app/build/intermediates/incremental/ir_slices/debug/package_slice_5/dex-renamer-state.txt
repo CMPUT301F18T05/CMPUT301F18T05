@@ -1,4 +1,4 @@
-#Thu Nov 22 17:24:58 MST 2018
-base.0=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/5
+#Thu Nov 22 18:53:39 MST 2018
+base.0=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/5
 path.0=classes.dex
 renamed.0=classes.dex

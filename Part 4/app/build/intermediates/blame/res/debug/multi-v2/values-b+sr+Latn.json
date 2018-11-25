@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
                     "source": "/Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/950ffce3f3f2c11d106f484a33ddd53e/res/values-b+sr+Latn/values-b+sr+Latn.xml",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/src/main/res/values/styles.xml",
+                    "source": "/Users/mayuhang/Quintus-Software/Part 4/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "5,16,12,18",
                         "startColumns": "4,4,4,4",
@@ -39,25 +39,6 @@
                         "endLines": "28,1091,1180,4635",
                         "endColumns": "60,24,24,12",
                         "endOffsets": "1371,66872,72083,296317"
-                    }
-                },
-                {
-                    "source": "/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "11,4,1,8,5,2,3,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "547,171,16,357,224,74,121,427,478",
-                        "endLines": "14,4,1,8,5,2,3,9,10",
-                        "endColumns": "19,52,57,69,73,46,49,50,68",
-                        "endOffsets": "656,219,69,422,293,116,166,473,542"
-                    },
-                    "to": {
-                        "startLines": "2,2260,2261,2268,2277,2279,2280,2281,2282",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "150,138445,138498,139317,140471,140616,140663,140713,140764",
-                        "endLines": "5,2260,2261,2268,2277,2279,2280,2281,2282",
-                        "endColumns": "19,52,57,69,73,46,49,50,68",
-                        "endOffsets": "259,138493,138551,139382,140540,140658,140708,140759,140828"
                     }
                 },
                 {
@@ -133,7 +114,26 @@
                     }
                 },
                 {
-                    "source": "/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/src/main/res/values/colors.xml",
+                    "source": "/Users/mayuhang/Quintus-Software/Part 4/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "11,4,1,8,5,2,3,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "547,171,16,357,224,74,121,427,478",
+                        "endLines": "14,4,1,8,5,2,3,9,10",
+                        "endColumns": "19,52,57,69,73,46,49,50,68",
+                        "endOffsets": "656,219,69,422,293,116,166,473,542"
+                    },
+                    "to": {
+                        "startLines": "2,2260,2261,2268,2277,2279,2280,2281,2282",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "150,138445,138498,139317,140471,140616,140663,140713,140764",
+                        "endLines": "5,2260,2261,2268,2277,2279,2280,2281,2282",
+                        "endColumns": "19,52,57,69,73,46,49,50,68",
+                        "endOffsets": "259,138493,138551,139382,140540,140658,140708,140759,140828"
+                    }
+                },
+                {
+                    "source": "/Users/mayuhang/Quintus-Software/Part 4/app/src/main/res/values/colors.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
@@ -147,6 +147,23 @@
                         "startOffsets": "10087,10133,10180",
                         "endColumns": "45,46,50",
                         "endOffsets": "10128,10175,10226"
+                    }
+                },
+                {
+                    "source": "/Users/mayuhang/Quintus-Software/Part 4/app/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "2,3,5,4",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "88,146,244,202",
+                        "endColumns": "57,55,48,41",
+                        "endOffsets": "141,197,288,239"
+                    },
+                    "to": {
+                        "startLines": "2020,2021,2022,2079",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "123558,123616,123672,127356",
+                        "endColumns": "57,55,48,41",
+                        "endOffsets": "123611,123667,123716,127393"
                     }
                 },
                 {
@@ -204,23 +221,6 @@
                         "endLines": "240,241,1052,1252,1284,1322,1329,2026,2027,2028,2029,2030,2031,2032,2141,2142,2143,2144,2145,2146,2147,2148,2149,2150,2151,2152,2153,2154,2155,2168,2169,2177,2178,2190,2191,2192,2193,2194,2198,2220,2278,3980,3984,3986,3992,3994,4357,4358",
                         "endColumns": "68,62,24,24,24,24,24,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66",
                         "endOffsets": "12963,13026,58900,77148,79213,81175,81552,123956,124024,124096,124166,124227,124301,124374,131301,131362,131424,131488,131550,131611,131679,131779,131839,131905,131978,132047,132104,132156,132218,132955,133031,133411,133446,134036,134097,134154,134188,134223,134401,135682,140611,254120,254321,254497,254881,255076,279421,279488"
-                    }
-                },
-                {
-                    "source": "/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/src/main/res/values/dimens.xml",
-                    "from": {
-                        "startLines": "2,3,5,4",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "88,146,244,202",
-                        "endColumns": "57,55,48,41",
-                        "endOffsets": "141,197,288,239"
-                    },
-                    "to": {
-                        "startLines": "2020,2021,2022,2079",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "123558,123616,123672,127356",
-                        "endColumns": "57,55,48,41",
-                        "endOffsets": "123611,123667,123716,127393"
                     }
                 },
                 {

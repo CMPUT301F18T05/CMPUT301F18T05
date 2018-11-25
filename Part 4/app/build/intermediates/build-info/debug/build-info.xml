@@ -6,8 +6,8 @@
     density="420dpi"
     format="10"
     plugin-version="3.2.1"
-    timestamp="1542936092628"
-    token="318229454370219974"
+    timestamp="1543124618709"
+    token="6006166853341122497"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
@@ -18,93 +18,93 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="39" />
+        duration="0" />
     <task
         name="verifier"
-        duration="5" />
+        duration="0" />
 
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1542936092628"
+        timestamp="1543124618709"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
     </build>
 

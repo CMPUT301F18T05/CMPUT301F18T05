@@ -1,4 +1,4 @@
-#Thu Nov 22 18:21:45 MST 2018
+#Sat Nov 24 22:44:13 MST 2018
 path.1=classes.dex
 path.0=classes.dex
 renamed.10=classes11.dex
@@ -10,19 +10,19 @@ renamed.5=classes6.dex
 renamed.4=classes5.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
-base.9=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/21
+base.9=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/19
 renamed.1=classes2.dex
-base.8=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/13
+base.8=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/16
 renamed.0=classes.dex
-base.7=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/12
-base.6=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/15
-base.5=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/14
-base.4=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/17
-base.3=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/16
-base.2=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/19
-base.1=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/18
-base.0=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/20
-base.10=/Users/mayuhang/Downloads/Quintus-Software-greg-ProstiaMea-3/Part 4/app/build/intermediates/transforms/dexMerger/debug/11
+base.7=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/18
+base.6=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/15
+base.5=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/12
+base.4=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/17
+base.3=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/14
+base.2=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/11
+base.1=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/13
+base.0=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/21
+base.10=/Users/mayuhang/Quintus-Software/Part 4/app/build/intermediates/transforms/dexMerger/debug/20
 path.10=classes.dex
 path.9=classes.dex
 path.8=classes.dex
