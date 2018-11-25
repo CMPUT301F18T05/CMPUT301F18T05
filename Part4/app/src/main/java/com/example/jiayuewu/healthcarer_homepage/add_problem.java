@@ -102,7 +102,6 @@ public class add_problem extends AppCompatActivity {
                 if (length != -1){
                     problemID = problemArrayList.get(length).getProblemID() + 1;
                 }
-                problemID = problemArrayList.get(length).getProblemID() + 1;
 
                 Problem problem = new Problem(userid, problemID, title, date_text, description, part);
                 elasticSearch.addProblemTask task
