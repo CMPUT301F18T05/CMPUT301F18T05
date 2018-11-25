@@ -84,7 +84,7 @@ public class elasticSearch {
 
             ArrayList<Problem> problems = new ArrayList<Problem>();
 
-            String query = "{\"query\" : {\"term\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
+            String query = "{\"query\" : {\"match\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
                     .addIndex(cmput301f18t05)
@@ -114,7 +114,7 @@ public class elasticSearch {
         protected ArrayList<Problem> doInBackground(Integer... search_parameters) {
             verifySettings();
 
-            String query = "{ \"query\": { \"term\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
+            String query = "{ \"query\": { \"match\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
 
             DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
                     .addIndex(cmput301f18t05)
@@ -181,7 +181,7 @@ public class elasticSearch {
 
             ArrayList<Record> records = new ArrayList<Record>();
 
-            String query = "{\"query\" : {\"term\" : { \"problemID\" : \"" + search_parameters[0] + "\" }}}";
+            String query = "{\"query\" : {\"match\" : { \"problemID\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
                     .addIndex(cmput301f18t05)
@@ -240,7 +240,7 @@ public class elasticSearch {
 
             ArrayList<Doctor_Comment> doctor_comments = new ArrayList<Doctor_Comment>();
 
-            String query = "{\"query\" : {\"term\" : { \"problemID\" : \"" + search_parameters[0] + "\" }}}";
+            String query = "{\"query\" : {\"match\" : { \"problemID\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
                     .addIndex(cmput301f18t05)
@@ -309,7 +309,7 @@ public class elasticSearch {
 
             ArrayList<User> users = new ArrayList<User>();
 
-            String query = "{\"query\" : {\"term\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
+            String query = "{\"query\" : {\"match\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
 
             Search search = new Search.Builder(query)
                     .addIndex(cmput301f18t05)
