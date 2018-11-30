@@ -1072,6 +1072,10 @@
         "source": "C:\\Users\\Jiayue Wu\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1017757746346330141568288eef9370\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
+        "merged": "F:\\Github\\Quiutus-Software-Master\\Quintus-Software\\Part4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_photos_for_part.xml.flat",
+        "source": "F:\\Github\\Quiutus-Software-Master\\Quintus-Software\\Part4\\app\\src\\main\\res\\layout\\activity_add_photos_for_part.xml"
+    },
+    {
         "merged": "F:\\Github\\Quiutus-Software-Master\\Quintus-Software\\Part4\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
         "source": "C:\\Users\\Jiayue Wu\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\a2a0275b24aa6526c2937b876eb07410\\res\\layout\\notification_template_big_media_narrow.xml"
     },

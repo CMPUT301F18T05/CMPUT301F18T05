@@ -1076,6 +1076,8 @@ id add
 id add_comment_button
 id add_patient_button
 id add_photos_button
+id add_photos_save
+id add_photos_upload
 id add_problem_date
 id add_problem_description
 id add_problem_save_button
@@ -1175,6 +1177,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -1441,6 +1444,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_doctor_comment
 layout activity_add_patient
+layout activity_add_photos_for_part
 layout activity_add_problem
 layout activity_add_record
 layout activity_all_problems

@@ -28,11 +28,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -40,7 +37,6 @@ import android.widget.ImageView;
 import com.github.chrisbanes.photoview.PhotoView;
 
 public class add_photos_in_record extends AppCompatActivity {
-    public Button sbutton;
     public Button editButton;
     public boolean turned = false;
     public ImageView bodyimg;
@@ -67,7 +63,8 @@ public class add_photos_in_record extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_record);
+        setContentView(R.layout.add_photos_in_record);
+
         bodyimg = findViewById(R.id.body_image);
         head_spot_button = findViewById(R.id.head_spot);
         torso_spot_button = findViewById(R.id.torso_spot);
@@ -158,16 +155,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Head Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front Head");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front Head");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Head Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back Head");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back Head");
+                    startActivityForResult(ap, 0);
                 }
 
             }
@@ -180,16 +177,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Torso Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front Torso");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front Torso");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Torso Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back Torso");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back Torso");
+                    startActivityForResult(ap, 0);
                 }
 
             }
@@ -202,16 +199,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Left Arm Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front right Arm");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front right Arm");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Arm Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back Left Arm");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back Left Arm");
+                    startActivityForResult(ap, 0);
                 }
             }
         });
@@ -223,16 +220,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Left Hand Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front right hand");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front right hand");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Hand Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back left hand");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back left hand");
+                    startActivityForResult(ap, 0);
                 }
            }
         });
@@ -244,16 +241,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Right Arm Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front left arm");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front left arm");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Arm Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back right arm");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back right arm");
+                    startActivityForResult(ap, 0);
                 }
             }
         });
@@ -265,16 +262,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Right Hand Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front left hand");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front left hand");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Hand Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back right hand");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back right hand");
+                    startActivityForResult(ap, 0);
                 }
             }
         });
@@ -286,16 +283,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Left Leg Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front right leg");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front right leg");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Leg Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back left leg");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back left leg");
+                    startActivityForResult(ap, 0);
                 }
             }
         });
@@ -307,16 +304,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Left Foot Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front right foot");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front right foot");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Left Foot Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back left foot");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back left foot");
+                    startActivityForResult(ap, 0);
                 }
             }
         });
@@ -328,16 +325,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Right Leg Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front left leg");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front left leg");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Leg Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back right leg");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back right leg");
+                    startActivityForResult(ap, 0);
                 }
             }
         });
@@ -349,16 +346,16 @@ public class add_photos_in_record extends AppCompatActivity {
                     // placeholder
                     Snackbar.make(v, "Right Foot Spot Front", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Front left foot");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Front left foot");
+                    startActivityForResult(ap, 0);
                 } else {
                     // placeholder
                     Snackbar.make(v, "Right Foot Spot Back", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    Intent problem_part = new Intent(add_photos_in_record.this, records_for_part.class);
-                    problem_part.putExtra("part", "Back right foot");
-                    //startActivityForResult(problem_part, 0);
+                    Intent ap = new Intent(add_photos_in_record.this, add_photos_for_part.class);
+                    ap.putExtra("part", "Back right foot");
+                    startActivityForResult(ap, 0);
                 }
             }
         });

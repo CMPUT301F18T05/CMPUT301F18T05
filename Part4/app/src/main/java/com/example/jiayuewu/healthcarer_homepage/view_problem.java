@@ -43,5 +43,13 @@ public class view_problem extends AppCompatActivity {
                 startActivity(vr);
             }
         });
+
+        doctorcomments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dc= new Intent(view_problem.this, doctor_comments.class);
+                startActivity(dc);
+            }
+        });
     }
 }

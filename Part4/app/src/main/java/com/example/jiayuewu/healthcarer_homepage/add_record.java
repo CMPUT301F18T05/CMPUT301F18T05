@@ -48,8 +48,8 @@ public class add_record extends AppCompatActivity {
         addphoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent ap = new Intent(add_record.this, add_photos_in_record.class);
-                //startActivity(ap);
+                Intent ap = new Intent(add_record.this, add_photos_in_record.class);
+                startActivity(ap);
             }
         });
 

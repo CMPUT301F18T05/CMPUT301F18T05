@@ -32,7 +32,6 @@
         android:editable="false"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="1323123"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

@@ -117,10 +117,12 @@
         <activity
             android:name="com.example.jiayuewu.healthcarer_homepage.add_doctor_comment"
             android:label="Add Doctor Comment" />
+        <activity android:name="com.example.jiayuewu.healthcarer_homepage.add_photos_in_record" />
 
         <receiver android:name="com.example.jiayuewu.healthcarer_homepage.AlertReceiver" />
         <!-- <service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" /> -->
         <activity android:name="com.example.jiayuewu.healthcarer_homepage.homepage_doctor_my_profile_content" />
+        <activity android:name="com.example.jiayuewu.healthcarer_homepage.add_photos_for_part" />
     </application>
 
 </manifest>

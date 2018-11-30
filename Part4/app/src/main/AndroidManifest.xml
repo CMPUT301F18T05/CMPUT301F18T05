@@ -17,11 +17,13 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
         <activity
             android:name=".mainpage"
             android:label="Health Carer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -106,10 +108,12 @@
         <activity
             android:name=".add_doctor_comment"
             android:label="Add Doctor Comment" />
+        <activity android:name=".add_photos_in_record" />
 
         <receiver android:name=".AlertReceiver" />
         <!-- <service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" /> -->
-        <activity android:name=".homepage_doctor_my_profile_content"></activity>
+        <activity android:name=".homepage_doctor_my_profile_content" />
+        <activity android:name=".add_photos_for_part"></activity>
     </application>
 
 </manifest>

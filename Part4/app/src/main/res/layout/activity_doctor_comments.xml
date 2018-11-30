@@ -8,8 +8,8 @@
 
     <ListView
         android:id="@+id/doctor_comments_listview"
-        android:layout_width="304dp"
-        android:layout_height="554dp"
+        android:layout_width="301dp"
+        android:layout_height="525dp"
         android:layout_marginStart="51dp"
         android:layout_marginLeft="51dp"
         android:layout_marginTop="16dp"
