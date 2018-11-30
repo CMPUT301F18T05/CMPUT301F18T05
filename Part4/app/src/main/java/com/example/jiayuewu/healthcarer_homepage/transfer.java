@@ -33,14 +33,14 @@ public class transfer extends AppCompatActivity {
 
                 try {
                     code = Integer.parseInt(transferText.getText().toString());
+                    transfer_with_code(code, v);
                 } catch (Exception e) {
-                    Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
+                    Snackbar.make(v, "Code must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
-                transfer_with_code(code);
             }
 
-            public void transfer_with_code(Integer code) {
+            public void transfer_with_code(Integer code, View v) {
                 /**
                  * Shows a simple alert message when the message is longer then the limit.
                  *
@@ -71,7 +71,6 @@ public class transfer extends AppCompatActivity {
                 }
 
                 try {
-                    idArrayList.get(0).equals(null);
                     t = idArrayList.get(0);
                     userid = t.getUserID();
 
@@ -116,7 +115,10 @@ public class transfer extends AppCompatActivity {
                     }
 
                 } catch (Exception e) {
+                    Log.i("DONE", "GOOFED");
 
+                    Snackbar.make(v, "Transfer code is invalid.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                 }
 
             }

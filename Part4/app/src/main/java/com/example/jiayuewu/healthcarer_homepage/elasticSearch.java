@@ -427,4 +427,31 @@ public class elasticSearch {
             return users;
         }
     }
+
+    /**deleteUserTask：
+     * delete User's info from the data stream with the UserID
+     *
+     */
+    public static class deleteTransferTask extends AsyncTask<Integer, Void, ArrayList<transferObject>> {
+        @Override
+        protected ArrayList<transferObject> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            String query = "{ \"query\": { \"term\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
+
+            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Transfer")
+                    .build();
+            try{
+                client.execute(deleteQuery);
+            }catch (IOException e){
+                Log.i("TODO","We actually failed here, deleting a transfer");
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+
 }

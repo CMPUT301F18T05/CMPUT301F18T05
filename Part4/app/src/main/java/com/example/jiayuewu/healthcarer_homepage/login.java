@@ -48,6 +48,7 @@ public class login extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
                 useridText = (EditText) findViewById(R.id.transfer_code_text);
 
                 Integer userid = 0;

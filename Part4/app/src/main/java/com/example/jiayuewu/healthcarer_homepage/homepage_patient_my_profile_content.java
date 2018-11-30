@@ -74,6 +74,11 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
         transferObject t;
         ArrayList<transferObject> idArrayList = new ArrayList<transferObject>();
 
+        elasticSearch.deleteTransferTask deleteTask
+                = new elasticSearch.deleteTransferTask();
+
+        deleteTask.execute(id);
+
         while (true) {
 
             Number = new Random();
@@ -96,6 +101,7 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
         elasticSearch.setTransferTask task2
                 = new elasticSearch.setTransferTask();
         task2.execute(tt);
+
         return code;
     }
 
@@ -103,7 +109,7 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
     public void onClick(View v) {
 
         switch(v.getId()) {
-            case R.id.transfer_code_button :
+            case R.id.transfer_code_button:
                 // transfer button clicked
                 Integer code;
                 code = generateCode(user.getUserID());
@@ -117,6 +123,9 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
                             }
                         });
 
+                alertDialog.show();
+
+                break;
             case R.id.patient_profile_save_button :
                 // save button clicked
                 Snackbar.make(v, "Contact Information Saved", Snackbar.LENGTH_LONG)
@@ -157,6 +166,7 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
                         = new elasticSearch.addUserTask();
                 addTweetsTask.execute(user);
                 // similarly for other buttons
+                break;
             }
     }
 
