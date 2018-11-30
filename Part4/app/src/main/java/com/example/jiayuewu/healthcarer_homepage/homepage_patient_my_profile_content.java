@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,7 +74,13 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
 
         //User user2 = new User(Integer.parseInt(u),n,e,p,user.getRole());
         user.setEmail(e);
-        user.setUserID(Integer.parseInt(u));
+        try {
+            user.setUserID(Integer.parseInt(u));
+        } catch (Exception_User_ID_Too_Short uid) {
+            Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+
+        }
         user.setName(n);
         user.setPhoneNumber(p);
 

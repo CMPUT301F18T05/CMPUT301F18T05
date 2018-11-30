@@ -1453,6 +1453,7 @@ layout activity_records_for_part
 layout activity_remind
 layout activity_remind_setting
 layout activity_search_result
+layout activity_transfer
 layout activity_view_doctor_comment
 layout activity_view_patient
 layout activity_view_patient_problem

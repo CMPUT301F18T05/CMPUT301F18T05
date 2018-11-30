@@ -69,25 +69,36 @@ public class newprofile extends AppCompatActivity {
            public void onClick(View v) {
                 setResult(RESULT_OK);
                 String uk = useridText.getText().toString();
-                Integer userid = 0 + Integer.parseInt(uk);
 
-                Log.w("USER ID ASKDASDKBAFBGAG", "" + userid);
+                try {
+                    Integer userid = 0 + Integer.parseInt(uk);
 
-                String name = nameText.getText().toString();
-                String phone = phoneText.getText().toString();
-                String email = emailText.getText().toString();
+                    String name = nameText.getText().toString();
 
-                String roleString = roleSpinner.getSelectedItem().toString();
+                    String phone = phoneText.getText().toString();
+                    String email = emailText.getText().toString();
+                    String roleString = roleSpinner.getSelectedItem().toString();
 
-                User user = new User(userid,name,email,phone,roleString);
-                //userArrayList.add(user);
-                //todo add the list to local or ES using controller
-               elasticSearch.addUserTask addTweetsTask
-                       = new elasticSearch.addUserTask();
-               addTweetsTask.execute(user);
+                    try {
+                        User user = new User(0, name, email, phone, roleString);
+                        user.setUserID(userid);
 
-               Snackbar.make(v, "New user created", Snackbar.LENGTH_LONG)
-                       .setAction("Action", null).show();
+                        //todo add the list to local or ES using controller
+                        elasticSearch.addUserTask addTweetsTask
+                                = new elasticSearch.addUserTask();
+                        addTweetsTask.execute(user);
+
+                        Snackbar.make(v, "New user created", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } catch (Exception_User_ID_Too_Short uid) {
+                        Snackbar.make(v, "UserID is too short. Must be at least 8 characters long.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+
+                } catch (Exception e) {
+                    Snackbar.make(v, "UserID cannot contain letters. Only numbers please.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
             }
         });
     }
