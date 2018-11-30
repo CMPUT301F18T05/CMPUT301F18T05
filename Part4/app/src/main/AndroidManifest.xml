@@ -110,6 +110,7 @@
         <receiver android:name=".AlertReceiver" />
         <!-- <service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" /> -->
         <activity android:name=".homepage_doctor_my_profile_content"></activity>
+        <activity android:name=".transfer"></activity>
     </application>
 
 </manifest>

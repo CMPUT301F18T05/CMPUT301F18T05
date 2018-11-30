@@ -46,9 +46,12 @@ public class User {
         return this.userID;
     }
 
-    public void setUserID(Integer userID) {
-
-        this.userID = userID;
+    public void setUserID(Integer userID) throws Exception_User_ID_Too_Short{
+        if (userID.toString().length() >= 8) {
+            this.userID = userID;
+        } else {
+            throw new Exception_User_ID_Too_Short();
+        }
     }
 
     public String getName() {

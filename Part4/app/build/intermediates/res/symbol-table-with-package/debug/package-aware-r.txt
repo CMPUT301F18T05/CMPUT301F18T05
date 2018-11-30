@@ -1191,7 +1191,6 @@ id listMode
 id list_item
 id login_button
 id login_login_button
-id login_userid_text
 id login_userid_text2
 id main_content
 id masked
@@ -1371,6 +1370,8 @@ id topPanel
 id torso_spot
 id touch_outside
 id transfer_button
+id transfer_code_button
+id transfer_code_text
 id transition_current_scene
 id transition_layout_save
 id transition_position
@@ -1453,6 +1454,7 @@ layout activity_records_for_part
 layout activity_remind
 layout activity_remind_setting
 layout activity_search_result
+layout activity_transfer
 layout activity_view_doctor_comment
 layout activity_view_patient
 layout activity_view_patient_problem

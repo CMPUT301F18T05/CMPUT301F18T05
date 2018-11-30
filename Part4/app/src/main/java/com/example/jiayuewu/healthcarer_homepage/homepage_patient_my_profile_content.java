@@ -19,14 +19,21 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class homepage_patient_my_profile_content extends Fragment implements View.OnClickListener {
     private User user;
@@ -35,6 +42,7 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
     private EditText emailText;
     private EditText phoneText;
     private FloatingActionButton saveButton;
+    private Button getCodeButton;
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,6 +53,8 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
         emailText = (EditText) rootView.findViewById(R.id.edit_email_text);
         phoneText = (EditText) rootView.findViewById(R.id.edit_phone_text);
         nameText = (EditText) rootView.findViewById(R.id.edit_name_text);
+        getCodeButton = rootView.findViewById(R.id.transfer_code_button);
+        getCodeButton.setOnClickListener(this);
         useridText.setText(String.valueOf(user.getUserID()));
         emailText.setText(user.getEmail());
         phoneText.setText(user.getPhoneNumber());
@@ -55,40 +65,97 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
         return rootView;
     }
 
+    public Integer generateCode(Integer id) {
+        elasticSearch.getTransferTask task
+                = new elasticSearch.getTransferTask();
+        Integer code, userid;
+        Random Number;
+        transferObject t;
+        ArrayList<transferObject> idArrayList = new ArrayList<transferObject>();
+
+        while (true) {
+
+            Number = new Random();
+            code = Number.nextInt(100);
+            task.execute(code);
+
+            try {
+                idArrayList = task.get();
+
+            }	catch (Exception e) {
+                Log.e("Error", "Failed to get the user id out of the async object.");
+            }
+
+            if (idArrayList.get(0).equals(null)) {
+                break;
+            }
+        }
+        transferObject tt = new transferObject(id,code);
+        elasticSearch.setTransferTask task2
+                = new elasticSearch.setTransferTask();
+        task2.execute(tt);
+        return code;
+    }
+
     @Override
     public void onClick(View v) {
-        // placeholder
-        Snackbar.make(v, "Contact Information Saved", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
 
-        elasticSearch.deleteUserTask task
-                = new elasticSearch.deleteUserTask();
-        task.execute(user.getUserID());
+        switch(v.getId()) {
+            case R.id.transfer_code_button :
+                // transfer button clicked
+                Integer code;
+                code = generateCode(user.getUserID());
+                final AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                alertDialog.setTitle("Trasfer code generated");
+                alertDialog.setMessage("Trasfer code is " + code);
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
 
-        String u,e,p,n;
-        u = useridText.getText().toString();
-        e = emailText.getText().toString();
-        p = phoneText.getText().toString();
-        n = nameText.getText().toString();
+            case R.id.patient_profile_save_button :
+                // save button clicked
+                Snackbar.make(v, "Contact Information Saved", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
 
-        //User user2 = new User(Integer.parseInt(u),n,e,p,user.getRole());
-        user.setEmail(e);
-        user.setUserID(Integer.parseInt(u));
-        user.setName(n);
-        user.setPhoneNumber(p);
+                elasticSearch.deleteUserTask task
+                        = new elasticSearch.deleteUserTask();
+                task.execute(user.getUserID());
 
-        DataHolder.setData(user);
-        try {
-            Thread.sleep(1000);
-        } catch (Exception el) {
+                String u,e,p,n;
+                u = useridText.getText().toString();
+                e = emailText.getText().toString();
+                p = phoneText.getText().toString();
+                n = nameText.getText().toString();
 
-        }
+                //User user2 = new User(Integer.parseInt(u),n,e,p,user.getRole());
+                user.setEmail(e);
+                try {
+                    user.setUserID(Integer.parseInt(u));
+                } catch (Exception_User_ID_Too_Short uid) {
+                    Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
 
-        //userArrayList.add(user);
-        //todo add the list to local or ES using controller
-        elasticSearch.addUserTask addTweetsTask
-                = new elasticSearch.addUserTask();
-        addTweetsTask.execute(user);
+                }
+                user.setName(n);
+                user.setPhoneNumber(p);
 
+                DataHolder.setData(user);
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception el) {
+
+                }
+
+                //userArrayList.add(user);
+                //todo add the list to local or ES using controller
+                elasticSearch.addUserTask addTweetsTask
+                        = new elasticSearch.addUserTask();
+                addTweetsTask.execute(user);
+                // similarly for other buttons
+            }
     }
+
 }

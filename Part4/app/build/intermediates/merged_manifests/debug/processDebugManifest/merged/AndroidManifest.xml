@@ -121,6 +121,7 @@
         <receiver android:name="com.example.jiayuewu.healthcarer_homepage.AlertReceiver" />
         <!-- <service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" /> -->
         <activity android:name="com.example.jiayuewu.healthcarer_homepage.homepage_doctor_my_profile_content" />
+        <activity android:name="com.example.jiayuewu.healthcarer_homepage.transfer" />
     </application>
 
 </manifest>

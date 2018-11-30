@@ -1,351 +1,355 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\65802bb6b56809036ff302c2d15667fb\AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1017757746346330141568288eef9370\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\0fdd10a2d3769cb9e3e24ea4342479a8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\eb717c8060c3791094ea6d423522a8fd\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\4589cd75541d5f1f6e629138174099f4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\78345bf19f9e3855c56013cd1a3d9ad2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\a6e4302106c7ed7035720159c4df8b99\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\fa537c5c414a9414c9b046764aa09687\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\743fa6769af66ff5fca58e97dee0d50a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\84be4d91fca2857e68ed26ecb247dc33\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8eca00ee8cbb305feed8bbfdbb7cad0c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\b8a00415142de48f08542af58dcd9fee\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\a2a0275b24aa6526c2937b876eb07410\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0d7a843d75d45cddecd6b76a2e5151fa\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bb18a833632774aadc466a4299738ce4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\0ba7f71511aeb81142aef316be351c93\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\21d49429ab8b8c24fef2cbc5de136b84\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\a04bcb76eaa2a06b29f970c98713ff64\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\41631933d051b882b3e462d8bdf98a57\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\4e11b79048b46e10a674ba860f02c6a5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\fc460ae4251b9c6e5a32c326ca42e8a2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4e4fb8e8276b418d31f18292a995d478\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\ecd7a907be30f315e6f39e7d7c3ba2ee\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\e45f71d32179dbdc109256d9b91f3067\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3308bdd678182df25be70aec67c8f896\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\dda58aabb208949fab910c31b5467d23\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7b647a1eef5996492552ee7ea1c047ff\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c4ec5d6b7cb1a0dde7e3d7479ee88dc\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\1ddd4e50e0887e192b7ccc8bf6df3071\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\16052e3f7d53689a964051ee71a7c7bc\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5c8a6fe400f74ecb5011158dd51661cd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\d3b96143a1d4520a483697ea643acab4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d1a8623522727f8be08ff070d48d52ec\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\44fdda591f956f9f7d27a870cd35683b\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\f74936739ffd31217d3ab17aba5a9bbf\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\095d22a4f6972c394aea76dc6bd5ff83\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\b5690672012030cd411a187af3fc56e5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\96728e03169a340c5e642682fbd18ff8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\6acad419d743fff24f909fefd63e1045\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\df9931f8c3d84779819dccebe1aa6282\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\7eca742b05d3ca93c5f22855deb68690\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\5fe4c96d27f59a4eb4c11db475fbe00b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\b5199754cf7a7bf403b3073b69edcfe3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\2dc7d30dd7abd1c4b0846462e1137cc4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c8f91860fd6811b7040ad585c1bb749f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3f860034f0396abb6b2dc3d61a6faf0b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\c9b7b69fede8ec88c3756f29ef18d841\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0f1fa1caaba4127fdcb1d7bb76f1c144\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bdf7976216feddc6d17d8052bf1807db\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\aba273524bbeff5bfab162bc52fb07b9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\bfb4eb97f205f1db9a43db5a200619a5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\32aa91f4149120a8a428b24c5291b432\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\14e09720fc7f657365dec6e786490d47\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\a560a21fcde6d062081d9c09634c92a8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\f950d05bc8679714fb0d7642259e29eb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\0fefdb1435b453663f8b867197d75a41\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\12c3dd068050bf0422d8455749982d52\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\733ca7f2a61e46bdb2164e238fe8c4b6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\83acdaac702a41b35388a191defd378b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\b33f18eb28c72c82424fc1a72a917596\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\3477f32913f9b9934a8185f031c05533\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\73289dbc6711e8292415efe83a859a43\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\400a5420ad5e4bcef8ebbebf2123e101\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\f5b8b9e2bbbf6e16caa00d091d538f2f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\68e9f88e3e623f899ee79dd4aa8966f1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\e49f57095504cc48cc7ba2b26757daf1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d791f241c61f09475b5d43561b131f77\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f12fdac753fb8cbf34b55eced23a29c7\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
 	package
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:3:5-56
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:3:5-56
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-115:12
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-116:12
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:5:5-81
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:5:22-78
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:5:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:6:5-75
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:6:5-75
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:6:22-72
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:6:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:7:5-80
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:7:22-77
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:7:22-77
 uses-permission#android.permission.INTERNET
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:8:5-67
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:10:5-113:19
-MERGED from [com.android.support:design:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1017757746346330141568288eef9370\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1017757746346330141568288eef9370\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\eb717c8060c3791094ea6d423522a8fd\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\eb717c8060c3791094ea6d423522a8fd\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4e4fb8e8276b418d31f18292a995d478\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4e4fb8e8276b418d31f18292a995d478\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\ecd7a907be30f315e6f39e7d7c3ba2ee\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\ecd7a907be30f315e6f39e7d7c3ba2ee\AndroidManifest.xml:22:5-23:19
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:10:5-114:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\095d22a4f6972c394aea76dc6bd5ff83\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\095d22a4f6972c394aea76dc6bd5ff83\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\96728e03169a340c5e642682fbd18ff8\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\96728e03169a340c5e642682fbd18ff8\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\0fefdb1435b453663f8b867197d75a41\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\0fefdb1435b453663f8b867197d75a41\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\12c3dd068050bf0422d8455749982d52\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\12c3dd068050bf0422d8455749982d52\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4e4fb8e8276b418d31f18292a995d478\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\0fefdb1435b453663f8b867197d75a41\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:13:9-38
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:13:9-38
 	android:roundIcon
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:16:9-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:16:9-40
 uses-library#org.apache.http.legacy
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:17:9-19:40
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:required
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:18:13-50
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:18:13-50
 activity#com.example.jiayuewu.healthcarer_homepage.mainpage
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:20:9-28:20
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:22:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:22:13-41
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:21:13-37
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:21:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.DEFAULT
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:17-76
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:17-76
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:27-73
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:27-73
 category#android.intent.category.LAUNCHER
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:26:27-74
 activity#com.example.jiayuewu.healthcarer_homepage.homepage_patient
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:29:9-40:20
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:29:9-40:20
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:31:13-42
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:31:13-42
 	android:theme
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:32:13-56
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:32:13-56
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:30:13-45
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:30:13-45
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:33:13-39:29
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:33:13-39:29
 action#android.intent.action.VIEW
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:38:25-66
 activity#com.example.jiayuewu.healthcarer_homepage.homepage_doctor
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:41:9-52:20
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:41:9-52:20
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:43:13-42
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:43:13-42
 	android:theme
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:44:13-56
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:44:13-56
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:42:13-44
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:42:13-44
 activity#com.example.jiayuewu.healthcarer_homepage.newprofile
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:53:9-55:43
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:53:9-55:43
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:55:13-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:55:13-40
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:54:13-39
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:54:13-39
 activity#com.example.jiayuewu.healthcarer_homepage.login
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:56:9-58:37
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:56:9-58:37
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:58:13-34
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:58:13-34
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:57:13-34
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:57:13-34
 activity#com.example.jiayuewu.healthcarer_homepage.all_problems
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:59:9-61:44
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:59:9-61:44
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:61:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:61:13-41
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:60:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:60:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.search_result
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:62:9-64:45
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:62:9-64:45
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:64:13-42
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:64:13-42
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:63:13-42
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:63:13-42
 activity#com.example.jiayuewu.healthcarer_homepage.records_for_part
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:65:9-54
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:65:9-54
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:65:19-51
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:65:19-51
 activity#com.example.jiayuewu.healthcarer_homepage.add_problem
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:66:9-68:43
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:66:9-68:43
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:68:13-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:68:13-40
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:67:13-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:67:13-40
 activity#com.example.jiayuewu.healthcarer_homepage.view_problem
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:69:9-71:44
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:69:9-71:44
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:71:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:71:13-41
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:70:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:70:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient_problem
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:72:9-74:44
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:72:9-74:44
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:74:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:74:13-41
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:73:13-49
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:73:13-49
 activity#com.example.jiayuewu.healthcarer_homepage.remind_setting
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:75:9-77:46
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:75:9-77:46
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:77:13-43
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:77:13-43
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:76:13-43
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:76:13-43
 activity#com.example.jiayuewu.healthcarer_homepage.view_record
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:78:9-80:43
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:78:9-80:43
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:80:13-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:80:13-40
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:79:13-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:79:13-40
 activity#com.example.jiayuewu.healthcarer_homepage.view_records
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:81:9-83:44
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:81:9-83:44
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:83:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:83:13-41
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:82:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:82:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient_record
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:84:9-86:51
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:84:9-86:51
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:86:13-48
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:86:13-48
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:85:13-48
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:85:13-48
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient_records
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:87:9-89:52
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:87:9-89:52
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:89:13-49
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:89:13-49
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:88:13-49
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:88:13-49
 activity#com.example.jiayuewu.healthcarer_homepage.add_record
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:90:9-92:42
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:90:9-92:42
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:92:13-39
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:92:13-39
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:91:13-39
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:91:13-39
 activity#com.example.jiayuewu.healthcarer_homepage.doctor_comments
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:93:9-95:47
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:93:9-95:47
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:95:13-44
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:95:13-44
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:94:13-44
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:94:13-44
 activity#com.example.jiayuewu.healthcarer_homepage.view_doctor_comment
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:96:9-98:52
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:96:9-98:52
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:98:13-49
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:98:13-49
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:97:13-48
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:97:13-48
 activity#com.example.jiayuewu.healthcarer_homepage.add_patient
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:99:9-101:43
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:99:9-101:43
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:101:13-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:101:13-40
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:100:13-40
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:100:13-40
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:102:9-104:44
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:102:9-104:44
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:104:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:104:13-41
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:103:13-41
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:103:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.RemindActivity
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:105:9-52
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:105:9-52
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:105:19-49
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:105:19-49
 activity#com.example.jiayuewu.healthcarer_homepage.add_doctor_comment
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:106:9-108:50
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:106:9-108:50
 	android:label
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:108:13-47
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:108:13-47
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:107:13-47
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:107:13-47
 receiver#com.example.jiayuewu.healthcarer_homepage.AlertReceiver
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:110:9-51
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:110:9-51
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:110:19-48
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:110:19-48
 activity#com.example.jiayuewu.healthcarer_homepage.homepage_doctor_my_profile_content
-ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:112:9-81
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:112:9-81
 	android:name
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:112:19-69
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:112:19-69
+activity#com.example.jiayuewu.healthcarer_homepage.transfer
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:113:9-55
+	android:name
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:113:19-43
 uses-sdk
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\65802bb6b56809036ff302c2d15667fb\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\65802bb6b56809036ff302c2d15667fb\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:design:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1017757746346330141568288eef9370\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1017757746346330141568288eef9370\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\0fdd10a2d3769cb9e3e24ea4342479a8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\0fdd10a2d3769cb9e3e24ea4342479a8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\eb717c8060c3791094ea6d423522a8fd\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\eb717c8060c3791094ea6d423522a8fd\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\4589cd75541d5f1f6e629138174099f4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\4589cd75541d5f1f6e629138174099f4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\78345bf19f9e3855c56013cd1a3d9ad2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\78345bf19f9e3855c56013cd1a3d9ad2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\a6e4302106c7ed7035720159c4df8b99\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\a6e4302106c7ed7035720159c4df8b99\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\fa537c5c414a9414c9b046764aa09687\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\fa537c5c414a9414c9b046764aa09687\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\743fa6769af66ff5fca58e97dee0d50a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\743fa6769af66ff5fca58e97dee0d50a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\84be4d91fca2857e68ed26ecb247dc33\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\84be4d91fca2857e68ed26ecb247dc33\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8eca00ee8cbb305feed8bbfdbb7cad0c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8eca00ee8cbb305feed8bbfdbb7cad0c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\b8a00415142de48f08542af58dcd9fee\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\b8a00415142de48f08542af58dcd9fee\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\a2a0275b24aa6526c2937b876eb07410\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\a2a0275b24aa6526c2937b876eb07410\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0d7a843d75d45cddecd6b76a2e5151fa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0d7a843d75d45cddecd6b76a2e5151fa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bb18a833632774aadc466a4299738ce4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bb18a833632774aadc466a4299738ce4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\0ba7f71511aeb81142aef316be351c93\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\0ba7f71511aeb81142aef316be351c93\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\21d49429ab8b8c24fef2cbc5de136b84\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\21d49429ab8b8c24fef2cbc5de136b84\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\a04bcb76eaa2a06b29f970c98713ff64\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\a04bcb76eaa2a06b29f970c98713ff64\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\41631933d051b882b3e462d8bdf98a57\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\41631933d051b882b3e462d8bdf98a57\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\4e11b79048b46e10a674ba860f02c6a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\4e11b79048b46e10a674ba860f02c6a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\fc460ae4251b9c6e5a32c326ca42e8a2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\fc460ae4251b9c6e5a32c326ca42e8a2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4e4fb8e8276b418d31f18292a995d478\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4e4fb8e8276b418d31f18292a995d478\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\ecd7a907be30f315e6f39e7d7c3ba2ee\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\ecd7a907be30f315e6f39e7d7c3ba2ee\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\e45f71d32179dbdc109256d9b91f3067\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\e45f71d32179dbdc109256d9b91f3067\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3308bdd678182df25be70aec67c8f896\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3308bdd678182df25be70aec67c8f896\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\dda58aabb208949fab910c31b5467d23\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\dda58aabb208949fab910c31b5467d23\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7b647a1eef5996492552ee7ea1c047ff\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7b647a1eef5996492552ee7ea1c047ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c4ec5d6b7cb1a0dde7e3d7479ee88dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c4ec5d6b7cb1a0dde7e3d7479ee88dc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\1ddd4e50e0887e192b7ccc8bf6df3071\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\1ddd4e50e0887e192b7ccc8bf6df3071\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\16052e3f7d53689a964051ee71a7c7bc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\16052e3f7d53689a964051ee71a7c7bc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5c8a6fe400f74ecb5011158dd51661cd\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5c8a6fe400f74ecb5011158dd51661cd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\d3b96143a1d4520a483697ea643acab4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\d3b96143a1d4520a483697ea643acab4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d1a8623522727f8be08ff070d48d52ec\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d1a8623522727f8be08ff070d48d52ec\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\44fdda591f956f9f7d27a870cd35683b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Jiayue Wu\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\44fdda591f956f9f7d27a870cd35683b\AndroidManifest.xml:20:5-44
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\f74936739ffd31217d3ab17aba5a9bbf\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\f74936739ffd31217d3ab17aba5a9bbf\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:design:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\095d22a4f6972c394aea76dc6bd5ff83\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\095d22a4f6972c394aea76dc6bd5ff83\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\b5690672012030cd411a187af3fc56e5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\b5690672012030cd411a187af3fc56e5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\96728e03169a340c5e642682fbd18ff8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\96728e03169a340c5e642682fbd18ff8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\6acad419d743fff24f909fefd63e1045\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\6acad419d743fff24f909fefd63e1045\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\df9931f8c3d84779819dccebe1aa6282\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\df9931f8c3d84779819dccebe1aa6282\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\7eca742b05d3ca93c5f22855deb68690\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\7eca742b05d3ca93c5f22855deb68690\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\5fe4c96d27f59a4eb4c11db475fbe00b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\5fe4c96d27f59a4eb4c11db475fbe00b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\b5199754cf7a7bf403b3073b69edcfe3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\b5199754cf7a7bf403b3073b69edcfe3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\2dc7d30dd7abd1c4b0846462e1137cc4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\2dc7d30dd7abd1c4b0846462e1137cc4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c8f91860fd6811b7040ad585c1bb749f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c8f91860fd6811b7040ad585c1bb749f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3f860034f0396abb6b2dc3d61a6faf0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3f860034f0396abb6b2dc3d61a6faf0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\c9b7b69fede8ec88c3756f29ef18d841\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\c9b7b69fede8ec88c3756f29ef18d841\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0f1fa1caaba4127fdcb1d7bb76f1c144\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0f1fa1caaba4127fdcb1d7bb76f1c144\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bdf7976216feddc6d17d8052bf1807db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bdf7976216feddc6d17d8052bf1807db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\aba273524bbeff5bfab162bc52fb07b9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\aba273524bbeff5bfab162bc52fb07b9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\bfb4eb97f205f1db9a43db5a200619a5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\bfb4eb97f205f1db9a43db5a200619a5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\32aa91f4149120a8a428b24c5291b432\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\32aa91f4149120a8a428b24c5291b432\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\14e09720fc7f657365dec6e786490d47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\14e09720fc7f657365dec6e786490d47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\a560a21fcde6d062081d9c09634c92a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\a560a21fcde6d062081d9c09634c92a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\f950d05bc8679714fb0d7642259e29eb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\f950d05bc8679714fb0d7642259e29eb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\0fefdb1435b453663f8b867197d75a41\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\0fefdb1435b453663f8b867197d75a41\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\12c3dd068050bf0422d8455749982d52\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\12c3dd068050bf0422d8455749982d52\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\733ca7f2a61e46bdb2164e238fe8c4b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\733ca7f2a61e46bdb2164e238fe8c4b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\83acdaac702a41b35388a191defd378b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\83acdaac702a41b35388a191defd378b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\b33f18eb28c72c82424fc1a72a917596\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\b33f18eb28c72c82424fc1a72a917596\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\3477f32913f9b9934a8185f031c05533\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\3477f32913f9b9934a8185f031c05533\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\73289dbc6711e8292415efe83a859a43\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\73289dbc6711e8292415efe83a859a43\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\400a5420ad5e4bcef8ebbebf2123e101\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\400a5420ad5e4bcef8ebbebf2123e101\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\f5b8b9e2bbbf6e16caa00d091d538f2f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\f5b8b9e2bbbf6e16caa00d091d538f2f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\68e9f88e3e623f899ee79dd4aa8966f1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\68e9f88e3e623f899ee79dd4aa8966f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\e49f57095504cc48cc7ba2b26757daf1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\e49f57095504cc48cc7ba2b26757daf1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d791f241c61f09475b5d43561b131f77\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d791f241c61f09475b5d43561b131f77\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f12fdac753fb8cbf34b55eced23a29c7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Owner\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f12fdac753fb8cbf34b55eced23a29c7\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-		ADDED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
-		INJECTED from F:\Github\Quiutus-Software-Master\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml

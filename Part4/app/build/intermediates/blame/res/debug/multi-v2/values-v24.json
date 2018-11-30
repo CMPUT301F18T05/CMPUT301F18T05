@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Github\\Quiutus-Software-Master\\Quintus-Software\\Part4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\Owner\\Documents\\GitHub\\Quintus-Software\\Part4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Jiayue Wu\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0fdd10a2d3769cb9e3e24ea4342479a8\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Owner\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\b5690672012030cd411a187af3fc56e5\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Jiayue Wu\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\a2a0275b24aa6526c2937b876eb07410\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Owner\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\c9b7b69fede8ec88c3756f29ef18d841\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

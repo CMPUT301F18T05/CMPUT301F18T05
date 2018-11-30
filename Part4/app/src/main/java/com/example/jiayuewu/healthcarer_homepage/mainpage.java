@@ -50,7 +50,7 @@ public class mainpage extends AppCompatActivity {
 
         final Button newprofile = findViewById(R.id.new_profile_button);
         Button login = findViewById(R.id.login_button);
-        Button test = findViewById(R.id.transfer_button);
+        Button transfer = findViewById(R.id.transfer_button);
         newprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,11 +66,11 @@ public class mainpage extends AppCompatActivity {
 
             }
         });
-        test.setOnClickListener(new View.OnClickListener() {
+        transfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(mainpage.this, photo_test.class);
-//                startActivity(intent);
+                Intent intent = new Intent(mainpage.this, transfer.class);
+                startActivity(intent);
             }
         });
     }

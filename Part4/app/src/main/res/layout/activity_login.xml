@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/login_userid_text"
+        android:id="@+id/transfer_code_text"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
@@ -48,7 +48,7 @@
         android:layout_marginRight="315dp"
         android:layout_marginBottom="8dp"
         android:text="User ID"
-        app:layout_constraintBottom_toTopOf="@+id/login_userid_text"
+        app:layout_constraintBottom_toTopOf="@+id/transfer_code_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
