@@ -19,6 +19,16 @@
             android:required="false" />
 
         <activity
+            android:name=".mainpage"
+            android:label="Health Carer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".homepage_patient"
             android:label="Welcome, user"
             android:theme="@style/AppTheme.NoActionBar">
@@ -42,15 +52,7 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".mainpage"
-            android:label="Health Carer">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".newprofile"
             android:label="New Profile" />

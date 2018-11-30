@@ -1,348 +1,348 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-MERGED from [com.android.support:design:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/eaf1c020b23200521c19492b4c63e1fe/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b67d08b667f5bb1fc55f41f108f3f4fc/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/489cd71827d8d46be9d34213ada62dde/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/356188b0e0d2128c89901857e6a31d8c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/d2fd8d10ccef244180de74c76a4b0816/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/a7e1f1cf48361c40ad72dbb574f04ded/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/0004fe01c37d59ccbe487a6acda267d9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/bf53c4d046f70b8e24e992e2f47cd08a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/5c1634f97b3919c2e30e1cd0422186d2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/3d770219f1df0df62453cf770f393e40/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/d01765805dbb1e21c94ee9c731b3b853/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/991ca1f6f075828bcbaed4caa256003c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bc10b92640713ad4abedcd97e39ceb2f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/fadcd30df014871fca923194bdbd59d5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4078ebb97ac0257e6d04d123fc5b79a2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/d7073dba29213e28dfb67690e19ac9af/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/766acffc71a0d8cf4986bb81f279d173/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/48374f218585020d11c3ad40d06653f1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/3e42c8821d9bb9699668530b87448e31/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f77c204a7eb8abfd2fc531601c908ba8/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/950ffce3f3f2c11d106f484a33ddd53e/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c8edff6a7348ce8e2eeae8f29147b82c/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/953e79a655254f35089adf7d03e310cf/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/ea1aacb9b799e06ea681cec4798e095e/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bff7352e569de87567f01fa96afe2a31/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/62c368b500832c0c3733de4cc21196bb/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/cc76d273e326a657cf0d485ecfeb37c2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/3fc3302d812b891ff69dba4d76b4e612/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a7c8e0221cd3ae166810f59c0b2078cf/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/fa67fd6ba6ae5556402e02a5d437a238/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/b6611829cd7fa7096b74f88bbeff7ad3/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/f6713781ebe8ab73521de2165eacc6c4/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1b7de5dd58141952db896a5bc477339a/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\f08385cec8b88d392c25429c727009f6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\9d3f650fafe451b4ccd58288c32b77ac\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\d7dabd066fdc92783c365d10dc77ba6e\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\5ab43f5e41cd64b88494b6f685862fd3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\780587f25c58597ab15c88682e2a5c41\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\03df84156d96a73eb4e7fcb8a7d79f5e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\0f6e91aa1aa7f464672ff3488d776046\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a19e9bd281d24866b9114218c9858f01\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\8309f575d1319b0282c64279bfbd5c8f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\bd80432da4f8b4203d6bbcc796997f9a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\ccaf5515d966de6193fecd9b08b34454\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\ee698ecf3e913ded9965be7113e1d87b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\5453a7833b31ce9886a8041c25dd7814\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0bca322751fcfbd22aef13e561a8ab09\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\f3ade77c09191c4d079193d133362ea6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a2e862d3e508320aef2f15b55debce48\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\a0774da91bd9859841e06258005fba21\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b4fa8e841330319d6f302cf7560df111\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\df2fba480a36ad9740009b2b23fa4b62\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\e05edff5ece64b72550c147c0870992e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c037be93990c865fa1839042491d041c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f7357f7194d9a98d5f14a06f6f32d172\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\67e78613ae02aececa76cd17fd673619\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\63f907fe2d7cd952300ef97718a98d78\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8dd5306348acae01d4d725a2e7a7b452\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\6bda797c8a848dd9b106b0eadb98b7ec\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d80fabbd41b741776b6cc074d447b9d8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\31f533579daea91e2915ce5e5e72f951\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\898746deda809d7a6106e2615f3f8028\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a947dfaa9332cc1b8446f66e62246808\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\5087de8ccf123462d18df54b633cf3b7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\8fe514e5ae35edfcc2695965ce7dde34\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0e0e332d6f4b93f6952468ef318066a3\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
 	package
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:3:5-56
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:3:5-56
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:1-116:12
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:1-118:12
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:5:5-81
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:5:22-78
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:5:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:6:5-75
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:6:5-75
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:6:22-72
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:6:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:7:5-80
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:7:22-77
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:7:22-77
 uses-permission#android.permission.INTERNET
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:8:5-67
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:10:5-114:19
-MERGED from [com.android.support:design:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/eaf1c020b23200521c19492b4c63e1fe/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/eaf1c020b23200521c19492b4c63e1fe/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/489cd71827d8d46be9d34213ada62dde/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/489cd71827d8d46be9d34213ada62dde/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/950ffce3f3f2c11d106f484a33ddd53e/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/950ffce3f3f2c11d106f484a33ddd53e/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c8edff6a7348ce8e2eeae8f29147b82c/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c8edff6a7348ce8e2eeae8f29147b82c/AndroidManifest.xml:22:5-23:19
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:10:5-116:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\f08385cec8b88d392c25429c727009f6\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\f08385cec8b88d392c25429c727009f6\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\d7dabd066fdc92783c365d10dc77ba6e\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\d7dabd066fdc92783c365d10dc77ba6e\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c037be93990c865fa1839042491d041c\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c037be93990c865fa1839042491d041c\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f7357f7194d9a98d5f14a06f6f32d172\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f7357f7194d9a98d5f14a06f6f32d172\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/950ffce3f3f2c11d106f484a33ddd53e/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c037be93990c865fa1839042491d041c\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:13:9-38
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:13:9-38
 	android:roundIcon
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:16:9-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:16:9-40
 uses-library#org.apache.http.legacy
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:17:9-19:40
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:required
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:18:13-50
-activity#com.example.jiayuewu.healthcarer_homepage.homepage_patient
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:21:9-32:20
-	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:23:13-42
-	android:theme
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:24:13-56
-	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:22:13-45
-intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:25:13-31:29
-action#android.intent.action.MAIN
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:26:17-69
-	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:26:25-66
-category#android.intent.category.DEFAULT
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:28:17-76
-	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:28:27-73
-action#android.intent.action.VIEW
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:30:17-69
-	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:30:25-66
-activity#com.example.jiayuewu.healthcarer_homepage.homepage_doctor
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:33:9-44:20
-	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:35:13-42
-	android:theme
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:36:13-56
-	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:34:13-44
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:18:13-50
 activity#com.example.jiayuewu.healthcarer_homepage.mainpage
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:45:9-53:20
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:21:9-29:20
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:47:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:23:13-41
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:46:13-37
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:48:13-52:29
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:22:13-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:26:17-76
+	android:name
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:26:27-73
 category#android.intent.category.LAUNCHER
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:51:17-77
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:51:27-74
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:27:27-74
+activity#com.example.jiayuewu.healthcarer_homepage.homepage_patient
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:31:9-42:20
+	android:label
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:33:13-42
+	android:theme
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:34:13-56
+	android:name
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:32:13-45
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:35:13-41:29
+action#android.intent.action.VIEW
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:40:17-69
+	android:name
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:40:25-66
+activity#com.example.jiayuewu.healthcarer_homepage.homepage_doctor
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:43:9-54:20
+	android:label
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:45:13-42
+	android:theme
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:46:13-56
+	android:name
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:44:13-44
 activity#com.example.jiayuewu.healthcarer_homepage.newprofile
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:54:9-56:43
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:56:9-58:43
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:56:13-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:58:13-40
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:55:13-39
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:57:13-39
 activity#com.example.jiayuewu.healthcarer_homepage.login
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:57:9-59:37
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:59:9-61:37
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:59:13-34
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:61:13-34
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:58:13-34
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:60:13-34
 activity#com.example.jiayuewu.healthcarer_homepage.all_problems
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:60:9-62:44
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:62:9-64:44
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:62:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:64:13-41
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:61:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:63:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.search_result
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:63:9-65:45
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:65:9-67:45
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:65:13-42
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:67:13-42
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:64:13-42
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:66:13-42
 activity#com.example.jiayuewu.healthcarer_homepage.problems_for_part
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:66:9-55
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:68:9-55
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:66:19-52
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:68:19-52
 activity#com.example.jiayuewu.healthcarer_homepage.add_problem
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:67:9-69:43
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:69:9-71:43
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:69:13-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:71:13-40
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:68:13-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:70:13-40
 activity#com.example.jiayuewu.healthcarer_homepage.view_problem
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:70:9-72:44
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:72:9-74:44
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:72:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:74:13-41
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:71:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:73:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient_problem
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:73:9-75:44
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:75:9-77:44
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:75:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:77:13-41
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:74:13-49
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:76:13-49
 activity#com.example.jiayuewu.healthcarer_homepage.remind_setting
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:76:9-78:46
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:78:9-80:46
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:78:13-43
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:80:13-43
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:77:13-43
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:79:13-43
 activity#com.example.jiayuewu.healthcarer_homepage.view_record
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:79:9-81:43
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:81:9-83:43
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:81:13-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:83:13-40
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:80:13-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:82:13-40
 activity#com.example.jiayuewu.healthcarer_homepage.view_records
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:82:9-84:44
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:84:9-86:44
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:84:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:86:13-41
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:83:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:85:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient_record
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:85:9-87:51
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:87:9-89:51
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:87:13-48
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:89:13-48
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:86:13-48
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:88:13-48
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient_records
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:88:9-90:52
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:90:9-92:52
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:90:13-49
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:92:13-49
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:89:13-49
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:91:13-49
 activity#com.example.jiayuewu.healthcarer_homepage.add_record
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:91:9-93:42
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:93:9-95:42
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:93:13-39
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:95:13-39
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:92:13-39
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:94:13-39
 activity#com.example.jiayuewu.healthcarer_homepage.doctor_comments
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:94:9-96:47
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:96:9-98:47
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:96:13-44
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:98:13-44
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:95:13-44
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:97:13-44
 activity#com.example.jiayuewu.healthcarer_homepage.view_doctor_comment
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:97:9-99:52
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:99:9-101:52
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:99:13-49
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:101:13-49
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:98:13-48
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:100:13-48
 activity#com.example.jiayuewu.healthcarer_homepage.add_patient
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:100:9-102:43
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:102:9-104:43
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:102:13-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:104:13-40
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:101:13-40
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:103:13-40
 activity#com.example.jiayuewu.healthcarer_homepage.view_patient
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:103:9-105:44
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:105:9-107:44
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:105:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:107:13-41
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:104:13-41
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:106:13-41
 activity#com.example.jiayuewu.healthcarer_homepage.RemindActivity
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:106:9-52
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:108:9-52
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:106:19-49
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:108:19-49
 activity#com.example.jiayuewu.healthcarer_homepage.add_doctor_comment
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:107:9-109:50
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:109:9-111:50
 	android:label
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:109:13-47
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:111:13-47
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:108:13-47
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:110:13-47
 receiver#com.example.jiayuewu.healthcarer_homepage.AlertReceiver
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:111:9-51
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:113:9-51
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:111:19-48
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:113:19-48
 activity#com.example.jiayuewu.healthcarer_homepage.homepage_doctor_my_profile_content
-ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:113:9-81
+ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:115:9-81
 	android:name
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml:113:19-69
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:115:19-69
 uses-sdk
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/eaf1c020b23200521c19492b4c63e1fe/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/eaf1c020b23200521c19492b4c63e1fe/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b67d08b667f5bb1fc55f41f108f3f4fc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b67d08b667f5bb1fc55f41f108f3f4fc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/489cd71827d8d46be9d34213ada62dde/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/489cd71827d8d46be9d34213ada62dde/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/356188b0e0d2128c89901857e6a31d8c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/356188b0e0d2128c89901857e6a31d8c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/d2fd8d10ccef244180de74c76a4b0816/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/d2fd8d10ccef244180de74c76a4b0816/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/a7e1f1cf48361c40ad72dbb574f04ded/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/a7e1f1cf48361c40ad72dbb574f04ded/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/0004fe01c37d59ccbe487a6acda267d9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/0004fe01c37d59ccbe487a6acda267d9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/bf53c4d046f70b8e24e992e2f47cd08a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/bf53c4d046f70b8e24e992e2f47cd08a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/5c1634f97b3919c2e30e1cd0422186d2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/5c1634f97b3919c2e30e1cd0422186d2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/3d770219f1df0df62453cf770f393e40/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/3d770219f1df0df62453cf770f393e40/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/d01765805dbb1e21c94ee9c731b3b853/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/d01765805dbb1e21c94ee9c731b3b853/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/991ca1f6f075828bcbaed4caa256003c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/991ca1f6f075828bcbaed4caa256003c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bc10b92640713ad4abedcd97e39ceb2f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bc10b92640713ad4abedcd97e39ceb2f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/fadcd30df014871fca923194bdbd59d5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/fadcd30df014871fca923194bdbd59d5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4078ebb97ac0257e6d04d123fc5b79a2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4078ebb97ac0257e6d04d123fc5b79a2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/d7073dba29213e28dfb67690e19ac9af/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/d7073dba29213e28dfb67690e19ac9af/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/766acffc71a0d8cf4986bb81f279d173/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/766acffc71a0d8cf4986bb81f279d173/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/48374f218585020d11c3ad40d06653f1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/48374f218585020d11c3ad40d06653f1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/3e42c8821d9bb9699668530b87448e31/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/3e42c8821d9bb9699668530b87448e31/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f77c204a7eb8abfd2fc531601c908ba8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f77c204a7eb8abfd2fc531601c908ba8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/950ffce3f3f2c11d106f484a33ddd53e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/950ffce3f3f2c11d106f484a33ddd53e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c8edff6a7348ce8e2eeae8f29147b82c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c8edff6a7348ce8e2eeae8f29147b82c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/953e79a655254f35089adf7d03e310cf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/953e79a655254f35089adf7d03e310cf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/ea1aacb9b799e06ea681cec4798e095e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/ea1aacb9b799e06ea681cec4798e095e/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bff7352e569de87567f01fa96afe2a31/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bff7352e569de87567f01fa96afe2a31/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/62c368b500832c0c3733de4cc21196bb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/62c368b500832c0c3733de4cc21196bb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/cc76d273e326a657cf0d485ecfeb37c2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/cc76d273e326a657cf0d485ecfeb37c2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/3fc3302d812b891ff69dba4d76b4e612/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/3fc3302d812b891ff69dba4d76b4e612/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a7c8e0221cd3ae166810f59c0b2078cf/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a7c8e0221cd3ae166810f59c0b2078cf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/fa67fd6ba6ae5556402e02a5d437a238/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/fa67fd6ba6ae5556402e02a5d437a238/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/b6611829cd7fa7096b74f88bbeff7ad3/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/b6611829cd7fa7096b74f88bbeff7ad3/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/f6713781ebe8ab73521de2165eacc6c4/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/f6713781ebe8ab73521de2165eacc6c4/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1b7de5dd58141952db896a5bc477339a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/mayuhang/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1b7de5dd58141952db896a5bc477339a/AndroidManifest.xml:20:5-44
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\f08385cec8b88d392c25429c727009f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\f08385cec8b88d392c25429c727009f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\9d3f650fafe451b4ccd58288c32b77ac\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\9d3f650fafe451b4ccd58288c32b77ac\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\d7dabd066fdc92783c365d10dc77ba6e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\d7dabd066fdc92783c365d10dc77ba6e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\5ab43f5e41cd64b88494b6f685862fd3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\5ab43f5e41cd64b88494b6f685862fd3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\780587f25c58597ab15c88682e2a5c41\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\780587f25c58597ab15c88682e2a5c41\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\03df84156d96a73eb4e7fcb8a7d79f5e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\03df84156d96a73eb4e7fcb8a7d79f5e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\0f6e91aa1aa7f464672ff3488d776046\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\0f6e91aa1aa7f464672ff3488d776046\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a19e9bd281d24866b9114218c9858f01\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a19e9bd281d24866b9114218c9858f01\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\8309f575d1319b0282c64279bfbd5c8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\8309f575d1319b0282c64279bfbd5c8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\bd80432da4f8b4203d6bbcc796997f9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\bd80432da4f8b4203d6bbcc796997f9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\ccaf5515d966de6193fecd9b08b34454\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\ccaf5515d966de6193fecd9b08b34454\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\ee698ecf3e913ded9965be7113e1d87b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\ee698ecf3e913ded9965be7113e1d87b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\5453a7833b31ce9886a8041c25dd7814\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\5453a7833b31ce9886a8041c25dd7814\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0bca322751fcfbd22aef13e561a8ab09\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0bca322751fcfbd22aef13e561a8ab09\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\f3ade77c09191c4d079193d133362ea6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\f3ade77c09191c4d079193d133362ea6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a2e862d3e508320aef2f15b55debce48\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a2e862d3e508320aef2f15b55debce48\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\a0774da91bd9859841e06258005fba21\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\a0774da91bd9859841e06258005fba21\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b4fa8e841330319d6f302cf7560df111\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b4fa8e841330319d6f302cf7560df111\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\df2fba480a36ad9740009b2b23fa4b62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\df2fba480a36ad9740009b2b23fa4b62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\e05edff5ece64b72550c147c0870992e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\e05edff5ece64b72550c147c0870992e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c037be93990c865fa1839042491d041c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c037be93990c865fa1839042491d041c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f7357f7194d9a98d5f14a06f6f32d172\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f7357f7194d9a98d5f14a06f6f32d172\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\67e78613ae02aececa76cd17fd673619\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\67e78613ae02aececa76cd17fd673619\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\63f907fe2d7cd952300ef97718a98d78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\63f907fe2d7cd952300ef97718a98d78\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8dd5306348acae01d4d725a2e7a7b452\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8dd5306348acae01d4d725a2e7a7b452\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\6bda797c8a848dd9b106b0eadb98b7ec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\6bda797c8a848dd9b106b0eadb98b7ec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d80fabbd41b741776b6cc074d447b9d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d80fabbd41b741776b6cc074d447b9d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\31f533579daea91e2915ce5e5e72f951\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\31f533579daea91e2915ce5e5e72f951\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\898746deda809d7a6106e2615f3f8028\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\898746deda809d7a6106e2615f3f8028\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a947dfaa9332cc1b8446f66e62246808\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a947dfaa9332cc1b8446f66e62246808\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\5087de8ccf123462d18df54b633cf3b7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\5087de8ccf123462d18df54b633cf3b7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\8fe514e5ae35edfcc2695965ce7dde34\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\8fe514e5ae35edfcc2695965ce7dde34\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0e0e332d6f4b93f6952468ef318066a3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Greg\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0e0e332d6f4b93f6952468ef318066a3\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mayuhang/Downloads/Quintus-Software-yuhang5-2/Part4fix/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Greg\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml
