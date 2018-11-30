@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".problems_for_part">
+    tools:context=".records_for_part">
 
     <EditText
         android:id="@+id/part_text"

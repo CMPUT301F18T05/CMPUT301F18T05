@@ -73,7 +73,7 @@
         <activity
             android:name="com.example.jiayuewu.healthcarer_homepage.search_result"
             android:label="Search Result" />
-        <activity android:name="com.example.jiayuewu.healthcarer_homepage.problems_for_part" />
+        <activity android:name="com.example.jiayuewu.healthcarer_homepage.records_for_part" />
         <activity
             android:name="com.example.jiayuewu.healthcarer_homepage.add_problem"
             android:label="Add Problem" />

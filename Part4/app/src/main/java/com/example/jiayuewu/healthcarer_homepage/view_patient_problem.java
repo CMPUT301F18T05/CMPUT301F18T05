@@ -34,7 +34,7 @@ public class view_patient_problem extends AppCompatActivity {
         record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent viewAndEdit = new Intent(view_patient_problem.this, view_record.class);
+                Intent viewAndEdit = new Intent(view_patient_problem.this, view_records.class);
                 startActivity(viewAndEdit);
             }
         });

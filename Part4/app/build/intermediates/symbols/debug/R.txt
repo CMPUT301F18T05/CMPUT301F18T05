@@ -1448,7 +1448,7 @@ int layout activity_homepage_patient 0x7f0c0024
 int layout activity_login 0x7f0c0025
 int layout activity_mainpage 0x7f0c0026
 int layout activity_newprofile 0x7f0c0027
-int layout activity_problems_for_part 0x7f0c0028
+int layout activity_records_for_part 0x7f0c0028
 int layout activity_remind 0x7f0c0029
 int layout activity_remind_setting 0x7f0c002a
 int layout activity_search_result 0x7f0c002b

@@ -1449,7 +1449,7 @@ layout activity_homepage_patient
 layout activity_login
 layout activity_mainpage
 layout activity_newprofile
-layout activity_problems_for_part
+layout activity_records_for_part
 layout activity_remind
 layout activity_remind_setting
 layout activity_search_result

@@ -62,7 +62,7 @@
         <activity
             android:name=".search_result"
             android:label="Search Result" />
-        <activity android:name=".problems_for_part" />
+        <activity android:name=".records_for_part" />
         <activity
             android:name=".add_problem"
             android:label="Add Problem" />
