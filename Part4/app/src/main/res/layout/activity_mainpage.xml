@@ -5,27 +5,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_animation"
+    android:id="@+id/myLayout"
     tools:context=".mainpage">
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="35dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_shape"
         android:text="Login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/new_profile_button"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="35dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_shape"
         android:text="New Profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfer_button" />
+
+    <Button
+        android:id="@+id/transfer_button"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_shape"
+        android:text="Transfer  Account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:text="Health Carer"
+        android:textColor="#FFF"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

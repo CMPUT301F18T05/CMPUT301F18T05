@@ -21,6 +21,8 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,12 +34,23 @@ import io.searchbox.core.Doc;
 
 public class mainpage extends AppCompatActivity {
 
+    ConstraintLayout myLayout;
+    AnimationDrawable animationDrawable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
+
+        myLayout = (ConstraintLayout) findViewById(R.id.myLayout);
+
+        animationDrawable = (AnimationDrawable) myLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(4500);
+        animationDrawable.setExitFadeDuration(4500);
+        animationDrawable.start();
+
         final Button newprofile = findViewById(R.id.new_profile_button);
         Button login = findViewById(R.id.login_button);
+        Button test = findViewById(R.id.transfer_button);
         newprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +64,13 @@ public class mainpage extends AppCompatActivity {
                 Intent login_intent = new Intent(mainpage.this, login.class);
                 startActivityForResult(login_intent, 0);
 
+            }
+        });
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(mainpage.this, photo_test.class);
+//                startActivity(intent);
             }
         });
     }

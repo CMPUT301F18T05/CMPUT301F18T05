@@ -23,6 +23,7 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
+import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -47,8 +48,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 public class homepage_patient_my_body_content extends Fragment{
     public Button sbutton;
+    public Button editButton;
     public boolean turned = false;
     public ImageView bodyimg;
     public ImageButton head_spot_button;
@@ -63,11 +67,15 @@ public class homepage_patient_my_body_content extends Fragment{
     public ImageButton right_foot_spot_button;
     public Drawable body_front;
     public Drawable body_back;
+    public Drawable rbody_back;
+    public Drawable rbody_front;
     public FloatingActionButton all_problems_button;
     public FloatingActionButton turn_around;
     public FloatingActionButton upload;
-
-
+    public PhotoView photoViewFront;
+    public PhotoView photoViewBack;
+    public Matrix front_matrix;
+    public Matrix back_matrix;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -89,7 +97,74 @@ public class homepage_patient_my_body_content extends Fragment{
         turn_around = rootView.findViewById(R.id.turn_around_button);
         upload = rootView.findViewById(R.id.upload_button);
         body_front = getResources().getDrawable(R.drawable.body_front);
+        rbody_front = getResources().getDrawable(R.drawable.full_body);
         body_back = getResources().getDrawable(R.drawable.body_back);
+        rbody_back = getResources().getDrawable(R.drawable.full_body_back);
+
+        photoViewFront = rootView.findViewById(R.id.photoViewFront);
+        photoViewBack = rootView.findViewById(R.id.photoViewBack);
+        editButton = rootView.findViewById(R.id.edit_button);
+        //imageView = rootView.findViewById(R.id.imageView);
+        photoViewFront.setZoomable(false);
+        photoViewBack.setZoomable(false);
+        photoViewBack.setImageDrawable(rbody_back);
+        photoViewFront.setImageDrawable(rbody_front);
+        front_matrix = new Matrix();
+        back_matrix = new Matrix();
+
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //mIcon.setZoomable(false);
+                if (!turned) {
+                    if (photoViewFront.isZoomable()) {
+                        photoViewFront.getSuppMatrix(front_matrix);
+                        photoViewFront.setZoomable(false);
+                        photoViewFront.setDisplayMatrix(front_matrix);
+                        bodyimg.setVisibility(View.INVISIBLE);
+                    } else {
+                        photoViewFront.getSuppMatrix(front_matrix);
+                        photoViewFront.setZoomable(true);
+                        photoViewFront.setDisplayMatrix(front_matrix);
+                        bodyimg.setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    if (photoViewBack.isZoomable()) {
+                        photoViewBack.getSuppMatrix(back_matrix);
+                        photoViewBack.setZoomable(false);
+                        photoViewBack.setDisplayMatrix(back_matrix);
+                        bodyimg.setVisibility(View.INVISIBLE);
+                    } else {
+                        photoViewBack.getSuppMatrix(back_matrix);
+                        photoViewBack.setZoomable(true);
+                        photoViewBack.setDisplayMatrix(back_matrix);
+                        bodyimg.setVisibility(View.VISIBLE);
+                    }
+                }
+            }
+        });
+
+        turn_around.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!turned){
+                    bodyimg.setImageDrawable(body_back);
+                    photoViewFront.setVisibility(View.INVISIBLE);
+                    photoViewBack.setVisibility(View.VISIBLE);
+                    turned = true;
+                    Snackbar.make(v, "Turned Back", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                } else {
+                    bodyimg.setImageDrawable(body_front);
+                    photoViewBack.setVisibility(View.INVISIBLE);
+                    photoViewFront.setVisibility(View.VISIBLE);
+                    turned = false;
+                    Snackbar.make(v, "Turned Front", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+
+            }
+        });
 
         sbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -330,24 +405,6 @@ public class homepage_patient_my_body_content extends Fragment{
             }
         });
 
-
-        turn_around.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!turned){
-                    bodyimg.setImageDrawable(body_back);
-                    turned = true;
-                    Snackbar.make(v, "Turned Around", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                } else {
-                    bodyimg.setImageDrawable(body_front);
-                    turned = false;
-                    Snackbar.make(v, "Turned Around", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-
-            }
-        });
         return rootView;
     }
 }
