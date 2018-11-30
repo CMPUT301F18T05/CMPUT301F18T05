@@ -21,6 +21,8 @@ package com.example.jiayuewu.healthcarer_homepage;
 import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,10 +44,19 @@ public class add_record extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
 
-        Button saveButton = findViewById(R.id.add_record_save_button);
+        Button addphoto = findViewById(R.id.add_photos_button);
+        addphoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent ap = new Intent(add_record.this, add_photos_in_record.class);
+                //startActivity(ap);
+            }
+        });
+
+        FloatingActionButton saveButton = findViewById(R.id.add_record_save_button);
 
 
-        this.newRecord.setComment("sss");
+        //this.newRecord.setComment("sss");
 
 
         saveButton.setOnClickListener(new View.OnClickListener() {

@@ -19,8 +19,11 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class view_problem extends AppCompatActivity {
 
@@ -28,5 +31,17 @@ public class view_problem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_problem);
+        FloatingActionButton viewrecords = findViewById(R.id.patient_records_button);
+        FloatingActionButton doctorcomments = findViewById(R.id.view_doctor_comment);
+        FloatingActionButton saveproblem = findViewById(R.id.problem_save_button);
+        FloatingActionButton deleteproblem = findViewById(R.id.problem_delete_button);
+
+        viewrecords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent vr= new Intent(view_problem.this, view_records.class);
+                startActivity(vr);
+            }
+        });
     }
 }

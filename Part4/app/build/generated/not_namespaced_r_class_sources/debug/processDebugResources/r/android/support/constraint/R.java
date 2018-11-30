@@ -73,20 +73,20 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int bottom = 0x7f090033;
-        public static final int end = 0x7f09006c;
-        public static final int gone = 0x7f09007a;
-        public static final int invisible = 0x7f090085;
-        public static final int left = 0x7f09008a;
-        public static final int packed = 0x7f0900ab;
-        public static final int parent = 0x7f0900ad;
-        public static final int percent = 0x7f0900c4;
-        public static final int right = 0x7f0900d6;
-        public static final int spread = 0x7f090105;
-        public static final int spread_inside = 0x7f090106;
-        public static final int start = 0x7f09010b;
-        public static final int top = 0x7f090144;
-        public static final int wrap = 0x7f09015a;
+        public static final int bottom = 0x7f090035;
+        public static final int end = 0x7f09006d;
+        public static final int gone = 0x7f09007b;
+        public static final int invisible = 0x7f090086;
+        public static final int left = 0x7f09008b;
+        public static final int packed = 0x7f0900ac;
+        public static final int parent = 0x7f0900ae;
+        public static final int percent = 0x7f0900c5;
+        public static final int right = 0x7f0900d8;
+        public static final int spread = 0x7f090106;
+        public static final int spread_inside = 0x7f090107;
+        public static final int start = 0x7f09010c;
+        public static final int top = 0x7f090145;
+        public static final int wrap = 0x7f09015c;
     }
     public static final class styleable {
         private styleable() {}

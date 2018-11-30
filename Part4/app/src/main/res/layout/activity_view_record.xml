@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/patient_record_description"
-        android:layout_width="308dp"
-        android:layout_height="168dp"
+        android:layout_width="279dp"
+        android:layout_height="163dp"
         android:layout_marginStart="51dp"
         android:layout_marginLeft="51dp"
         android:layout_marginTop="50dp"
@@ -51,8 +51,8 @@
 
     <Button
         android:id="@+id/patient_location_button"
-        android:layout_width="149dp"
-        android:layout_height="130dp"
+        android:layout_width="136dp"
+        android:layout_height="129dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
@@ -73,7 +73,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,7 +109,7 @@
 
     <Button
         android:id="@+id/patient_photos_button"
-        android:layout_width="149dp"
+        android:layout_width="134dp"
         android:layout_height="130dp"
         android:layout_marginStart="51dp"
         android:layout_marginLeft="51dp"
@@ -131,19 +131,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patient_record_description" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/doctor_comment_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        app:backgroundTint="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/delete_record_button"

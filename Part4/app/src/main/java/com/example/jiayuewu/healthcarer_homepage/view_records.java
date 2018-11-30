@@ -20,8 +20,11 @@
 
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class view_records extends AppCompatActivity {
 
@@ -29,5 +32,14 @@ public class view_records extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_records);
+
+        FloatingActionButton addrecord = findViewById(R.id.add_record_button);
+        addrecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ar = new Intent(view_records.this, add_record.class);
+                startActivity(ar);
+            }
+        });
     }
 }

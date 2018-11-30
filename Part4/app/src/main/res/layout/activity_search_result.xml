@@ -7,7 +7,7 @@
     tools:context=".search_result">
 
     <ListView
-        android:id="@+id/search_result_lisview"
+        android:id="@+id/all_problems_lisview"
         android:layout_width="328dp"
         android:layout_height="540dp"
         android:layout_marginStart="40dp"
@@ -28,5 +28,5 @@
         android:layout_marginTop="10dp"
         android:text="Results Count: 0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_result_lisview" />
+        app:layout_constraintTop_toBottomOf="@+id/all_problems_lisview" />
 </android.support.constraint.ConstraintLayout>

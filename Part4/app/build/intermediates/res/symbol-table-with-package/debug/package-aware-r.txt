@@ -1084,7 +1084,9 @@ id add_record_button
 id add_record_save_button
 id alertTitle
 id all
+id all_add_problem_button
 id all_problems_button
+id all_problems_lisview
 id always
 id appbar
 id async
@@ -1134,7 +1136,6 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
-id doctor_comment_button
 id doctor_comment_name
 id doctor_comment_timestamp
 id doctor_comment_title
@@ -1250,6 +1251,7 @@ id problems_for_part_listview
 id progress_circular
 id progress_horizontal
 id radio
+id records_for_part_slideshow
 id records_map_button
 id register_button
 id remind_boolean_spinner
@@ -1284,7 +1286,6 @@ id search_go_btn
 id search_mag_icon
 id search_plate
 id search_result_count_text
-id search_result_lisview
 id search_src_text
 id search_text
 id search_voice_btn
@@ -1383,6 +1384,7 @@ id up
 id upload_button
 id useLogo
 id userid_text
+id view_doctor_comment
 id view_offset_helper
 id view_record_description2
 id view_record_timestamp
@@ -1461,6 +1463,7 @@ layout activity_view_patient_records
 layout activity_view_problem
 layout activity_view_record
 layout activity_view_records
+layout add_photos_in_record
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
