@@ -107,12 +107,16 @@ ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\A
 		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:22:13-41
 	android:name
 		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:21:13-37
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
 ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
 		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:17-76
+	android:name
+		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:25:27-73
 category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
@@ -127,10 +131,6 @@ ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\A
 		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:30:13-45
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT
 ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:33:13-39:29
-category#android.intent.category.DEFAULT
-ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:36:17-76
-	android:name
-		ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:36:27-73
 action#android.intent.action.VIEW
 ADDED from C:\Users\Owner\Documents\GitHub\Quintus-Software\Part4\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
