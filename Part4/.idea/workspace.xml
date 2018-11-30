@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transfer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="transfer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/transfer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+            <state relative-caret-position="377">
+              <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
               <folding>
                 <element signature="e#2387#2403#0" expanded="true" />
               </folding>
@@ -64,7 +64,7 @@
       <file leaf-file-name="elasticSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
+            <state relative-caret-position="1536">
               <caret line="401" column="29" selection-start-line="401" selection-start-column="29" selection-end-line="401" selection-end-column="29" />
               <folding>
                 <element signature="e#13093#13109#0" expanded="true" />
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage_patient_my_profile_content.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homepage_patient_my_profile_content.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_patient_my_profile_content.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="188">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
               <folding>
                 <element signature="e#3086#3102#0" expanded="true" />
               </folding>
@@ -2413,12 +2413,12 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/mainpage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_transfer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/homepage_patient_my_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/transferObject.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/transfer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_patient_my_profile_content.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_patient_my_profile_content.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/transfer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/homepage_patient_my_profile.xml" />
       </list>
     </option>
   </component>
@@ -2632,11 +2632,11 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Logcat" visible="true" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Logcat" visible="true" weight="0.32894737" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24985541" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24985541" />
       <window_info anchor="bottom" id="Build" weight="0.284689" />
       <window_info anchor="right" id="Gradle" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2708,14 +2708,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage_patient_my_profile.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -2740,31 +2732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="401" column="29" selection-start-line="401" selection-start-column="29" selection-end-line="401" selection-end-column="29" />
-          <folding>
-            <element signature="e#13093#13109#0" expanded="true" />
-            <element signature="e#14250#14266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_patient_my_profile_content.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#3086#3102#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2789,12 +2760,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1536">
+          <caret line="401" column="29" selection-start-line="401" selection-start-column="29" selection-end-line="401" selection-end-column="29" />
+          <folding>
+            <element signature="e#13093#13109#0" expanded="true" />
+            <element signature="e#14250#14266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/transfer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        <state relative-caret-position="377">
+          <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
           <folding>
             <element signature="e#2387#2403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage_patient_my_profile.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_patient_my_profile_content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#3086#3102#0" expanded="true" />
           </folding>
         </state>
       </provider>

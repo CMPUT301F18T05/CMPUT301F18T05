@@ -33,12 +33,11 @@ public class transfer extends AppCompatActivity {
 
                 try {
                     code = Integer.parseInt(transferText.getText().toString());
-                    transfer_with_code(code);
                 } catch (Exception e) {
                     Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
-
+                transfer_with_code(code);
             }
 
             public void transfer_with_code(Integer code) {
@@ -71,51 +70,54 @@ public class transfer extends AppCompatActivity {
                     Log.e("Error", "Failed to get the user id out of the async object.");
                 }
 
-                t = idArrayList.get(0);
-                userid = t.getUserID();
-
-                elasticSearch.getUserTask getUserTask
-                        = new elasticSearch.getUserTask();
-                getUserTask.execute(userid);
-
                 try {
-                    userArrayList = getUserTask.get();
+                    idArrayList.get(0).equals(null);
+                    t = idArrayList.get(0);
+                    userid = t.getUserID();
 
-                }	catch (Exception e) {
-                    Log.e("Error", "Failed to get the user out of the async object.");
-                }
+                    elasticSearch.getUserTask getUserTask
+                            = new elasticSearch.getUserTask();
+                    getUserTask.execute(userid);
 
-                try {
-                    user = userArrayList.get(0);
+                    try {
+                        userArrayList = getUserTask.get();
 
-                    Log.w("GOT USER", "" + user.getUserID());
-
-                    DataHolder.setData(user);
-                    if (user.getRole().equals("Patient")) {
-
-                        try {
-                            Intent patient_intent = new Intent(transfer.this, homepage_patient.class);
-                            startActivity(patient_intent);
-                        } catch (Exception e) {
-                            Log.i ("Error in trying to open", "Patient homepage");
-                        }
+                    }	catch (Exception e) {
+                        Log.e("Error", "Failed to get the user out of the async object.");
                     }
-                    if (user.getRole().equals("Doctor")) {
-                        try {
-                            Intent doctor_intent = new Intent(transfer.this, homepage_doctor.class);
-                            startActivity(doctor_intent);
-                        } catch (Exception e) {
-                            Log.i ("Error in trying to open", "Doctor homepage");
+
+                    try {
+                        user = userArrayList.get(0);
+
+                        Log.w("GOT USER", "" + user.getUserID());
+
+                        DataHolder.setData(user);
+                        if (user.getRole().equals("Patient")) {
+
+                            try {
+                                Intent patient_intent = new Intent(transfer.this, homepage_patient.class);
+                                startActivity(patient_intent);
+                            } catch (Exception e) {
+                                Log.i ("Error in trying to open", "Patient homepage");
+                            }
                         }
+                        if (user.getRole().equals("Doctor")) {
+                            try {
+                                Intent doctor_intent = new Intent(transfer.this, homepage_doctor.class);
+                                startActivity(doctor_intent);
+                            } catch (Exception e) {
+                                Log.i ("Error in trying to open", "Doctor homepage");
+                            }
+                        }
+                    } catch (Exception e) {
+                        Log.i("User", "Not found");
+
+                        alertDialog.show();
                     }
+
                 } catch (Exception e) {
-                    Log.i("User", "Not found");
 
-                    alertDialog.show();
                 }
-
-
-
 
             }
         });

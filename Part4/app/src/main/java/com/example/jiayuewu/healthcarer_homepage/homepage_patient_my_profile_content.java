@@ -32,6 +32,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -85,8 +86,9 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
             }	catch (Exception e) {
                 Log.e("Error", "Failed to get the user id out of the async object.");
             }
-
-            if (idArrayList.get(0).equals(null)) {
+            try {
+                idArrayList.get(0).equals(null);
+            } catch (Exception e) {
                 break;
             }
         }
