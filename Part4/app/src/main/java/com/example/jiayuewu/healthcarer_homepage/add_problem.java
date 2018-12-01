@@ -98,47 +98,68 @@ public class add_problem extends AppCompatActivity {
 
                 try {
                     problemArrayList = problemTask.get();
+                    problemID = findLastID(userid, v);
 
                 }	catch (Exception e) {
                     Log.e("Error", "Failed to get the problem out of the async object.");
                 }
                 Integer length = problemArrayList.size() - 1;
+
                 if (length == -1) {
                     problemID = 0;
                 } else {
                     problemID = findLastID(userid, v);
                 }
 
+
                 Problem problem = new Problem(userid, problemID, title, date_text, description, part);
-                elasticSearch.addProblemTask task
+                elasticSearch.addProblemTask task2
                         = new elasticSearch.addProblemTask();
-                task.execute(problem);
+                task2.execute(problem);
 
             }
         });
     }
 
     public Integer findLastID(Integer userID, View v) {
-        Integer unusedProblemID = 0;
+        Integer unusedProblemID = 1;
 
         ArrayList<Problem> problemList = new ArrayList<>();
 
-//        elasticSearch.getSpecialProblem task
-//                = new elasticSearch.getSpecialProblem();
-//
-//
-//        task.execute(new Integer[]{12345678, 45});
+        while (Boolean.TRUE) {
+            elasticSearch.getSpecialProblem task
+                    = new elasticSearch.getSpecialProblem();
 
-        try {
-//            problemList = task.get();
+            Log.i("addProblem", "Search ign for : " + userID + " " + unusedProblemID);
 
-            Snackbar.make(v, "Fucked up" + problemList, Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+            task.execute(new Integer[]{unusedProblemID, userID});
+            try {
 
-        } catch (Exception e) {
-            Snackbar.make(v, "Fucked up", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+                problemList = task.get();
+
+
+
+            } catch (Exception e) {
+                Log.i("addProblem", "Error : " + e);
+                Snackbar.make(v, "FUCKED UP", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                break;
+            }
+
+            try {
+                problemList = task.get();
+            } catch (Exception e) {
+//                break;
+            }
+
+            if (problemList.size() == 0) {
+                break;
+            }
+            unusedProblemID++;
         }
+
+//                    Snackbar.make(v, "New id is : " + unusedProblemID, Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show();
 
         return unusedProblemID;
     }
