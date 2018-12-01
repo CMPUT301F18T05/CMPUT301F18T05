@@ -25,6 +25,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class view_records extends AppCompatActivity {
 
@@ -32,6 +38,29 @@ public class view_records extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_records);
+
+        ListView patients = findViewById(R.id.view_records_listview);
+        List<String> test_array_list = new ArrayList<String>();
+        test_array_list.add("foo");
+        test_array_list.add("bar");
+
+        // This is the array adapter, it takes the context of the activity as a
+        // first parameter, the type of list view as a second parameter and your
+        // array as a third parameter.
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                view_records.this,
+                android.R.layout.simple_list_item_1,
+                test_array_list );
+
+        patients.setAdapter(arrayAdapter);
+        patients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
+                Intent vp = new Intent(view_records.this, view_record.class);
+                vp.putExtra("position",position);
+                startActivity(vp);
+            }
+        });
 
         FloatingActionButton addrecord = findViewById(R.id.add_record_button);
         addrecord.setOnClickListener(new View.OnClickListener() {

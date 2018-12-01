@@ -3,6 +3,7 @@ package com.example.jiayuewu.healthcarer_homepage;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +27,8 @@ public class view_patient_problem extends AppCompatActivity {
         recordmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Snackbar.make(v, "Go to Records Map", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
@@ -39,7 +41,7 @@ public class view_patient_problem extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton addcomment = findViewById(R.id.add_comment_button);
+        FloatingActionButton addcomment = findViewById(R.id.add_comment_button2);
         addcomment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

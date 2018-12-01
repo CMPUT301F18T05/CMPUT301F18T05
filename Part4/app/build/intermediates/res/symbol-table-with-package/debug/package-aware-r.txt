@@ -1073,7 +1073,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id add_comment_button
+id add_comment_button2
 id add_patient_button
 id add_photos_button
 id add_photos_save
@@ -1229,7 +1229,6 @@ id patient_location_button
 id patient_photos_button
 id patient_problem_description
 id patient_problem_title
-id patient_problems_for_part_listview
 id patient_problems_listview
 id patient_profile_button
 id patient_profile_save_button
@@ -1237,6 +1236,7 @@ id patient_record_description
 id patient_record_timestamp
 id patient_record_title
 id patient_records_button
+id patient_records_listview
 id patient_records_of_text
 id patient_welcome_tab_body
 id patient_welcome_tab_profile
@@ -1391,6 +1391,7 @@ id view_doctor_comment
 id view_offset_helper
 id view_record_description2
 id view_record_timestamp
+id view_records_listview
 id visible
 id withText
 id wrap

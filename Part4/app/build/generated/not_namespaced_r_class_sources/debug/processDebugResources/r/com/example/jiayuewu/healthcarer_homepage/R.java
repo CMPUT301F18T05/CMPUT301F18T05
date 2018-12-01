@@ -4720,7 +4720,7 @@ public final class R {
     public static final int actions=0x7f09001c;
     public static final int activity_chooser_view_content=0x7f09001d;
     public static final int add=0x7f09001e;
-    public static final int add_comment_button=0x7f09001f;
+    public static final int add_comment_button2=0x7f09001f;
     public static final int add_patient_button=0x7f090020;
     public static final int add_photos_button=0x7f090021;
     public static final int add_photos_save=0x7f090022;
@@ -4876,14 +4876,14 @@ public final class R {
     public static final int patient_photos_button=0x7f0900b8;
     public static final int patient_problem_description=0x7f0900b9;
     public static final int patient_problem_title=0x7f0900ba;
-    public static final int patient_problems_for_part_listview=0x7f0900bb;
-    public static final int patient_problems_listview=0x7f0900bc;
-    public static final int patient_profile_button=0x7f0900bd;
-    public static final int patient_profile_save_button=0x7f0900be;
-    public static final int patient_record_description=0x7f0900bf;
-    public static final int patient_record_timestamp=0x7f0900c0;
-    public static final int patient_record_title=0x7f0900c1;
-    public static final int patient_records_button=0x7f0900c2;
+    public static final int patient_problems_listview=0x7f0900bb;
+    public static final int patient_profile_button=0x7f0900bc;
+    public static final int patient_profile_save_button=0x7f0900bd;
+    public static final int patient_record_description=0x7f0900be;
+    public static final int patient_record_timestamp=0x7f0900bf;
+    public static final int patient_record_title=0x7f0900c0;
+    public static final int patient_records_button=0x7f0900c1;
+    public static final int patient_records_listview=0x7f0900c2;
     public static final int patient_records_of_text=0x7f0900c3;
     public static final int patient_welcome_tab_body=0x7f0900c4;
     public static final int patient_welcome_tab_profile=0x7f0900c5;
@@ -5038,10 +5038,11 @@ public final class R {
     public static final int view_offset_helper=0x7f09015a;
     public static final int view_record_description2=0x7f09015b;
     public static final int view_record_timestamp=0x7f09015c;
-    public static final int visible=0x7f09015d;
-    public static final int withText=0x7f09015e;
-    public static final int wrap=0x7f09015f;
-    public static final int wrap_content=0x7f090160;
+    public static final int view_records_listview=0x7f09015d;
+    public static final int visible=0x7f09015e;
+    public static final int withText=0x7f09015f;
+    public static final int wrap=0x7f090160;
+    public static final int wrap_content=0x7f090161;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f0a0000;
