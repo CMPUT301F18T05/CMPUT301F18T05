@@ -377,15 +377,13 @@ public class elasticSearch {
                         = new getTransferTask();
                 getUserTask.execute(transfer.getUserID());
 
-                Log.w("HEYO", "HERH");
                 Index index = new Index.Builder(transfer).index(cmput301f18t05).type("Transfer").build();
 
                 try {
                     // where is the client?
-                    Log.w("RUNNING", "NOW");
                     DocumentResult result = client.execute(index);
                 } catch (Exception e) {
-                    Log.w("You", "Done goofed.");
+                    Log.w("elasticSearch", "Error trying to execute search.");
                 }
             }
 

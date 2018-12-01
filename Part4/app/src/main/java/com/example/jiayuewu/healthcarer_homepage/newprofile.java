@@ -70,8 +70,14 @@ public class newprofile extends AppCompatActivity {
                 setResult(RESULT_OK);
                 String uk = useridText.getText().toString();
 
+
                 try {
                     Integer userid = 0 + Integer.parseInt(uk);
+
+                    if (checkIfUserAlreadyExists(userid)) {
+                        throw new exception_titleTooLong();
+                    }
+
 
                     String name = nameText.getText().toString();
 
@@ -95,11 +101,38 @@ public class newprofile extends AppCompatActivity {
                                 .setAction("Action", null).show();
                     }
 
-                } catch (Exception e) {
+                } catch (exception_titleTooLong er) {
+                    Snackbar.make(v, "UserID alerady exists. Choose a new userID.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }catch (Exception e) {
                     Snackbar.make(v, "UserID cannot contain letters. Only numbers please.", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
             }
         });
+    }
+
+    public Boolean checkIfUserAlreadyExists(Integer userID) {
+        ArrayList<User> userArrayList = new ArrayList<>();
+
+        User user = new User();
+
+        elasticSearch.getUserTask getUserTask
+                = new elasticSearch.getUserTask();
+        getUserTask.execute(userID);
+
+        try {
+            userArrayList = getUserTask.get();
+
+        } catch (Exception e) {
+            Log.e("Error", "Failed to get the user out of the async object.");
+        }
+
+        try {
+            user = userArrayList.get(0);
+            return Boolean.TRUE;
+        } catch (Exception e) {
+            return Boolean.FALSE;
+        }
     }
 }

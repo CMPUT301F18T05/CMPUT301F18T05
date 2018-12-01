@@ -44,10 +44,6 @@ public class add_record extends AppCompatActivity {
 
         Button saveButton = findViewById(R.id.add_record_save_button);
 
-
-        this.newRecord.setComment("sss");
-
-
         saveButton.setOnClickListener(new View.OnClickListener() {
 
 

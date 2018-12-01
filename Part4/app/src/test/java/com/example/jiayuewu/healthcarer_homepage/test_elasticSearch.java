@@ -15,6 +15,7 @@ import static org.junit.Assert.assertTrue;
 
 public class test_elasticSearch {
 
+
     @Test
     /* This test checks if you can post and retrieve a record. */
     public void test_getProblem() {

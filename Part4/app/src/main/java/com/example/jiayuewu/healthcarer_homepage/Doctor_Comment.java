@@ -57,11 +57,11 @@ public class Doctor_Comment {
         return this.title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title) throws exception_titleTooLong{
         if (title.length() <= 30) {
             this.title = title;
         } else {
-            this.title = "";
+            throw new exception_titleTooLong();
         }
     }
 
@@ -85,11 +85,11 @@ public class Doctor_Comment {
         return this.comment;
     }
 
-    public void setComment(String comment) {
+    public void setComment(String comment) throws exception_description_too_long {
         if (comment.length() <= 300) {
             this.comment = comment;
         } else {
-            this.comment = "";
+            throw new exception_description_too_long();
         }
     }
 }
