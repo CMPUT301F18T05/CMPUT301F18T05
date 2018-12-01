@@ -452,4 +452,45 @@ public class elasticSearch {
     }
 
 
+
+//    /**GetProblemsTask:
+//     *
+//     *  get problemList from the data which related to the UserID
+//     *
+//     */
+//    // TODO we need a function which gets tweets from elastic search
+//    public static class getSpecialProblem extends AsyncTask<Integer, Void, ArrayList<Problem>> {
+//        @Override
+//        protected ArrayList<Problem> doInBackground(Integer... search_parameters) {
+//            verifySettings();
+//
+//            ArrayList<Problem> problems = new ArrayList<Problem>();
+//
+//            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"title\": " +
+//                    search_parameters[0] + "} },{\"term\": {\"userID\": " + search_parameters[1] + "}}]}}}";
+//
+//            Search search = new Search.Builder(query)
+//                    .addIndex(cmput301f18t05)
+//                    .addType("Problem")
+//                    .build();
+//
+//            try {
+//                // TODO get the results of the query
+//                SearchResult result = client.execute(search);
+//                if (result.isSucceeded()) {
+//                    List<Problem> foundTweets = result.getSourceAsObjectList(Problem.class);
+//                    problems.addAll(foundTweets);
+//                } else {
+//                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+//                }
+//            }
+//            catch (Exception e) {
+//                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+//            }
+//
+//            return problems;
+//        }
+//    }
+
+
 }

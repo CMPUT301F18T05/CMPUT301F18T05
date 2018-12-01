@@ -61,69 +61,69 @@ public class login extends AppCompatActivity {
                             .setAction("Action", null).show();
                 }
 
-    }
+            }
 
-    public void login_with_userID(Integer userid) {
-        /**
-         * Shows a simple alert message when the message is longer then the limit.
-         *
-         * @author: MysticMagic
-         */
-        final AlertDialog alertDialog = new AlertDialog.Builder(login.this).create();
-        alertDialog.setTitle("Alert");
-        alertDialog.setMessage("Cannot login. Check connectivity, or create a profile.");
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
+            public void login_with_userID(Integer userid) {
+                /**
+                 * Shows a simple alert message when the message is longer then the limit.
+                 *
+                 * @author: MysticMagic
+                 */
+                final AlertDialog alertDialog = new AlertDialog.Builder(login.this).create();
+                alertDialog.setTitle("Alert");
+                alertDialog.setMessage("Cannot login. Check connectivity, or create a profile.");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+
+
+                elasticSearch.getUserTask getUserTask
+                        = new elasticSearch.getUserTask();
+                getUserTask.execute(userid);
+
+                try {
+                    userArrayList = getUserTask.get();
+
+                }	catch (Exception e) {
+                    Log.e("Error", "Failed to get the user out of the async object.");
+                }
+
+                try {
+                    user = userArrayList.get(0);
+
+                    Log.w("GOT USER", "" + user.getUserID());
+
+                    DataHolder.setData(user);
+                    if (user.getRole().equals("Patient")) {
+
+                        try {
+                            Intent patient_intent = new Intent(login.this, homepage_patient.class);
+                            startActivity(patient_intent);
+                        } catch (Exception e) {
+                            Log.i ("Error in trying to open", "Patient homepage");
+                        }
                     }
-                });
-
-
-        elasticSearch.getUserTask getUserTask
-                = new elasticSearch.getUserTask();
-        getUserTask.execute(userid);
-
-        try {
-            userArrayList = getUserTask.get();
-
-        }	catch (Exception e) {
-            Log.e("Error", "Failed to get the user out of the async object.");
-        }
-
-        try {
-            user = userArrayList.get(0);
-
-            Log.w("GOT USER", "" + user.getUserID());
-
-            DataHolder.setData(user);
-            if (user.getRole().equals("Patient")) {
-
-                try {
-                    Intent patient_intent = new Intent(login.this, homepage_patient.class);
-                    startActivity(patient_intent);
+                    if (user.getRole().equals("Doctor")) {
+                        try {
+                            Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
+                            startActivity(doctor_intent);
+                        } catch (Exception e) {
+                            Log.i ("Error in trying to open", "Doctor homepage");
+                        }
+                    }
                 } catch (Exception e) {
-                    Log.i ("Error in trying to open", "Patient homepage");
+                    Log.i("User", "Not found");
+
+                    alertDialog.show();
                 }
+
+
+
+
             }
-            if (user.getRole().equals("Doctor")) {
-                try {
-                    Intent doctor_intent = new Intent(login.this, homepage_doctor.class);
-                    startActivity(doctor_intent);
-                } catch (Exception e) {
-                    Log.i ("Error in trying to open", "Doctor homepage");
-                }
-            }
-        } catch (Exception e) {
-            Log.i("User", "Not found");
-
-            alertDialog.show();
-        }
-
-
-
-
-    }
         });
     }
 

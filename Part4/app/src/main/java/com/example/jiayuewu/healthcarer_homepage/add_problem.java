@@ -23,6 +23,7 @@ package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -77,6 +79,8 @@ public class add_problem extends AppCompatActivity {
 
                 problemID = 1;
 
+
+
                 part = getIntent().getStringExtra("part");
                 user = DataHolder.getData();
                 userid = user.getUserID();
@@ -99,19 +103,43 @@ public class add_problem extends AppCompatActivity {
                     Log.e("Error", "Failed to get the problem out of the async object.");
                 }
                 Integer length = problemArrayList.size() - 1;
-                if (length != -1){
-                    problemID = problemArrayList.get(length).getProblemID() + 1;
+                if (length == -1) {
+                    problemID = 0;
+                } else {
+                    problemID = findLastID(userid, v);
                 }
 
                 Problem problem = new Problem(userid, problemID, title, date_text, description, part);
                 elasticSearch.addProblemTask task
                         = new elasticSearch.addProblemTask();
                 task.execute(problem);
-//                elasticSearch.deleteProblemTask task
-//                        = new elasticSearch.deleteProblemTask();
-//                task.execute(userid);
 
             }
         });
+    }
+
+    public Integer findLastID(Integer userID, View v) {
+        Integer unusedProblemID = 0;
+
+        ArrayList<Problem> problemList = new ArrayList<>();
+
+//        elasticSearch.getSpecialProblem task
+//                = new elasticSearch.getSpecialProblem();
+//
+//
+//        task.execute(new Integer[]{12345678, 45});
+
+        try {
+//            problemList = task.get();
+
+            Snackbar.make(v, "Fucked up" + problemList, Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+
+        } catch (Exception e) {
+            Snackbar.make(v, "Fucked up", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+
+        return unusedProblemID;
     }
 }
