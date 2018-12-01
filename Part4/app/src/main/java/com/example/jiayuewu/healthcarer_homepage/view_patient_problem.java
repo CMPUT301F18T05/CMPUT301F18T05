@@ -22,6 +22,7 @@ public class view_patient_problem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_patient_problem);
+        setTitle("View Patient Problem");
 
         FloatingActionButton recordmap = findViewById(R.id.records_map_button);
         recordmap.setOnClickListener(new View.OnClickListener() {

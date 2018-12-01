@@ -10,6 +10,7 @@ public class add_photos_for_part extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_photos_for_part);
+        setTitle("Add Photos");
         FloatingActionButton upload = findViewById(R.id.add_photos_upload);
         FloatingActionButton save = findViewById(R.id.add_photos_save);
     }

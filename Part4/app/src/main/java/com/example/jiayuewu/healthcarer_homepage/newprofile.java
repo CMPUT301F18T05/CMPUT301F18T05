@@ -49,7 +49,7 @@ public class newprofile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newprofile);
-
+        setTitle("New Profile");
         roleSpinner = (Spinner) findViewById(R.id.role_spinner);
 
         /** setting up the spinner with adapter to update the view as user selects */

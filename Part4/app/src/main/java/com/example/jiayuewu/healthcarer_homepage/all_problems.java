@@ -24,7 +24,7 @@ public class all_problems extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_problems);
-
+        setTitle("All Problems");
         FloatingActionButton all_add_problem = findViewById(R.id.all_add_problem_button);
 
         all_add_problem.setOnClickListener(new View.OnClickListener() {

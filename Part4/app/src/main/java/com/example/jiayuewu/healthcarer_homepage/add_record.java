@@ -43,6 +43,7 @@ public class add_record extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
+        setTitle("Add Record");
 
         Button addphoto = findViewById(R.id.add_photos_button);
         addphoto.setOnClickListener(new View.OnClickListener() {

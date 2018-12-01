@@ -18,6 +18,7 @@
         android:editable="false"
         android:ems="10"
         android:inputType="textPersonName"
+        android:singleLine="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +90,7 @@
         android:text="Title"
         app:layout_constraintBottom_toTopOf="@+id/patient_record_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

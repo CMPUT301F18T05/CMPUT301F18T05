@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:text="Records of"
         app:layout_constraintBottom_toTopOf="@+id/patient_records_of_text"
         app:layout_constraintStart_toStartOf="parent" />

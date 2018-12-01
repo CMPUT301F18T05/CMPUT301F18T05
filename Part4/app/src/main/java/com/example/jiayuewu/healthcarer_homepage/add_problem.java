@@ -48,6 +48,7 @@ public class add_problem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_problem);
+        setTitle("Add Problem");
         Button rButton = (Button) findViewById(R.id.button);
         rButton.setOnClickListener(new View.OnClickListener() {
 

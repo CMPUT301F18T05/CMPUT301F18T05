@@ -38,6 +38,7 @@ public class view_records extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_records);
+        setTitle("View Records");
 
         ListView patients = findViewById(R.id.view_records_listview);
         List<String> test_array_list = new ArrayList<String>();

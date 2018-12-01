@@ -31,6 +31,7 @@ public class view_problem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_problem);
+        setTitle("View Problem");
         FloatingActionButton viewrecords = findViewById(R.id.patient_records_button);
         FloatingActionButton doctorcomments = findViewById(R.id.view_doctor_comment);
         FloatingActionButton saveproblem = findViewById(R.id.problem_save_button);

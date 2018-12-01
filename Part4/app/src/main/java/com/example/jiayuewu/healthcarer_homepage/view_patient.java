@@ -36,6 +36,7 @@ public class view_patient extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_patient);
+        setTitle("View Patient Problems");
 
         ListView patients = findViewById(R.id.patient_problems_listview);
         List<String> test_array_list = new ArrayList<String>();

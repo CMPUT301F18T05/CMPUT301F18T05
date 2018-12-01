@@ -27,5 +27,6 @@ public class view_patient_record extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_patient_record);
+        setTitle("View Patient Record");
     }
 }

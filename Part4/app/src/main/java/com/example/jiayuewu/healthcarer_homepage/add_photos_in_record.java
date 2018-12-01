@@ -64,6 +64,7 @@ public class add_photos_in_record extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_photos_in_record);
+        setTitle("Add Photos");
 
         bodyimg = findViewById(R.id.body_image);
         head_spot_button = findViewById(R.id.head_spot);

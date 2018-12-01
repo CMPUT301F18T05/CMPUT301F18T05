@@ -29,5 +29,6 @@ public class view_record extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_record);
+        setTitle("View Record");
     }
 }

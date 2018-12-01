@@ -28,5 +28,6 @@ public class view_doctor_comment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_doctor_comment);
+        setTitle("View Doctor Comment");
     }
 }

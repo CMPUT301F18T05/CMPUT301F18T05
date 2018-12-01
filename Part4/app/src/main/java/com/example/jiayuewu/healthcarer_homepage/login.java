@@ -45,6 +45,7 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setTitle("Login");
         Button login = findViewById(R.id.login_login_button);
         login.setOnClickListener(new View.OnClickListener() {
 
