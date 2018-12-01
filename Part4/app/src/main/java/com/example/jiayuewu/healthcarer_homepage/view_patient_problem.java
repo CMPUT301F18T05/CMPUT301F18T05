@@ -20,10 +20,10 @@ public class view_patient_problem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_problem);
+        setContentView(R.layout.activity_view_patient_problem);
 
-        FloatingActionButton saveProblem = findViewById(R.id.problem_save_button);
-        saveProblem.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton recordmap = findViewById(R.id.records_map_button);
+        recordmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -34,8 +34,17 @@ public class view_patient_problem extends AppCompatActivity {
         record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent viewAndEdit = new Intent(view_patient_problem.this, view_records.class);
+                Intent viewAndEdit = new Intent(view_patient_problem.this, view_patient_records.class);
                 startActivity(viewAndEdit);
+            }
+        });
+
+        FloatingActionButton addcomment = findViewById(R.id.add_comment_button);
+        addcomment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ac = new Intent(view_patient_problem.this, add_doctor_comment.class);
+                startActivity(ac);
             }
         });
 

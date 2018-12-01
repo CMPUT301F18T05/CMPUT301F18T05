@@ -21,6 +21,7 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -29,9 +30,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class homepage_doctor_my_patients_content extends Fragment{
     public Button sbutton;
@@ -48,6 +55,39 @@ public class homepage_doctor_my_patients_content extends Fragment{
                 // placeholder
                 Snackbar.make(v, "Search Button Action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        ListView patients = rootView.findViewById(R.id.patients_listview);
+        List<String> test_array_list = new ArrayList<String>();
+        test_array_list.add("foo");
+        test_array_list.add("bar");
+
+        // This is the array adapter, it takes the context of the activity as a
+        // first parameter, the type of list view as a second parameter and your
+        // array as a third parameter.
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                homepage_doctor_my_patients_content.this.getActivity(),
+                android.R.layout.simple_list_item_1,
+                test_array_list );
+
+        patients.setAdapter(arrayAdapter);
+        patients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
+                Intent vp = new Intent(homepage_doctor_my_patients_content.this.getActivity(), view_patient.class);
+                vp.putExtra("position",position);
+                startActivity(vp);
+
+            }
+        });
+
+        FloatingActionButton addpatient = rootView.findViewById(R.id.add_patient_button);
+        addpatient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ap = new Intent(homepage_doctor_my_patients_content.this.getActivity(), add_patient.class);
+                startActivity(ap);
             }
         });
 
