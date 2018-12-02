@@ -1,0 +1,7 @@
+#Sat Dec 01 19:33:31 MST 2018
+base.0=/Users/mayuhang/Downloads/Quintus-Software-test-for-merge-master/Part4/app/build/intermediates/transforms/dexMerger/debug/10
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/mayuhang/Downloads/Quintus-Software-test-for-merge-master/Part4/app/build/intermediates/transforms/dexMerger/debug/10
