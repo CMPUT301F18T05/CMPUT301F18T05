@@ -120,41 +120,43 @@ public class homepage_patient_my_body_content extends Fragment{
 
         user = DataHolder.getData();
 
-        ArrayList<full_body_photo> listFullBody = new ArrayList<>();
+        ArrayList<full_body_photo> listFullBodyFront = new ArrayList<>();
 
-        elasticSearch.getSpecificFullPhoto getUserTask
+        elasticSearch.getSpecificFullPhoto getFrontTask
                 = new elasticSearch.getSpecificFullPhoto();
-        getUserTask.execute(new Integer[]{user.getUserID(),1});
+        getFrontTask.execute(new Integer[]{user.getUserID(),1});
 
         try {
-            listFullBody = getUserTask.get();
+            listFullBodyFront = getFrontTask.get();
         } catch (Exception e) {
-            Log.i("Homepage_patient_my", "No user photos found");
+            Log.i("Homepage_patient_my", "No front user photos found");
         }
 
-        if (listFullBody.isEmpty()) {
+        if (listFullBodyFront.isEmpty()) {
             photoViewFront.setImageDrawable(rbody_front);
         } else {
-            Drawable d = (Drawable) new BitmapDrawable(listFullBody.get(0).getBitmap());
+            Drawable d = (Drawable) new BitmapDrawable(listFullBodyFront.get(0).getBitmap());
             photoViewFront.setImageDrawable(d);
         }
 
-        ArrayList<full_body_photo> listFullBody2 = new ArrayList<>();
+        ArrayList<full_body_photo> listFullBodyBack = new ArrayList<>();
 
-        elasticSearch.getSpecificFullPhoto getUserTask2
+        elasticSearch.getSpecificFullPhoto getBackTask
                 = new elasticSearch.getSpecificFullPhoto();
+        getBackTask.execute(new Integer[]{user.getUserID(),-1});
 
-        Log.i("HOMPAGE SON", "VALUES ARE " + user.getUserID());
-
-        getUserTask2.execute(new Integer[]{user.getUserID(), 2});
-
-        if (listFullBody2.isEmpty()) {
-            photoViewBack.setImageDrawable(rbody_back);
-        } else {
-            Drawable d = (Drawable) new BitmapDrawable(listFullBody2.get(0).getBitmap());
-            photoViewBack.setImageDrawable(d);
+        try {
+            listFullBodyBack = getBackTask.get();
+        } catch (Exception e) {
+            Log.i("Homepage_patient_my", "No front user photos found");
         }
 
+        if (listFullBodyBack.isEmpty()) {
+            photoViewBack.setImageDrawable(rbody_back);
+        } else {
+            Drawable d = (Drawable) new BitmapDrawable(listFullBodyBack.get(0).getBitmap());
+            photoViewBack.setImageDrawable(d);
+        }
 
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,7 +182,7 @@ public class homepage_patient_my_body_content extends Fragment{
                             Snackbar.make(v, "Saving front photo.", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
 
-                            uploadPaperDoll(user.getUserID(), -1, viewCapture);
+                            uploadPaperDoll(user.getUserID(), 1, viewCapture);
                         } catch (Exception e) {
                             Snackbar.make(v, "Could not save front photo.", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
@@ -210,7 +212,7 @@ public class homepage_patient_my_body_content extends Fragment{
 
 //                            photoViewBack.setImageDrawable(d);
 
-                            uploadPaperDoll(user.getUserID(), 1, viewCapture);
+                            uploadPaperDoll(user.getUserID(), -1, viewCapture);
 
                             Snackbar.make(v, "Saving back photo.", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
@@ -499,6 +501,9 @@ public class homepage_patient_my_body_content extends Fragment{
         full_body_photo newPhoto = new full_body_photo(userID, photoID, image);
 
         //Todo : Delete old image
+        elasticSearch.deleteSpecificFullPhoto deleteTask
+                = new elasticSearch.deleteSpecificFullPhoto();
+        deleteTask.execute(new Integer[]{userID,photoID});
 
         elasticSearch.setFullBody getUserTask
                 = new elasticSearch.setFullBody();

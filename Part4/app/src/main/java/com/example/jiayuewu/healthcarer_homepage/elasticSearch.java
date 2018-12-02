@@ -725,7 +725,7 @@ public class elasticSearch {
             for (full_body_photo photo : full_body_photos) {
                 getSpecificFullPhoto getUserTask
                         = new getSpecificFullPhoto();
-                getUserTask.execute(photo.getUserID());
+                getUserTask.execute(photo.getUserID(),photo.getPhotoID());
 
                 Index index = new Index.Builder(photo).index(cmput301f18t05).type("FullPhoto").build();
 
