@@ -101,6 +101,9 @@
         <activity
             android:name=".view_patient"
             />
+        <activity
+            android:name=".transfer"
+            />
         <activity android:name=".RemindActivity" />
         <activity
             android:name=".add_doctor_comment" />
