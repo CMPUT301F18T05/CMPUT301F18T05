@@ -22,17 +22,15 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -52,6 +50,21 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                useridText = (EditText) findViewById(R.id.transfer_code_text);
+
+                Integer userid = 0;
+
+                try {
+                    userid = Integer.parseInt(useridText.getText().toString());
+                    login_with_userID(userid);
+                } catch (Exception e) {
+                    Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+
+            }
+
+            public void login_with_userID(Integer userid) {
                 /**
                  * Shows a simple alert message when the message is longer then the limit.
                  *
@@ -68,8 +81,6 @@ public class login extends AppCompatActivity {
                         });
 
 
-                useridText = (EditText) findViewById(R.id.login_userid_text);
-                Integer userid = Integer.parseInt(useridText.getText().toString());
                 elasticSearch.getUserTask getUserTask
                         = new elasticSearch.getUserTask();
                 getUserTask.execute(userid);
@@ -115,8 +126,6 @@ public class login extends AppCompatActivity {
 
             }
         });
-
-        final Context context = this;
-
     }
+
 }

@@ -63,11 +63,11 @@ public class Problem {
         return this.title;
     }
 
-    public void setTitle(String title) {
-        if (title.length() <= 10) {
+    public void setTitle(String title) throws exception_titleTooLong{
+        if (title.length() <= 30) {
             this.title = title;
         } else {
-            this.title = "";
+            throw new exception_titleTooLong();
         }
     }
 
@@ -83,11 +83,11 @@ public class Problem {
         return this.description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description) throws exception_description_too_long {
         if (description.length() <= 300) {
             this.description = description;
         } else {
-            this.description = "";
+            throw new exception_description_too_long();
         }
     }
 

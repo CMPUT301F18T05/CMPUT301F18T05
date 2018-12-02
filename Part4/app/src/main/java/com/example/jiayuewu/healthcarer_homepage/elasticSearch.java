@@ -358,4 +358,149 @@ public class elasticSearch {
             return null;
         }
     }
+
+    /**setTransferTask:
+     * create a trasfer info to data stream
+     *
+     */
+
+    public static class setTransferTask extends AsyncTask<transferObject, Void, Void> {
+
+        @Override
+        protected Void doInBackground(transferObject... transferObjects) {
+            ArrayList<transferObject> userArrayList = new ArrayList<transferObject>();
+
+            verifySettings();
+
+            for (transferObject transfer : transferObjects) {
+                getTransferTask getUserTask
+                        = new getTransferTask();
+                getUserTask.execute(transfer.getUserID());
+
+                Index index = new Index.Builder(transfer).index(cmput301f18t05).type("Transfer").build();
+
+                try {
+                    // where is the client?
+                    DocumentResult result = client.execute(index);
+                } catch (Exception e) {
+                    Log.w("elasticSearch", "Error trying to execute search.");
+                }
+            }
+
+            return null;
+        }
+    }
+    /**getTransferTask:
+     * get trasnfer's info from the date stream with the code
+     *
+     */
+    public static class getTransferTask extends AsyncTask<Integer, Void, ArrayList<transferObject>> {
+        @Override
+        protected ArrayList<transferObject> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            ArrayList<transferObject> users = new ArrayList<transferObject>();
+
+            String query = "{\"query\" : {\"term\" : { \"code\" : \"" + search_parameters[0] + "\" }}}";
+
+            Search search = new Search.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Transfer")
+                    .build();
+
+            try {
+                // TODO get the results of the query
+                SearchResult result = client.execute(search);
+                if (result.isSucceeded()) {
+                    List<transferObject> foundTweets = result.getSourceAsObjectList(transferObject.class);
+                    users.addAll(foundTweets);
+                } else {
+                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                }
+            }
+            catch (Exception e) {
+                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+            }
+
+            return users;
+        }
+    }
+
+    /**deleteUserTask：
+     * delete User's info from the data stream with the UserID
+     *
+     */
+    public static class deleteTransferTask extends AsyncTask<Integer, Void, ArrayList<transferObject>> {
+        @Override
+        protected ArrayList<transferObject> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            String query = "{ \"query\": { \"term\" : { \"userID\" : \""+search_parameters[0]+"\" } } }";
+
+            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Transfer")
+                    .build();
+            try{
+                client.execute(deleteQuery);
+            }catch (IOException e){
+                Log.i("TODO","We actually failed here, deleting a transfer");
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+
+
+    /**GetProblemsTask:
+     *
+     *  get problemList from the data which related to the UserID
+     *
+     */
+    // TODO we need a function which gets tweets from elastic search
+    public static class getSpecialProblem extends AsyncTask<Integer, Void, ArrayList<Problem>> {
+        @Override
+        protected ArrayList<Problem> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            ArrayList<Problem> problems = new ArrayList<Problem>();
+
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"problemID\": " +
+                    search_parameters[0] + "} },{\"term\": {\"userID\": " + search_parameters[1] + "}}]}}}";
+
+            Search search = new Search.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Problem")
+                    .build();
+
+
+            Log.i("elasticSearcgh", "IN HERER");
+
+            try {
+                // TODO get the results of the query
+
+
+                SearchResult result = client.execute(search);
+
+                Log.i("elasticSearch", "Exceuted search");
+                if (result.isSucceeded()) {
+                    Log.i("elasticSearch", "checking contenst");
+
+                    List<Problem> foundTweets = result.getSourceAsObjectList(Problem.class);
+                    problems.addAll(foundTweets);
+                } else {
+                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                }
+            }
+            catch (Exception e) {
+                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+            }
+
+
+            Log.i("elasticSearch", "Returned" + problems);
+            return problems;
+        }
+    }
+
 }

@@ -23,6 +23,7 @@ package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -78,6 +80,8 @@ public class add_problem extends AppCompatActivity {
 
                 problemID = 1;
 
+
+
                 part = getIntent().getStringExtra("part");
                 user = DataHolder.getData();
                 userid = user.getUserID();
@@ -95,24 +99,69 @@ public class add_problem extends AppCompatActivity {
 
                 try {
                     problemArrayList = problemTask.get();
+                    problemID = findLastID(userid, v);
 
                 }	catch (Exception e) {
                     Log.e("Error", "Failed to get the problem out of the async object.");
                 }
                 Integer length = problemArrayList.size() - 1;
-                if (length != -1){
-                    problemID = problemArrayList.get(length).getProblemID() + 1;
+
+                if (length == -1) {
+                    problemID = 0;
+                } else {
+                    problemID = findLastID(userid, v);
                 }
 
+
                 Problem problem = new Problem(userid, problemID, title, date_text, description, part);
-                elasticSearch.addProblemTask task
+                elasticSearch.addProblemTask task2
                         = new elasticSearch.addProblemTask();
-                task.execute(problem);
-//                elasticSearch.deleteProblemTask task
-//                        = new elasticSearch.deleteProblemTask();
-//                task.execute(userid);
+                task2.execute(problem);
 
             }
         });
+    }
+
+    public Integer findLastID(Integer userID, View v) {
+        Integer unusedProblemID = 1;
+
+        ArrayList<Problem> problemList = new ArrayList<>();
+
+        while (Boolean.TRUE) {
+            elasticSearch.getSpecialProblem task
+                    = new elasticSearch.getSpecialProblem();
+
+            Log.i("addProblem", "Search ign for : " + userID + " " + unusedProblemID);
+
+            task.execute(new Integer[]{unusedProblemID, userID});
+            try {
+
+                problemList = task.get();
+
+
+
+            } catch (Exception e) {
+                Log.i("addProblem", "Error : " + e);
+                Snackbar.make(v, "FUCKED UP", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                break;
+            }
+
+            try {
+                problemList = task.get();
+            } catch (Exception e) {
+//                break;
+            }
+
+            if (problemList.size() == 0) {
+                break;
+            }
+            unusedProblemID++;
+        }
+
+//                    Snackbar.make(v, "New id is : " + unusedProblemID, Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show();
+
+        return unusedProblemID;
     }
 }
