@@ -502,5 +502,5 @@ public class elasticSearch {
             return problems;
         }
     }
-    
+
 }

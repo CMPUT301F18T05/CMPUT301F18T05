@@ -40,8 +40,8 @@
       <file leaf-file-name="elasticSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="483" column="43" selection-start-line="483" selection-start-column="43" selection-end-line="483" selection-end-column="43" />
+            <state relative-caret-position="1698">
+              <caret line="467" lean-forward="true" selection-start-line="467" selection-end-line="467" />
             </state>
           </provider>
         </entry>
@@ -67,8 +67,8 @@
       <file leaf-file-name="add_problem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/add_problem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="96" column="35" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="35" />
+            <state relative-caret-position="64">
+              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
               <folding>
                 <element signature="e#2321#4293#0" expanded="true" />
                 <element signature="e#4292#4293#0" expanded="true" />
@@ -92,6 +92,7 @@
       <find>snack</find>
       <find>snackbar</find>
       <find>execute</find>
+      <find>special</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -2365,12 +2366,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/add_record.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/newprofile.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/login.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/add_problem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="290" />
     <option name="y" value="-34" />
     <option name="width" value="1750" />
@@ -2641,7 +2642,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" />
@@ -2953,15 +2954,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="483" column="43" selection-start-line="483" selection-start-column="43" selection-end-line="483" selection-end-column="43" />
+        <state relative-caret-position="1698">
+          <caret line="467" lean-forward="true" selection-start-line="467" selection-end-line="467" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/add_problem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="96" column="35" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="35" />
+        <state relative-caret-position="64">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
           <folding>
             <element signature="e#2321#4293#0" expanded="true" />
             <element signature="e#4292#4293#0" expanded="true" />
