@@ -7,7 +7,7 @@
     tools:context=".view_doctor_comment">
 
     <EditText
-        android:id="@+id/view_record_description2"
+        android:id="@+id/doctor_comment_description"
         android:layout_width="309dp"
         android:layout_height="319dp"
         android:layout_marginStart="51dp"
@@ -31,7 +31,7 @@
         android:layout_marginLeft="51dp"
         android:layout_marginBottom="8dp"
         android:text="Comment"
-        app:layout_constraintBottom_toTopOf="@+id/view_record_description2"
+        app:layout_constraintBottom_toTopOf="@+id/doctor_comment_description"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -46,7 +46,7 @@
         android:text="timestamp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_record_description2" />
+        app:layout_constraintTop_toBottomOf="@+id/doctor_comment_description" />
 
     <EditText
         android:id="@+id/doctor_comment_name"

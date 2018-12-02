@@ -21,13 +21,30 @@ package com.example.jiayuewu.healthcarer_homepage;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 
 public class view_doctor_comment extends AppCompatActivity {
+    private EditText titleText;
+    private EditText nameText;
+    private EditText commentText;
+    private Doctor_Comment doctor_comment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_doctor_comment);
         setTitle("View Doctor Comment");
+
+        titleText = (EditText) findViewById(R.id.doctor_comment_title);
+        nameText = (EditText) findViewById(R.id.doctor_comment_name);
+        commentText = (EditText) findViewById(R.id.doctor_comment_description);
+
+        doctor_comment = Doctor_Comment_Holder.getData();
+
+        titleText.setText(doctor_comment.getTitle());
+        nameText.setText(doctor_comment.getName());
+        commentText.setText(doctor_comment.getComment());
     }
+
+
 }

@@ -131,6 +131,7 @@ public class view_problem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent dc= new Intent(view_problem.this, doctor_comments.class);
+                dc.putExtra("problemID",String.valueOf(problemID));
                 startActivity(dc);
             }
         });

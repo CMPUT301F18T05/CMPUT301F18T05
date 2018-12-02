@@ -25,6 +25,7 @@ package com.example.jiayuewu.healthcarer_homepage;
 import java.util.Calendar;
 
 public class Doctor_Comment {
+    private Integer userID;
     private Integer problemID;
     private Integer doctorCommentID;
     private String title;
@@ -36,7 +37,7 @@ public class Doctor_Comment {
 
     }
 
-    Doctor_Comment(Integer problemID, Integer doctorCommentID, String title, String name, Calendar date, String comment){
+    Doctor_Comment(Integer userID, Integer problemID, Integer doctorCommentID, String title, String name, Calendar date, String comment){
         this.problemID = problemID;
         this.doctorCommentID = doctorCommentID;
         this.title = title;
@@ -91,5 +92,13 @@ public class Doctor_Comment {
         } else {
             throw new exception_description_too_long();
         }
+    }
+
+    public Integer getUserID() {
+        return this.userID;
+    }
+
+    public void setUserID(Integer userID) {
+        this.userID = userID;
     }
 }
