@@ -56,13 +56,7 @@ public class add_record extends AppCompatActivity {
 
         FloatingActionButton saveButton = findViewById(R.id.add_record_save_button);
 
-<<<<<<< HEAD
 
-        //this.newRecord.setComment("sss");
-
-
-=======
->>>>>>> test-for-merge---chhaniya
         saveButton.setOnClickListener(new View.OnClickListener() {
 
 
@@ -76,19 +70,10 @@ public class add_record extends AppCompatActivity {
                 // Do a bunch of checks.
 
 
-//            try {
-//                newRecord.setComment();
-//            }
-
 
 
             }
         });
-
-
-
-
-
 
     }
 }
