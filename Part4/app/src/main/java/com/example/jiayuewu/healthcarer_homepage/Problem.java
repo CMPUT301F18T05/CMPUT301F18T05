@@ -31,19 +31,21 @@ public class Problem {
     private String title;
     private String calenderDate;
     private String description;
-    private String bodyPart;
+//    private String bodyPart;
 
     Problem() {
 
     }
 
-    Problem(Integer userID, Integer problemID, String title, String calenderDate, String description, String bodyPart) {
+//    Problem(Integer userID, Integer problemID, String title, String calenderDate, String description, String bodyPart) {
+
+    Problem(Integer userID, Integer problemID, String title, String calenderDate, String description) {
         this.problemID = problemID;
         this.userID = userID;
         this.title = title;
         this.calenderDate = calenderDate;
         this.description = description;
-        this.bodyPart = bodyPart;
+//        this.bodyPart = bodyPart;
     }
 
     public Integer getUserID() {
@@ -91,17 +93,17 @@ public class Problem {
         }
     }
 
-    public String getBodyPart() {
-        return this.bodyPart;
-    }
-
-    public void setBodyPart(String bodyPart) {
-        this.bodyPart = bodyPart;
-    }
+//    public String getBodyPart() {
+//        return this.bodyPart;
+//    }
+//
+//    public void setBodyPart(String bodyPart) {
+//        this.bodyPart = bodyPart;
+//    }
 
     @Override
     public String toString(){
-        return this.problemID + this.title;
+        return this.problemID + " " + this.title;
     }
 
 }

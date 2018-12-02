@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patient_body_part" />
+        app:layout_constraintTop_toBottomOf="@+id/patient_problem_date" />
 
     <TextView
         android:id="@+id/textView18"
@@ -77,13 +77,13 @@
         android:layout_marginRight="315dp"
         android:layout_marginBottom="4dp"
         android:text="Body Part"
-        app:layout_constraintBottom_toTopOf="@+id/patient_body_part"
+        app:layout_constraintBottom_toTopOf="@+id/patient_problem_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/patient_body_part"
+        android:id="@+id/patient_problem_date"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"

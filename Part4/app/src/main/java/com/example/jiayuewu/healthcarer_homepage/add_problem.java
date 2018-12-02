@@ -82,7 +82,7 @@ public class add_problem extends AppCompatActivity {
 
 
 
-                part = getIntent().getStringExtra("part");
+                //part = getIntent().getStringExtra("part");
                 user = DataHolder.getData();
                 userid = user.getUserID();
                 titleText = (EditText) findViewById(R.id.add_problem_title);
@@ -113,7 +113,7 @@ public class add_problem extends AppCompatActivity {
                 }
 
 
-                Problem problem = new Problem(userid, problemID, title, date_text, description, part);
+                Problem problem = new Problem(userid, problemID, title, date_text, description);
                 elasticSearch.addProblemTask task2
                         = new elasticSearch.addProblemTask();
                 task2.execute(problem);

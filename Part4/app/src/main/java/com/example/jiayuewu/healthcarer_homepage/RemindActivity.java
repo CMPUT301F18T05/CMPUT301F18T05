@@ -121,6 +121,9 @@ public class RemindActivity extends AppCompatActivity implements TimePickerDialo
         //if (c.before(Calendar.getInstance())) {
         //     c.add(Calendar.DATE, Integer.parseInt(duration));
         //}
+        if (duration.isEmpty()) {
+            duration = "1";
+        }
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),AlarmManager.INTERVAL_HOUR * Integer.parseInt(duration),pendingIntent);
     }
     //    private void startReminder2(Calendar c, String title, String message, String duration) {
