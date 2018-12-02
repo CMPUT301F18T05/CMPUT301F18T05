@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,11 +43,16 @@ import java.util.List;
 
 public class homepage_doctor_my_patients_content extends Fragment{
     public Button sbutton;
+    private ArrayList<User> userArrayList = new ArrayList<User>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.homepage_doctor_my_patients, container, false);
+
+        User user = new User();
+
+
         sbutton = rootView.findViewById(R.id.search_button);
 
         sbutton.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +69,11 @@ public class homepage_doctor_my_patients_content extends Fragment{
         test_array_list.add("foo");
         test_array_list.add("bar");
 
+        //for (int i = 0; i < userArrayList.size(); i++) {
+        //    User current = userArrayList.get(i);
+        //    test_array_list.add(current.getName());
+        //}
+
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
         // array as a third parameter.
@@ -77,6 +88,7 @@ public class homepage_doctor_my_patients_content extends Fragment{
             public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
                 Intent vp = new Intent(homepage_doctor_my_patients_content.this.getActivity(), view_patient.class);
                 vp.putExtra("position",position);
+                vp.putExtra("userid", userArrayList.get(position).getUserID());
                 startActivity(vp);
 
             }

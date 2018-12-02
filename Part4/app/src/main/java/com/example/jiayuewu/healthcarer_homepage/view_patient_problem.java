@@ -15,6 +15,7 @@ import java.util.Date;
 
 public class view_patient_problem extends AppCompatActivity {
     private EditText titleText;
+    private EditText partText;
     private EditText dateText;
     private EditText dText;
     private User user;
@@ -23,6 +24,23 @@ public class view_patient_problem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_patient_problem);
         setTitle("View Patient Problem");
+
+        Intent get_intent = getIntent();
+        String problem_id = get_intent.getStringExtra("problem_id");
+        String title = get_intent.getStringExtra("title");
+        String part = get_intent.getStringExtra("part");
+        String date = get_intent.getStringExtra("date");
+        String description = get_intent.getStringExtra("description");
+
+        titleText = findViewById(R.id.patient_problem_title);
+        partText = findViewById(R.id.patient_body_part);
+        dateText = findViewById(R.id.patient_date_started);
+        dText = findViewById(R.id.patient_problem_description);
+
+        titleText.setText(title);
+        partText.setText(part);
+        dateText.setText(date);
+        dText.setText(description);
 
         FloatingActionButton recordmap = findViewById(R.id.records_map_button);
         recordmap.setOnClickListener(new View.OnClickListener() {
