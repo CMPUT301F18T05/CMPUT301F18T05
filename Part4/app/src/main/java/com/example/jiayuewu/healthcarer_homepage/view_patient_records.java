@@ -22,15 +22,18 @@ package com.example.jiayuewu.healthcarer_homepage;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class view_patient_records extends AppCompatActivity {
+    private ArrayList<Record> records = new ArrayList<Record>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +41,32 @@ public class view_patient_records extends AppCompatActivity {
         setContentView(R.layout.activity_view_patient_records);
         setTitle("View Patient Records");
 
+        Intent get_intent = getIntent();
+        String problem_id = get_intent.getStringExtra("problem_id");
+        String problem_title = get_intent.getStringExtra("problem_title");
+
+        EditText title = findViewById(R.id.patient_records_of_text);
+        title.setText(problem_title);
+
+        elasticSearch.getRecordsTask getRecordsTask
+                = new elasticSearch.getRecordsTask();
+        getRecordsTask.execute(Integer.parseInt(problem_id));
+
+        try {
+            records = getRecordsTask.get();
+
+        }	catch (Exception e) {
+            Log.e("Error", "Failed to get the user out of the async object.");
+        }
+
         ListView patients = findViewById(R.id.patient_records_listview);
         List<String> test_array_list = new ArrayList<String>();
-        test_array_list.add("foo");
-        test_array_list.add("bar");
+        //test_array_list.add("foo");
+        //test_array_list.add("bar");
+
+        for (int i = 0; i < records.size(); i++) {
+            test_array_list.add(records.get(i).getTitle());
+        }
 
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
@@ -56,7 +81,10 @@ public class view_patient_records extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
                 Intent vp = new Intent(view_patient_records.this, view_patient_record.class);
-                vp.putExtra("position",position);
+                vp.putExtra("record_id",records.get(position).getRecordID());
+                vp.putExtra("record_title",records.get(position).getTitle());
+                vp.putExtra("record_comment",records.get(position).getComment());
+                vp.putExtra("record_time",records.get(position).getDate());
                 startActivity(vp);
             }
         });

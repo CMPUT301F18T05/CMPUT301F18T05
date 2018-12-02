@@ -36,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="add_patient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_patient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/add_patient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="360">
+              <caret line="56" column="17" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="56" selection-end-column="17" />
               <folding>
                 <element signature="e#1204#1210#0" expanded="true" />
                 <element signature="e#1631#3314#0" expanded="true" />
@@ -77,35 +77,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="view_patient_problem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_problem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="view_patient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="-86">
               <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_problem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_problem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_patient_problem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_problem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_view_patient_problem.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient_problem.xml">
+      <file leaf-file-name="activity_view_patient.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient.xml">
           <provider selected="true" editor-type-id="android-designer2">
             <state />
           </provider>
@@ -114,30 +105,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elasticSearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java">
+      <file leaf-file-name="view_patient_records.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_records.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1440">
-              <caret line="84" column="67" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="67" />
+            <state relative-caret-position="720">
+              <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage_patient_my_body_content.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_patient_my_body_content.java">
+      <file leaf-file-name="view_patient_record.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_record.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-594">
-              <caret line="184" column="62" selection-start-line="184" selection-start-column="62" selection-end-line="184" selection-end-column="62" />
+            <state relative-caret-position="396">
+              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimePicker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/TimePicker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-            </state>
+      <file leaf-file-name="activity_view_record.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_record.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_view_patient_record.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient_record.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -2448,16 +2450,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/remind_setting.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/search_result.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_doctor_comment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_record.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_records.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_problem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_record.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_records.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_patient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/homepage_doctor_my_patients_content.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_problem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/add_patient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_problem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_records.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_record.java" />
       </list>
     </option>
   </component>
@@ -2814,14 +2816,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_doctor_comments.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_record.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -2831,14 +2825,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_homepage_doctor.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
@@ -2902,14 +2888,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_record.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
@@ -2929,22 +2907,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_records.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient_records.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient_record.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
@@ -3105,24 +3067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_records.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="e#1976#2333#0" expanded="true" />
-            <element signature="e#2332#2333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_record.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -3163,13 +3107,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_problem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -3177,10 +3114,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient_records.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/elasticSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        <state relative-caret-position="432">
+          <caret line="181" column="64" lean-forward="true" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3209,14 +3157,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/add_patient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="360">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="56" selection-end-column="17" />
           <folding>
             <element signature="e#1204#1210#0" expanded="true" />
             <element signature="e#1631#3314#0" expanded="true" />
             <element signature="e#3313#3314#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient_record.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_record.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient_records.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiayuewu/healthcarer_homepage/view_patient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_patient.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
       </provider>
     </entry>
   </component>

@@ -26,8 +26,8 @@ public class view_patient_problem extends AppCompatActivity {
         setTitle("View Patient Problem");
 
         Intent get_intent = getIntent();
-        String problem_id = get_intent.getStringExtra("problem_id");
-        String title = get_intent.getStringExtra("title");
+        final String problem_id = get_intent.getStringExtra("problem_id");
+        final String title = get_intent.getStringExtra("title");
         String part = get_intent.getStringExtra("part");
         String date = get_intent.getStringExtra("date");
         String description = get_intent.getStringExtra("description");
@@ -56,6 +56,8 @@ public class view_patient_problem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent viewAndEdit = new Intent(view_patient_problem.this, view_patient_records.class);
+                viewAndEdit.putExtra("problem_id", problem_id);
+                viewAndEdit.putExtra("problem_title", title);
                 startActivity(viewAndEdit);
             }
         });

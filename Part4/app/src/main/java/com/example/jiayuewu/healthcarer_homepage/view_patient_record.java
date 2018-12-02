@@ -18,8 +18,11 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class view_patient_record extends AppCompatActivity {
 
@@ -28,5 +31,16 @@ public class view_patient_record extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_patient_record);
         setTitle("View Patient Record");
+        Intent get_intent = getIntent();
+        String record_id = get_intent.getStringExtra("record_id");
+        String record_title = get_intent.getStringExtra("record_title");
+        String record_comment = get_intent.getStringExtra("record_comment");
+        String record_time = get_intent.getStringExtra("record_time");
+        EditText title = findViewById(R.id.patient_record_title);
+        EditText comment = findViewById(R.id.patient_record_description);
+        TextView time = findViewById(R.id.patient_record_timestamp);
+        title.setText(record_title);
+        comment.setText(record_comment);
+        time.setText(record_time);
     }
 }
