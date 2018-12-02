@@ -621,40 +621,93 @@ public class elasticSearch {
         }
     }
 
-    /**getTransferTask:
-     * get trasnfer's info from the date stream with the code
+    /**GetProblemsTask:
+     *
+     *  get problemList from the data which related to the UserID
      *
      */
-    public static class getFullPhoto extends AsyncTask<Integer, Void, ArrayList<full_body_photo>> {
+    // TODO we need a function which gets tweets from elastic search
+    public static class getSpecificFullPhoto extends AsyncTask<Integer, Void, ArrayList<full_body_photo>> {
         @Override
         protected ArrayList<full_body_photo> doInBackground(Integer... search_parameters) {
             verifySettings();
 
-            ArrayList<full_body_photo> users = new ArrayList<full_body_photo>();
+            ArrayList<full_body_photo> problems = new ArrayList<full_body_photo>();
 
-            String query = "{\"query\" : {\"term\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": " +
+                    search_parameters[0] + "} },{\"term\": {\"photoID\": " + search_parameters[1] + "}}]}}}";
 
             Search search = new Search.Builder(query)
                     .addIndex(cmput301f18t05)
                     .addType("FullPhoto")
                     .build();
 
+
+            Log.i("elasticSearcgh", "IN HERER");
+
             try {
                 // TODO get the results of the query
+
+
                 SearchResult result = client.execute(search);
+
+                Log.i("elasticSearch", "Exceuted search");
                 if (result.isSucceeded()) {
+                    Log.i("elasticSearch", "checking contenst");
+
                     List<full_body_photo> foundTweets = result.getSourceAsObjectList(full_body_photo.class);
-                    users.addAll(foundTweets);
+                    problems.addAll(foundTweets);
                 } else {
                     Log.i("Error", "The search query failed to find any tweets for some reason.");
                 }
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
             }
 
-            return users;
+
+            Log.i("elasticSearch", "Returned" + problems);
+            return problems;
         }
     }
+
+//    /**getTransferTask:
+//     * get trasnfer's info from the date stream with the code
+//     *
+//     */
+//    public static class getSpecificFullPhoto extends AsyncTask<Integer, Void, ArrayList<full_body_photo>> {
+//        @Override
+//        protected ArrayList<full_body_photo> doInBackground(Integer... search_parameters) {
+//            verifySettings();
+//
+//            Log.i("IN ELASTIC SEARCH", " VALUES ARE" + search_parameters[1]);
+//
+//            ArrayList<full_body_photo> users = new ArrayList<full_body_photo>();
+//
+//            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": " +
+//                    search_parameters[0] + "} },{\"term\": {\"photoID\": " + search_parameters[1] + "}}]}}}";
+//
+//            Search search = new Search.Builder(query)
+//                    .addIndex(cmput301f18t05)
+//                    .addType("FullPhoto")
+//                    .build();
+//
+//            try {
+//                // TODO get the results of the query
+//                SearchResult result = client.execute(search);
+//                if (result.isSucceeded()) {
+//                    List<full_body_photo> foundTweets = result.getSourceAsObjectList(full_body_photo.class);
+//                    users.addAll(foundTweets);
+//                } else {
+//                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+//                }
+//            } catch (Exception e) {
+//                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+//            }
+//
+//            return users;
+//        }
+//    }
 
     /**setTransferTask:
      * create a trasfer info to data stream
@@ -670,8 +723,8 @@ public class elasticSearch {
             verifySettings();
 
             for (full_body_photo photo : full_body_photos) {
-                getFullPhoto getUserTask
-                        = new getFullPhoto();
+                getSpecificFullPhoto getUserTask
+                        = new getSpecificFullPhoto();
                 getUserTask.execute(photo.getUserID());
 
                 Index index = new Index.Builder(photo).index(cmput301f18t05).type("FullPhoto").build();

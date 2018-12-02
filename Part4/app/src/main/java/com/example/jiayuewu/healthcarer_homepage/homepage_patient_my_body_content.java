@@ -40,6 +40,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -53,6 +54,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.chrisbanes.photoview.PhotoView;
+
+import java.util.ArrayList;
 
 public class homepage_patient_my_body_content extends Fragment{
     public Button sbutton;
@@ -112,13 +115,45 @@ public class homepage_patient_my_body_content extends Fragment{
         //imageView = rootView.findViewById(R.id.imageView);
         photoViewFront.setZoomable(false);
         photoViewBack.setZoomable(false);
-        photoViewBack.setImageDrawable(rbody_back);
-        photoViewFront.setImageDrawable(rbody_front);
         front_matrix = new Matrix();
         back_matrix = new Matrix();
 
         user = DataHolder.getData();
 
+        ArrayList<full_body_photo> listFullBody = new ArrayList<>();
+
+        elasticSearch.getSpecificFullPhoto getUserTask
+                = new elasticSearch.getSpecificFullPhoto();
+        getUserTask.execute(new Integer[]{user.getUserID(),1});
+
+        try {
+            listFullBody = getUserTask.get();
+        } catch (Exception e) {
+            Log.i("Homepage_patient_my", "No user photos found");
+        }
+
+        if (listFullBody.isEmpty()) {
+            photoViewFront.setImageDrawable(rbody_front);
+        } else {
+            Drawable d = (Drawable) new BitmapDrawable(listFullBody.get(0).getBitmap());
+            photoViewFront.setImageDrawable(d);
+        }
+
+        ArrayList<full_body_photo> listFullBody2 = new ArrayList<>();
+
+        elasticSearch.getSpecificFullPhoto getUserTask2
+                = new elasticSearch.getSpecificFullPhoto();
+
+        Log.i("HOMPAGE SON", "VALUES ARE " + user.getUserID());
+
+        getUserTask2.execute(new Integer[]{user.getUserID(), 2});
+
+        if (listFullBody2.isEmpty()) {
+            photoViewBack.setImageDrawable(rbody_back);
+        } else {
+            Drawable d = (Drawable) new BitmapDrawable(listFullBody2.get(0).getBitmap());
+            photoViewBack.setImageDrawable(d);
+        }
 
 
         editButton.setOnClickListener(new View.OnClickListener() {
@@ -140,7 +175,7 @@ public class homepage_patient_my_body_content extends Fragment{
 
                             Drawable d = (Drawable) new BitmapDrawable(viewCapture);
 
-                            photoViewFront.setImageDrawable(d);
+//                            photoViewFront.setImageDrawable(d);
 
                             Snackbar.make(v, "Saving front photo.", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
@@ -173,9 +208,7 @@ public class homepage_patient_my_body_content extends Fragment{
 
                             Drawable d = (Drawable) new BitmapDrawable(viewCapture);
 
-                            photoViewBack.setImageDrawable(d);
-
-
+//                            photoViewBack.setImageDrawable(d);
 
                             uploadPaperDoll(user.getUserID(), 1, viewCapture);
 
@@ -194,11 +227,6 @@ public class homepage_patient_my_body_content extends Fragment{
                     }
 
                 }
-
-
-
-
-
 
             }
         });
@@ -469,6 +497,8 @@ public class homepage_patient_my_body_content extends Fragment{
 
     public void uploadPaperDoll(Integer userID, Integer photoID, Bitmap image){
         full_body_photo newPhoto = new full_body_photo(userID, photoID, image);
+
+        //Todo : Delete old image
 
         elasticSearch.setFullBody getUserTask
                 = new elasticSearch.setFullBody();
