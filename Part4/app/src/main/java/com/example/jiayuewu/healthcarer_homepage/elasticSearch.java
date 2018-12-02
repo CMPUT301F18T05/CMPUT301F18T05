@@ -503,4 +503,214 @@ public class elasticSearch {
         }
     }
 
+    /**getTransferTask:
+     * get trasnfer's info from the date stream with the code
+     *
+     */
+    public static class getPhoto extends AsyncTask<Integer, Void, ArrayList<photo_object>> {
+        @Override
+        protected ArrayList<photo_object> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            ArrayList<photo_object> users = new ArrayList<photo_object>();
+
+            String query = "{\"query\" : {\"term\" : { \"recordID\" : \"" + search_parameters[0] + "\" }}}";
+
+            Search search = new Search.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Photo")
+                    .build();
+
+            try {
+                // TODO get the results of the query
+                SearchResult result = client.execute(search);
+                if (result.isSucceeded()) {
+                    List<photo_object> foundTweets = result.getSourceAsObjectList(photo_object.class);
+                    users.addAll(foundTweets);
+                } else {
+                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                }
+            } catch (Exception e) {
+                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+            }
+
+            return users;
+        }
+    }
+
+    /**setTransferTask:
+     * create a trasfer info to data stream
+     *
+     */
+
+    public static class setPhoto extends AsyncTask<photo_object, Void, Void> {
+
+        @Override
+        protected Void doInBackground(photo_object... photo_objects) {
+            ArrayList<photo_object> userArrayList = new ArrayList<photo_object>();
+
+            verifySettings();
+
+            for (photo_object photo : photo_objects) {
+                getPhoto getUserTask
+                        = new getPhoto();
+                getUserTask.execute(photo.getRecordID());
+
+                Index index = new Index.Builder(photo).index(cmput301f18t05).type("Photo").build();
+
+                try {
+                    // where is the client?
+                    DocumentResult result = client.execute(index);
+                } catch (Exception e) {
+                    Log.w("elasticSearch", "Error trying to execute search.");
+                }
+            }
+
+            return null;
+        }
+    }
+
+    /**deleteUserTask：
+     * delete User's info from the data stream with the UserID
+     *
+     */
+    public static class deleteSpecificPhoto extends AsyncTask<Integer, Void, ArrayList<photo_object>> {
+        @Override
+        protected ArrayList<photo_object> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"problemID\": " +
+                    search_parameters[0] + "} },{\"term\": {\"photoID\": " + search_parameters[1] + "}}]}}}";
+
+            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Photo")
+                    .build();
+            try{
+                client.execute(deleteQuery);
+            }catch (IOException e){
+                Log.i("TODO","We actually failed here, deleting a photo");
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+    /**deleteUserTask：
+     * delete User's info from the data stream with the UserID
+     *
+     */
+    public static class deletePhoto extends AsyncTask<Integer, Void, ArrayList<photo_object>> {
+        @Override
+        protected ArrayList<photo_object> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            String query = "{\"query\" : {\"term\" : { \"recordID\" : \"" + search_parameters[0] + "\" }}}";
+
+            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Photo")
+                    .build();
+            try{
+                client.execute(deleteQuery);
+            }catch (IOException e){
+                Log.i("TODO","We actually failed here, deleting a photo");
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+    /**getTransferTask:
+     * get trasnfer's info from the date stream with the code
+     *
+     */
+    public static class getFullPhoto extends AsyncTask<Integer, Void, ArrayList<full_body_photo>> {
+        @Override
+        protected ArrayList<full_body_photo> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            ArrayList<full_body_photo> users = new ArrayList<full_body_photo>();
+
+            String query = "{\"query\" : {\"term\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
+
+            Search search = new Search.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("FullPhoto")
+                    .build();
+
+            try {
+                // TODO get the results of the query
+                SearchResult result = client.execute(search);
+                if (result.isSucceeded()) {
+                    List<full_body_photo> foundTweets = result.getSourceAsObjectList(full_body_photo.class);
+                    users.addAll(foundTweets);
+                } else {
+                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                }
+            } catch (Exception e) {
+                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+            }
+
+            return users;
+        }
+    }
+
+    /**setTransferTask:
+     * create a trasfer info to data stream
+     *
+     */
+
+    public static class setFullBody extends AsyncTask<full_body_photo, Void, Void> {
+
+        @Override
+        protected Void doInBackground(full_body_photo... full_body_photos) {
+            ArrayList<full_body_photo> userArrayList = new ArrayList<full_body_photo>();
+
+            verifySettings();
+
+            for (full_body_photo photo : full_body_photos) {
+                getFullPhoto getUserTask
+                        = new getFullPhoto();
+                getUserTask.execute(photo.getUserID());
+
+                Index index = new Index.Builder(photo).index(cmput301f18t05).type("FullPhoto").build();
+
+                try {
+                    // where is the client?
+                    DocumentResult result = client.execute(index);
+                } catch (Exception e) {
+                    Log.w("elasticSearch", "Error trying to execute search.");
+                }
+            }
+
+            return null;
+        }
+    }
+
+    /**deleteUserTask：
+     * delete User's info from the data stream with the UserID
+     *
+     */
+    public static class deleteSpecificFullPhoto extends AsyncTask<Integer, Void, ArrayList<full_body_photo>> {
+        @Override
+        protected ArrayList<full_body_photo> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": " +
+                    search_parameters[0] + "} },{\"term\": {\"photoID\": " + search_parameters[1] + "}}]}}}";
+
+            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("FullPhoto")
+                    .build();
+            try{
+                client.execute(deleteQuery);
+            }catch (IOException e){
+                Log.i("TODO","We actually failed here, deleting a photo");
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
 }

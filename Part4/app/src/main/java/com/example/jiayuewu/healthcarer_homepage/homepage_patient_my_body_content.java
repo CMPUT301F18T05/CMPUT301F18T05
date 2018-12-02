@@ -23,7 +23,11 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -76,6 +80,7 @@ public class homepage_patient_my_body_content extends Fragment{
     public PhotoView photoViewBack;
     public Matrix front_matrix;
     public Matrix back_matrix;
+    public User user;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -112,6 +117,10 @@ public class homepage_patient_my_body_content extends Fragment{
         front_matrix = new Matrix();
         back_matrix = new Matrix();
 
+        user = DataHolder.getData();
+
+
+
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,25 +131,75 @@ public class homepage_patient_my_body_content extends Fragment{
                         photoViewFront.setZoomable(false);
                         photoViewFront.setDisplayMatrix(front_matrix);
                         bodyimg.setVisibility(View.INVISIBLE);
+                        try {
+                            Bitmap viewCapture = null;
+
+                            photoViewFront.setDrawingCacheEnabled(true);
+                            viewCapture = Bitmap.createBitmap(photoViewFront.getDrawingCache());
+                            photoViewFront.setDrawingCacheEnabled(false);
+
+                            Drawable d = (Drawable) new BitmapDrawable(viewCapture);
+
+                            photoViewFront.setImageDrawable(d);
+
+                            Snackbar.make(v, "Saving front photo.", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+
+                            uploadPaperDoll(user.getUserID(), -1, viewCapture);
+                        } catch (Exception e) {
+                            Snackbar.make(v, "Could not save front photo.", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
                     } else {
                         photoViewFront.getSuppMatrix(front_matrix);
                         photoViewFront.setZoomable(true);
                         photoViewFront.setDisplayMatrix(front_matrix);
                         bodyimg.setVisibility(View.VISIBLE);
+
                     }
+
                 } else {
                     if (photoViewBack.isZoomable()) {
                         photoViewBack.getSuppMatrix(back_matrix);
                         photoViewBack.setZoomable(false);
                         photoViewBack.setDisplayMatrix(back_matrix);
                         bodyimg.setVisibility(View.INVISIBLE);
+                        try {
+                            Bitmap viewCapture = null;
+
+                            photoViewBack.setDrawingCacheEnabled(true);
+                            viewCapture = Bitmap.createBitmap(photoViewBack.getDrawingCache());
+                            photoViewBack.setDrawingCacheEnabled(false);
+
+                            Drawable d = (Drawable) new BitmapDrawable(viewCapture);
+
+                            photoViewBack.setImageDrawable(d);
+
+
+
+                            uploadPaperDoll(user.getUserID(), 1, viewCapture);
+
+                            Snackbar.make(v, "Saving back photo.", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        } catch (Exception e) {
+                            Snackbar.make(v, "Could not save back photo.", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
                     } else {
                         photoViewBack.getSuppMatrix(back_matrix);
                         photoViewBack.setZoomable(true);
                         photoViewBack.setDisplayMatrix(back_matrix);
                         bodyimg.setVisibility(View.VISIBLE);
+
                     }
+
                 }
+
+
+
+
+
+
             }
         });
 
@@ -407,4 +466,13 @@ public class homepage_patient_my_body_content extends Fragment{
 
         return rootView;
     }
+
+    public void uploadPaperDoll(Integer userID, Integer photoID, Bitmap image){
+        full_body_photo newPhoto = new full_body_photo(userID, photoID, image);
+
+        elasticSearch.setFullBody getUserTask
+                = new elasticSearch.setFullBody();
+        getUserTask.execute(newPhoto);
+    }
+
 }
