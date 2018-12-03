@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 public class photo_object {
     private String bitmap;
     private Integer userID;
+    private Integer problemID;
     private Integer recordID;
     private Integer photoID;
     private String labelName;
@@ -13,12 +14,14 @@ public class photo_object {
     photo_object() {
     }
 
-    photo_object(Integer userID, Integer recordID, Integer photoID, String bitmap, String labelName, String bodypart) {
+    photo_object(Integer userID, Integer problemID, Integer recordID, Integer photoID, String bitmap, String labelName, String bodypart) {
         this.setRecordID(recordID);
         this.setPhotoID(photoID);
         this.setBitmap(bitmap);
         this.setLabelName(labelName);
         this.setBodyPart(bodypart);
+        this.setUserID(userID);
+        this.setProblemID(problemID);
     }
 
     public String getBitmap() {
@@ -62,10 +65,18 @@ public class photo_object {
     }
 
     public Integer getUserID() {
-        return userID;
+        return this.userID;
     }
 
     public void setUserID(Integer userID) {
         this.userID = userID;
+    }
+
+    public Integer getProblemID() {
+        return this.problemID;
+    }
+
+    public void setProblemID(Integer problemID) {
+        this.problemID = problemID;
     }
 }

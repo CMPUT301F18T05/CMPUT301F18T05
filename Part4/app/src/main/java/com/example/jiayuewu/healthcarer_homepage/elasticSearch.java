@@ -614,7 +614,44 @@ public class elasticSearch {
      * get trasnfer's info from the date stream with the code
      *
      */
-    public static class getPhoto extends AsyncTask<Integer, Void, ArrayList<photo_object>> {
+    public static class getPhoto extends AsyncTask<String, Void, ArrayList<photo_object>> {
+        @Override
+        protected ArrayList<photo_object> doInBackground(String... search_parameters) {
+            verifySettings();
+
+            ArrayList<photo_object> users = new ArrayList<photo_object>();
+
+            String query4 = " {\"query\": {\"bool\": {\"must\": [ {\"term\": {\"userID\": " + search_parameters[0] +
+                    "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}},{\"term\": {\"recordID\": " + search_parameters[2] +
+                    " }} ,{\"term\": {\"bodyPart\": " + search_parameters[3] + "}}]}}}";
+
+            Search search = new Search.Builder(query4)
+                    .addIndex(cmput301f18t05)
+                    .addType("Photo")
+                    .build();
+
+            try {
+                // TODO get the results of the query
+                SearchResult result = client.execute(search);
+                if (result.isSucceeded()) {
+                    List<photo_object> foundTweets = result.getSourceAsObjectList(photo_object.class);
+                    users.addAll(foundTweets);
+                } else {
+                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                }
+            } catch (Exception e) {
+                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+            }
+
+            return users;
+        }
+    }
+
+    /**getTransferTask:
+     * get trasnfer's info from the date stream with the code
+     *
+     */
+    public static class getPhotoForProblem extends AsyncTask<Integer, Void, ArrayList<photo_object>> {
         @Override
         protected ArrayList<photo_object> doInBackground(Integer... search_parameters) {
             verifySettings();
@@ -622,8 +659,7 @@ public class elasticSearch {
             ArrayList<photo_object> users = new ArrayList<photo_object>();
 
             String query4 = " {\"query\": {\"bool\": {\"must\": [ {\"term\": {\"userID\": " + search_parameters[0] +
-                    "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}},{\"term\": {\"recordID\": " + search_parameters[2] +
-                    " }} ,{\"term\": {\"photoID\": " + search_parameters[3] + "}}]}}}";
+                    "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}}]}}}";
 
             Search search = new Search.Builder(query4)
                     .addIndex(cmput301f18t05)
