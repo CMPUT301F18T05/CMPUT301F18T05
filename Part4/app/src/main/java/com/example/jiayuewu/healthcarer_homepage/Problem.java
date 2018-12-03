@@ -103,7 +103,7 @@ public class Problem {
 
     @Override
     public String toString(){
-        return this.problemID + " " + this.title;
+        return this.problemID + " " + this.title + " " + this.calenderDate;
     }
 
 }

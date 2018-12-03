@@ -38,21 +38,20 @@ import java.util.Date;
 public class add_record extends AppCompatActivity {
     Context context;
     private Record newRecord = new Record();
-    private ArrayList<Record> imageList = new ArrayList<Image>();
-
-
+    private ArrayList<Record> recordArrayList = new ArrayList<Record>();
     private EditText titleText;
     private EditText dateText;
     private EditText dText;
     private User user;
-    private Integer problemID;
-    private ArrayList<Problem> problemArrayList = new ArrayList<Problem>();
+    private Integer problemID, recordID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
         setTitle("Add Record");
+
+        problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
 
         Button addphoto = findViewById(R.id.add_photos_button);
         addphoto.setOnClickListener(new View.OnClickListener() {
@@ -63,12 +62,21 @@ public class add_record extends AppCompatActivity {
             }
         });
 
+        Button addmap = findViewById(R.id.patient_location_button);
+        addmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent ap = new Intent(add_record.this, add_photos_in_record.class);
+//                startActivity(ap);
+            }
+        });
+
         FloatingActionButton saveButton = findViewById(R.id.add_record_save_button);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String part, date_text, title, description;
+                String date_text, title, description;
                 Integer userid;
                 Calendar cal;
 
@@ -79,84 +87,82 @@ public class add_record extends AppCompatActivity {
                 sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
                 date_text = "" + sdf.format(date);
 
-                problemID = 1;
-
-
-
-                //part = getIntent().getStringExtra("part");
+                recordID = 0;
                 user = DataHolder.getData();
                 userid = user.getUserID();
-                titleText = (EditText) findViewById(R.id.add_problem_title);
-                dateText = (EditText) findViewById(R.id.add_problem_date);
-                dText = (EditText) findViewById(R.id.add_problem_description);
+
+                titleText = (EditText) findViewById(R.id.patient_record_title);
+                dateText = (EditText) findViewById(R.id.patient_record_timestamp2);
+                dText = (EditText) findViewById(R.id.patient_record_description);
 
                 title = titleText.getText().toString();
                 description = dText.getText().toString();
                 dateText.setText(date_text);
 
-                elasticSearch.getProblemsTask problemTask
-                        = new elasticSearch.getProblemsTask();
-                problemTask.execute(userid);
+                elasticSearch.getAllRecordsTask Task
+                        = new elasticSearch.getAllRecordsTask();
+                Task.execute(userid,problemID);
 
                 try {
-                    problemArrayList = problemTask.get();
-                    problemID = findLastID(userid, v);
+                    recordArrayList = Task.get();
+                    recordID = findLastID(userid,problemID, v);
 
                 }	catch (Exception e) {
-                    Log.e("Error", "Failed to get the problem out of the async object.");
+                    Log.e("Error", "Failed to get the record out of the async object.");
                 }
-                Integer length = problemArrayList.size() - 1;
+                Integer length = recordArrayList.size() - 1;
 
                 if (length == -1) {
-                    problemID = 0;
+                    recordID = 1;
                 } else {
-                    problemID = findLastID(userid, v);
+                    recordID = findLastID(userid, problemID, v);
                 }
 
+//                recordID = findLastID(userid, problemID, v);
 
-                Problem problem = new Problem(userid, problemID, title, date_text, description);
-                elasticSearch.addProblemTask task2
-                        = new elasticSearch.addProblemTask();
-                task2.execute(problem);
+                Record rec = new Record(userid, problemID, recordID, title, date_text, description);
+
+                elasticSearch.addRecordTask task2
+                        = new elasticSearch.addRecordTask();
+                task2.execute(rec);
 
             }
         });
     }
 
-    public Integer findLastID(Integer userID, View v) {
-        Integer unusedProblemID = 1;
+    public Integer findLastID(Integer userID, Integer problemID, View v) {
+        Integer unusedRecordID = 1;
 
-        ArrayList<Problem> problemList = new ArrayList<>();
+
+        ArrayList<Record> recordList = new ArrayList<>();
 
         while (Boolean.TRUE) {
-            elasticSearch.getSpecialProblem task
-                    = new elasticSearch.getSpecialProblem();
+            elasticSearch.getRecordsTask task
+                    = new elasticSearch.getRecordsTask();
 
-            Log.i("addProblem", "Search ign for : " + userID + " " + unusedProblemID);
+            Log.i("addRecord", "Search ign for : " + userID + " " + unusedRecordID);
 
-            task.execute(new Integer[]{unusedProblemID, userID});
+            task.execute(userID, problemID, unusedRecordID);
             try {
 
-                problemList = task.get();
+                recordList = task.get();
 
             } catch (Exception e) {
-                Log.i("addProblem", "Error : " + e);
-                Snackbar.make(v, "FUCKED UP", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Log.i("addRecord", "Error : " + e);
                 break;
             }
 
             try {
-                problemList = task.get();
+                recordList = task.get();
             } catch (Exception e) {
             }
 
-            if (problemList.size() == 0) {
+            if (recordList.size() == 0) {
                 break;
             }
-            unusedProblemID++;
+            unusedRecordID++;
         }
 
-        return unusedProblemID;
+        return unusedRecordID;
     }
 }

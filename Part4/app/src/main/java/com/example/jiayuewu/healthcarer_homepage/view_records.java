@@ -52,6 +52,7 @@ public class view_records extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent ar = new Intent(view_records.this, add_record.class);
+                ar.putExtra("problemID", String.valueOf(problemID));
                 startActivity(ar);
             }
         });
@@ -62,8 +63,8 @@ public class view_records extends AppCompatActivity {
         user = DataHolder.getData();
         problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
 
-        elasticSearch.getRecordsTask task2
-                = new elasticSearch.getRecordsTask();
+        elasticSearch.getAllRecordsTask task2
+                = new elasticSearch.getAllRecordsTask();
         task2.execute(user.getUserID(), problemID);
 
         try{

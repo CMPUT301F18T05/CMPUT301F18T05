@@ -103,4 +103,9 @@ public class Record {
     public void setUserID(Integer userID) {
         this.userID = userID;
     }
+
+    @Override
+    public String toString(){
+        return this.recordID + " " + this.title + " " + this.date;
+    }
 }

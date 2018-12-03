@@ -142,8 +142,6 @@ public class add_problem extends AppCompatActivity {
 
             } catch (Exception e) {
                 Log.i("addProblem", "Error : " + e);
-                Snackbar.make(v, "FUCKED UP", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
                 break;
             }
 

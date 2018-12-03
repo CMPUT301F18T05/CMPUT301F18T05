@@ -210,8 +210,10 @@ public class elasticSearch {
 
             ArrayList<Record> records = new ArrayList<Record>();
 
-            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": " +
-                    search_parameters[0] + "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}}]}}}";
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": {" +
+                    "query\": " + search_parameters[0] + "}}},{\"term\": {\"problemID\": { " +
+                    "query\": " + search_parameters[1] + "}}},{\"term\": {\"recordID\": {\"query\": " +
+                    search_parameters[2] + "}}}]}}}";
 
             Search search = new Search.Builder(query)
                     .addIndex(cmput301f18t05)
@@ -236,6 +238,43 @@ public class elasticSearch {
         }
     }
 
+    /**GetRecordsTask:
+     * get recordList from the date which related to the UserID's problemList
+     *
+     */
+    // TODO we need a function which gets tweets from elastic search
+    public static class getAllRecordsTask extends AsyncTask<Integer, Void, ArrayList<Record>> {
+        @Override
+        protected ArrayList<Record> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            ArrayList<Record> records = new ArrayList<Record>();
+
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"problemID\": " +
+                    search_parameters[1] + "} },{\"term\": {\"userID\": " + search_parameters[0] + "}}]}}}";
+
+            Search search = new Search.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Record")
+                    .build();
+
+            try {
+                // TODO get the results of the query
+                SearchResult result = client.execute(search);
+                if (result.isSucceeded()) {
+                    List<Record> foundRecords = result.getSourceAsObjectList(Record.class);
+                    records.addAll(foundRecords);
+                } else {
+                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                }
+            }
+            catch (Exception e) {
+                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+            }
+
+            return records;
+        }
+    }
 
     // TODO we need a function which adds tweets to elastic search
     public static class addDoctorCommentTask extends AsyncTask<Doctor_Comment, Void, Void> {

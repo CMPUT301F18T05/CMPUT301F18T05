@@ -48,6 +48,7 @@ public class all_problems extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         user = DataHolder.getData();
+        Log.e("Error", "id" + user.getUserID());
         Integer ID = user.getUserID();
         elasticSearch.getProblemsTask getProblemsTask = new elasticSearch.getProblemsTask();
         getProblemsTask.execute(ID);
