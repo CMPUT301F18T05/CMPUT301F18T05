@@ -99,26 +99,25 @@ public class add_record extends AppCompatActivity {
                 description = dText.getText().toString();
                 dateText.setText(date_text);
 
-                elasticSearch.getAllRecordsTask Task
-                        = new elasticSearch.getAllRecordsTask();
-                Task.execute(userid,problemID);
-
-                try {
-                    recordArrayList = Task.get();
-                    recordID = findLastID(userid,problemID, v);
-
-                }	catch (Exception e) {
-                    Log.e("Error", "Failed to get the record out of the async object.");
-                }
-                Integer length = recordArrayList.size() - 1;
-
-                if (length == -1) {
-                    recordID = 1;
-                } else {
-                    recordID = findLastID(userid, problemID, v);
-                }
-
-//                recordID = findLastID(userid, problemID, v);
+//                elasticSearch.getAllRecordsTask Task
+//                        = new elasticSearch.getAllRecordsTask();
+//                Task.execute(userid,problemID);
+//
+//                try {
+//                    recordArrayList = Task.get();
+////                    recordID = findLastID(userid,problemID, v);
+//
+//                }	catch (Exception e) {
+//                    Log.i("Error", "Failed to get the record out of the async object.");
+//                }
+//                Integer length = recordArrayList.size() ;
+//
+//                if (length == -1) {
+//                    recordID = 1;
+//                } else {
+//                    recordID = findLastID(userid, problemID, v);
+//                }
+                recordID = findLastID(userid, problemID, v);
 
                 Record rec = new Record(userid, problemID, recordID, title, date_text, description);
 
@@ -131,7 +130,7 @@ public class add_record extends AppCompatActivity {
     }
 
     public Integer findLastID(Integer userID, Integer problemID, View v) {
-        Integer unusedRecordID = 1;
+        Integer unusedRecordID = 0;
 
 
         ArrayList<Record> recordList = new ArrayList<>();
@@ -144,11 +143,9 @@ public class add_record extends AppCompatActivity {
 
             task.execute(userID, problemID, unusedRecordID);
             try {
-
                 recordList = task.get();
-
             } catch (Exception e) {
-                Log.i("addRecord", "Error : " + e);
+                Log.i("ADD_RECORD", "HAD AN EXCEPTION");
                 break;
             }
 
@@ -163,6 +160,7 @@ public class add_record extends AppCompatActivity {
             unusedRecordID++;
         }
 
+        Log.i("Add_RECORD", "GOT THIS NUMBER BACK : " + unusedRecordID + " " + recordList);
         return unusedRecordID;
     }
 }

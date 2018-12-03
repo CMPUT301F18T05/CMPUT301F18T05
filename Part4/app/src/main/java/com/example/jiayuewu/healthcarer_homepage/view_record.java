@@ -51,17 +51,6 @@ public class view_record extends AppCompatActivity {
         dateText = (EditText) findViewById(R.id.patient_record_timestamp);
         dText = (EditText) findViewById(R.id.patient_record_description);
 
-//        elasticSearch.getSpecialRecord task2
-//                = new elasticSearch.getSpecialRecord();
-//        task2.execute(record.getRecordID(), record.getProblemID(), record.getUserID());
-//
-//        try {
-//            recordArrayList = task2.get();
-//        }	catch (Exception e) {
-//            Log.e("Error", "Failed to get the problem out of the async object.");
-//        }
-//
-//        problem = problemArrayList.get(0);
 
         titleText.setText(record.getTitle());
         dateText.setText(record.getDate());

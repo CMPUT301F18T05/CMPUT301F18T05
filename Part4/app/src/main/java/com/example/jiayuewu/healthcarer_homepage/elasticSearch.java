@@ -115,12 +115,11 @@ public class elasticSearch {
         protected ArrayList<Record> doInBackground(Integer... search_parameters) {
             verifySettings();
 
-            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": {" +
-                    "query\": " + search_parameters[0] + "}}},{\"term\": {\"problemID\": { " +
-                    "query\": " + search_parameters[1] + "}}},{\"term\": {\"recordID\": {\"query\": " +
-                    search_parameters[2] + "}}}]}}}";
+            String query3 = " {\"query\": {\"bool\": {\"must\": [ {\"term\": {\"userID\": " + search_parameters[0] +
+                    "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}},{\"term\": {\"recordID\": " + search_parameters[2] +
+                    " }}]}}}";
 
-            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
+            DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query3)
                     .addIndex(cmput301f18t05)
                     .addType("Record")
                     .build();
@@ -210,12 +209,11 @@ public class elasticSearch {
 
             ArrayList<Record> records = new ArrayList<Record>();
 
-            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": {" +
-                    "query\": " + search_parameters[0] + "}}},{\"term\": {\"problemID\": { " +
-                    "query\": " + search_parameters[1] + "}}},{\"term\": {\"recordID\": {\"query\": " +
-                    search_parameters[2] + "}}}]}}}";
+           String query3 = " {\"query\": {\"bool\": {\"must\": [ {\"term\": {\"userID\": " + search_parameters[0] +
+                    "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}},{\"term\": {\"recordID\": " + search_parameters[2] +
+                    " }}]}}}";
 
-            Search search = new Search.Builder(query)
+            Search search = new Search.Builder(query3)
                     .addIndex(cmput301f18t05)
                     .addType("Record")
                     .build();
@@ -226,8 +224,9 @@ public class elasticSearch {
                 if (result.isSucceeded()) {
                     List<Record> foundRecords = result.getSourceAsObjectList(Record.class);
                     records.addAll(foundRecords);
+                    Log.i("ELASTIC SEARCH", "SUCCESFFULY RAN : " + records);
                 } else {
-                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                    Log.i("Error", "The search query failed to find any RECORDS 123456 for some reason.");
                 }
             }
             catch (Exception e) {
@@ -265,7 +264,7 @@ public class elasticSearch {
                     List<Record> foundRecords = result.getSourceAsObjectList(Record.class);
                     records.addAll(foundRecords);
                 } else {
-                    Log.i("Error", "The search query failed to find any tweets for some reason.");
+                    Log.i("Error", "The search query failed to find ALL RECORDS tweets for some reason.");
                 }
             }
             catch (Exception e) {
