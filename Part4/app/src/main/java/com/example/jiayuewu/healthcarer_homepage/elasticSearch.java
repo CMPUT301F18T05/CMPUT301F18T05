@@ -621,9 +621,9 @@ public class elasticSearch {
             verifySettings();
 
             for (photo_object photo : photo_objects) {
-                getPhoto getUserTask
-                        = new getPhoto();
-                getUserTask.execute(photo.getRecordID());
+//                getPhoto getUserTask
+//                        = new getPhoto();
+//                getUserTask.execute(photo.getRecordID());
 
                 Index index = new Index.Builder(photo).index(cmput301f18t05).type("Photo").build();
 
@@ -717,7 +717,6 @@ public class elasticSearch {
             try {
                 // TODO get the results of the query
 
-
                 SearchResult result = client.execute(search);
 
                 Log.i("elasticSearch", "Exceuted search");
@@ -754,17 +753,15 @@ public class elasticSearch {
             verifySettings();
 
             for (full_body_photo photo : full_body_photos) {
-                getSpecificFullPhoto getUserTask
-                        = new getSpecificFullPhoto();
-                getUserTask.execute(photo.getUserID(),photo.getPhotoID());
 
                 Index index = new Index.Builder(photo).index(cmput301f18t05).type("FullPhoto").build();
 
                 try {
                     // where is the client?
                     DocumentResult result = client.execute(index);
+
                 } catch (Exception e) {
-                    Log.w("elasticSearch", "Error trying to execute search.");
+                    Log.i("elasticSearch", "Error trying save FULL BODY IMAGE.");
                 }
             }
 

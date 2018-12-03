@@ -3,7 +3,7 @@ package com.example.jiayuewu.healthcarer_homepage;
 import android.graphics.Bitmap;
 
 public class full_body_photo {
-    private Bitmap bitmap;
+    private String bitmap;
     private Integer userID;
     private Integer photoID;
 
@@ -11,17 +11,17 @@ public class full_body_photo {
     full_body_photo() {
     }
 
-    full_body_photo(Integer userID, Integer photoID, Bitmap bitmap) {
+    full_body_photo(Integer userID, Integer photoID, String bitmap) {
         this.setUserID(userID);
         this.setPhotoID(photoID);
         this.setBitmap(bitmap);
     }
 
-    public Bitmap getBitmap() {
+    public String getBitmap() {
         return this.bitmap;
     }
 
-    public void setBitmap(Bitmap bitmap) {
+    public void setBitmap(String bitmap) {
         this.bitmap = bitmap;
     }
 

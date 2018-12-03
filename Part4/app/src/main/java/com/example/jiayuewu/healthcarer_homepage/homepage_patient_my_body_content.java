@@ -40,6 +40,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -55,6 +56,7 @@ import android.widget.TextView;
 
 import com.github.chrisbanes.photoview.PhotoView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class homepage_patient_my_body_content extends Fragment{
@@ -124,7 +126,7 @@ public class homepage_patient_my_body_content extends Fragment{
 
         elasticSearch.getSpecificFullPhoto getFrontTask
                 = new elasticSearch.getSpecificFullPhoto();
-        getFrontTask.execute(new Integer[]{user.getUserID(),1});
+        getFrontTask.execute(user.getUserID(),1);
 
         try {
             listFullBodyFront = getFrontTask.get();
@@ -135,7 +137,7 @@ public class homepage_patient_my_body_content extends Fragment{
         if (listFullBodyFront.isEmpty()) {
             photoViewFront.setImageDrawable(rbody_front);
         } else {
-            Drawable d = (Drawable) new BitmapDrawable(listFullBodyFront.get(0).getBitmap());
+            Drawable d = (Drawable) new BitmapDrawable(convertStringToBitmap(listFullBodyFront.get(0).getBitmap()));
             photoViewFront.setImageDrawable(d);
         }
 
@@ -143,7 +145,7 @@ public class homepage_patient_my_body_content extends Fragment{
 
         elasticSearch.getSpecificFullPhoto getBackTask
                 = new elasticSearch.getSpecificFullPhoto();
-        getBackTask.execute(new Integer[]{user.getUserID(),-1});
+        getBackTask.execute(user.getUserID(),-1);
 
         try {
             listFullBodyBack = getBackTask.get();
@@ -152,9 +154,10 @@ public class homepage_patient_my_body_content extends Fragment{
         }
 
         if (listFullBodyBack.isEmpty()) {
+            Log.i("HOMEPAGE", "NOTHING FOUND, SO DEFAULTED");
             photoViewBack.setImageDrawable(rbody_back);
         } else {
-            Drawable d = (Drawable) new BitmapDrawable(listFullBodyBack.get(0).getBitmap());
+            Drawable d = (Drawable) new BitmapDrawable(convertStringToBitmap(listFullBodyBack.get(0).getBitmap()));
             photoViewBack.setImageDrawable(d);
         }
 
@@ -498,16 +501,38 @@ public class homepage_patient_my_body_content extends Fragment{
     }
 
     public void uploadPaperDoll(Integer userID, Integer photoID, Bitmap image){
-        full_body_photo newPhoto = new full_body_photo(userID, photoID, image);
 
+        full_body_photo newPhoto = new full_body_photo(userID, photoID, convertBitmapToString(image));
+
+
+        Log.i("IN UPLOAD PAPER DOLL", "PASSING " + userID + photoID);
         //Todo : Delete old image
-        elasticSearch.deleteSpecificFullPhoto deleteTask
-                = new elasticSearch.deleteSpecificFullPhoto();
-        deleteTask.execute(new Integer[]{userID,photoID});
+//        elasticSearch.deleteSpecificFullPhoto deleteTask
+//                = new elasticSearch.deleteSpecificFullPhoto();
+//        deleteTask.execute(userID,photoID);
 
         elasticSearch.setFullBody getUserTask
                 = new elasticSearch.setFullBody();
         getUserTask.execute(newPhoto);
+    }
+
+    public String convertBitmapToString(Bitmap bitmap) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+
+        byte[] byteArray = byteArrayOutputStream .toByteArray();
+        String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+        return encoded;
+    }
+
+    public Bitmap convertStringToBitmap(String base64) {
+        byte[] data = Base64.decode(base64, Base64.DEFAULT);
+//        String text = new String(data, "UTF-8");
+
+        Bitmap decodedByte = BitmapFactory.decodeByteArray(data, 0, data.length);
+
+        return decodedByte;
     }
 
 }
