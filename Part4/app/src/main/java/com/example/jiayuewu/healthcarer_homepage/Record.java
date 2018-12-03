@@ -39,13 +39,12 @@ public class Record {
 
     }
 
-    Record(Integer userID, Integer problemID, Integer recordID, String title, String date, Location location, String comment) {
+    Record(Integer userID, Integer problemID, Integer recordID, String title, String date, String comment) {
         this.userID = userID;
         this.problemID = problemID;
         this.recordID = recordID;
         this.title = title;
         this.date = date;
-        this.location = location;
         this.comment = comment;
     }
 

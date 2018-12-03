@@ -68,10 +68,6 @@ public class add_record extends AppCompatActivity {
                 // Todo: Need to save the record to elastic search
 
                 // Do a bunch of checks.
-
-
-
-
             }
         });
 

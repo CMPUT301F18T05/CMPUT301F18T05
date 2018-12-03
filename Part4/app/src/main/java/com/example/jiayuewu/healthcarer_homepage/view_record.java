@@ -21,6 +21,7 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -36,7 +37,7 @@ public class view_record extends AppCompatActivity {
     private EditText dateText;
     private EditText dText;
     private Record record;
-    private ArrayList<Record> problemArrayList = new ArrayList<Record>();
+    private ArrayList<Record> recordArrayList = new ArrayList<Record>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,63 +45,70 @@ public class view_record extends AppCompatActivity {
         setContentView(R.layout.activity_view_record);
         setTitle("View Record");
 
-        Record record = DataHolder_Record.getData();
+        record = DataHolder_Record.getData();
 
         titleText = (EditText) findViewById(R.id.patient_record_title);
         dateText = (EditText) findViewById(R.id.patient_record_timestamp);
         dText = (EditText) findViewById(R.id.patient_record_description);
 
-        elasticSearch.getSpecialProblem task2
-                = new elasticSearch.getSpecialProblem();
-        task2.execute(problemID, userid);
+//        elasticSearch.getSpecialRecord task2
+//                = new elasticSearch.getSpecialRecord();
+//        task2.execute(record.getRecordID(), record.getProblemID(), record.getUserID());
+//
+//        try {
+//            recordArrayList = task2.get();
+//        }	catch (Exception e) {
+//            Log.e("Error", "Failed to get the problem out of the async object.");
+//        }
+//
+//        problem = problemArrayList.get(0);
 
-        try {
-            problemArrayList = task2.get();
-        }	catch (Exception e) {
-            Log.e("Error", "Failed to get the problem out of the async object.");
-        }
-
-        problem = problemArrayList.get(0);
-
-        titleText.setText(problem.getTitle());
-        dateText.setText(problem.getCalenderDate());
-        dText.setText(problem.getDescription());
+        titleText.setText(record.getTitle());
+        dateText.setText(record.getDate());
+        dText.setText(record.getComment());
 
 
-        Button rButton = (Button) findViewById(R.id.Reminder_button);
-        rButton.setOnClickListener(new View.OnClickListener() {
-
+        Button addphoto = findViewById(R.id.patient_photos_button);
+        addphoto.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                setResult(RESULT_OK);
-
-                //passing the emotion count to new activity
-                Intent intent = new Intent(view_problem.this, RemindActivity.class);
-                view_problem.this.startActivity(intent);
+                Intent ap = new Intent(view_record.this, add_photos_in_record.class);
+                startActivity(ap);
             }
         });
 
-        FloatingActionButton viewrecords = findViewById(R.id.patient_records_button);
-        FloatingActionButton doctorcomments = findViewById(R.id.view_doctor_comment);
-        FloatingActionButton saveProblem = findViewById(R.id.problem_save_button);
-        FloatingActionButton deleteProblem = findViewById(R.id.problem_delete_button);
+        Button addmap = findViewById(R.id.patient_location_button);
+        addmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent ap = new Intent(view_record.this, add_photos_in_record.class);
+//                startActivity(ap);
+            }
+        });
+
+        FloatingActionButton saveProblem = findViewById(R.id.record_save_button);
+        FloatingActionButton deleteProblem = findViewById(R.id.delete_record_button);
 
         saveProblem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String date_text, title, description;
+//                Location location;
 
                 date_text = dateText.getText().toString();
                 title = titleText.getText().toString();
                 description = dText.getText().toString();
 
-                elasticSearch.deleteProblemTask task1
-                        = new elasticSearch.deleteProblemTask();
-                task1.execute(userid,problemID);
+                elasticSearch.deleteRecordTask task1
+                        = new elasticSearch.deleteRecordTask();
+                task1.execute(record.getUserID(), record.getProblemID(), record.getRecordID());
 
-                Problem problem = new Problem(userid, problemID, title, date_text, description);
-                elasticSearch.addProblemTask task2
-                        = new elasticSearch.addProblemTask();
-                task2.execute(problem);
+                Record rec = new Record(record.getUserID(), record.getProblemID(), record.getRecordID(), title, date_text, description);
+                // todo check if user picked location , update it otherwise keep it empty
+//                rec.setLocation(location);
+                elasticSearch.addRecordTask task2
+                        = new elasticSearch.addRecordTask();
+                task2.execute(rec);
 
             }
         });
@@ -108,27 +116,9 @@ public class view_record extends AppCompatActivity {
         deleteProblem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                elasticSearch.deleteProblemTask task1
-                        = new elasticSearch.deleteProblemTask();
-                task1.execute(userid,problemID);
-            }
-        });
-
-        viewrecords.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent vr= new Intent(view_problem.this, view_records.class);
-                vr.putExtra("problemID",String.valueOf(problemID));
-                startActivity(vr);
-            }
-        });
-
-        doctorcomments.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent dc= new Intent(view_problem.this, doctor_comments.class);
-                dc.putExtra("problemID",String.valueOf(problemID));
-                startActivity(dc);
+                elasticSearch.deleteRecordTask task1
+                        = new elasticSearch.deleteRecordTask();
+                task1.execute(record.getUserID(), record.getProblemID(), record.getRecordID());
             }
         });
     }
