@@ -45,6 +45,7 @@ public class elasticSearch {
     static String cmput301f18t05 = "cmput301f18t05test";
     private static JestDroidClient client;
 
+
       /**
      * AddProblemTask
      *
@@ -114,8 +115,10 @@ public class elasticSearch {
         protected ArrayList<Record> doInBackground(Integer... search_parameters) {
             verifySettings();
 
-            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": " +
-                    search_parameters[0] + "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}}]}}}";
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": {" +
+                    "query\": " + search_parameters[0] + "}}},{\"term\": {\"problemID\": { " +
+                    "query\": " + search_parameters[1] + "}}},{\"term\": {\"recordID\": {\"query\": " +
+                    search_parameters[2] + "}}}]}}}";
 
             DeleteByQuery deleteQuery = new DeleteByQuery.Builder(query)
                     .addIndex(cmput301f18t05)
