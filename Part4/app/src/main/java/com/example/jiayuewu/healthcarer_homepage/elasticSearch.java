@@ -183,7 +183,8 @@ public class elasticSearch {
 
             ArrayList<Record> records = new ArrayList<Record>();
 
-            String query = "{\"query\" : {\"term\" : { \"problemID\" : \"" + search_parameters[0] + "\" }}}";
+            String query = "{\"query\": {\"bool\": {\"must\": [{\"term\": {\"userID\": " +
+                    search_parameters[0] + "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}}]}}}";
 
             Search search = new Search.Builder(query)
                     .addIndex(cmput301f18t05)

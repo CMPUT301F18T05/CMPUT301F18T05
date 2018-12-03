@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,35 +34,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class view_records extends AppCompatActivity {
+    private Record record = new Record();
+    private ArrayList<Record> recordArrayList = new ArrayList<Record>();
+    private ArrayAdapter<Record> adapter;
+    private User user;
+    private Integer problemID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_records);
         setTitle("View Records");
-
         ListView patients = findViewById(R.id.view_records_listview);
-        List<String> test_array_list = new ArrayList<String>();
-        test_array_list.add("foo");
-        test_array_list.add("bar");
-
-        // This is the array adapter, it takes the context of the activity as a
-        // first parameter, the type of list view as a second parameter and your
-        // array as a third parameter.
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                view_records.this,
-                android.R.layout.simple_list_item_1,
-                test_array_list );
-
-        patients.setAdapter(arrayAdapter);
-        patients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
-                Intent vp = new Intent(view_records.this, view_record.class);
-                vp.putExtra("position",position);
-                startActivity(vp);
-            }
-        });
 
         FloatingActionButton addrecord = findViewById(R.id.add_record_button);
         addrecord.setOnClickListener(new View.OnClickListener() {
@@ -71,5 +55,40 @@ public class view_records extends AppCompatActivity {
                 startActivity(ar);
             }
         });
+    }
+
+    protected void onStart() {
+        super.onStart();
+        user = DataHolder.getData();
+        problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
+
+        elasticSearch.getRecordsTask task2
+                = new elasticSearch.getRecordsTask();
+        task2.execute(user.getUserID(), problemID);
+
+        try{
+            recordArrayList = task2.get();
+        } catch (Exception e){
+            Log.e("View_records", "Failed to get the records history out of the async object.");
+        }
+
+        Log.i("view_records","" + recordArrayList);
+        adapter = new ArrayAdapter<>(this, R.layout.list_item, recordArrayList);
+        ListView history = findViewById(R.id.view_records_listview);
+        history.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+        history.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
+                Intent viewAndEdit = new Intent(view_records.this, view_record.class);
+                Record record;
+                record = recordArrayList.get(position);
+                DataHolder_Record.setData(record);
+                startActivity(viewAndEdit);
+
+            }
+        });
+
     }
 }

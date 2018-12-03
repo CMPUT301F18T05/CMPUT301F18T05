@@ -123,6 +123,7 @@ public class view_problem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent vr= new Intent(view_problem.this, view_records.class);
+                vr.putExtra("problemID",String.valueOf(problemID));
                 startActivity(vr);
             }
         });

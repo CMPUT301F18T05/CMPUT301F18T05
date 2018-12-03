@@ -27,10 +27,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Record {
+    private Integer userID;
     private Integer problemID;
     private Integer recordID;
     private String title;
-    private Calendar date;
+    private String date;
     private Location location;
     private String comment;
 
@@ -38,7 +39,8 @@ public class Record {
 
     }
 
-    Record(Integer problemID, Integer recordID, String title, Calendar date, Location location, String comment) {
+    Record(Integer userID, Integer problemID, Integer recordID, String title, String date, Location location, String comment) {
+        this.userID = userID;
         this.problemID = problemID;
         this.recordID = recordID;
         this.title = title;
@@ -67,11 +69,11 @@ public class Record {
         }
     }
 
-    public Calendar getDate() {
+    public String getDate() {
         return this.date;
     }
 
-    public void setDate(Calendar date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -93,5 +95,13 @@ public class Record {
         } else {
             throw new exception_description_too_long();
         }
+    }
+
+    public Integer getUserID() {
+        return this.userID;
+    }
+
+    public void setUserID(Integer userID) {
+        this.userID = userID;
     }
 }
