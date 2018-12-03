@@ -83,7 +83,7 @@ public class homepage_doctor_my_profile_content extends Fragment implements View
         user.setName(n);
         user.setPhoneNumber(p);
 
-        DataHolder.setData(user);
+//        DataHolder.setData(user);
         try {
             Thread.sleep(1000);
         } catch (Exception el) {

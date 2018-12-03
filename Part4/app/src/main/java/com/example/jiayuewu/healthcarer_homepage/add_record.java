@@ -36,22 +36,26 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class add_record extends AppCompatActivity {
-    Context context;
+    Context context = add_record.this;
     private Record newRecord = new Record();
     private ArrayList<Record> recordArrayList = new ArrayList<Record>();
     private EditText titleText;
     private EditText dateText;
     private EditText dText;
     private User user;
-    private Integer problemID, recordID;
+    private Integer userID, problemID, recordID;
+    private Problem problem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
         setTitle("Add Record");
+        problem = DataHolder_Problem.getData();
+        problemID = problem.getProblemID();
+        userID = problem.getUserID();
 
-        problemID = DataHolder_Problem.getData().getProblemID();
+//        problemID = DataHolder_Problem.getData().getProblemID();
 
         Button addphoto = findViewById(R.id.add_photos_button);
         addphoto.setOnClickListener(new View.OnClickListener() {
@@ -88,8 +92,8 @@ public class add_record extends AppCompatActivity {
                 date_text = "" + sdf.format(date);
 
                 recordID = 0;
-                user = DataHolder.getData();
-                userid = user.getUserID();
+                Integer userID = problem.getUserID();
+                problemID = problem.getProblemID();
 
                 titleText = (EditText) findViewById(R.id.patient_record_title);
                 dateText = (EditText) findViewById(R.id.patient_record_timestamp2);
@@ -99,14 +103,23 @@ public class add_record extends AppCompatActivity {
                 description = dText.getText().toString();
                 dateText.setText(date_text);
 
-                recordID = findLastID(userid, problemID, v);
+                if (!connectivityChecker.getConnectivity(context)) {
+                    recordID = findOfflineLastID();
+                    Record newRecord = new Record(userID, problemID, recordID, title, date_text, description);
 
-                Record rec = new Record(userid, problemID, recordID, title, date_text, description);
+                    recordArrayList = DataHolderEverything.getRecordList();
+                    recordArrayList.add(newRecord);
+                    DataHolderEverything.setRecordList(recordArrayList);
 
-                elasticSearch.addRecordTask task2
-                        = new elasticSearch.addRecordTask();
-                task2.execute(rec);
+                } else {
+                    recordID = findLastID(userID, problemID, v);
 
+                    Record newRecord = new Record(userID, problemID, recordID, title, date_text, description);
+
+                    elasticSearch.addRecordTask task2
+                            = new elasticSearch.addRecordTask();
+                    task2.execute(newRecord);
+                }
             }
         });
     }
@@ -144,5 +157,25 @@ public class add_record extends AppCompatActivity {
 
         Log.i("Add_RECORD", "GOT THIS NUMBER BACK : " + unusedRecordID + " " + recordList);
         return unusedRecordID;
+    }
+
+    public Integer findOfflineLastID() {
+        ArrayList<Record> listOfRecords = DataHolderEverything.getRecordList();
+        Integer maxNumber = 0;
+        ArrayList<Integer> listOfID = new ArrayList<>();
+
+        for (Record record : listOfRecords) {
+            listOfID.add(record.getRecordID());
+        }
+
+        for (Integer ID : listOfID) {
+            if (listOfID.contains(maxNumber)) {
+                maxNumber++;
+            } else {
+                break;
+            }
+        }
+
+        return maxNumber;
     }
 }

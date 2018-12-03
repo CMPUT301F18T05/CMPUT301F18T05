@@ -50,8 +50,7 @@ public class all_problems extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        user = DataHolder.getData();
-        Integer ID = user.getUserID();
+        Integer ID = DataHolder.getData().getUserID();
 
         // Check connectivity to decide whether to get problem list from online or from storage.
         if (!connectivityChecker.getConnectivity(context)) {
@@ -75,8 +74,8 @@ public class all_problems extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
                 Intent viewAndEdit = new Intent(all_problems.this, view_problem.class);
-                Problem problem;
-                problem = problemArrayList.get(position);
+                Problem problem  = problemArrayList.get(position);
+                Log.i("PROBLEM SELECTED", ""+ problem.getProblemID());
                 DataHolder_Problem.setData(problem);
                 startActivity(viewAndEdit);
             }

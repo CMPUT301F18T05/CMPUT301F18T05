@@ -67,9 +67,9 @@ public class view_records extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-        problem = DataHolder_Problem.getData();
-        problemID = problem.getProblemID();
-//        problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
+        Problem problems = DataHolder_Problem.getData();
+        Log.i("IN VIEW RECORDS R", "" + problems.getUserID());
+
 
         // Check if user is online, or offline, and set list accordingly.
         if (!connectivityChecker.getConnectivity(context)) {
@@ -77,7 +77,7 @@ public class view_records extends AppCompatActivity {
         } else {
             elasticSearch.getAllRecordsTask task2
                     = new elasticSearch.getAllRecordsTask();
-            task2.execute(problem.getUserID(), problemID);
+            task2.execute(problems.getUserID(), problems.getProblemID());
 
             try {
                 recordArrayList = task2.get();
@@ -95,9 +95,9 @@ public class view_records extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
                 Intent viewAndEdit = new Intent(view_records.this, view_record.class);
-                Record record;
-                record = recordArrayList.get(position);
+                Record record = recordArrayList.get(position);
                 DataHolder_Record.setData(record);
+                Log.i("IN VIEW RECORD", "RECORD ID IS : " + record.getUserID());
                 startActivity(viewAndEdit);
             }
         });

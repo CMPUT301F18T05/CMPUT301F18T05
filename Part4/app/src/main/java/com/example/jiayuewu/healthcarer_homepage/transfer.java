@@ -99,7 +99,7 @@ public class transfer extends AppCompatActivity {
 
                         Log.w("GOT USER", "" + user.getUserID());
 
-                        DataHolder.setData(user);
+//                        DataHolder.setData(user);
                         if (user.getRole().equals("Patient")) {
 
                             try {

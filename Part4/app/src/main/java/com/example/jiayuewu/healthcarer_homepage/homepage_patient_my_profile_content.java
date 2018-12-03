@@ -20,6 +20,7 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -44,8 +45,8 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
     private EditText phoneText;
     private FloatingActionButton saveButton;
     private Button getCodeButton;
-    @Override
 
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.homepage_patient_my_profile, container, false);
@@ -107,67 +108,71 @@ public class homepage_patient_my_profile_content extends Fragment implements Vie
 
     @Override
     public void onClick(View v) {
+        if (connectivityChecker.getConnectivity(getActivity())) {
+            switch (v.getId()) {
+                case R.id.transfer_code_button:
+                    // transfer button clicked
+                    Integer code;
+                    code = generateCode(user.getUserID());
+                    final AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    alertDialog.setTitle("Trasfer code generated");
+                    alertDialog.setMessage("Trasfer code is " + code);
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
 
-        switch(v.getId()) {
-            case R.id.transfer_code_button:
-                // transfer button clicked
-                Integer code;
-                code = generateCode(user.getUserID());
-                final AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                alertDialog.setTitle("Trasfer code generated");
-                alertDialog.setMessage("Trasfer code is " + code);
-                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        });
+                    alertDialog.show();
 
-                alertDialog.show();
-
-                break;
-            case R.id.patient_profile_save_button :
-                // save button clicked
-                Snackbar.make(v, "Contact Information Saved", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-                elasticSearch.deleteUserTask task
-                        = new elasticSearch.deleteUserTask();
-                task.execute(user.getUserID());
-
-                String u,e,p,n;
-                u = useridText.getText().toString();
-                e = emailText.getText().toString();
-                p = phoneText.getText().toString();
-                n = nameText.getText().toString();
-
-                //User user2 = new User(Integer.parseInt(u),n,e,p,user.getRole());
-                user.setEmail(e);
-                try {
-                    user.setUserID(Integer.parseInt(u));
-                } catch (Exception_User_ID_Too_Short uid) {
-                    Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
+                    break;
+                case R.id.patient_profile_save_button:
+                    // save button clicked
+                    Snackbar.make(v, "Contact Information Saved", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
 
-                }
-                user.setName(n);
-                user.setPhoneNumber(p);
+                    elasticSearch.deleteUserTask task
+                            = new elasticSearch.deleteUserTask();
+                    task.execute(user.getUserID());
 
-                DataHolder.setData(user);
-                try {
-                    Thread.sleep(1000);
-                } catch (Exception el) {
+                    String u, e, p, n;
+                    u = useridText.getText().toString();
+                    e = emailText.getText().toString();
+                    p = phoneText.getText().toString();
+                    n = nameText.getText().toString();
 
-                }
+                    //User user2 = new User(Integer.parseInt(u),n,e,p,user.getRole());
+                    user.setEmail(e);
+                    try {
+                        user.setUserID(Integer.parseInt(u));
+                    } catch (Exception_User_ID_Too_Short uid) {
+                        Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
 
-                //userArrayList.add(user);
-                //todo add the list to local or ES using controller
-                elasticSearch.addUserTask addTweetsTask
-                        = new elasticSearch.addUserTask();
-                addTweetsTask.execute(user);
-                // similarly for other buttons
-                break;
+                    }
+                    user.setName(n);
+                    user.setPhoneNumber(p);
+
+//                DataHolder.setData(user);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (Exception el) {
+
+                    }
+
+                    //userArrayList.add(user);
+                    //todo add the list to local or ES using controller
+                    elasticSearch.addUserTask addTweetsTask
+                            = new elasticSearch.addUserTask();
+                    addTweetsTask.execute(user);
+                    // similarly for other buttons
+                    break;
             }
+        } else {
+            Snackbar.make(v, "You cannot generate or save profile changes while you are offline.", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
     }
 
 }

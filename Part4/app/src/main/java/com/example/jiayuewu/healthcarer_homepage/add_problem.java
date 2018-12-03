@@ -21,6 +21,7 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -45,6 +46,7 @@ public class add_problem extends AppCompatActivity {
     private User user;
     private Integer problemID;
     private ArrayList<Problem> problemArrayList = new ArrayList<Problem>();
+    private Context context = add_problem.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,8 +82,6 @@ public class add_problem extends AppCompatActivity {
 
                 problemID = 1;
 
-
-
                 //part = getIntent().getStringExtra("part");
                 user = DataHolder.getData();
                 userid = user.getUserID();
@@ -93,29 +93,24 @@ public class add_problem extends AppCompatActivity {
                 description = dText.getText().toString();
                 dateText.setText(date_text);
 
-                elasticSearch.getProblemsTask problemTask
-                        = new elasticSearch.getProblemsTask();
-                problemTask.execute(userid);
+                if (!connectivityChecker.getConnectivity(context)) {
+                    problemID = findOfflineLastID();
+                    Problem newProblem = new Problem(userid, problemID, title, date_text, description);
 
-                try {
-                    problemArrayList = problemTask.get();
-                    problemID = findLastID(userid, v);
+                    problemArrayList = DataHolderEverything.getProblemList();
+                    problemArrayList.add(newProblem);
+                    DataHolderEverything.setProblemList(problemArrayList);
 
-                }	catch (Exception e) {
-                    Log.e("Error", "Failed to get the problem out of the async object.");
-                }
-                Integer length = problemArrayList.size() - 1;
-
-                if (length == -1) {
-                    problemID = 0;
                 } else {
                     problemID = findLastID(userid, v);
+
+                    Problem newProblem = new Problem(userid, problemID, title, date_text, description);
+                    elasticSearch.addProblemTask task2
+                            = new elasticSearch.addProblemTask();
+                    task2.execute(newProblem);
                 }
 
-                Problem problem = new Problem(userid, problemID, title, date_text, description);
-                elasticSearch.addProblemTask task2
-                        = new elasticSearch.addProblemTask();
-                task2.execute(problem);
+
             }
         });
     }
@@ -156,5 +151,25 @@ public class add_problem extends AppCompatActivity {
         }
 
         return unusedProblemID;
+    }
+
+    public Integer findOfflineLastID() {
+        ArrayList<Problem> listOfProblems = DataHolderEverything.getProblemList();
+        Integer maxNumber = 0;
+        ArrayList<Integer> listOfID = new ArrayList<>();
+
+        for (Problem problem : listOfProblems) {
+            listOfID.add(problem.getProblemID());
+        }
+
+        for (Integer ID : listOfID) {
+            if (listOfID.contains(maxNumber)) {
+                maxNumber++;
+            } else {
+                break;
+            }
+        }
+
+        return maxNumber;
     }
 }

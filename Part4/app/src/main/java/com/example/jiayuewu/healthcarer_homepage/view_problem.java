@@ -157,6 +157,7 @@ public class view_problem extends AppCompatActivity {
                 Intent vr= new Intent(view_problem.this, view_records.class);
                 vr.putExtra("problemID",String.valueOf(problemID));
                 vr.putExtra("problemTitle",problem.getTitle());
+//                DataHolder_Problem.setData(problem);
                 startActivity(vr);
             }
         });
