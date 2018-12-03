@@ -106,4 +106,8 @@ public class User {
         this.userList.remove(userID);
     }
 
+    public Integer getCurrentUser(Integer n){
+        return this.userList.get(n);
+    }
+
 }

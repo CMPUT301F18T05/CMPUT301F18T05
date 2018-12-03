@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class homepage_doctor_my_patients_content extends Fragment{
+
     public Button sbutton;
 
     @Override
@@ -58,19 +59,22 @@ public class homepage_doctor_my_patients_content extends Fragment{
             }
         });
 
-        ListView patients = rootView.findViewById(R.id.patients_listview);
-        List<String> test_array_list = new ArrayList<String>();
-        test_array_list.add("foo");
-        test_array_list.add("bar");
-
+        User user = DataHolder.getData();
+        ArrayList patientsList = user.getUserList();
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
         // array as a third parameter.
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 homepage_doctor_my_patients_content.this.getActivity(),
-                android.R.layout.simple_list_item_1,
-                test_array_list );
+                android.R.layout.simple_list_item_1,patientsList);
 
+        /*
+         *
+         *
+         * view patient's detail button
+         *
+         */
+        ListView patients = rootView.findViewById(R.id.patients_listview);
         patients.setAdapter(arrayAdapter);
         patients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -78,10 +82,16 @@ public class homepage_doctor_my_patients_content extends Fragment{
                 Intent vp = new Intent(homepage_doctor_my_patients_content.this.getActivity(), view_patient.class);
                 vp.putExtra("position",position);
                 startActivity(vp);
-
             }
         });
 
+
+        /*
+         *
+         *
+         * add patient button
+         *
+         */
         FloatingActionButton addpatient = rootView.findViewById(R.id.add_patient_button);
         addpatient.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,8 +100,6 @@ public class homepage_doctor_my_patients_content extends Fragment{
                 startActivity(ap);
             }
         });
-
-
         return rootView;
     }
 }
