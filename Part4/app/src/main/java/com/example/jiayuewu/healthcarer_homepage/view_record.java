@@ -56,7 +56,6 @@ public class view_record extends AppCompatActivity {
         dateText.setText(record.getDate());
         dText.setText(record.getComment());
 
-
         Button addphoto = findViewById(R.id.patient_photos_button);
         addphoto.setOnClickListener(new View.OnClickListener() {
             @Override
