@@ -53,27 +53,30 @@ public class view_problem extends AppCompatActivity {
         user = DataHolder.getData();
         userid = user.getUserID();
 
-        problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
+
         titleText = (EditText) findViewById(R.id.patient_problem_title);
         dateText = (EditText) findViewById(R.id.patient_problem_date);
         dText = (EditText) findViewById(R.id.patient_problem_description);
-        elasticSearch.getSpecialProblem task2
-                = new elasticSearch.getSpecialProblem();
-        task2.execute(problemID, userid);
 
-        try {
-            problemArrayList = task2.get();
-        }	catch (Exception e) {
-            Log.e("Error", "Failed to get the problem out of the async object.");
-        }
+//        elasticSearch.getSpecialProblem task2
+//                = new elasticSearch.getSpecialProblem();
+//        task2.execute(problemID, userid);
+//
+//        try {
+//            problemArrayList = task2.get();
+//        }	catch (Exception e) {
+//            Log.e("Error", "Failed to get the problem out of the async object.");
+//        }
 
-        problem = problemArrayList.get(0);
+        problem = DataHolder_Problem.getData();
+        problemID = problem.getProblemID();
 
         titleText.setText(problem.getTitle());
         dateText.setText(problem.getCalenderDate());
         dText.setText(problem.getDescription());
 
         countText = (TextView) findViewById(R.id.count);
+
         elasticSearch.getAllRecordsTask Task
                 = new elasticSearch.getAllRecordsTask();
         Task.execute(userid, problemID);

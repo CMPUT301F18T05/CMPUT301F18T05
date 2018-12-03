@@ -29,8 +29,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
 
 
 public class homepage_patient extends AppCompatActivity {
@@ -59,6 +62,8 @@ public class homepage_patient extends AppCompatActivity {
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+
+        fillDataHolder();
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -135,5 +140,41 @@ public class homepage_patient extends AppCompatActivity {
             // Show 3 total pages.
             return 2;
         }
+    }
+
+
+    public void fillDataHolder() {
+        Integer userID = DataHolder.getData().getUserID();
+        ArrayList<Problem> problemList = new ArrayList<>();
+        ArrayList<Record> recordList= new ArrayList<>();
+        ArrayList<photo_object> photoList= new ArrayList<>();
+
+        elasticSearch.getProblemsTask task2
+                = new elasticSearch.getProblemsTask();
+        task2.execute(userID);
+
+        try {
+            problemList = task2.get();
+        } catch (Exception e) {
+            Log.i("homepage_patinet", "No problem found");
+        }
+
+        DataHolderEverything.setProblemList(problemList);
+
+        elasticSearch.getAbsolutelyAllRecordsTask task
+                = new elasticSearch.getAbsolutelyAllRecordsTask();
+        task.execute(userID);
+
+        try {
+            recordList = task.get();
+        } catch (Exception e) {
+            Log.i("homepage_patinet", "No record found");
+        }
+
+        DataHolderEverything.setRecordList(recordList);
+
+
+
+
     }
 }

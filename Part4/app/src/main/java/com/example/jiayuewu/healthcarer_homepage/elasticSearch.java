@@ -275,6 +275,44 @@ public class elasticSearch {
         }
     }
 
+    /**GetRecordsTask:
+     * get recordList from the date which related to the UserID's problemList
+     *
+     */
+    // TODO we need a function which gets tweets from elastic search
+    public static class getAbsolutelyAllRecordsTask extends AsyncTask<Integer, Void, ArrayList<Record>> {
+        @Override
+        protected ArrayList<Record> doInBackground(Integer... search_parameters) {
+            verifySettings();
+
+            ArrayList<Record> records = new ArrayList<Record>();
+
+            String query = "{\"query\" : {\"term\" : { \"userID\" : \"" + search_parameters[0] + "\" }}}";
+
+
+            Search search = new Search.Builder(query)
+                    .addIndex(cmput301f18t05)
+                    .addType("Record")
+                    .build();
+
+            try {
+                // TODO get the results of the query
+                SearchResult result = client.execute(search);
+                if (result.isSucceeded()) {
+                    List<Record> foundRecords = result.getSourceAsObjectList(Record.class);
+                    records.addAll(foundRecords);
+                } else {
+                    Log.i("Error", "The search query failed to find ALL RECORDS tweets for some reason.");
+                }
+            }
+            catch (Exception e) {
+                Log.i("Error", "Something went wrong when we tried to communicate with the elasticsearch server!");
+            }
+
+            return records;
+        }
+    }
+
     // TODO we need a function which adds tweets to elastic search
     public static class addDoctorCommentTask extends AsyncTask<Doctor_Comment, Void, Void> {
 

@@ -99,24 +99,6 @@ public class add_record extends AppCompatActivity {
                 description = dText.getText().toString();
                 dateText.setText(date_text);
 
-//                elasticSearch.getAllRecordsTask Task
-//                        = new elasticSearch.getAllRecordsTask();
-//                Task.execute(userid,problemID);
-//
-//                try {
-//                    recordArrayList = Task.get();
-////                    recordID = findLastID(userid,problemID, v);
-//
-//                }	catch (Exception e) {
-//                    Log.i("Error", "Failed to get the record out of the async object.");
-//                }
-//                Integer length = recordArrayList.size() ;
-//
-//                if (length == -1) {
-//                    recordID = 1;
-//                } else {
-//                    recordID = findLastID(userid, problemID, v);
-//                }
                 recordID = findLastID(userid, problemID, v);
 
                 Record rec = new Record(userid, problemID, recordID, title, date_text, description);

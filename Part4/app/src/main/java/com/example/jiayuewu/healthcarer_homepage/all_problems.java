@@ -69,13 +69,10 @@ public class all_problems extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
                 Intent viewAndEdit = new Intent(all_problems.this, view_problem.class);
-                Integer problemid;
-                String problemTitle;
-                problemid = problemArrayList.get(position).getProblemID();
-                problemTitle = problemArrayList.get(position).getTitle();
-                viewAndEdit.putExtra("problemID",String.valueOf(problemid));
+                Problem problem;
+                problem = problemArrayList.get(position);
+                DataHolder_Problem.setData(problem);
                 startActivity(viewAndEdit);
-
             }
         });
 
