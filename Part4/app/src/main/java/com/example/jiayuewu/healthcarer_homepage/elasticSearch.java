@@ -621,9 +621,11 @@ public class elasticSearch {
 
             ArrayList<photo_object> users = new ArrayList<photo_object>();
 
-            String query = "{\"query\" : {\"term\" : { \"recordID\" : \"" + search_parameters[0] + "\" }}}";
+            String query4 = " {\"query\": {\"bool\": {\"must\": [ {\"term\": {\"userID\": " + search_parameters[0] +
+                    "} },{\"term\": {\"problemID\": " + search_parameters[1] + "}},{\"term\": {\"recordID\": " + search_parameters[2] +
+                    " }} ,{\"term\": {\"photoID\": " + search_parameters[3] + "}}]}}}";
 
-            Search search = new Search.Builder(query)
+            Search search = new Search.Builder(query4)
                     .addIndex(cmput301f18t05)
                     .addType("Photo")
                     .build();
@@ -659,10 +661,6 @@ public class elasticSearch {
             verifySettings();
 
             for (photo_object photo : photo_objects) {
-//                getPhoto getUserTask
-//                        = new getPhoto();
-//                getUserTask.execute(photo.getRecordID());
-
                 Index index = new Index.Builder(photo).index(cmput301f18t05).type("Photo").build();
 
                 try {

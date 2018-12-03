@@ -23,18 +23,26 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.github.chrisbanes.photoview.PhotoView;
+
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 
 public class add_photos_in_record extends AppCompatActivity {
     public Button editButton;
@@ -93,6 +101,45 @@ public class add_photos_in_record extends AppCompatActivity {
         photoViewFront.setImageDrawable(rbody_front);
         front_matrix = new Matrix();
         back_matrix = new Matrix();
+
+        ArrayList<full_body_photo> listFullBodyFront = new ArrayList<>();
+
+        elasticSearch.getSpecificFullPhoto getFrontTask
+                = new elasticSearch.getSpecificFullPhoto();
+        getFrontTask.execute(DataHolder.getData().getUserID(),1);
+
+        try {
+            listFullBodyFront = getFrontTask.get();
+        } catch (Exception e) {
+            Log.i("Homepage_patient_my", "No front user photos found");
+        }
+
+        if (listFullBodyFront.isEmpty()) {
+            photoViewFront.setImageDrawable(rbody_front);
+        } else {
+            Drawable d = (Drawable) new BitmapDrawable(convertStringToBitmap(listFullBodyFront.get(0).getBitmap()));
+            photoViewFront.setImageDrawable(d);
+        }
+
+        ArrayList<full_body_photo> listFullBodyBack = new ArrayList<>();
+
+        elasticSearch.getSpecificFullPhoto getBackTask
+                = new elasticSearch.getSpecificFullPhoto();
+        getBackTask.execute(DataHolder.getData().getUserID(),-1);
+
+        try {
+            listFullBodyBack = getBackTask.get();
+        } catch (Exception e) {
+            Log.i("Homepage_patient_my", "No front user photos found");
+        }
+
+        if (listFullBodyBack.isEmpty()) {
+            Log.i("HOMEPAGE", "NOTHING FOUND, SO DEFAULTED");
+            photoViewBack.setImageDrawable(rbody_back);
+        } else {
+            Drawable d = (Drawable) new BitmapDrawable(convertStringToBitmap(listFullBodyBack.get(0).getBitmap()));
+            photoViewBack.setImageDrawable(d);
+        }
 
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -361,5 +408,23 @@ public class add_photos_in_record extends AppCompatActivity {
             }
         });
 
+    }
+    public String convertBitmapToString(Bitmap bitmap) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+
+        byte[] byteArray = byteArrayOutputStream .toByteArray();
+        String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+        return encoded;
+    }
+
+    public Bitmap convertStringToBitmap(String base64) {
+        byte[] data = Base64.decode(base64, Base64.DEFAULT);
+//        String text = new String(data, "UTF-8");
+
+        Bitmap decodedByte = BitmapFactory.decodeByteArray(data, 0, data.length);
+
+        return decodedByte;
     }
 }
