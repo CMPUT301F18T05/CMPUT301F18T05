@@ -28,6 +28,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class view_records extends AppCompatActivity {
     private Record record = new Record();
     private ArrayList<Record> recordArrayList = new ArrayList<Record>();
     private ArrayAdapter<Record> adapter;
+    private EditText titleText;
     private User user;
     private Integer problemID;
 
@@ -45,6 +47,10 @@ public class view_records extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_records);
         setTitle("View Records");
+        titleText = findViewById(R.id.patient_records_of_text);
+        String title = getIntent().getStringExtra("problemTitle");
+        titleText.setText(title);
+
         ListView patients = findViewById(R.id.view_records_listview);
 
         FloatingActionButton addrecord = findViewById(R.id.add_record_button);

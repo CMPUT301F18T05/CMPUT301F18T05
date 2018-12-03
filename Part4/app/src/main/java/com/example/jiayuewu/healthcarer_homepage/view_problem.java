@@ -27,6 +27,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class view_problem extends AppCompatActivity {
     private EditText titleText;
     private EditText dateText;
     private EditText dText;
+    private TextView countText;
     private User user;
     private Integer problemID;
     private Problem problem;
@@ -71,6 +73,23 @@ public class view_problem extends AppCompatActivity {
         dateText.setText(problem.getCalenderDate());
         dText.setText(problem.getDescription());
 
+        countText = (TextView) findViewById(R.id.count);
+        elasticSearch.getAllRecordsTask Task
+                = new elasticSearch.getAllRecordsTask();
+        Task.execute(userid, problemID);
+        ArrayList<Record> arrayList = new ArrayList<Record>();
+        try {
+            arrayList = Task.get();
+        }	catch (Exception e) {
+            Log.e("Error", "Failed to get the record out of the async object.");
+        }
+        Integer length = arrayList.size();
+
+        if (length == -1) {
+            countText.setText("0");
+        } else {
+            countText.setText(String.valueOf(length));
+        }
 
         Button rButton = (Button) findViewById(R.id.Reminder_button);
         rButton.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +143,7 @@ public class view_problem extends AppCompatActivity {
             public void onClick(View v) {
                 Intent vr= new Intent(view_problem.this, view_records.class);
                 vr.putExtra("problemID",String.valueOf(problemID));
+                vr.putExtra("problemTitle",problem.getTitle());
                 startActivity(vr);
             }
         });
