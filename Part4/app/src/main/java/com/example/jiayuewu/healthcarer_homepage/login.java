@@ -22,6 +22,7 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
@@ -38,6 +39,7 @@ public class login extends AppCompatActivity {
     private EditText useridText;
     private User user = new User();
     private ArrayList<User> userArrayList = new ArrayList<User>();
+    private Context context = login.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +58,7 @@ public class login extends AppCompatActivity {
 
                 try {
                     userid = Integer.parseInt(useridText.getText().toString());
-                    login_with_userID(userid);
+                    login_with_userID(v, userid);
                 } catch (Exception e) {
                     Snackbar.make(v, "UserID must only contain digits. NO letters please.", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -64,7 +66,7 @@ public class login extends AppCompatActivity {
 
             }
 
-            public void login_with_userID(Integer userid) {
+            public void login_with_userID(View v, Integer userid) {
                 /**
                  * Shows a simple alert message when the message is longer then the limit.
                  *
@@ -72,13 +74,19 @@ public class login extends AppCompatActivity {
                  */
                 final AlertDialog alertDialog = new AlertDialog.Builder(login.this).create();
                 alertDialog.setTitle("Alert");
-                alertDialog.setMessage("Cannot login. Check connectivity, or create a profile.");
+                alertDialog.setMessage("Cannot login. Create a new profile.");
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
                             }
                         });
+
+                if (!connectivityChecker.getConnectivity(context)) {
+                    Snackbar.make(v, "No connection.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    return;
+                }
 
 
                 elasticSearch.getUserTask getUserTask

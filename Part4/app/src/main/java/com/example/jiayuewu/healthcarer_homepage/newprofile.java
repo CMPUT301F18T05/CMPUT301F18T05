@@ -22,6 +22,7 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -42,8 +43,8 @@ public class newprofile extends AppCompatActivity {
     private EditText nameText;
     private EditText emailText;
     private EditText phoneText;
+    private Context context = newprofile.this;
     //private ArrayList<User> userArrayList = new ArrayList<User>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,44 +71,57 @@ public class newprofile extends AppCompatActivity {
                 setResult(RESULT_OK);
                 String uk = useridText.getText().toString();
 
+               if (!connectivityChecker.getConnectivity(context)) {
+                   Snackbar.make(v, "No connection.", Snackbar.LENGTH_LONG)
+                           .setAction("Action", null).show();
 
-                try {
-                    Integer userid = 0 + Integer.parseInt(uk);
-
-                    if (checkIfUserAlreadyExists(userid)) {
-                        throw new exception_titleTooLong();
-                    }
+               } else {
 
 
-                    String name = nameText.getText().toString();
+                   try {
+                       Log.i("NEWPROFILE", "CREATE");
+                       Integer userid = 0 + Integer.parseInt(uk);
 
-                    String phone = phoneText.getText().toString();
-                    String email = emailText.getText().toString();
-                    String roleString = roleSpinner.getSelectedItem().toString();
+                       if (checkIfUserAlreadyExists(userid)) {
+                           throw new Exception();
+                       }
+                       Log.i("NEWPROFILE", "Before Set");
 
-                    try {
-                        User user = new User(0, name, email, phone, roleString);
-                        user.setUserID(userid);
+                       String name = nameText.getText().toString();
+                       String phone = phoneText.getText().toString();
+                       String email = emailText.getText().toString();
+                       String roleString = roleSpinner.getSelectedItem().toString();
 
-                        //todo add the list to local or ES using controller
-                        elasticSearch.addUserTask addTweetsTask
-                                = new elasticSearch.addUserTask();
-                        addTweetsTask.execute(user);
+                       try {
+                           Log.i("NEWPROFILE", "CREATE");
 
-                        Snackbar.make(v, "New user created", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    } catch (Exception_User_ID_Too_Short uid) {
-                        Snackbar.make(v, "UserID is too short. Must be at least 8 characters long.", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
+                           User user = new User(0, name, email, phone, roleString);
+                           Log.i("NEWPROFILE", "Before Set");
 
-                } catch (exception_titleTooLong er) {
-                    Snackbar.make(v, "UserID alerady exists. Choose a new userID.", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }catch (Exception e) {
-                    Snackbar.make(v, "UserID cannot contain letters. Only numbers please.", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
+                           user.setUserID(userid);
+
+                           Log.i("NEWPROFILE", "GOT HERE");
+
+                           //todo add the list to local or ES using controller
+                           elasticSearch.addUserTask addTweetsTask
+                                   = new elasticSearch.addUserTask();
+                           addTweetsTask.execute(user);
+
+                           Snackbar.make(v, "New user created", Snackbar.LENGTH_LONG)
+                                   .setAction("Action", null).show();
+                       } catch (Exception_User_ID_Too_Short uid) {
+                           Snackbar.make(v, "UserID is no the correct length. Must be 8 characters long.", Snackbar.LENGTH_LONG)
+                                   .setAction("Action", null).show();
+                       }
+
+                   } catch (exception_titleTooLong er) {
+                       Snackbar.make(v, "UserID alerady exists. Choose a new userID.", Snackbar.LENGTH_LONG)
+                               .setAction("Action", null).show();
+                   } catch (Exception e) {
+                       Snackbar.make(v, "UserID cannot contain letters. Only numbers please, 8 digits long.", Snackbar.LENGTH_LONG)
+                               .setAction("Action", null).show();
+                   }
+               }
             }
         });
     }

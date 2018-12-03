@@ -1,6 +1,7 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class transfer extends AppCompatActivity {
     private EditText transferText;
     private User user = new User();
     private ArrayList<User> userArrayList = new ArrayList<User>();
+    private Context context = transfer.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,13 @@ public class transfer extends AppCompatActivity {
                                 dialog.dismiss();
                             }
                         });
+
+                if (!connectivityChecker.getConnectivity(context)) {
+                    Snackbar.make(v, "No connection.", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    return;
+                }
+
                 Integer userid;
                 ArrayList<transferObject> idArrayList = new ArrayList<transferObject>();
                 transferObject t;
