@@ -22,6 +22,9 @@
 
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,6 +32,9 @@ import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -53,11 +59,23 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.chrisbanes.photoview.PhotoView;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.DexterError;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.PermissionRequestErrorListener;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
+import static android.media.MediaRecorder.VideoSource.CAMERA;
 
 public class homepage_patient_my_body_content extends Fragment{
     public Button sbutton;
@@ -86,6 +104,9 @@ public class homepage_patient_my_body_content extends Fragment{
     public Matrix front_matrix;
     public Matrix back_matrix;
     public User user;
+//    private int PICK_IMAGE_REQUEST = 1;
+    private static final String IMAGE_DIRECTORY = "/demonuts";
+    private int GALLERY = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -492,8 +513,10 @@ public class homepage_patient_my_body_content extends Fragment{
             @Override
             public void onClick(View v) {
                 // placeholder
+                requestMultiplePermissions();
                 Snackbar.make(v, "Upload Button Action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                showPictureDialog();
             }
         });
 
@@ -533,6 +556,117 @@ public class homepage_patient_my_body_content extends Fragment{
         Bitmap decodedByte = BitmapFactory.decodeByteArray(data, 0, data.length);
 
         return decodedByte;
+    }
+
+    private void showPictureDialog(){
+        AlertDialog.Builder pictureDialog = new AlertDialog.Builder(getActivity());
+        pictureDialog.setTitle("Select Action");
+        String[] pictureDialogItems = {
+                "Select photo from gallery",
+                "Capture photo from camera" };
+        pictureDialog.setItems(pictureDialogItems,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                Intent galleryIntent = new Intent(Intent.ACTION_PICK,
+                                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                                startActivityForResult(galleryIntent, GALLERY);
+//                                Intent intent = new Intent();
+//                                // Show only images, no videos or anything else
+//                                intent.setType("image/*");
+//                                intent.setAction(Intent.ACTION_GET_CONTENT);
+//                                // Always show the chooser (if there are multiple options available)
+//                                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+                                break;
+                            case 1:
+                                Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                                startActivityForResult(intent, 0);
+                                break;
+                        }
+                    }
+                });
+//        pictureDialog.create();
+        pictureDialog.show();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == getActivity().RESULT_CANCELED) {
+            return;
+        }
+        if (requestCode == GALLERY) {
+            if (data != null) {
+                Uri contentURI = data.getData();
+                try {
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), contentURI);
+//                    String path = saveImage(bitmap);
+//                    imageview.setImageBitmap(bitmap);
+                    if (!turned){
+                        Drawable d = (Drawable) new BitmapDrawable(bitmap);
+                        photoViewFront.setImageDrawable(d);
+                    } else {
+                        Drawable d = (Drawable) new BitmapDrawable(bitmap);
+                        photoViewBack.setImageDrawable(d);
+                    }
+
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } else if (requestCode == 0) {
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+//            imageview.setImageBitmap(thumbnail);
+//            saveImage(thumbnail);
+            if (!turned){
+                Drawable d = (Drawable) new BitmapDrawable(bitmap);
+                photoViewFront.setImageDrawable(d);
+            } else {
+                Drawable d = (Drawable) new BitmapDrawable(bitmap);
+                photoViewBack.setImageDrawable(d);
+            }
+        }
+    }
+
+    private void  requestMultiplePermissions(){
+        Dexter.withActivity(getActivity())
+                .withPermissions(
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)
+                .withListener(new MultiplePermissionsListener() {
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport report) {
+                        // check if all permissions are granted
+                        if (report.areAllPermissionsGranted()) {
+                        }
+
+                        // check for permanent denial of any permission
+                        if (report.isAnyPermissionPermanentlyDenied()) {
+                            // show alert dialog navigating to Settings
+                            //openSettingsDialog();
+                        }
+                    }
+
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
+                }).
+                withErrorListener(new PermissionRequestErrorListener() {
+                    @Override
+                    public void onError(DexterError error) {
+                    }
+                })
+                .onSameThread()
+                .check();
     }
 
 }
