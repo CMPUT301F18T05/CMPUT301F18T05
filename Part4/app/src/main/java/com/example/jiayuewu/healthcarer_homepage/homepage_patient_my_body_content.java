@@ -507,9 +507,9 @@ public class homepage_patient_my_body_content extends Fragment{
 
         Log.i("IN UPLOAD PAPER DOLL", "PASSING " + userID + photoID);
         //Todo : Delete old image
-//        elasticSearch.deleteSpecificFullPhoto deleteTask
-//                = new elasticSearch.deleteSpecificFullPhoto();
-//        deleteTask.execute(userID,photoID);
+        elasticSearch.deleteSpecificFullPhoto deleteTask
+                = new elasticSearch.deleteSpecificFullPhoto();
+        deleteTask.execute(userID,photoID);
 
         elasticSearch.setFullBody getUserTask
                 = new elasticSearch.setFullBody();
