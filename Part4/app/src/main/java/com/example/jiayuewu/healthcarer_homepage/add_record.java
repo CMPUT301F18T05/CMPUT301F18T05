@@ -51,7 +51,7 @@ public class add_record extends AppCompatActivity {
         setContentView(R.layout.activity_add_record);
         setTitle("Add Record");
 
-        problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
+        problemID = DataHolder_Problem.getData().getProblemID();
 
         Button addphoto = findViewById(R.id.add_photos_button);
         addphoto.setOnClickListener(new View.OnClickListener() {

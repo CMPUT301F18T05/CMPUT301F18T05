@@ -19,8 +19,10 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,6 +46,7 @@ public class view_problem extends AppCompatActivity {
     private Problem problem;
     private Integer userid;
     private ArrayList<Problem> problemArrayList = new ArrayList<Problem>();
+    private Context context = view_problem.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,20 +56,9 @@ public class view_problem extends AppCompatActivity {
         user = DataHolder.getData();
         userid = user.getUserID();
 
-
         titleText = (EditText) findViewById(R.id.patient_problem_title);
         dateText = (EditText) findViewById(R.id.patient_problem_date);
         dText = (EditText) findViewById(R.id.patient_problem_description);
-
-//        elasticSearch.getSpecialProblem task2
-//                = new elasticSearch.getSpecialProblem();
-//        task2.execute(problemID, userid);
-//
-//        try {
-//            problemArrayList = task2.get();
-//        }	catch (Exception e) {
-//            Log.e("Error", "Failed to get the problem out of the async object.");
-//        }
 
         problem = DataHolder_Problem.getData();
         problemID = problem.getProblemID();
@@ -120,24 +112,42 @@ public class view_problem extends AppCompatActivity {
                 title = titleText.getText().toString();
                 description = dText.getText().toString();
 
-                elasticSearch.deleteProblemTask task1
-                        = new elasticSearch.deleteProblemTask();
-                task1.execute(userid,problemID);
+                Problem oldProblem = problem;
+                Problem newProblem = new Problem(userid, problemID, title, date_text, description);
 
-                Problem problem = new Problem(userid, problemID, title, date_text, description);
-                elasticSearch.addProblemTask task2
-                        = new elasticSearch.addProblemTask();
-                task2.execute(problem);
+                if (!connectivityChecker.getConnectivity(context)) {
+                    problemArrayList = DataHolderEverything.getProblemList();
+                    problemArrayList.remove(oldProblem);
+                    problemArrayList.add(newProblem);
+                    DataHolderEverything.setProblemList(problemArrayList);
+                } else {
+                    elasticSearch.deleteProblemTask task1
+                            = new elasticSearch.deleteProblemTask();
+                    task1.execute(userid, problemID);
 
+                    elasticSearch.addProblemTask task2
+                            = new elasticSearch.addProblemTask();
+                    task2.execute(newProblem);
+                }
+                Snackbar.make(v, "Problem has been saved.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
         deleteProblem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                elasticSearch.deleteProblemTask task1
-                        = new elasticSearch.deleteProblemTask();
-                task1.execute(userid,problemID);
+                if (!connectivityChecker.getConnectivity(context)) {
+                    problemArrayList = DataHolderEverything.getProblemList();
+                    problemArrayList.remove(problem);
+                    DataHolderEverything.setProblemList(problemArrayList);
+                } else {
+                    elasticSearch.deleteProblemTask task1
+                            = new elasticSearch.deleteProblemTask();
+                    task1.execute(userid,problemID);
+                }
+                Snackbar.make(v, "Problem has been deleted.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 

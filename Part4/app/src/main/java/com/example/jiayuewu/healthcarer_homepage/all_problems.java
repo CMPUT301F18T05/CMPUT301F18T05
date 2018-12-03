@@ -1,7 +1,9 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +20,7 @@ public class all_problems extends AppCompatActivity {
     private ArrayList<Problem> problemArrayList = new ArrayList<Problem>();
     private ArrayAdapter<Problem> adapter;
     private User user;
+    private Context context = all_problems.this;
     //open the activity_all_problem layout
     //start showing problem history screen
     @Override
@@ -48,23 +51,26 @@ public class all_problems extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         user = DataHolder.getData();
-        Log.e("Error", "id" + user.getUserID());
         Integer ID = user.getUserID();
-        elasticSearch.getProblemsTask getProblemsTask = new elasticSearch.getProblemsTask();
-        getProblemsTask.execute(ID);
 
-        try{
-            problemArrayList = getProblemsTask.get();
-        } catch (Exception e){
-            Log.e("Error", "Failed to get the problem history out of the async object.");
+        // Check connectivity to decide whether to get problem list from online or from storage.
+        if (!connectivityChecker.getConnectivity(context)) {
+           problemArrayList = DataHolderEverything.getProblemList();
+        } else {
+            elasticSearch.getProblemsTask getProblemsTask = new elasticSearch.getProblemsTask();
+            getProblemsTask.execute(ID);
+
+            try {
+                problemArrayList = getProblemsTask.get();
+            } catch (Exception e) {
+                Log.e("Error", "Failed to get the problem history out of the async object.");
+            }
         }
-
-        Log.i("hello","" + problemArrayList);
         adapter = new ArrayAdapter<>(this, R.layout.list_item, problemArrayList);
         ListView history = findViewById(R.id.all_problems_lisview);
-
         history.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
         history.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {

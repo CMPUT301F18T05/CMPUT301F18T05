@@ -112,12 +112,10 @@ public class add_problem extends AppCompatActivity {
                     problemID = findLastID(userid, v);
                 }
 
-
                 Problem problem = new Problem(userid, problemID, title, date_text, description);
                 elasticSearch.addProblemTask task2
                         = new elasticSearch.addProblemTask();
                 task2.execute(problem);
-
             }
         });
     }
@@ -156,9 +154,6 @@ public class add_problem extends AppCompatActivity {
             }
             unusedProblemID++;
         }
-
-//                    Snackbar.make(v, "New id is : " + unusedProblemID, Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show();
 
         return unusedProblemID;
     }

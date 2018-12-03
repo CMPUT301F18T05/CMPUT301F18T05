@@ -20,10 +20,12 @@
  */
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -38,6 +40,7 @@ public class view_record extends AppCompatActivity {
     private EditText dText;
     private Record record;
     private ArrayList<Record> recordArrayList = new ArrayList<Record>();
+    private Context context = view_record.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,26 +90,44 @@ public class view_record extends AppCompatActivity {
                 title = titleText.getText().toString();
                 description = dText.getText().toString();
 
-                elasticSearch.deleteRecordTask task1
-                        = new elasticSearch.deleteRecordTask();
-                task1.execute(record.getUserID(), record.getProblemID(), record.getRecordID());
+                Record oldRecord = record;
+                Record newRecord = new Record(record.getUserID(), record.getProblemID(), record.getRecordID(), title, date_text, description);
 
-                Record rec = new Record(record.getUserID(), record.getProblemID(), record.getRecordID(), title, date_text, description);
-                // todo check if user picked location , update it otherwise keep it empty
-//                rec.setLocation(location);
-                elasticSearch.addRecordTask task2
-                        = new elasticSearch.addRecordTask();
-                task2.execute(rec);
+                if (!connectivityChecker.getConnectivity(context)) {
+                    recordArrayList = DataHolderEverything.getRecordList();
+                    recordArrayList.remove(record);
+                    recordArrayList.add(newRecord);
+                    DataHolderEverything.setRecordList(recordArrayList);
+                } else {
+                    elasticSearch.deleteRecordTask task1
+                            = new elasticSearch.deleteRecordTask();
+                    task1.execute(record.getUserID(), record.getProblemID(), record.getRecordID());
 
+                    elasticSearch.addRecordTask task2
+                            = new elasticSearch.addRecordTask();
+                    task2.execute(newRecord);
+                }
+
+                Snackbar.make(v, "Record has been Saved.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
         deleteProblem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                elasticSearch.deleteRecordTask task1
-                        = new elasticSearch.deleteRecordTask();
-                task1.execute(record.getUserID(), record.getProblemID(), record.getRecordID());
+                if (!connectivityChecker.getConnectivity(context)) {
+                    recordArrayList = DataHolderEverything.getRecordList();
+                    recordArrayList.remove(record);
+                    DataHolderEverything.setRecordList(recordArrayList);
+                } else {
+                    elasticSearch.deleteRecordTask task1
+                            = new elasticSearch.deleteRecordTask();
+                    task1.execute(record.getUserID(), record.getProblemID(), record.getRecordID());
+
+                }
+                Snackbar.make(v, "REcord has been deleted.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
     }

@@ -20,6 +20,7 @@
 
 package com.example.jiayuewu.healthcarer_homepage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -39,8 +40,9 @@ public class view_records extends AppCompatActivity {
     private ArrayList<Record> recordArrayList = new ArrayList<Record>();
     private ArrayAdapter<Record> adapter;
     private EditText titleText;
-    private User user;
+    private Problem problem;
     private Integer problemID;
+    private Context context = view_records.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,6 @@ public class view_records extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent ar = new Intent(view_records.this, add_record.class);
-                ar.putExtra("problemID", String.valueOf(problemID));
                 startActivity(ar);
             }
         });
@@ -66,20 +67,25 @@ public class view_records extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-        user = DataHolder.getData();
-        problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
+        problem = DataHolder_Problem.getData();
+        problemID = problem.getProblemID();
+//        problemID = Integer.parseInt(getIntent().getStringExtra("problemID"));
 
-        elasticSearch.getAllRecordsTask task2
-                = new elasticSearch.getAllRecordsTask();
-        task2.execute(user.getUserID(), problemID);
+        // Check if user is online, or offline, and set list accordingly.
+        if (!connectivityChecker.getConnectivity(context)) {
+            recordArrayList = DataHolderEverything.getRecordList();
+        } else {
+            elasticSearch.getAllRecordsTask task2
+                    = new elasticSearch.getAllRecordsTask();
+            task2.execute(problem.getUserID(), problemID);
 
-        try{
-            recordArrayList = task2.get();
-        } catch (Exception e){
-            Log.e("View_records", "Failed to get the records history out of the async object.");
+            try {
+                recordArrayList = task2.get();
+            } catch (Exception e) {
+                Log.e("View_records", "Failed to get the records history out of the async object.");
+            }
         }
 
-        Log.i("view_records","" + recordArrayList);
         adapter = new ArrayAdapter<>(this, R.layout.list_item, recordArrayList);
         ListView history = findViewById(R.id.view_records_listview);
         history.setAdapter(adapter);
@@ -93,9 +99,7 @@ public class view_records extends AppCompatActivity {
                 record = recordArrayList.get(position);
                 DataHolder_Record.setData(record);
                 startActivity(viewAndEdit);
-
             }
         });
-
     }
 }
