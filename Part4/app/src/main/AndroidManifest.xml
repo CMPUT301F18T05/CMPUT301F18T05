@@ -116,6 +116,7 @@
         <!-- <service android:name=".ReactNativeAudioStreaming.Signal" android:enabled="true" /> -->
         <!--<activity android:name=".homepage_doctor_my_profile_content" /> -->
         <activity android:name=".add_photos_for_part"></activity>
+        <activity android:name=".slideshow"></activity>
     </application>
 
 </manifest>

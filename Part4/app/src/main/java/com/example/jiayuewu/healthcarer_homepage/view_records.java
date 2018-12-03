@@ -63,6 +63,15 @@ public class view_records extends AppCompatActivity {
                 startActivity(ar);
             }
         });
+
+        FloatingActionButton slideshow = findViewById(R.id.slideshow_button);
+        slideshow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ar = new Intent(view_records.this, slideshow.class);
+                startActivity(ar);
+            }
+        });
     }
 
     protected void onStart() {
