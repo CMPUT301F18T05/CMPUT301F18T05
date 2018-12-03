@@ -19,6 +19,8 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -106,6 +108,7 @@ public class add_photos_for_part extends AppCompatActivity {
         }
 
         ArrayList<Drawable> listOfDrawable = new ArrayList<>();
+        ArrayList<Bitmap> listOfBitmaps = new ArrayList<>();
 
         try {
             for (photo_object po : foundImages) {
@@ -113,15 +116,27 @@ public class add_photos_for_part extends AppCompatActivity {
                 Bitmap image = convertStringToBitmap(compressed);
                 Drawable d = (Drawable) new BitmapDrawable(image);
                 listOfDrawable.add(d);
+                listOfBitmaps.add(image);
             }
         } catch (Exception e) {
         }
 
 
+//        ViewFlipper imageFlipper = (ViewFlipper)findViewById( R.id.image_flipper );
+//
+//        for (Bitmap photo : listOfBitmaps) {//or something like this
+//            ImageView image = new ImageView ( getApplicationContext() );
+//            image.setImageBitmap( photo );
+//            imageFlipper.addView( image );
+//        }
+//
+//        imageFlipper.setFlipInterval( 5000 ); //5s intervals
+//        imageFlipper.startFlipping();
+
 //        int[] imageIds = convertIntegers(listOfDrawable);
 
 
-//        int[] imageIds = new int[] {R.drawable.full_body, R.drawable.full_body_back};
+        int[] imageIds = new int[] {R.drawable.full_body, R.drawable.full_body_back};
 
 
         adapter = new ImageAdapter(this, imageIds);
