@@ -106,6 +106,6 @@ public class Record {
 
     @Override
     public String toString(){
-        return this.recordID + " " + this.title + " " + this.date;
+        return this.recordID + " | " + this.title + " | " + this.date;
     }
 }

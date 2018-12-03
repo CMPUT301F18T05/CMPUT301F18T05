@@ -28,6 +28,7 @@ public class User {
     private String email;
     private String phoneNumber;
     private String role;
+    private ArrayList<Integer> userList = new ArrayList<Integer>();
 
     User() {
 
@@ -87,6 +88,22 @@ public class User {
     public void setPhoneNumber(String phoneNumber) {
 
         this.phoneNumber = phoneNumber;
+    }
+
+    public ArrayList<Integer> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(ArrayList<Integer> userList) {
+        this.userList = userList;
+    }
+
+    public void addUser(Integer userID) {
+        this.userList.add(userID);
+    }
+
+    public void deleteUser(Integer userID) {
+        this.userList.remove(userID);
     }
 
 }
