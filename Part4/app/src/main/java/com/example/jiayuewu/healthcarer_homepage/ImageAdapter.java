@@ -1,6 +1,7 @@
 package com.example.jiayuewu.healthcarer_homepage;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
@@ -10,9 +11,9 @@ import android.widget.ImageView;
 public class ImageAdapter extends PagerAdapter {
 
     private Context mContext;
-    private int[] mImageIds;
+    private Bitmap[] mImageIds;
 
-    ImageAdapter(Context context, int[] ImageIds) {
+    ImageAdapter(Context context, Bitmap[] ImageIds) {
         mContext = context;
         mImageIds = ImageIds;
     }
@@ -31,7 +32,7 @@ public class ImageAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
         imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        imageView.setImageResource(mImageIds[position]);
+        imageView.setImageBitmap(mImageIds[position]);
         container.addView(imageView, 0);
         return imageView;
     }
