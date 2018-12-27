@@ -121,7 +121,8 @@ public class add_photos_for_part extends AppCompatActivity {
 //        int[] imageIds = convertIntegers(listOfDrawable);
 
 
-//        int[] imageIds = new int[] {R.drawable.full_body, R.drawable.full_body_back};
+        int[] imageIds = new int[] {R.drawable.full_body, R.drawable.full_body_back};
+
 
 
         adapter = new ImageAdapter(this, imageIds);
