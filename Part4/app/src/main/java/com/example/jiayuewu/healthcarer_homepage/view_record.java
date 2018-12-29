@@ -72,8 +72,8 @@ public class view_record extends AppCompatActivity {
         addmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent ap = new Intent(view_record.this, add_photos_in_record.class);
-//                startActivity(ap);
+                Intent ap = new Intent(view_record.this, MapsMarkerActivity.class);
+                startActivity(ap);
             }
         });
 

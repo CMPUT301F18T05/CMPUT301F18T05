@@ -99,6 +99,7 @@ public class slideshow extends AppCompatActivity {
         handler.removeCallbacks(runnable);
     }
 
+    // Load iamge resource files as bitmap, and return an array of bitmaps.
     private Bitmap[] trialGetPhotoList() {
         Bitmap[] listOfPhotoes = new Bitmap[2];
 
